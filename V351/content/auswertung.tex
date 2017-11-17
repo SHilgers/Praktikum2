@@ -1,17 +1,66 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Fourier-Analyse}
-Für die Fourier-Analyse sind die die Amplituden der Oberwellen ausschlaggebend.
-Die Messwerte der Amplituden und die zugehörigen Freqenzen sind in den folgenden
-Tabellen aufgeführt.
-%\input{Tabelle1.tex}
-%\input{Tabelle2.tex}
-%\input{Tabelle3.tex}
+Für die Fourier-Analyse sind die Amplituden der Oberwellen ausschlaggebend.
+Die Messwerte der Amplituden, die auf die erste Oberwelle normierten Amplituden
+und die zugehörigen Freqenzen und sind in den folgenden Tabellen aufgeführt.
+\input{Tabelle1.tex}
+\input{Tabelle2.tex}
+\input{Tabelle3.tex}
 Die Amplituden werden nun doppeltlogarithmisch gegen die Anzahl der Oberwellen
-aufgetragen, anschließend wird eine Ausgleichsgerade und deren Steigung berechnet.
-%\input{plot1.pdf}
-%\input{plot2.pdf}
-%\input{plot3.pdf}
+aufgetragen, anschließend wird eine Ausgleichsgerade und deren Steigung $a$ berechnet.
+An den in der Vorbereitung berechneten Fourier-Koeffizienten %label
+kann die erwartete Steigung der Ausgleichsgerade abgelesen werden, da diese
+entweder mit $\frac{1}{n}$ oder $\frac{1}{n²}$ abfallen.
+Somit sind folgende Steigungen zu erwarten: \\
+
+\begin{align*}
+  a_{\text{Rechteckspannung}} = -1 \\
+  a_{\text{Dreieckspannung}} = -2  \\
+  a_{\text{Sägezahnspannung}} = -1
+\end{align*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Überprüfung der Steigung für die Rechteckspannung.}
+  \label{fig:plot1}
+\end{figure}
+Für die Steigung der Ausgleichsgerade der Rechteckspannung ergibt sich
+\begin{align*}
+ a_{\text{Rechteckspannung}}= -0.791 \pm 0.028.
+\end{align*}
+Die Abweichung der Steigung von den Theoriewerten wird durch
+\begin{equation}
+  \lvert \: \frac{a_{\text{Theorie}}-a_{\text{Messung}}}{a_{\text{Theorie}}} \rvert
+  \label{eqn:abw}
+\end{equation}
+berechnet.
+Somit ergibt sich eine Abweichung von 20,9\% von den Theoriewerten.
+
+ \begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Überprüfung der Steigung für die Dreieckspannung.}
+  \label{fig:plot2}
+\end{figure}
+Die Steigung der Ausgleichsgerade beträgt
+\begin{align*}
+  a_{\text{Dreieckspannung}}= -0.354 \pm 0.012.
+\end{align*}
+Für die Dreieckspannung ergibt sich mit \eqref{eqn:abw} eine Abweichung von
+82,3\%.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Überprüfung der Steigung für die Sägezahnspannung.}
+  \label{fig:plot3}
+\end{figure}
+Die Steigung der Sägezahnspannung beträgt
+\begin{align*}
+  a_{\text{Sägezahnspannung}}= -1.022 \pm 0.041.
+\end{align*}
+Nach \eqref{eqn:abw} ergibt sich eine Abweichung von 2,2\%.
 
 
 %\begin{figure}
