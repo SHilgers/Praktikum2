@@ -25,11 +25,21 @@ der Gleichung
    f(t)= \frac{1}{2}a_0 + \sum_{n=1}^\infty (a_n \cos n \frac{2 \pi}{T}t
    + b_n \sin n \frac{2 \pi}{T}t)
 \end{equation}
-, wobei die Reihe gleichmäßig konvergent ist. Die entsprechenden Amplituden
+wobei die Reihe gleichmäßig konvergent ist. Die entsprechenden Amplituden
 berechnen sich durch
 \begin{align}
   & a_n = \frac{2}{T} \int_0^T f(t) \cos n \frac{2 \pi}{T}t dt \\
   \text{und    }     & b_n = \frac{2}{T} \int_0^T f(t) \sin n \frac{2 \pi}
   {T}t dt
 \end{align}
-mit n $\in \symbb{N} $. Es treten dabei nur 
+mit n $\in \symbb{N} $. Es treten dabei nur ganzzahlige Vielfache der
+Grundfrequenz $v = \frac{1}{T} $ auf, welche auch als harmonische Oberwellen
+bezeichnet werden. Trägt man diese gegen ihre jeweilige Amplitude auf, ergibt
+sich daraus ein diskretes Linienspektrum, wie es in \ref{fig:spektrum} zu
+sehen ist.
+\begin{figure}[H]
+  \centering
+  \includegraphics{Spektrum}
+  \caption{Linienspektrum einer Fourier-Ananlyse \cite{skript}}
+  \label{fig:Biegung}
+\end{figure}
