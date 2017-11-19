@@ -9,15 +9,16 @@ und die zugehörigen Freqenzen und sind in den folgenden Tabellen aufgeführt.
 \input{Tabelle3.tex}
 Die Amplituden werden nun doppeltlogarithmisch gegen die Anzahl der Oberwellen
 aufgetragen, anschließend wird eine Ausgleichsgerade und deren Steigung $a$ berechnet.
-An den in der Vorbereitung berechneten Fourier-Koeffizienten %label
+An den in der Vorbereitung berechneten Fourier-Koeffizienten
 kann die erwartete Steigung der Ausgleichsgerade abgelesen werden, da diese
 entweder mit $\frac{1}{n}$ oder $\frac{1}{n²}$ abfallen. Dieser
 Zusamenhang wird in folgender Rechnung deutlich:
 \begin{align*}
-  y &\Leftrithtarrow B*x^{-a}\\
-  \ln(y) &\Leftrigthtarrow \ln(B)+\ln(x^{-a})\\
-  \ln(y) &\Leftrigthtarrow \ln(B)-a\ln(x).
+  y &= B*x^{-a}\\
+    &= \ln(B)+\ln(x^{-a})\\
+    &= \ln(B)-a\ln(x).
 \end{align*}
+Diese Formel ist äquivalent zur allgemeinen Geradengleichung $y=mx+v$.
 Somit sind folgende Steigungen zu erwarten: \\
 
 \begin{align*}
@@ -38,7 +39,7 @@ Für die Steigung der Ausgleichsgerade der Rechteckspannung ergibt sich
 \end{align*}
 Die Abweichung der Steigung von den Theoriewerten wird durch
 \begin{equation}
-  \lvert \: \frac{a_{\text{Theorie}}-a_{\text{Messung}}}{a_{\text{Theorie}}} \rvert
+  \Biggl\lvert \: \frac{a_{\text{Theorie}}-a_{\text{Messung}}}{a_{\text{Theorie}}} \Biggr\rvert
   \label{eqn:abw}
 \end{equation}
 berechnet.
@@ -72,19 +73,22 @@ Nach \eqref{eqn:abw} ergibt sich eine Abweichung von 2,2\%.
 Bei der Fourier-Synthese werden die Spannungen aus einer endlichen Anzahl von
 Spannungsanplituden zusammengesetzt, so ergeben sich die folgenden Spannungsbilder.
 \begin{figure}[H]
-  \includegraphics{Rechteck.BMP}
+  \centering
+  \includegraphics{recht.png}
   \caption{Synthetisierte Rechteckspannung.}
   \label{fig:Rechteck}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics{Dreieck.BMP}
+  \centering
+  \includegraphics{drei.png}
   \caption{Synthetisierte Dreieckspannung.}
   \label{fig:Dreieck}
 \end{figure}
 
 \begin{figure}
-  \includegraphics{Säge.BMP}
+  \centering
+  \includegraphics{sag.png}
   \caption{Synthetisierte SäSägezahnspannung.}
   \label{fig:Säge}
 \end{figure}
