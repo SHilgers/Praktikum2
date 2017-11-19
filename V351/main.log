@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.9.25)  17 NOV 2017 17:57
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.9.25)  19 NOV 2017 11:11
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.218 seconds
+luaotfload | main : initialization completed in 0.265 seconds
 Babel <3.13> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex (c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/09/07 v3.24 KOMA-Script document class (article)
@@ -2265,99 +2265,79 @@ LaTeX Warning: Citation 'skript' on page 3 undefined on input line 42.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./content/durchfuehrung.tex [3]) (./content/auswertung.tex (./Tabelle1.tex)
-(./Tabelle2.tex) (./Tabelle3.tex [4<./Spektrum.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 10--16
-
- []
-
-<plot1.pdf, id=58, pagebox=cropbox, 462.52798pt x 346.89601pt>
-File: plot1.pdf Graphic file (type pdf)
-<use plot1.pdf>
-Package luatex.def Info: plot1.pdf  used on input line 25. on input line 25.
-Package luatex.def Info: Requested size: 462.52684pt x 346.89516pt on input line
- 25.
-
-Overfull \hbox (44.27129pt too wide) in paragraph at lines 25--26
- [][] 
- []
-
-[5]
-<plot2.pdf, id=66, pagebox=cropbox, 462.52798pt x 346.89601pt>
-File: plot2.pdf Graphic file (type pdf)
-<use plot2.pdf>
-Package luatex.def Info: plot2.pdf  used on input line 43. on input line 43.
-Package luatex.def Info: Requested size: 462.52684pt x 346.89516pt on input line
- 43.
-
-Overfull \hbox (44.27129pt too wide) in paragraph at lines 43--44
- [][] 
- []
-
-[6<./plot1.pdf>]
-<plot3.pdf, id=126, pagebox=cropbox, 462.52798pt x 346.89601pt>
-File: plot3.pdf Graphic file (type pdf)
-<use plot3.pdf>
-Package luatex.def Info: plot3.pdf  used on input line 55. on input line 55.
-Package luatex.def Info: Requested size: 462.52684pt x 346.89516pt on input line
- 55.
-
-Overfull \hbox (44.27129pt too wide) in paragraph at lines 55--56
- [][] 
- []
-
-[7<./plot2.pdf>]) (./content/diskussion.tex)
-
-LaTeX Warning: Empty bibliography on input line 23.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
-[8<./plot3.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
- (./main.aux
-Language ngerman already loaded; id is 8)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
-Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 84D24E60CEE238835688AD62807FA35A;5820.
-Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 49666A6D48C929DFE77220093E9E6183;571.
+) (./content/durchfuehrung.tex [3]
+<Rechteck.png, id=50, pagebox=cropbox, 572.1375pt x 330.23375pt>
+File: Rechteck.png Graphic file (type png)
+<use Rechteck.png>
+Package luatex.def Info: Rechteck.png  used on input line 13. on input line 13.
+Package luatex.def Info: Requested size: 345.07481pt x 199.16928pt on input line
+ 13.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Citation 'Schwingungen' on page 4 undefined on input line 14.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
+LaTeX Warning: Citation 'Schwingungen' on page 4 undefined on input line 14.
 
-Package logreq Info: Writing requests to 'main.run.xml'.
 
-\openout1 = main.run.xml
-)
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Dreieck.png, id=51, pagebox=cropbox, 556.0775pt x 356.33125pt>
+File: Dreieck.png Graphic file (type png)
+<use Dreieck.png>
+Package luatex.def Info: Dreieck.png  used on input line 39. on input line 39.
+Package luatex.def Info: Requested size: 310.81581pt x 199.16928pt on input line
+ 39.
+
+LaTeX Warning: Citation 'Schwingungen' on page 4 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'Schwingungen' on page 4 undefined on input line 40.
+
+[4<./Spektrum.png>] [5<./Rechteck.png><./Dreieck.png>]
+
+LaTeX Warning: File `Sägezahn.png' not found on input line 71.
+
+
+! Package luatex.def Error: File `Sägezahn.png' not found: using draft setting
+.
+
+See the luatex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71   \includegraphics[height=7cm]{Sägezahn.png}
+                                                
+? X
+
 
 Here is how much of LuaTeX's memory you used:
- 40625 strings out of 494472
- 100000,1648299 words of node,token memory allocated
- 610 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 13 attribute, 75 glue_spec, 13 attr
-ibute_list, 1 write nodes
-   avail lists: 1:1,2:831,3:102,4:22,5:269,6:2197,7:873,8:70,9:252,10:9,11:284
- 43531 multiletter control sequences out of 65536+600000
- 109 fonts using 27472119 bytes
- 61i,15n,104p,8833b,2931s stack positions out of 5000i,500n,10000p,200000b,100000s
-<c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/te
-xlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/tex
-live/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/201
-7/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/texlive/2017
-/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/texlive/2017/
-texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2017/texmf
--dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2017/texmf-dist
-/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2017/texmf-dist/fonts/op
-entype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (8 pages, 104526 bytes).
+ 40521 strings out of 494472
+ 100000,1648299 words of node,token memory allocated 8987 words of node memory still in use:
+   284 hlist, 38 vlist, 37 rule, 12 disc, 3 local_par, 2 dir, 58 math, 212 glue,
+ 99 kern, 22 penalty, 318 glyph, 182 attribute, 89 glue_spec, 182 attribute_list
+, 2 temp, 7 if_stack, 1 write, 2 pdf_dest nodes
+   avail lists: 2:181,3:84,4:26,5:155,6:1876,7:224,8:45,9:81,10:7,11:272
+ 43487 multiletter control sequences out of 65536+600000
+ 99 fonts using 24632431 bytes
+ 61i,16n,104p,8833b,2931s stack positions out of 5000i,500n,10000p,200000b,100000s
 
-PDF statistics: 323 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 131072)
- 49 words of extra memory for PDF output out of 10000 (max. 100000000)
+warning  (pdf backend): unreferenced destination with name 'section.5'
+
+warning  (pdf backend): unreferenced destination with name 'subsection.4.1'
+
+warning  (pdf backend): unreferenced destination with name 'section.4'
+<c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texl
+ive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/texli
+ve/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/texliv
+e/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/201
+7/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2017/tex
+mf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2017/texmf-dist/f
+onts/opentype/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (5 pages, 109512 bytes).
+
+PDF statistics: 117 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
