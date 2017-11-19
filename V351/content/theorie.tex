@@ -15,14 +15,14 @@ ursprünglichen Startwert annehmen, so dass
   \label{eqn:period}
 \end{align}
 gilt. Häufig auftretende Funktion sind hierbei Sinus- und Cosinusfunktion,
-welche durch eine bestimmte Amplitude a bzw. b und eine Periodendauer T
+welche durch eine bestimmte Amplitude $a_n$ bzw. $b_n$ und eine Periodendauer T
 charakterisiert sind.
-Das Fouriersche Theorem besagt zudem, das ein Großteil der stetigen periodischen
+Das Fouriersche Theorem besagt zudem, dass ein Großteil der stetigen periodischen
 Funktionen aus der Summation mehrer dieser Funktion zusammensetzen lässt gemäß
 der Gleichung
 \begin{equation}
-   f(t)= \frac{1}{2}a_0 + \sum_{n=1}^\infty (a_n \cos n \frac{2 \pi}{T}t
-   + b_n \sin n \frac{2 \pi}{T}t)
+   f(t)= \frac{1}{2}a_0 + \sum_{n=1}^\infty \left(a_n \cos n \frac{2 \pi}{T}t
+   + b_n \sin n \frac{2 \pi}{T}t\right)
 \end{equation}
 wobei die Reihe gleichmäßig konvergent ist. Die entsprechenden Amplituden
 berechnen sich durch
@@ -36,7 +36,7 @@ Grundfrequenz $\nu = \frac{1}{T} $ auf, welche auch als harmonische Oberwellen
 bezeichnet werden. Trägt man diese gegen ihre jeweilige Amplitude auf, ergibt
 sich daraus ein diskretes Linienspektrum, wie es in Abbildung
 \ref{fig:spektrum} zu sehen ist.
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{Spektrum.png}
   \caption{Linienspektrum einer Fourier-Ananlyse \cite{skript}}
@@ -44,8 +44,7 @@ sich daraus ein diskretes Linienspektrum, wie es in Abbildung
 \end{figure}
 Handelt es sich bei der zu approximiernden Funktion f(t) nicht um eine
 stetige Funktion, so kommt es zu endlichen Abweichungen der Reihe,
-was auch als Gibbssches Phänomen bezeichnet wird.
-
+was auch als Gibbssches Phänomen bezeichnet wird. \\
 Soll hingegen eine nicht periodische zeitliche Funktion in ihr
 Frequenzspektrum zerlegt werden wird statt der Fourier-Reihe die
 Fourier-Transformation der Form

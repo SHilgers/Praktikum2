@@ -8,7 +8,7 @@ und Sägezahn-Schwingungen, bestimmt. Dazu werden diese zur Vereinfachung so def
 dass es sich entweder nur um gerade oder ungerade Funktionen handelt.
 
 \subsubsection{Rechteck-Schwingung}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{Rechteck.png}
   \caption{Rechteckschwingung \cite{Schwingungen}}
@@ -23,9 +23,9 @@ Definition:
 \end{equation}
 Da es sich um eine ungerade Funktion handelt, gilt $a_n = 0 $
 \begin{align*}
-  b_n &= \frac{1}{T} \int_{-T}^{T} f(t) \sin (\frac{n\pi}{T} t)dt \\
-  &= \frac{2}{T} \int_0^T A \sin (\frac{n\pi}{T} t)dt \\
-  &= \frac{2A}{n\pi} [-\cos \frac{n\pi}{T} t]_0^T \\
+  b_n &= \frac{1}{T} \int_{-T}^{T} f(t) \sin \left(\frac{n\pi}{T} t\right)dt \\
+  &= \frac{2}{T} \int_0^T A \sin \left(\frac{n\pi}{T} t\right)dt \\
+  &= \frac{2A}{n\pi} \left[-\cos \frac{n\pi}{T} t \right]^T_0 \\
   &= \frac{2A}{n\pi} (1-\cos (n\pi)) = \frac{2A}{n\pi}(1-(-1)^n) \\
   \implies b_n &= \begin{cases}
         0  , &\text{n gerade} \\
@@ -34,7 +34,7 @@ Da es sich um eine ungerade Funktion handelt, gilt $a_n = 0 $
   \end{align*}
 
   \subsubsection{Dreieck-Schwingung}
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centering
     \includegraphics[height=7cm]{Dreieck.png}
     \caption{Dreieckschwingung \cite{Schwingungen}}
@@ -49,14 +49,14 @@ Da es sich um eine ungerade Funktion handelt, gilt $a_n = 0 $
   \end{equation}
   Da es sich um eine gerade Funktion handelt, gilt $ b_n = 0$
   \begin{align*}
-    a_n &= \frac{1}{T} \int_{-T}^T f(t) \cos ( \frac{n\pi}{T} t) dt \\
-    &= \frac{1}{T} \int_{-T}^T f(t) (\frac{-2A}{T} \lvert t\rvert)
-    \cos (\frac{n\pi}{T} t) dt \\
-    &= \frac{2}{T} \int_0^T \frac{-2A}{T} t \cos (\frac{n\pi}{T} t) dt \\
-    &= -\frac{4A}{T^2} \int_0^T \cos (\frac{n\pi}{T} t) t dt \\
-    &= -\frac{4A}{T^2} ([\frac{Tt}{n\pi} \sin(\frac{n\pi}{T}t)]_0^T)
-    - \frac{T}{n\pi} \int_0^T sin(\frac{n\pi}{T}t)dt ) \\
-    &= -\frac{4A}{T^2} (\frac{-T^2}{(n\pi)^2}[-\cos(\frac{n\pi}{T}t)]) \\
+    a_n &= \frac{1}{T} \int_{-T}^T f(t) \cos \left( \frac{n\pi}{T} t\right) dt \\
+    &= \frac{1}{T} \int_{-T}^T f(t) \left(\frac{-2A}{T} \lvert t\rvert\right)
+    \cos \left(\frac{n\pi}{T} t\right) dt \\
+    &= \frac{2}{T} \int_0^T \frac{-2A}{T} t \cos \left(\frac{n\pi}{T} t\right) dt \\
+    &= -\frac{4A}{T^2} \int_0^T \cos \left(\frac{n\pi}{T} t\right) t dt \\
+    &= -\frac{4A}{T^2} \left(\left[\frac{Tt}{n\pi} \sin \left(\frac{n\pi}{T}t\right)\right]_0^T\right)
+    - \frac{T}{n\pi} \int_0^T sin\left(\frac{n\pi}{T}t\right)dt \\
+    &= -\frac{4A}{T^2} \left(\frac{-T^2}{(n\pi)^2}\left[-\cos\left(\frac{n\pi}{T}t\right)\right]\right) \\
     &= -\frac{4A}{(n\pi)^2} (cos(n\pi)-1) \\
     &= \frac{4A}{(n\pi)^2} ((-1)^n-1) \\
     \implies a_n &= \begin{cases}
@@ -66,7 +66,7 @@ Da es sich um eine ungerade Funktion handelt, gilt $a_n = 0 $
 \end{align*}
 
 \subsubsection{Sägezahn-Schwingung}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{Saegezahn.png}
   \caption{Sägezahnschwingung \cite{Schwingungen}}
@@ -81,10 +81,10 @@ Definition:
 \end{equation}
 Da es sich um eine ungerade Funktion handelt, gilt $a_n = 0 $
 \begin{align*}
-  b_n &= \frac{1}{T} \int_{-T}^T f(t) \sin (\frac{n\pi}{T}t) dt \\
-  &= \frac{-2A}{T^2} \int_0^T tsin( \frac{n\pi}{T}t) dt \\
-  &= \frac{-2A}{T^2} [- \frac{tT}{n\pi} \cos (\frac{n\pi}{T}t)
-  +\frac{T^2}{(n\pi)^2} \sin (\frac{n\pi}{T}t)]_0^T \\
+  b_n &= \frac{1}{T} \int_{-T}^T f(t) \sin \left(\frac{n\pi}{T}t\right) dt \\
+  &= \frac{-2A}{T^2} \int_0^T tsin\left( \frac{n\pi}{T}t\right) dt \\
+  &= \frac{-2A}{T^2} \left[- \frac{tT}{n\pi} \cos \left(\frac{n\pi}{T}t\right)
+  +\frac{T^2}{(n\pi)^2} \sin \left(\frac{n\pi}{T}t\right)\right]_0^T \\
   &= \frac{2A}{n\pi}(cos(n\pi)) \\
   &= \frac{2A}{n\pi}(-1)^n \\
   \implies b_n &= \begin{cases}
@@ -104,7 +104,7 @@ wird für alle drei Schwingungsformen getrennt durchgeführt und die Messwerte
 werden notiert. Der Versuchsaufbau ist in Abbildung \ref{fig:Aufbau} grob
 skizziert.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=15cm]{Aufbau.png}
   \caption{Versuchsaufbau \cite{skript}}
