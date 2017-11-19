@@ -11,7 +11,13 @@ Die Amplituden werden nun doppeltlogarithmisch gegen die Anzahl der Oberwellen
 aufgetragen, anschließend wird eine Ausgleichsgerade und deren Steigung $a$ berechnet.
 An den in der Vorbereitung berechneten Fourier-Koeffizienten %label
 kann die erwartete Steigung der Ausgleichsgerade abgelesen werden, da diese
-entweder mit $\frac{1}{n}$ oder $\frac{1}{n²}$ abfallen.
+entweder mit $\frac{1}{n}$ oder $\frac{1}{n²}$ abfallen. Dieser
+Zusamenhang wird in folgender Rechnung deutlich:
+\begin{align*}
+  y &\Leftrithtarrow B*x^{-a}\\
+  \ln(y) &\Leftrigthtarrow \ln(B)+\ln(x^{-a})\\
+  \ln(y) &\Leftrigthtarrow \ln(B)-a\ln(x).
+\end{align*}
 Somit sind folgende Steigungen zu erwarten: \\
 
 \begin{align*}
@@ -62,6 +68,31 @@ Die Steigung der Sägezahnspannung beträgt
 \end{align*}
 Nach \eqref{eqn:abw} ergibt sich eine Abweichung von 2,2\%.
 
+\subsection{Fourier-Synthese}
+Bei der Fourier-Synthese werden die Spannungen aus einer endlichen Anzahl von
+Spannungsanplituden zusammengesetzt, so ergeben sich die folgenden Spannungsbilder.
+\begin{figure}[H]
+  \includegraphics{Rechteck.BMP}
+  \caption{Synthetisierte Rechteckspannung.}
+  \label{fig:Rechteck}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics{Dreieck.BMP}
+  \caption{Synthetisierte Dreieckspannung.}
+  \label{fig:Dreieck}
+\end{figure}
+
+\begin{figure}
+  \includegraphics{Säge.BMP}
+  \caption{Synthetisierte SäSägezahnspannung.}
+  \label{fig:Säge}
+\end{figure}
+
+Die Dreieckspannung \ref{fig:Dreieck} lässt sich trotz der wenigen Spannungsamplituden
+gut approximieren. Die Rechteckspannung \ref{Rechteck} und auch die
+Sägezahnspannung \ref{Säge} dagegen zeigen größere Abweichungen, besongers
+an den unstetigen Punkten.
 
 %\begin{figure}
 %  \centering
