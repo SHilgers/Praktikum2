@@ -1,0 +1,91 @@
+\section{Zielsetzung}
+In diesem Versuch wird zunächst die Zeitkonstante eines RC-Kreises bestimmt.
+Anschließend wird die Amplitude der Kondensatorspannung in Abhängigkeit der Frequenz und
+die Phasenverschiebung von Kondensator- und Generatorspannung ebenfalls in Abhängigkeit der
+Frequenz gemessen. Zum Schluss wird gezeigt, dass der RC-Kreis Spannungen
+integrieren kann.
+
+\section{Theorie}
+Ein System zeigt ein Relaxationsverhalten, wenn es aus seinem Ausgangszustand
+ausgelenkt wurde und nicht-oszillatorisch in diesen zurückkerhrt. Dabei ist die
+Änderungsgeschwindigkeit der Größe $A$ zum Zeitpunkt $t$ meist proportional zur
+Abweichung von A zum Endzustand A(\infty)
+\begin{equation}
+  \frac{dA}{dt} = c[A(t)-A(\infty)].
+  \label{eqn:diff1}
+\end{equation}
+Duch Integration diese Gleichung von 0 bis $t$ folgt
+\begin{equation}
+  A(t)=A(\infty)+[A(0)-A(\infty)] \cdot \exp{ct}
+\end{equation}
+womit A zum Zeitpunkt $t$ berechnet weden kann.
+Dabei muss c<0 gelten, damit A beschränkt bleibt. \\
+
+Ein Beipiel für Relaxationsvorgänge ist das Auf- und Endladen eines Kondensators
+über einen Widerstand.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=5cm]{RC.JPG}
+  \cite{skript}
+  \caption{Entladung (Stellung 1) und Aufladung (Stellung 2) eines RC-Kreises.}
+  \label{fig:RC}
+  \end{figure}
+
+\textbf{Entladung eines Kondensators}\\
+\label{sec:Entladung}
+Für die Spannung $U_{C}$ am Kondensator mit der Kapazizät C und der Ladung Q gilt:
+\begin{equation}
+  U_{C} = \frac{Q}{C}.
+  \label{Spannung}
+\end{equation}
+Mit Hilfe des ohmschen Gesetzes $U=R\cdot I$ und der Beziehung $\dot{Q}=I$
+folgt aus \eqref{eqn:Spannung} eine Differentialgleichung für die Ladung des
+Kondensators.
+\begin{equation}
+  \frac{dQ}{dt}=- \frac{1}{RC}\; Q/t)
+  \label{eqn:diff2}
+\end{equation}
+Diese Differentialgleichung hat die gleiche Gestallt wie Gleichung \eqref{eqn:diff1}.
+Mit der Annahme, dass der Kondensator nach $t \to \infty$ entladen ist, folgt
+nach Integration
+\begin{equation}
+  Q(t)=Q(0)\exp{\frac{-1}{RC}}.
+  \label{eqn:entladung}
+\end{equation}
+
+\textbf{Aufladen eines Kondensators} \\
+Ähnlich wie in Abschnitt \ref{sec:Theorie} kann eine Gleichung für den
+Aufladevorgang des Kondensators hergeleitet werden. Hier gelten die
+Randbedingungen $Q(0)=0$ und $Q(\infty)=CU_{0}$. Somt ergibt sich
+für den Aufladevorgang mit einer äußeren Spannungsquelle der Spannung $U_{0}$
+die Gleichung
+\begin{equation}
+  Q(t)=CU_{0}(1-\exp{\frac{-t}{RC}}).
+  \label{aufladen}
+\end{equation}
+Dabei wird der Ausdruck RC als Zeitkonstante des Relaxationsvorganges bezeichnet,
+er ist ein Maß für die Geschwindigkeit, mit der das System seinem Endzusand entgegenstrebt.\\
+\\
+
+Wenn ein System von außen periodisch aus seiner Gleichgewichtslage ausgelenkt wird
+treten ebenfalls Relaxationsvorgänge auf. In dem Beipiel des RC-Kreises wird
+das System mit einer Wechselspannung ausgelenkt, wie in Abbildung \ref{fig:RCsin}
+zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=5cm]{RCsin.JPG}
+  \caption{Periodische Anregung eines RC-Kreises.}
+  \label{fig:RCsin}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\label{sec:Theorie}
+
+%\cite{sample}
