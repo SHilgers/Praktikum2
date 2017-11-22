@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.9.25)  21 NOV 2017 18:34
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.9.25)  22 NOV 2017 20:25
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.218 seconds
+luaotfload | main : initialization completed in 0.234 seconds
 Babel <3.13> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex (c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/09/07 v3.24 KOMA-Script document class (article)
@@ -2247,37 +2247,37 @@ Language ngerman already loaded; id is 8)
  [2
 
 ] (./content/theorie.tex
-Underfull \hbox (badness 10000) in paragraph at lines 20--23
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-<RC.JPG, id=31, pagebox=cropbox, 350.81062pt x 156.585pt>
+<RC.JPG, id=40, pagebox=cropbox, 350.81062pt x 156.585pt>
 File: RC.JPG Graphic file (type jpg)
 <use RC.JPG>
-Package luatex.def Info: RC.JPG  used on input line 28. on input line 28.
+Package luatex.def Info: RC.JPG  used on input line 29. on input line 29.
 Package luatex.def Info: Requested size: 318.73497pt x 142.26378pt on input line
- 28.
+ 29.
 
-LaTeX Warning: Reference `eqn:Spannung' on page 3 undefined on input line 42.
+LaTeX Warning: Reference `eqn:Spannung' on page 3 undefined on input line 43.
 
 [3<./RC.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
-<RCsin.JPG, id=50, pagebox=cropbox, 414.04688pt x 191.21437pt>
+<RCsin.JPG, id=58, pagebox=cropbox, 414.04688pt x 191.21437pt>
 File: RCsin.JPG Graphic file (type jpg)
 <use RCsin.JPG>
-Package luatex.def Info: RCsin.JPG  used on input line 76. on input line 76.
+Package luatex.def Info: RCsin.JPG  used on input line 77. on input line 77.
 Package luatex.def Info: Requested size: 308.0641pt x 142.26378pt on input line 
-76.
-) (./content/durchfuehrung.tex) (./content/auswertung.tex)
-(./content/diskussion.tex) [4<./RCsin.JPG>]
+77.
+[4<./RCsin.JPG>]) (./content/durchfuehrung.tex) (./content/auswertung.tex)
+(./content/diskussion.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
  [5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
@@ -2285,24 +2285,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
 Language ngerman already loaded; id is 8)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
+Package rerunfilecheck Info: File `main.aux' has not changed.
+(rerunfilecheck)             Checksum: BCC3263B9952BC48A9D0FFFD32DFCCC6;6961.
+Package rerunfilecheck Info: File `main.toc' has not changed.
+(rerunfilecheck)             Checksum: 063CA069FD9387C8BCCA5BBECE9FCC24;854.
 
-
-Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: 82F7F4E012B4FF3993A31EAA27FA0A7D;4343
-(rerunfilecheck)             After:  CA07A3DDD2AE3853E31603E6D987297F;4673.
-
-Package rerunfilecheck Warning: File `main.toc' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `main.toc':
-(rerunfilecheck)             Before: 359D033FCE27A30E025AD025ECC3E42D;491
-(rerunfilecheck)             After:  0029BCA0EEFCAC1C6ACC57E7A22FB327;555.
 
 LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please rerun LaTeX.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 
@@ -2310,15 +2299,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40556 strings out of 494472
+ 40574 strings out of 494472
  100000,1648299 words of node,token memory allocated
- 621 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 18 attribute, 75 glue_spec, 18 attr
+ 670 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 29 attribute, 76 glue_spec, 29 attr
 ibute_list, 1 write nodes
-   avail lists: 1:1,2:334,3:102,4:22,5:161,6:1368,7:331,8:46,9:119,10:10,11:176
- 43503 multiletter control sequences out of 65536+600000
- 96 fonts using 24355579 bytes
- 61i,7n,104p,8833b,2998s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:1,2:309,3:91,4:22,5:168,6:1713,7:380,8:49,9:122,10:10,11:219
+ 43512 multiletter control sequences out of 65536+600000
+ 97 fonts using 24447907 bytes
+ 61i,7n,104p,8833b,2707s stack positions out of 5000i,500n,10000p,200000b,100000s
 <c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf><c:/te
 xlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf><c:/tex
 live/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/201
@@ -2327,10 +2316,10 @@ live/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/201
 f-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2017/texmf-dis
 t/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2017/texmf-dist/fonts/o
 pentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (5 pages, 78834 bytes).
+Output written on main.pdf (5 pages, 85217 bytes).
 
-PDF statistics: 138 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 131072)
- 49 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 161 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 131072)
+ 73 words of extra memory for PDF output out of 10000 (max. 100000000)
 
