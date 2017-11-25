@@ -1,7 +1,9 @@
 \section{Auswertung}
 \subsection{Bestimmung der RC-Konstanten durch die Entladungskurve}
 In der Abbildung %\ref{fig:kurve}
-ist die zur Ausmessung verwendete Entladungskurve des Kondensators zu sehen.
+ist die zur Ausmessung verwendete Entladungskurve des Kondensators, welcher
+durch einen Generator mit der der Frequenz von $\nu$ = 50 $\si{\hertz}$ mit
+ U =12.00 $\si{\volt}$ aufgeladen wurde, zu sehen.
 \begin{figure}[H]
   \centering
   \includegraphics{kurve}
@@ -12,3 +14,154 @@ In Tabelle \ref{tab:tabe1} sind die aus ihr gewonnenen Messwertpaare zusammen mi
 dem Verhältniss $ \frac{U}{U_0} $ und dessen Logarithmus, welcher zur
 Auswertung nötig ist, abzulesen.
 \input{tabelle1.tex}
+Zur Bestimmung der RC-Konstante wird dann der Logarithmus des Verhältnisses gegen
+die Zeit in einem halblogarithmischen Diagramm aufgetragen, wie in Abbildung
+\ref{fig:gerade} zu sehen ist, und eine lineare Ausgleichsrechnung durchgeführt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Halblogaritmisches Diagramm des Entladevorgangs}
+  \label{fig:gerade}
+\end{figure}
+Hieraus ergeben sich für die Steigung a und den y-Achsenabschnitt die Parameter
+\begin{align*}
+  a&= \SI{-1.0513(15)}{1\per\milli\second} \\
+  b&= -0.057 \pm 0.016
+\end{align*}
+Nach Umstellen der Gleichung \ref{eqn:entladung} ergibt sich für die RC Konstante:
+\begin{equation}
+  \text{RC} = -\frac{t}{\log\left({\frac{U}{U_0}}\right)} = -\frac{1}{a} =
+  \SI{0.951(14)}{\milli\second}
+\end{equation}
+\subsection{Bestimmung der RC-Konstanten durch Anregung mit einer Sinusspannung}
+Eine weiter Methode zur Bestimmung der RC-Konstanten ist das Anlegen einer
+Sinusspannung, wobei die Frequenz $ \nu $ variiert wird und die entsprechenden
+Amplituden gemessen, wie in Tabelle \ref{tab:tabe2} zu sehen ist.
+\input{tabelle2.tex}
+Mit der normierten Spannung wird dann eine Ausgleichsrechnung mit der Funktion
+\begin{equation}
+  f(x)= \frac{1}{\sqrt{1+a\cdot x^2}}
+\end{equation}
+durchgeführt, wie in dem halblogarithmischen Diagramm \ref{fig:Ampl} zu sehen ist.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Frequenzabhängigkeit der Amplitude}
+  \label{fig:Ampl}
+\end{figure}
+Für den Parameter a ergibt sich daraus:
+\begin{equation*}
+  a= \SI{6.34(98)e-6}{1\per\second}
+\end{equation*}
+Aus der Gleichung \ref{eqn:amplitude} ergibt sich für die RC-Konstante
+somit:
+\begin{equation}
+  RC = \sqrt{b} =\SI{2.52(20)}{\milli\second}
+\end{equation}
+\subsection{Bestimmung der RC-Konstanten durch die Phasenverschiebung}
+Im dritten Versuchsteil wird die Phasenverschiebung zwischen der Spannung
+des Generators und des RC-Glieds verwendet um die RC-Konstante zu bestimmen. Dazu
+werden die zeitliche Verschiebung $a$ und die Schwingungslänge $b$ gemessen,
+woraus sich mit
+\begin{equation}
+  \phi = \frac{a}{b} \cdot 2\pi
+\end{equation}
+die Phasenverschiebung berechnen lässt, wie in Tabelle \ref{tab:tabe3}
+dargestellt ist.
+\input{tabelle3.tex}
+Anschließend wird wieder eine Ausgleichsrechnung durchgeführt, diesmal mit der
+Funktion
+\begin{equation}
+  f(x) = arctan (c \cdot x)
+\end{equation}
+Hieraus ergibt sich für den Parameter c
+\begin{equation*}
+  c = \SI{4.85(33)e-3}{\second}
+\end{equation*}
+Aus Gleichung \ref{eqn:phi} folgt somit
+\begin{equation}
+   RC = c = \SI{4.85(33)}{\milli\second}
+\end{equation}
+Die Ausgleichsfunktion ist zusammen mit den Wertepaaren in dem halblogarithmischen
+Diagramm \ref{fig:phase} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Frequenzabhängigkeit der Phasenverschiebung}
+  \label{fig:phase}
+\end{figure}
+
+Mit den nun bereits vorhandenen Messwerten aus den Tabellen \ref{tab:tabe2}
+und \ref{tab:tabe3} lässt sich nun ein Polar-Plot erstellen(Abbildung \ref{fig:polar}),
+in welchem die Messwerte zusammen mit der Theoriekurve dargestellt werden.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot4.pdf}
+  \caption{Polare Darstellung der Amplitude und Phasenverschiebung}
+  \label{fig:polar}
+\end{figure}
+
+\subsection{Der RC-Kreis als Integrator}
+Schlussendlich soll noch gezeigt werden, dass der RC-Kreis als Integrator
+fungieren kann, was durch die folgenden Grafiken deutlich wird. Dabei ist die
+Generatorfrequenz in gelb und die resultierende Frequenz des RC-Kreises in blau
+dargestellt. Zu beachten ist, dass hierbei unterschiedliche Skalierungen
+vorgenommen wurden.
+
+\subsubsection{Sinusschwingen}
+Eine Sinusspannung der Form
+\begin{equation*}
+  f(x) = a\cdot \sin{x}
+\end{equation*}
+ergibt durch Integration die Stammfunktion
+\begin{equation*}
+  F(x) = -a\cdot \cos{x} + C
+\end{equation*}
+\begin{figure}[H]
+  \centering
+  \includegraphics{sinus.png}
+  \caption{Integration der Sinusspannung}
+  \label{fig:sinus}
+\end{figure}
+\subsubsection{Dreieckspannung}
+Eine Dreieckspannung der Form
+\begin{equation*}
+  f(x) = \begin{cases}
+         b \cdot x  , & -a < x < a \\
+         -b \cdot x  , & a < x < 3a
+       \end{cases}
+\end{equation*}
+ergibt durch Integration die Stammfunktion
+\begin{equation*}
+  F(x) = \begin{cases}
+         \frac{b}{2} \cdot x^2  , & -a < x < a \\
+         -\frac{b}{2} \cdot x^2  , & a < x < 3a
+       \end{cases}
+\end{equation*}
+\begin{figure}[H]
+  \centering
+  \includegraphics{Dreieck.png}
+  \caption{Integration der Dreieckspannung}
+  \label{fig:dreieck}
+\end{figure}
+\subsubsection{Rechteckspannung}
+Eine Rechteckspannung der Form
+\begin{equation*}
+  f(x) = \begin{cases}
+         b , & 0 < x < a \\
+         -b , & a < x < 2a
+       \end{cases}
+\end{equation*}
+ergibt durch Integration die Stammfunktion
+\begin{equation*}
+  f(x) = \begin{cases}
+         b \cdot x , & 0 < x < a \\
+         -b \cdot x, & a < x < 2a
+       \end{cases}
+\end{equation*}
+\begin{figure}[H]
+  \centering
+  \includegraphics{rechteck.png}
+  \caption{Integration der Rechteckspannung}
+  \label{fig:rechteck}
+\end{figure}
