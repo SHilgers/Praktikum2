@@ -18,7 +18,7 @@ t=np.linspace(0, 1.800)
 
 plt.plot (a, d, 'rx', label='Messwerte')
 plt.plot(t, f(t, *params), 'b-' ,label='Lineare Regression')
-plt.xlabel( r'$t \:/\: \mu s$')
+plt.xlabel( r'$t \:/\: ms$')
 plt.ylabel(r'$ln(\frac{U_C}{U_0})$')
 plt.legend()
 
