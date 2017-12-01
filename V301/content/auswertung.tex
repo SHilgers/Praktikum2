@@ -1,0 +1,80 @@
+\section{Auswertung}
+Die zu Beginn gemessene Leerlaufspannung $U_{0}$ der Monozelle und der
+Innenwiderstand $R_{V}$ des Voltmeters lauten:
+\begin{align*}
+  U_{0} &= \SI{1,53}{\volt} \\
+  R_{V} &\approx \SI{10}{\Mohm}.
+\end{align*}
+\noindent Um den Innenwiderstand $R_{i}$ und die Leerlaufspannung der Monozelle zu
+bestimmen, wird die Klemmspannung $U_{k}$ gegen den Belastunsstrom $I$ aufgetragen.
+Dies ist in Abbildung \ref{fig:plot1} zu sehen, die Steigung $a$ der Ausgleichsgeraden
+entspricht dabei dem Innenwiderstand $R_{i}$ und der y-Achsenabschnitt $b$ entspricht
+der Leerlaufspannung $U_{0}$.
+Die Messwerte dazu finden sich in Tallele \ref{tab:tabelle1}.
+\input{Tabelle1.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Lineare Regression der ersten Messung: Monozelle ohne Gegenspannung.}
+  \label{fig:plot1}
+\end{figure}
+
+\begin{align*}
+  -a &= R_{i} = \SI{0,017(000)}{\ohm} \\
+  b &= U_{0} = \SI{1,576(007)}{\volt}
+\end{align*}
+
+\noindent Die Berechnung des Innenwiderstandes $R_{i}$ und der Leerlaufspannung $U_{0}$ für
+die zweite Messung, die mit einer Gegenspannung an der Monozelle durchgeführt wurde,
+erfolgen äquivalent.
+\input{Tabelle2.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Lineare Regression der zweiten Messung: Monozelle mit Gegenspannung.}
+  \label{fig:plot2}
+\end{figure}
+
+\begin{align*}
+  a &= R_{i} = \SI{0,018(001)}{\ohm} \\
+  b &= U_{0} = \SI{1,593(074)}{\volt}
+\end{align*}
+
+\noindent Nun folgt die Messung einer Rechteck- und Sinusschwingung eines RC-Generators.
+Die Messwerte sind in Tabelle \ref{tab:tabelle3} und dargestellt.
+\input{Tabelle3.tex}
+Der Innenwiderstand $R_{i}$ und die Leerlaufspannung $U_{0}$ werden erneut über Lineare Regression
+bestimmt, dass ist in Abbildung \ref{fig:plot3} zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Lineare Regression der dritten Messung: Rechteckspannung ohne Gegenspannung.}
+  \label{fig:plot3}
+\end{figure}
+\begin{align*}
+  -a &= R_{i} = \SI{0,222(007)}{\ohm} \\
+  b &= U_{0} = \SI{6,610(145)}{\volt}
+\end{align*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot4.pdf}
+  \caption{Lineare Regression der vierten Messung: Sinusspannung ohne Gegenspannung.}
+  \label{fig:plot4}
+\end{figure}
+\begin{align*}
+  -a &= R_{i} = \SI{0,192(012)}{\ohm} \\
+  b &= U_{0} = \SI{10,743(149)}{\volt}
+\end{align*}
+
+
+
+
+\label{sec:Auswertung}
+
+%\begin{figure}
+%  \centering
+%  \includegraphics{plot.pdf}
+%  \caption{Plot.}
+%  \label{fig:plot}
+%\end{figure}
