@@ -8,5 +8,12 @@
 \contentsline {subsection}{\numberline {2.3}RC-Kreis als Integrator}{5}{subsection.2.3}
 \contentsline {section}{\numberline {3}Durchführung}{5}{section.3}
 \contentsline {section}{\numberline {4}Auswertung}{8}{section.4}
-\contentsline {section}{\numberline {5}Diskussion}{8}{section.5}
-\contentsline {section}{\nonumberline Literatur}{8}{section*.8}
+\contentsline {subsection}{\numberline {4.1}Bestimmung der RC-Konstanten durch die Entladungskurve}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Bestimmung der RC-Konstanten durch Anregung mit einer Sinusspannung}{10}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Bestimmung der RC-Konstanten durch die Phasenverschiebung}{12}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Der RC-Kreis als Integrator}{15}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Sinusschwingen}{15}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Dreieckspannung}{16}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}Rechteckspannung}{17}{subsubsection.4.4.3}
+\contentsline {section}{\numberline {5}Diskussion}{18}{section.5}
+\contentsline {section}{\nonumberline Literatur}{18}{section*.19}
