@@ -6,7 +6,7 @@ Dies wird mit verschiedenen Arten von Brückenschaltungen durchgeführt.
 \section{Theorie}
 Allgemein wird bei Brückenschaltungen die Potentialdifferenz zwischen zwei
 Punkten zweier getrennter stromduchflossener Leiter in Abhängigkeit des
-Widerstandsverhältnisses. Daher hat sie im allgemeinen eine Schaltung wie in
+Widerstandsverhältnisses gemessen. Daher hat sie im allgemeinen eine Schaltung wie in
 Abbildung \ref{fig:allg} dargestellt.
 \begin{figure}[H]
   \centering
@@ -33,10 +33,10 @@ ist die Summer über die Spannungen gleich Null.
 Aus diesen Gesetzen lässt sich folgender Zusammenhang für die Brückenspannung
 herleiten:
 \begin{equation}
-  U=\frac{R_{2}R{3}-R_{1}R{4}}{(R_{3}+R_{4})(R_{1}+R_{2})}U_{s}.
+  U=\frac{R_{2}R{3}-R_{1}R{4}}{(R_{3}+R_{4})(R_{1}+R_{2})}U_{S}.
   \label{eqn:ubrücke}
 \end{equation}
-Hier lässt sich erkennen, dass die Brückenspannung für die Bedingung
+Hieran lässt sich erkennen, dass die Brückenspannung für die Bedingung
 \begin{equation}
   R_{2}R_{3}=R_{1}R_{4}
   \label{eqn:rbrücke}
@@ -44,10 +44,10 @@ Hier lässt sich erkennen, dass die Brückenspannung für die Bedingung
 verschwindet. Ist das der Fall, wird die Brücke als abgeglichene Brücke bezeichnet.
 Da die Abgleichbedingung nur von den Widerständen abhängig ist, kann durch
 variieren dreier bekannter Widerstände (z.B. $R_{2}$,$R_{3}$,$R_{4}$)ein unbekannter
-Widerstand (z.B.$R_{1}$) ausgemessen werden. Die Genauigkeit der Messung ist davon
+Widerstand (z.B. $R_{1}$) ausgemessen werden. Die Genauigkeit der Messung ist davon
 abhängig wie genau die Widerstände (z.B. $R_{2}$,$R_{3}$,$R_{4}$) bekannt sind und wie
 ganau der Wert "Null" als Brückenspannung eingestellt werden kann.
-Die Abgleichbedingung ist unabhängig von der Speisespannung $U_{s}$, da
+Die Abgleichbedingung ist unabhängig von der Speisespannung $U_{S}$, da
 die Brückenspannung aber proportional zu dieser ist, sollte sie
 dennnoch hoch gewählt werden, um eine hohe Abgleichempfindlichkeit zu erhalten.
 
@@ -66,7 +66,7 @@ ergeben sich folgende Impedanzen.
   Z_{R} &= R\\
 \end{align*}
 
-Für eien Brückenschaltund mit Impedanzen lautet die Abgleichbedingung äqivalent zu
+\noindent Für eien Brückenschaltund mit Impedanzen lautet die Abgleichbedingung äqivalent zu
 \ref{eqn:rbrücke}:
 \begin{equation}
   Z_{2}Z_{3}=Z_{1}Z_{4}.
@@ -113,17 +113,17 @@ in Reihe geschaltet. Somit ergibt sich für einen realen Kondensator:
   \cite{skript}
 \end{figure}
 Mit dieser Brücke kann eine unbekannte Kapazität $C_{x}$ gemessen werden.
-Dabei ist neben dem Potentiometer ($\frac{R_{3}}{R_{4}}$) auch der Widerstand
+Dabei ist neben dem Potentiometer auch der Widerstand
 $R_{2}$ veränderlich.
 Aus der Abgleichbedingung \ref{eqn:zbrücke} ergibt sich
 \begin{align}
-  R_{x} &=R_{2}\frac{R_{3}}{R_{4}} \text und \\
+  R_{x} &=R_{2}\frac{R_{3}}{R_{4}} \;\;\;\;\text und \\
   C_{x} &=C_{2}\frac{R_{4}}{R_{3}}.
 \end{align}
 
 \subsection{Induktivitätsmessbrücke}
- Auch eine reale Induktivität wandelt einen Tei der Enrgie in Wärme um, daher wird äquivalent
- zum Kondensator ein Erstzschaltbild eingeführt, in dem ein ohmscherwiderstand in Reihe
+ Auch eine reale Induktivität wandelt einen Teil der Enrgie in Wärme um, daher wird äquivalent
+ zum Kondensator ein Erstzschaltbild eingeführt, in dem ein ohmscher Widerstand in Reihe
  zur Induktivität geschaltet wird.
  Daraus ergibt sich für die Impedanz einer realen Spule:
  \begin{equation}
@@ -133,18 +133,18 @@ Aus der Abgleichbedingung \ref{eqn:zbrücke} ergibt sich
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=8cm,height=6cm]{induktivitat.JPG}
+  \includegraphics[width=7cm,height=6cm]{induktivitat.JPG}
   \caption{Messbrücke für reale Induktivitäten.}
   \label{fig:induktivitat}
   \cite{skript}
 \end{figure}
 Aus der Abgleichbedingung \ref{eqn:zbrücke} ergibt sich
 \begin{align}
-  R_{x} &=R_{2}\frac{R_{3}}{R_{4}} \text und \\
+  R_{x} &=R_{2}\frac{R_{3}}{R_{4}} \;\;\;\; \text und \\
   L_{x} &=L_{2}\frac{R_{3}}{R_{4}}.
 \end{align}
 
-In dieser Schaltung sollte die Induktivität $L_{2}$ möglichst geringe Verluste besitzen und der
+\noindnent In dieser Schaltung sollte die Induktivität $L_{2}$ möglichst geringe Verluste besitzen und der
 Wirkanteil sollte nur durch den Widerstand $R_{2}$ erzeugt werden. Diese
 Forderungen sind bei niedrigen Frequenzen schwer zu realisieren, weshalb
 man heufig auf die Maxwell-Brücke ausweicht.
@@ -163,17 +163,17 @@ $R_{2}$ ist ein bekannter Widerstand.
 
 Aus den Abgleichbedingungen \ref{eqn:zbrücke} folgt:
 \begin{align}
-  R_{x} &=\frac{R_{2} R_{3}}{R_{4}} \text und \\
+  R_{x} &=\frac{R_{2} R_{3}}{R_{4}} \;\;\;\; \text und \\
   L_{x} &=R_{2}R_{3}C_{4}.
 \end{align}
 
-\noindent In den Bisher vorgestellten Brückenschaltugen sind die Abgleichbedingungen
+\noindent In den bisher vorgestellten Brückenschaltugen sind die Abgleichbedingungen
 unabhängig von der Frequenz der Speisespannung. Theoretisch sollten sich die Brücken bei jeder
-Frequenz abgleichen lassen, in der Praxis gibt es jedoch eine Frequenzbereich in dem
+Frequenz abgleichen lassen, in der Praxis gibt es jedoch einen Frequenzbereich in dem
 dies besonders gut funktioniert, dieser muss im Experiment ermittelt werden.
 Bei zu hohen Frequenzen wird der Einfluss der Streukapazitäten zu hoch, während
 bei zu niedrigen Frequenzen aufrund der Einschwingvorgänge mehrere Periodendauern
-warten muss bis sich eine stabile Brückenspannung einstellt.
+gewarten werden muss bis sich eine stabile Brückenspannung einstellt.
 Der optimale Frequenzbereich ist, wenn die BLind- und Wirkwiderstände in der
 Schaltung die gleiche Größenordnung besitzen.
 
@@ -188,7 +188,7 @@ keine Abgleichelemente.
   \cite{skript}
 \end{figure}
 
-Aus \ref{eqn:ubrücke} und \ref{zbrücke} erhält man, dass die Brückenspannung genau für
+Aus \ref{eqn:ubrücke} und \ref{eqn:zbrücke} erhält man, dass die Brückenspannung genau für
 \begin{equation*}
   \omega_{0}=\frac{1}{RC}
   \label{eqn:omega}
@@ -198,7 +198,7 @@ Zur Vereinfachung wird das Frequenzverhältnis $\Omega=\frac{\omega}{\omega_{0}}
 eingefürhrt, damit ergibt sich für das Verhältnis von Speise- zu Brückenspannung:
 \begin{equation}
   \Bigl|\frac{U_{Br}}{U_{s}}\Bigr|=\frac{((\Omega)^2-1)^2}{9(1-(\Omega)^2)^2+9(\Omega)^2}.
-  \label{eqn:bertag}
+  \label{eqn:betrag}
 \end{equation}
 An dieser Gleichung \ref{eqn:betrag} kann man erkennen, das die Wien-Robinson-Brücke
 die Funktion eines elektrischen Filters hat. Sie filtert aus einem kontiniuierlichem
@@ -209,7 +209,7 @@ Der Kirrfaktor gibt an, in welchem Maß die Grundschwingung von Oberwellen über
 wird. Eine Sinusschwingung sollte eigentlich keine Oberwellen beesitzen, doch mit realen
 Sinusgeneratoren ist dies nur schwer zu realisieren. Der Klirrfaktor dient deshalb
 als Maß für die Qualität eines Sinusgenerators.
-Den Klirrfaktor erhält man, indem am Sinusgenerator die Sperrfrequenz $\omega_{0d}$
+Den Klirrfaktor erhält man, indem am Sinusgenerator die Sperrfrequenz $\omega_{0}$
 der Wien-Robinson-Brücke eingestellt wird, somit bleiben nur die von $\omega_{0}$
 verschiedenen Frequenzen übrig.
 
@@ -230,7 +230,7 @@ die Speisespannung $U_{S}$ gegen Masse angeschlossen werden können.
 Mit Hilfe der Kirchhoffschen Gesetze erhält man folgenden Ausdruck für die
 Brückenspannung
 \begin{equation}
-  U_{Br}=U_{s}\frac{1-\omega^2 R^2C^2}{1-\omega^2 R^2C^2-4i\omega RC}.
+  U_{Br}=U_{S}\frac{1-\omega^2 R^2C^2}{1-\omega^2 R^2C^2-4i\omega RC}.
   \label{eqn:ubr}
 \end{equation}
 Für die Frequnz $\omega=\frac{1}{RC}$ verschwindet die Brückenspannung. Mit der
