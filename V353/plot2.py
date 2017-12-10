@@ -5,6 +5,7 @@ from uncertainties import ufloat
 
 a, b = np.genfromtxt('Werte2.txt', unpack=True)
 b=b/b[0]
+a=a*2*np.pi 
 def f(x, b):
     return 1/(1+x**2*b)
 
