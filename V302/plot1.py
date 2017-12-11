@@ -6,17 +6,23 @@ from uncertainties import ufloat
 a, b, c, d = np.genfromtxt('Werte8.txt', unpack=True)
 a=a/242
 def f(x):
-    return (((x**2)-1)**2)/((((1-x**2)**2)+9*x**2)*9)
+    return np.sqrt((x**2 -1)**2)
+def g(x):
+    return (3*((1-(x**2))**2 + 9*(x**2))**0.5)
+
+def h(x,y):
+    return x/y
 
 
 
-t=np.linspace(0.01, 1000)
+x=np.linspace(0.01, 100, 10000)
 plt.xscale('log')
-#plt.plot (a, d, 'rx', label='Messwerte')
-plt.plot(t, np.sqrt(f(t)), 'b-' ,label='Ausgleichsfunktion f(x)')
-plt.xlabel(r'$\nu\:/\:\mathrm{Hz}$')
-plt.ylabel(r'$ \frac{U_C}{U_0}$')
-plt.legend()
+plt.plot (a, d, 'rx', label='Messwerte')
+plt.plot(x,h(f(x),g(x)), 'b-' ,label='Ausgleichsfunktion f(x)')
+#plt.plot(x, np.sqrt(((x**2-1)**2)/(((1-x**2)**2+9*x**2)*9)))
+plt.xlabel(r'$\frac{\nu}{\nu_0}$')
+plt.ylabel(r'$ \frac{U_b}{U_s}$')
+plt.legend(loc="lower right")
 plt.tight_layout()
 plt.savefig('plot.pdf')
 plt.show()

@@ -97,7 +97,7 @@ ergibt sich somit
 \end{equation*}
 mit den Fehlern aus Gleichung \ref{eqn:gaus}, da die Mittelwertfehler aus Gleichung
 \ref{eqn:mitf} mit
-$ \pm 3.8 \si{\ohm} $ für $ \text{R}_{x16} $und $ \pm 0.076 \si{\milli\henry} $
+$ \pm 3.8 \si{\ohm} $ für $ \text{R}_{x16} $ und $ \pm 0.076 \si{\milli\henry} $
 für $ \text{L}_{x16} $ jeweils kleiner sind.
 
 \subsection{Maxwell-Brücke}
@@ -141,5 +141,21 @@ und somit
 
 \subsection{Klirrfaktorbestimmung}
 
-Wird angenommen, dass die Oberwellen nur aus der zweiten Oberwelle bestehen, ergibt
-sich der Klirrfaktor zu:
+Das Minimum der Frequenz liegt bei einer Frequenz von 242 $\si{\hertz}$
+mit einer Brückenspannung $\text{U}_b = 0.016 \si{\volt} \: \text{und} \:
+\text{U}_s = 4.48 \si{\volt} $.
+Durch die Gleichung %\ref{eqn:}
+ergibt sich f(2) zu
+\begin{equation*}
+  f(\Omega =2) = \sqrt{\frac{1}{9} \cdot \frac{\left(\Omega^2-1\right)^2}{\left(1-\Omega^2
+  \right)^2+9\Omega^2}} = \sqrt{\frac{1}{9} \cdot \frac{(3)^2}{(-3)^2+36}} =
+  \frac{1}{\sqrt{45}}
+\end{equation*}
+Daraus folgt, dass
+\begin{equation*}
+  \text{U}_2 = \frac{\text{U}_b}{f(2)} = \SI{2.385}{\milli\volt}
+\end{equation*}
+und schlussendlich mit Gleichung %\ref{}
+\begin{equation*}
+  \text{k}= \frac{\text{U}_2}{text{U}_1} = 0.149
+\end{equation*}
