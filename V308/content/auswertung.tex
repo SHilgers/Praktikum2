@@ -1,11 +1,32 @@
 \section{Auswertung}
-
+\subsection{Daten}
+Hier sind die Daten der verwendeten Spulen
+aufgelistet.\\
+\noindent Ringspule mit Luftspalt:\\
+\begin{align*}
+  &\text{Breite Luftspalt:} d=3mm &\text{Windungszahl:} n=595
+\end{align*}
+\noindent Helmholzspulen:\\
+\begin{align*}
+  &\text{Windungszahl:}(je) n=100 &\text{Spulenbreite:} b=33mm\\
+  &\text{Durchmesser:} d=125mm
+\end{align*}
+Lange Spule:\\
+\begin{align*}
+  &\text{Windungszahl:} n=300 &\text{Länge:} l=16cm\\
+  &\text{Durchmesser:} d=41mm
+\end{align*}
+Kurze Spule:\\
+\begin{align*}
+  &\text{Windungszahl:} n=3400 &\text{Länge:} l=10cm\\
+  &\text{Durchmesser:} d=??
+\end{align*}
 \subsection{Hysteresekurve}
-Um die Hysteresekurve einer Ringspule mit Luftspalt zu
-bestimmen, wurden die in Tabelle \ref{tab:tabelle1}
-dargestellten Messwerte in einem Diagramm aufgetragen.
-Dieses Diagramm ist ist Abbildung \ref{fig:plothys}
-dargestellt.
+\noindent Um die Hysteresekurve einer Ringspule mit
+Luftspalt zu bestimmen, wurden die in Tabelle
+\ref{tab:tabelle1} dargestellten Messwerte in einem
+Diagramm aufgetragen. Dieses Diagramm ist ist Abbildung
+\ref{fig:plothys} dargestellt.
 \input{Tabelle1.tex}
 \begin{figure}
   \centering
@@ -13,7 +34,8 @@ dargestellt.
   \caption{Hysteresekurve einer Ringspule mit Luftspalt.}
   \label{fig:plothys}
 \end{figure}
-An Abbildung \ref{fig:plothys} und auch an den Messwerten
+\noindent An Abbildung \ref{fig:plothys} und auch an den
+Messwerten
 aus Tabelle \ref{tab:tabelle1} kann die
 Sättigungsmagnetisierung $B_{S}$,die Remanenz
 $B_{r}$ für $I=0$ sowie die Koerzitivfeldstärke
@@ -25,9 +47,8 @@ Die Beträge der Werte werden nach der Formel
 \end{equation}
 gemittelt, dabei bezeichnet $N$ die Anzahl der zu
 mittelnden Werte.
-
-Sättigungsmagnetisierung und Remanenz haben also folgende
-Werte:
+Für die Sättigungsmagnetisierung und
+Remanenz haben also folgende Werte:
 \begin{align*}
   B_{S} &=\SI{691,5(12)}{\milli\tesla} \\
   B_{r} &=\SI{121.3(22)}{\milli\tesla}
@@ -48,8 +69,8 @@ darauf folgt mit Formel \ref{eqn:Luftspalt}:
 \end{equation*}
 
 \subsection{Helmholzspulen}
-Die Messwerte für die erste Messung mit $I=2A$ sind in
-Tabelle \ref{tab:tabelle3} dargestellt.
+\noindent Die Messwerte für die erste Messung mit $I=2A$
+sind in Tabelle \ref{tab:tabelle3} dargestellt.
 \input{Tabelle3.tex}
 Die Messwerte für den Innenbereich der Spulen und den
 Außenbereich wurden getrennt in einem xB-Diagramm
@@ -77,10 +98,11 @@ Messwerte jedoch an Rand der ersten Spule befindet.
   \label{fig:Helmholz1I}
 \end{figure}
 
-Für die zweite Messreihe mit einer Stromstärke von
-$I=5A$ wird äquivalent zur ersten Messreihe vorgegeangen.
-Im folgenden sind die Messwerte sowie die xB-Diagramme
-für den Außen- und Innenbereich dargestellt.
+\noindent Für die zweite Messreihe mit einer Stromstärke
+von $I=5A$ wird äquivalent zur ersten Messreihe
+vorgegeangen. Im folgenden sind die Messwerte sowie
+die xB-Diagramme für den Außen- und Innenbereich
+dargestellt.
 \input{Tabelle4.tex}
 
 \begin{figure}[H]
@@ -100,7 +122,18 @@ für den Außen- und Innenbereich dargestellt.
   (I=5A)}
   \label{fif:Helmholz2I}
 \end{figure}
-
+\noindent An den Abbildungen \ref{fig:Helmholz1}
+und \ref{fig:Helmholz2} wird deutlich sichtbar, dass
+das Magnetfeld quadratisch abfällt und für große Abstände
+gegen Null strebt. Dieses Ergebnis stimmt auch mit
+der Formel \ref{eqn:??} überein. Jedoch weichen beide
+Graphen für kleine Abstände von der Theoriekurve ab.
+\noindent An den Messdaten sowie der Theoriekurve aus
+Abbildung \ref{fig:Helmholz1I} und \ref{fig:Helmholz2I}
+für den Innenbereich der Helmhozspulen wird deutlich, dass
+das Magnetfeld in Inneren der Helmholzspulen
+nahezu konstant ist. Doch beide Graphen liegen
+deutlich unter der Theoriekurve.
 
 
 \subsection{Magnetfeld Spulen}
@@ -123,6 +156,11 @@ der Theoriekurve verglichen wird.
   \label{fig:KurzeSpule}
 \end{figure}
 
+An den Abbildungen \ref{fig:LangeSpule} und \ref{fig:KurzeSpule}
+wird deutlich, dass das Magnetfeld im Mittelpunkt
+am stärksten ist, innerhalb der langen Spule ist es
+sogar konstant. Nach außen hin fallen beide Felder
+ab und streben für große Abstände gegen Null.
 
 
 

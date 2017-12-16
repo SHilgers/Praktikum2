@@ -16,7 +16,7 @@ t= np.linspace(-11, 11)
 
 plt.plot (x,y, 'rx', label='Messwerte')
 #plt.plot(t, f(t, *params), 'b-' ,label='Lineare Regression')
-plt.xlabel(r'I/ mA')
+plt.xlabel(r'I/ A')
 plt.ylabel(r'B/ mT')
 plt.legend()
 plt.grid()
