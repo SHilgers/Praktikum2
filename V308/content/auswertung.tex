@@ -1,0 +1,132 @@
+\section{Auswertung}
+
+\subsection{Hysteresekurve}
+Um die Hysteresekurve einer Ringspule mit Luftspalt zu
+bestimmen, wurden die in Tabelle \ref{tab:tabelle1}
+dargestellten Messwerte in einem Diagramm aufgetragen.
+Dieses Diagramm ist ist Abbildung \ref{fig:plothys.pdf}
+dargestellt.
+\input{Tabelle1.tex}
+\begin{figure}
+  \centering
+  \includegraphics[height=5cm]{plothys.pdf}
+  \caption{Hysteresekurve einer Ringspule mit Luftspalt.}
+  \label{fig:plothys}
+\end{figure}
+An Abbildung \ref{fig:plothys} und auch an den Messwerten
+aus Tabelle \ref{tab:tabelle1} kann die
+Sättigungsmagnetisierung $B_{S}$,die Remanenz
+$B_{r}$ für $I=0$ sowie die Koerzitivfeldstärke
+$H_{k}$ abgelesen werden.
+Die Beträge der Werte werden nach der Formel
+\begin{equation}
+  \bar{x}=\frac{1}{N}\sum_{1}^\N x_{i}
+  \label{eqn:mittel}
+\end{equation}
+gemittelt, dabei bezeichnet $N$ die Anzahl der zu
+mittelnden Werte.
+
+Sättigungsmagnetisierung und Remanenz haben also folgende
+Werte:
+\begin{align*}
+  B_{S} &=\SI{691,5(12)}{\mT}
+  B_{r} &=\SI{121.3(22)}{\mT}
+\end{align*}
+Die Koerzitivfeldstärke $H_{k}$ kann aus dem Messwerten
+der Stromsärke nach der Formel
+\begin{equation}
+  H=\frac{NI}{d_{L}}
+  %B=\nu_{0}\frac{NI}{d_{L}}
+  \label{eqn:Luftspalt}
+\end{equation}
+berechnet werden, wobei $d_{L}$ die Breite des Luftspalts
+bezeichnet.
+Werden die Beträge gemittelt, ergibt sich $I=\SI{0.7}{A}$
+darauf folgt mit Formel \ref{eqn:Luftspalt}:
+\begin{equation*}
+  H=\SI{138833,33}{\Ampere\per\meter}.
+\end{equation*}
+
+\subsection{Helmholzspulen}
+Die Messwerte für die erste Messung mit $I=2A$ sind in
+Tabelle \ref{tab:tabelle3} dargestellt.
+\input{Tabelle3.tex}
+Die Messwerte für den Innenbereich der Spulen und den
+Außenbereich wurden getrennt in einem xB-Diagramm
+aufgetragen und mit der Theoriekurve \ref{eqn:??}
+verglichen. Die Diagramme sind in Abbildung
+\ref{fig:Helmholz1} und \ref{fig:Helmholz1I}
+dargestellt. Dabei muss berücksichtigt werden, dass die
+Theoriekurve den Mittelpunkt zwischen den Spulen als
+Nullpunkt annimmt, sich der der Nullpunkt der
+Messwerte jedoch an Rand der ersten Spule befindet.
+\begin{figure}
+  \centering
+  \includegraphics{Helmholz1.pdf}
+  \caption{xB-Diagramm des Außenbereiches eines
+  Helmholzspulenpaares im Vergleich zur Theoriekurve
+  (I=2A)}
+  \label{fig:Helmholz1}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{Helmholz1I.pdf}
+  \caption{xB-Diagramm des Innenbereiches eines
+  Helmholzspulenpaares im Vergleich zur Theoriekurve
+  (I=2A)}
+  \label{fif:Helmholz1I}
+\end{figure}
+
+Für die zweite Messreihe mit einer Stromstärke von
+$I=5A$ wird äquivalent zur ersten Messreihe vorgegeangen.
+Im folgenden sind die Messwerte sowie die xB-Diagramme
+für den Außen- und Innenbereich dargestellt.
+\input{Tabelle4.tex}
+\begin{figure}
+  \centering
+  \includegraphics{Helmholz2.pdf}
+  \caption{xB-Diagramm des Außenbereiches eines
+  Helmholzspulenpaares im Vergleich zur Theoriekurve
+  (I=5A)}
+  \label{fig:Helmholz2}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{Helmholz2I.pdf}
+  \caption{xB-Diagramm des Innenbereiches eines
+  Helmholzspulenpaares im Vergleich zur Theoriekurve
+  (I=5A)}
+  \label{fif:Helmholz5I}
+\end{figure}
+
+\subsection{Magnetfeld Spulen}
+Die Aufgenommenen Messwerte für die kurze und lange
+Spule sind in der fplgenden Tabelle zu finden.
+\input{Tabelle2.tex}
+Ähnlich zum Vorgehen bei den Helmhozspulen wird hier
+ebenfalls ein xB-Diagramm erstellt, welches mit
+der Theoriekurve verglichen wird.
+\end{description}.
+\begin{figure}
+  \centering
+  \includegraphics{LangeSpule.pdf}
+  \caption{xB-Diagramm der langen Spule.}
+  \label{fig:LangeSpule}
+\end{figure}
+\begin{figure}
+  \includegraphics{KurzeSpule.pdf}
+  \caption{xB-Diagramm der kurzen Spule.}
+  \label{fig:KurzeSpule}
+\end{figure}
+
+
+
+
+\label{sec:Auswertung}
+
+%\begin{figure}
+%  \centering
+%  \includegraphics{plot.pdf}
+%  \caption{Plot.}
+%  \label{fig:plot}
+%\end{figure}
