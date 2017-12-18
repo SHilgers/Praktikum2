@@ -19,7 +19,6 @@ Lange Spule:\\
 Kurze Spule:\\
 \begin{align*}
   &\text{Windungszahl:} n=3400 &\text{Länge:} l=10cm\\
-  &\text{Durchmesser:} d=??
 \end{align*}
 \subsection{Hysteresekurve}
 \noindent Um die Hysteresekurve einer Ringspule mit
@@ -53,16 +52,13 @@ Remanenz haben also folgende Werte:
   B_{S} &=\SI{691,5(12)}{\milli\tesla} \\
   B_{r} &=\SI{121.3(22)}{\milli\tesla}
 \end{align*}
-Die Koerzitivfeldstärke $H_{k}$ kann aus dem Messwerten
-der Stromsärke nach der Formel
+Die Koerzitivfeldstärke $H_{k}$, kann aus den Werten in
+\ref{tab:tabelle1} wie folgt berechnet werden:
 \begin{equation}
-  H=\frac{NI}{d_{L}}
-  %B=\nu_{0}\frac{NI}{d_{L}}
-  \label{eqn:Luftspalt}
+  \SI{0,7}{\ampere}-(\SI{-0,7}{\ampere}=\SI{1,4}{\ampere}).
+  \label{eqn:koerzitiv}
 \end{equation}
-berechnet werden, wobei $d_{L}$ die Breite des Luftspalts
-bezeichnet.
-Werden die Beträge gemittelt, ergibt sich $I=\SI{0.7}{A}$
+\noindent Werden die Beträge gemittelt, ergibt sich $I=\SI{0.7}{A}$
 darauf folgt mit Formel \ref{eqn:Luftspalt}:
 \begin{equation*}
   H=\SI{138833,33}{\ampere \per \meter}.
@@ -137,7 +133,7 @@ deutlich unter der Theoriekurve.
 
 
 \subsection{Magnetfeld Spulen}
-Die Aufgenommenen Messwerte für die kurze und lange
+\noindent Die Aufgenommenen Messwerte für die kurze und lange
 Spule sind in der folgenden Tabelle zu finden.
 \input{Tabelle2.tex}
 Ähnlich zum Vorgehen bei den Helmhozspulen wird hier
@@ -156,7 +152,7 @@ der Theoriekurve verglichen wird.
   \label{fig:KurzeSpule}
 \end{figure}
 
-An den Abbildungen \ref{fig:LangeSpule} und \ref{fig:KurzeSpule}
+\noindent An den Abbildungen \ref{fig:LangeSpule} und \ref{fig:KurzeSpule}
 wird deutlich, dass das Magnetfeld im Mittelpunkt
 am stärksten ist, innerhalb der langen Spule ist es
 sogar konstant. Nach außen hin fallen beide Felder
