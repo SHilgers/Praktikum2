@@ -57,8 +57,8 @@ darauf folgenden Tabelle \ref{tab:tabe4}
 \noindent Aus Gleichung \ref{eqn:cx}
 ergibt sich damit für
 \begin{align*}
-  \text{C}_{x3} = \SI{420.6 (29)}{\nano\farad} \\
-  \text{C}_{x1} = \SI{655.4 (35)}{\nano\farad}
+  \text{C}_{x3} &= \SI{420.6 (29)}{\nano\farad} \\
+  \text{C}_{x1} &= \SI{655.4 (35)}{\nano\farad}
 \end{align*}
 wobei bei $ \text{C}_{x3} $ der Fehler des Mittelwerts der größere war und bei
 $ \text{C}_{x1} $ der Gauß-Fehler durch die Ungenauigkeit von $C_2$ mit $ \pm 0.2
@@ -71,10 +71,10 @@ beträgt $ \pm 2.9 \si{\nano\farad} $.
 \noindent Die RC-Kombination (Wert 9) mit der Kapazität $ \text{C}_{x9} $ und dem
 Widerstand $ \text{R}_{x9} $ ergibt sich
 mit den Werten aus Tabelle \ref{tab:tabe5} zu
-\begin{equation*}
-  \text{C}_{x9} = \SI{417 (13)}{\nano\farad} \\
-  \text{R}_{x9} = \SI{475 (14)}{\ohm}
-\end{equation*}
+\begin{align*}
+  \text{C}_{x9} &= \SI{417 (13)}{\nano\farad} \\
+  \text{R}_{x9} &= \SI{475 (14)}{\ohm}
+\end{align*}
 Dabei wurde für die Kapazität $ \text{C}_{x9} $ der Mittelwertfehler verwendet und
 für den Widerstand $ \text{R}_{x9} $ der Fehler nach Gauß mit der Formel \ref{eqn:gaus}
 , welcher durch die Abweichung des variablen Widerstands $R_2$ mit $ \pm 3 \% $
@@ -91,10 +91,10 @@ Widerstand $ \text{R}_{x16} $(Wert 16) sind in Tabelle
 \input{Tabelle6.tex}
 Durch die Gleichungen \ref{eqn:lx}
 ergibt sich somit
-\begin{equation*}
-  \text{R}_{x16} = \SI{393 (12)}{\ohm} \\
-  \text{L}_{x16} = \SI{51.3 (21)}{\milli\henry}
-\end{equation*}
+\begin{align*}
+  \text{R}_{x16} &= \SI{393 (12)}{\ohm} \\
+  \text{L}_{x16} &= \SI{51.3 (21)}{\milli\henry}
+\end{align*}
 mit den Fehlern aus Gleichung \ref{eqn:gaus}, da die Mittelwertfehler aus Gleichung
 \ref{eqn:mitf} mit
 $ \pm 3.8 \si{\ohm} $ für $ \text{R}_{x16} $ und $ \pm 0.076 \si{\milli\henry} $
@@ -106,18 +106,20 @@ Bei der Messung wird eine Kapaziät $ \text{C}_{2} = \SI{450.0(9)}{\nano\farad} 
 verwendet. Die Messwerte befinden sich in Tabelle \ref{tab:tabe7}
 \input{Tabelle7.tex}
 Aus den Gleichungen \ref{eqn:mx}
-ergibt sich\begin{equation*}
-  \text{R}_{x16} = \SI{330 (29)}{\ohm} \\
-  \text{L}_{x16} = \SI{49 (14)}{\milli\henry}
-\end{equation*}
+ergibt sich\begin{align*}
+  \text{R}_{x16} &= \SI{330 (29)}{\ohm} \\
+  \text{L}_{x16} &= \SI{49 (14)}{\milli\henry}
+\end{align*}
 wobei der Mittelwertfehler für $ \text{R}_{x16} $ verwendet wurde (Gauß-Fehler =
-$ \pm 14 \si{\ohm} $) und der Gauß-Fehler für$ \text{L}_{x16} $ (Mittelwertfehler=
+$ \pm 14 \si{\ohm} $) und der Gauß-Fehler für $ \text{L}_{x16} $ (Mittelwertfehler=
 $ \pm 4.4 \si{\milli\henry} $).
 
 \subsection{Wien-Robinson-Brücke}
 Die Messung der Wien-Robinson-brücke wird mit einer Kapazität C=$ 992\si{\nano\farad}$
 und einem Widerstand von R= $664\si{\ohm}$ durchgeführt. Die Messwerte sind in Tabelle
 \ref{tab:tabe8} dargestellt.
+
+\input{Tabelle8.tex}
 
 \noindent In Abbildung \ref{fig:plot} ist das Verhältniss $\frac{U_b}{U_s}$ gegen
 $\frac{\nu}{\nu_0} $ aufgetragen.
@@ -144,7 +146,7 @@ und somit
 Das Minimum der Frequenz liegt bei einer Frequenz von 242 $\si{\hertz}$
 mit einer Brückenspannung $\text{U}_b = 0.016 \si{\volt} \: \text{und} \:
 \text{U}_s = 4.48 \si{\volt} $.
-Durch die Gleichung %\ref{eqn:}
+Durch die Gleichung \ref{eqn:betrag}
 ergibt sich f(2) zu
 \begin{equation*}
   f(\Omega =2) = \sqrt{\frac{1}{9} \cdot \frac{\left(\Omega^2-1\right)^2}{\left(1-\Omega^2
@@ -155,7 +157,7 @@ Daraus folgt, dass
 \begin{equation*}
   \text{U}_2 = \frac{\text{U}_b}{f(2)} = \SI{2.385}{\milli\volt}
 \end{equation*}
-und schlussendlich mit Gleichung %\ref{}
+und schlussendlich
 \begin{equation*}
-  \text{k}= \frac{\text{U}_2}{text{U}_1} = 0.149
+  \text{k}= \frac{\text{U}_2}{\text{U}_1} = 0.149
 \end{equation*}
