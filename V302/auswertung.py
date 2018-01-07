@@ -3,9 +3,9 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 from scipy.stats import sem
-a, b, c = np.genfromtxt('Werte7.txt', unpack=True)
+a, b, c = np.genfromtxt('Werte1.txt', unpack=True)
 
-d= a*c/b
+d= a*b/c
 print(d)
 
 e = np.mean(d)
