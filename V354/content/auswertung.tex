@@ -1,11 +1,156 @@
 \section{Auswertung}
-\label{sec:Auswertung}
+\subsection{Bestimmung des Dämpfungswiderstands}
+Die Werte des im Versuch verwendeten Schwingkreises (Gerät 2) lauten
+\begin{align*}
+  L &= \SI{10.11(3)}{\milli\henry} \\
+  C &= \SI{2.098(6)}{\nano\farad} \\
+  R_1 &= \SI{48.1 (1)}{\ohm} \\
+  R_2 &= \SI{509.5(5)}{\ohm} \\
+\end{align*}
+\noindent Der Spannungsverlauf, der zur Messung verwendet wurde ist in Abbildung \ref{fig:fig1}
+mit eingezeicneter Einhüllender zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=7cm]{Schwingung.JPG}
+  \caption{Schwingungsverlauf des Oszilloskops mit Einhüllender}
+  \label{fig:fig1}
+\end{figure}
 
-Test
+\noindent Die sich hieraus ergebenden Wertepaare aus Kondensatorspannung $\text{U}_c$
+und Zeit t befinden sich, getrennt nach Minima und Maxima, in Tabelle \ref{tab:tabe1}
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\input{Tabelle1.tex}
+
+\noindent In Abbildung \ref{fig:plot1} sind die Messwerte zusammen mit der jeweils erechnete Ausgleichsfunktion
+zu sehen, welche sich durch eine Ausgleichsrechnung mt der Funktion
+\begin{equation}
+  A(t)= A_0 \cdot \exp{-2\pi \cdot \mu \cdot t}
+\end{equation}
+ergibt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Messwerte und Ausgleichsfunktionen der ersten Messung}
+  \label{fig:plot1}
+\end{figure}
+
+\noindent Hieraus ergeben sich bei den Minima die Parameter
+\begin{align*}
+  A_0 &= \SI{-171.45(71)}{\volt} \\
+  \mu&= \SI{1011.7(66)}{1\per\second}
+\end{align*}
+und bei den Maxima
+\begin{align*}
+  A_0 &= \SI{169.3(16)}{\volt} \\
+  \mu&= \SI{980(13)}{1\per\second}
+\end{align*}
+sodass sich für $ \mu $ insgesamt ein Wert von
+\begin{align*}
+  \mu &= \SI{996(7)}{1\per\second}
+\end{align*}
+ergibt.
+Hieraus ergibt sich durch Gleichung % \ref{eqn:}
+\begin{align*}
+  R= \SI{126.5(10)}{\ohm} \\
+  T= \SI{159.9(12)}{\micro\second}
+\end{align*}
+
+\subsection{Bestimmung des Dämpfungswiderstands mit dem Aperiodischen Grenzfall}
+
+Die gemessenen Werte des Widerstands $R_{ap}$ beim aperiodischen Grenzfall lauten
+$\SI{3360}{\ohm}$, $\SI{3330}{\ohm}$ und $\SI{3370}{\ohm}$ , sodass sich hierbei ein Mittelwert
+von $\SI{3353(17)}{\ohm}$ ergibt.
+\noindent Theoretisch berechnet ergibt sich durch die Formel %\ref{eqn:}
+ein Wert von
+\begin{equation*}
+  \text{R}_{ap}= 2 \cdot \sqrt{\frac{L}{C}} = \SI{4390(9)}{\ohm}
+\end{equation*}
+
+
+\subsection{Bestimmung der Frequenzabhängigkeit der Kondensatorspannung}
+
+Die Messwerte zur Bestimmung der Frequenzabhängigkeit befinden sich in Tabelle \ref{tab:tabe2}.
+
+\input{Tabelle2.tex}
+\noindent In Abbildung \ref{fig:plot2} ist das Verhältniss von $ \frac{U}{U_c} $ in einem
+halblogarithmischen Diagramm gegen die Frequenz $ \nu $ aufgetragen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Spannungsverhältniss in Abhängigkeit der Frequenz}
+  \label{fig:plot2}
+\end{figure}
+\noindent Um die Güte zu bestimmen, wird der Bereich um die Resonanzfrequenz
+in Abbildung \ref{fig:plot3}
+zudem linear dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Spannungsverhältniss in Abhängigkeit der Frequenz}
+  \label{fig:plot3}
+\end{figure}
+
+\noindent Hierraus lässt sich die Resonanzüberhöhung $\text{q} = 4.4791 $ ablesen. Aus den Werten des
+Schaltkreises lässt sich durch die Gleichung %\ref{eqn:gute}
+eine theoretische Resonanzüberhöhung von
+\begin{equation*}
+  \text{q}_{theo} = 3.923 \pm 0.009
+\end{equation*}
+\noindent berechnen. \\
+\noindent Die abgelesenen Werte der breite der Resonanzkurve lauten
+\begin{align*}
+  \nu_- =\SI{29000}{\hertz} \\ %\implies \omega_- = \SI{182212.37}{\hertz} \\
+  \nu_+ =\SI{37500}{\hertz} %\implies \omega_+ = \SI{235619.45}{\hertz}
+\end{align*}
+woraus sich die Breite
+\begin{equation*}
+  \nu_+ - \nu_- = \SI{8500}{\hertz}
+\end{equation*}
+ergibt. Theoretisch lässt sich durch Gleichung %\ref{eqn:}
+eine Breite von $\SI{8808(27)}{\hertz} $ erechnen.
+\subsection{Bestimmung der Frequenzabhängigkeit der Phasenverschiebung}
+
+Die Messwerte zur Bestimmung der Frequnezabhängigkeit der Phasenverschiebung,
+sowie die daraus erechnete Phase befinden sich in Tabelle \ref{tab:tabe3}.
+\input{Tabelle3.tex}
+
+\noindent In Abbildung \ref{fig:phase} ist die Phasenverschiebung gegen die Frequenz
+in einem halblogarithmischen Diagramm aufgetragen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot4.pdf}
+  \caption{Phasenverschiebung in Abhängigkeit der Frequenz}
+  \label{fig:phase}
+\end{figure}
+
+Zudem ist in Abbildung \ref{fig:plot4} der Bereich um die Resonanzfrequenz linear
+dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot5.pdf}
+  \caption{Phasenverschiebung in Abhängigkeit der Frequenz}
+  \label{fig:plot4}
+\end{figure}
+
+\noindent Hieraus lassen sich die Resonanzfrequenz
+\begin{align*}
+  \nu_{res}= \SI{33600}{\hertz}
+\end{align*}
+sowie die beiden Frequenzen
+\begin{align*}
+  \nu_1 = \SI{29600}{\hertz} \\
+  \nu_2 = \SI{38000}{\hertz}
+\end{align*}
+bei welchen die Phasenverschiebung gerade $\phi = \frac{\pi}{4}$ bzw. $\phi= \frac{3 \cdot \pi}{4}$
+ist, ablesen. \\
+\noindent Die nach Gleichungen % \ref{eqn}
+berechneten Theoriewerte lauten
+\begin{align*}
+  \nu_{res}= \SI{33990(70)}{\hertz} \\
+  \nu_1 = \SI{30430(60)}{\hertz} \\
+  \nu_2 = \SI{39240(80)}{\hertz}
+\end{align*}
