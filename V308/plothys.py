@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from uncertainties import ufloat
 
 x, y= np.genfromtxt('Hysterese.txt', unpack=True)
+u, z= np.genfromtxt('neuk.txt', unpack=True)
 #def f(x, a, b):
 #    return a*x + b
 
@@ -15,6 +16,7 @@ x, y= np.genfromtxt('Hysterese.txt', unpack=True)
 t= np.linspace(-11, 11)
 
 plt.plot (x,y, 'rx', label='Messwerte')
+plt.plot (u,z, 'bo', label='Neukurve')
 #plt.plot(t, f(t, *params), 'b-' ,label='Lineare Regression')
 plt.xlabel(r'I/ A')
 plt.ylabel(r'B/ mT')
