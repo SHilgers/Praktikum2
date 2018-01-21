@@ -19,12 +19,12 @@ d= b/c * 2* np.pi
 
 
 t=np.linspace(9, 5000, 10000)
-plt.axhline(y=np.pi/2, color='greenyellow', linestyle='--')
-plt.axhline(y=np.pi/4, color='slateblue', linestyle='--')
-plt.axhline(y=3*np.pi/4, color='slateblue', linestyle='--')
-plt.axvline(x=33600, color='greenyellow', linestyle='--')
-plt.axvline(x=29600, color='slateblue', linestyle='--')
-plt.axvline(x=38000, color='slateblue', linestyle='--')
+plt.axhline(y=np.pi/2, color='greenyellow', linestyle='--',label='y=\frac{\pi}{2}' )
+plt.axhline(y=np.pi/4, color='slateblue', linestyle='--',label='y= \frac{\pi}{4}')
+plt.axhline(y=3*np.pi/4, color='slateblue', linestyle='--',label='y= \frac{3\pi}{4}')
+plt.axvline(x=33600, color='greenyellow', linestyle='--',label='Resonanzfrequenz ')
+plt.axvline(x=29600, color='slateblue', linestyle='--',label='\nu_1')
+plt.axvline(x=38000, color='slateblue', linestyle='--',label='\nu_2')
 #plt.xlim(9,5500)
 plt.yticks( [0, np.pi/4, np.pi/2, 3*np.pi/4, np.pi],[ r'$0$', r'$\pi/4$', r'$\pi/2$', r'$3/4\pi$', r'$\pi$'])
 plt.plot (a, d, 'rx', label='Messwerte')

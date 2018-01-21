@@ -49,18 +49,23 @@ sodass sich für $ \mu $ insgesamt ein Wert von
   \mu &= \SI{996(7)}{1\per\second}
 \end{align*}
 ergibt.
-Hieraus ergibt sich durch Gleichung % \ref{eqn:}
+Hieraus ergibt sich durch die Gleichungen \ref{eqn:eqn:lös} und \ref{eqn:tex}
 \begin{align*}
   R= \SI{126.5(10)}{\ohm} \\
-  T= \SI{159.9(12)}{\micro\second}
+  T= \SI{159.9(12)}{\micro\second} \: .
 \end{align*}
-
+Die Fehler berechnen sich hierbei durch die Gauß´sche Fhlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: .
+  \label{eqn:gaus}
+\end{equation}
 \subsection{Bestimmung des Dämpfungswiderstands mit dem Aperiodischen Grenzfall}
 
 Die gemessenen Werte des Widerstands $R_{ap}$ beim aperiodischen Grenzfall lauten
 $\SI{3360}{\ohm}$, $\SI{3330}{\ohm}$ und $\SI{3370}{\ohm}$ , sodass sich hierbei ein Mittelwert
 von $\SI{3353(17)}{\ohm}$ ergibt.
-\noindent Theoretisch berechnet ergibt sich durch die Formel %\ref{eqn:}
+\noindent Theoretisch berechnet ergibt sich durch die Formel \ref{eqn:bed3}
 ein Wert von
 \begin{equation*}
   \text{R}_{ap}= 2 \cdot \sqrt{\frac{L}{C}} = \SI{4390(9)}{\ohm}
@@ -78,7 +83,7 @@ halblogarithmischen Diagramm gegen die Frequenz $ \nu $ aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics{plot2.pdf}
-  \caption{Spannungsverhältniss in Abhängigkeit der Frequenz}
+  \caption{Spannungsverhältniss in Abhängigkeit der Frequenz.}
   \label{fig:plot2}
 \end{figure}
 \noindent Um die Güte zu bestimmen, wird der Bereich um die Resonanzfrequenz
@@ -93,13 +98,16 @@ zudem linear dargestellt.
 \end{figure}
 
 \noindent Hierraus lässt sich die Resonanzüberhöhung $\text{q} = 4.4791 $ ablesen. Aus den Werten des
-Schaltkreises lässt sich durch die Gleichung %\ref{eqn:gute}
+Schaltkreises lässt sich durch die Gleichung
+\begin{equation}
+  q= \frac{\omega_0}{\omega_+-\omega_-}
+\end{equation}
 eine theoretische Resonanzüberhöhung von
 \begin{equation*}
   \text{q}_{theo} = 3.923 \pm 0.009
 \end{equation*}
 \noindent berechnen. \\
-\noindent Die abgelesenen Werte der breite der Resonanzkurve lauten
+\noindent Die abgelesenen Werte der Resonanzkurve lauten
 \begin{align*}
   \nu_- =\SI{29000}{\hertz} \\ %\implies \omega_- = \SI{182212.37}{\hertz} \\
   \nu_+ =\SI{37500}{\hertz} %\implies \omega_+ = \SI{235619.45}{\hertz}
@@ -108,7 +116,7 @@ woraus sich die Breite
 \begin{equation*}
   \nu_+ - \nu_- = \SI{8500}{\hertz}
 \end{equation*}
-ergibt. Theoretisch lässt sich durch Gleichung %\ref{eqn:}
+ergibt. Theoretisch lässt sich durch Gleichung \ref{eqn:gute}
 eine Breite von $\SI{8808(27)}{\hertz} $ erechnen.
 \subsection{Bestimmung der Frequenzabhängigkeit der Phasenverschiebung}
 
@@ -147,7 +155,10 @@ sowie die beiden Frequenzen
 \end{align*}
 bei welchen die Phasenverschiebung gerade $\phi = \frac{\pi}{4}$ bzw. $\phi= \frac{3 \cdot \pi}{4}$
 ist, ablesen. \\
-\noindent Die nach Gleichungen % \ref{eqn}
+\noindent Die nach Gleichungen \ref{eqn:res} und
+\begin{equation}
+  \omega_{1,2} = \pm \frac{R}{2L} + \sqrt{\frac{R^2}{4L^2} + \frac{1}{LC}}
+\end{equation}
 berechneten Theoriewerte lauten
 \begin{align*}
   \nu_{res}= \SI{33990(70)}{\hertz} \\
