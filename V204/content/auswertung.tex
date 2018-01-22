@@ -2,7 +2,7 @@
 \input{daten.tex}
 \subsection{Statische Methode}
 Zunächst werden die Messwerte T1 und T4 sowie T5 und T8 gegen die Zeit aufgetragen.
-(Für die Bezeichnungen der Thermoelemente siehe Abbildung \ref{fig:...})
+(Für die Bezeichnungen der Thermoelemente siehe Abbildung \ref{fig:aufbau})
 \begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{T14.pdf}
@@ -40,7 +40,7 @@ dünne Messingstab dann dadurch begründet werden, dass $\kappa \propto A$ gilt 
 der dünne Messingstab deshalb eine geringere Wärmeleitfähigkeut besitzt.\\
 
 Im Folgenden wird der Wärmestrom $\frac{\Delta Q}{\Delta t}$
-der Metalle nach der Formel \ref{eqn:...} berechnet.
+der Metalle nach der Formel \ref{eqn:warm} berechnet.
 Die Werte der Wärmeleitfähigkeit $\kappa$ wurden aus der Literatur \cite{chemie} entnommen.
 Der Abstand $\Delta x$ zwischen den Thermoelenten wurde gemessen, die restlichen
 Werte wurden aus der Versuchsanleitung \cite{skript} entnommen.
@@ -58,8 +58,8 @@ gemittelt und der zugehörige Fehler berechnet sich nach
 \end{equation}
 Somit ergeben sich folgende Werte:
 \begin{align*}
-  \frac{\Delta Q_{12}}{\Delta t} &=\SI{-0,22(04)}{\W}    \frac{\Delta Q_{34}}{\Delta t} &=\SI{-0,09(00)}{\W}\\
-  \frac{\Delta Q_{56}}{\Delta t} &=\SI{-0,31(03)}{\W}    \frac{\Delta Q_{78}}{\Delta t} &=\SI{-0,28(04)}{\W}
+  \frac{\Delta Q_{12}}{\Delta t} &=\SI{-0,22(04)}{\W}\;\;\;    &\frac{\Delta Q_{34}}{\Delta t} &=\SI{-0,28(04)}{\W}\\
+  \frac{\Delta Q_{56}}{\Delta t} &=\SI{-0,31(03)}{\W}\;\;\;    &\frac{\Delta Q_{78}}{\Delta t} &=\SI{-0,09(00)}{\W}
 \end{align*}
 
 Da $\frac{\Delta Q}{\Delta t}$ proportional zu $\kappa$ und der Querschnittsfläche $A$ ist,
@@ -86,7 +86,7 @@ Messingstabes $\Delta T_{21}$.
 \subsection{Dynamische Methode}
 In diesem Teil wird die Wärmeleitfähigkeit $\kappa$ der verschiedenen Materialien bestimmt.
 Die Messwerte der verschiedenen Materialien werden graphisch in
-den Dagrammen \ref{fig:T12}, \ref{fig:56} und \ref{fig:78} dargestellt. Daraus
+den Dagrammen \ref{fig:T12}, \ref{fig:T56} und \ref{fig:T78} dargestellt. Daraus
 werden die Werte für die Amplitude und die Phasendifferenz $\Delta x$ abgelesen.
 
 Im Folgenden sind die Temperaturverläufe der verschiedenen Metalle sowie die abgelesen
@@ -118,15 +118,15 @@ Mit Gleichung \ref{eqn:mittel} und \ref{eqn:gauß} ergeben sich aus den Tabellen
 \ref{tab:tab2}, \ref{tab:tab3} und \ref{tab:tab4} folgende Werte:
 \begin{align*}
   \text{Messingstab}: \ln{\frac{A_{nah}}{A_{fern}}} &=\SI{1,16(10)}\;\;\; &\Delta t &=\SI{13,54(38)}{\s}  \\
-  \text{Aluminiumstab}: \ln{\frac{A_{nah}}{A_{fern}}} &=\SI{0,73(00)}\;\;\; &\Delta t &=\SI{2,42(07)}{\s}   \\
+  \text{Aluminiumstab}: \ln{\frac{A_{nah}}{A_{fern}}} &=\SI{0,73(00)}\;\;\; &\Delta t &=\SI{4,84(22)}{\s}   \\
   \text{Edelstahlstab}: \ln{\frac{A_{nah}}{A_{fern}}} &=\SI{2,07(00)}\;\;\; &\Delta t &=\SI{48,60(08)}{\s}
 \end{align*}
 
-Aus diesen Werten und den Angaben aus \ref{tab:tab1} lässt sich mit Hilfe der Formel \ref{eqn:...}
+Aus diesen Werten und den Angaben aus Tabelle \ref{tab:tab1} lässt sich mit Hilfe der Formel \ref{eqn:leitf}
 die Wärmeleitfähigkeit $\kappa$ bestimmen:
 \begin{align*}
   \kappa_{Messing} &=\SI{93,98(1074)}{\W\per\meter\kelvin} \\
-  \kappa_{Aluminium} &=\SI{591,98(1712)}{\W\per\meter\kelvin} \\
+  \kappa_{Aluminium} &=\SI{295,99(1345)}{\W\per\meter\kelvin} \\
   \kappa_{Edelstahl} &=\SI{14,31(02)}{\W\per\meter\kelvin}
 \end{align*}
 
