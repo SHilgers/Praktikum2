@@ -17,15 +17,15 @@ Die Augleichsfunktionen wurde durch eine Ausgleichsrechung mit der Funktion
 \end{equation}
 erstellt, wobei sich bei dem wärmeren Reservoir die Parameter
 \begin{align*}
-  a_w &= (-33,3 \: \pm \: 1,0) \cdot 10^{-7} \\
-  b_w &= (-21,50 \: \pm \: 0,21) \cdot 10^{-3} \\
-  c_w &= (19,732 \: \pm \: 0,091) \\
+  a_w &= (-33,3 \: \pm \: 1,0) \cdot 10^{-7} \: \si{\kelvin\per\second\squared}\\
+  b_w &= (21,50 \: \pm \: 0,21) \cdot 10^{-3} \: \si{\kelvin\per\second}\\
+  c_w &= (292.882 \: \pm \: 0,091) \: \si{\kelvin} \\
 \end{align*}
 und bei dem kälteren Reservoir die Parameter
 \begin{align*}
-  a_k &= (33,7 \: \pm \: 1,0) \cdot 10^{-7} \\
-  b_k &= (-15,44 \: \pm \: 0,21) \cdot 10^{-3} \\
-  c_k &= (21,199 \: \pm \: 0,088) \\
+  a_k &= (33,7 \: \pm \: 1,0) \cdot 10^{-7} \: \si{\kelvin\per\second\squared}\\
+  b_k &= (-15,44 \: \pm \: 0,21) \cdot 10^{-3} \: \si{\kelvin\per\second}\\
+  c_k &= (294.349 \: \pm \: 0,088) \: \si{\kelvin}\\
 \end{align*}
 ergeben.
 
@@ -35,9 +35,9 @@ sich
   \frac{d T(t)}{d t} = 2at +b
 \end{equation}
 ergibt.
-Setzt man nun die entsprechnenden Parameter, sowie die vier beliebig gewählten Zeiten
+Werden nun die entsprechenden Parameter, sowie die vier beliebig gewählten Zeiten
 $t_1 = \SI{480}{\second}$, $t_2 = \SI{960}{\second}$, $t_3 = \SI{1500}{\second}$
-und $t_4 = \SI{1980}{\second}$ ein, ergeben sich die jeweiligen Differentialquotienten.
+und $t_4 = \SI{1980}{\second}$ eingesetzt, ergeben sich die jeweiligen Differentialquotienten.
 \input{Tabelle2.tex}
 Die Fehler berechnen sich hierbei aus den Fehlern der Ausgleichsrechnung durch die Gauß´sche
 Fehlerfortpflanzung
@@ -46,27 +46,37 @@ Fehlerfortpflanzung
   \cdot (\increment x_i)^2  } \: .
   \label{eqn:gaus}
 \end{equation}
+Also in diesem Fall:
+\begin{equation}
+  \increment \frac{d T(t)}{d t} = \sqrt{(2t)^2 \cdot (\increment a)^2 + (\increment b)^2 } \: .
+  \label{eqn:f1}
+\end{equation}
 \\
 \\
-\noindent Um die Güteziffer zu bestimmen nutzt man die Gleichungen \ref{eqn:},
+\noindent Um die Güteziffer zu bestimmen, wird Gleichungen \ref{eqn:güte3} verwendet,
 wobei die spezifischen Wärmekapazität von Wasser $\SI{4183}{\joule\per\kilo\gram\per\kelvin}$ \cite{chemie}
 beträgt, die Masse des Wassers $\SI{4}{\kilo\gram}$ und die Wärmekapazität des Kupfers
 $\SI{750}{\joule\per\kelvin}$. Die entsprechende Leistung kann in der Tabelle \ref{tab:tabe1}
-abgelesen werden. Die Theoriewerte für die ideale Wärmepumpe berechnen sich dabei durch die Gleichung
-\ref{eqn:} (die Temperatur muss zunächst noch in Kelvin umgerechnet werden) und die Abweichungen durch
+abgelesen werden.
+Die Fehler berechnen sich hierbei nach Gleichung \ref{eqn:gaus} durch
+\begin{equation}
+  \increment v_{\text{real}} = \sqrt{\left(\frac{m_1c_w +m_2c_k}{N}\right)^2 \cdot \left(\increment \frac{d T(t)_1}{d t}\right)^2} \: .
+  \label{eqn:f2}
+\end{equation}
+Die Theoriewerte für die ideale Wärmepumpe berechnen sich dabei durch die Gleichung
+\ref{eqn:güte2} (die Temperatur muss zunächst noch in Kelvin umgerechnet werden) und die Abweichungen durch
 \begin{equation*}
-  \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Messung}}} \: .
+  \frac{\lvert \text{Wert}_{\text{Messung}}-\text{Wert}_{\text{Theorie}}\rvert}{\text{Wert}_{\text{Theorie}}} \: .
 \end{equation*}
-Die Fehler ergeben sich erneut durch Gleichung \ref{eqn:gaus}
 Somit ergibt sich insgesamt für die jeweils entsprechenden Differentialquotienten:
 \input{Tabelle3.tex}
 
 \subsection{Bestimmung des Massendurchsatzes}
-Um den Massendurchsatz zu bestimmen, muss zunächst die Verdampfungswärme L des
-verwendeten Gases bestimmt werden.
-Hierzu wird zunächst der Logarithmus des Verhältnisses $\frac{p_b}{p_0}$ gebildet werden
+Um den Massendurchsatz zu bestimmen, wird zunächst die Verdampfungswärme L des
+verwendeten Gases bestimmt.
+Hierzu wird zunächst der Logarithmus des Verhältnisses $\frac{p_b}{p_0}$ gebildet
 (Annahme: $p_0 \approx \SI{1}{\bar}$), was daraufhin gegen den Kehrwert der Temperatur $T_1$
-aufgetragen wird. Dann wird eine lineare Ausgleichsrechnung durchgeführt, wie in
+aufgetragen wird. Dann wird eine lineare Ausgleichsrechnung der Form $ f(x) =ax +b$ durchgeführt, wie in
 Abbildung \ref{fig:plot2} zu sehen ist.
 \begin{figure}[H]
   \centering
@@ -76,29 +86,39 @@ Abbildung \ref{fig:plot2} zu sehen ist.
 \end{figure}
 Hieraus ergeben sich die Parameter
 \begin{align*}
-  a&= -2340 \pm 69 \: \si{\kelvin} \\
-  b&= 9,77 \pm 0,22 \\
+  a= (-2340 &\pm 69) \: \si{\kelvin} \\
+  b= (9,77 &\pm 0,22) \\
 \end{align*}
-und für die Verdampfungswärme somit
+und für die Verdampfungswärme ergibt sich
 \begin{equation*}
   L= -a*R = \SI{19.46(58)e3}{\joule\per\mol}
 \end{equation*}
-wobei R= $\SI{8.3144}{\joule\per\mol\kelvin}$ \cite{chemie2} die allgemeine Gaskonstante ist.
-Aus Gleichung \ref{eqn:} und einer molaren Masse von $\SI{120.91}{\gram\per\mol}$
+wobei R= $\SI{8.3144}{\joule\per\mol\per\kelvin}$ \cite{chemie2} die allgemeine Gaskonstante ist.
+Der Fehler berechnet sich durch
+\begin{equation}
+  \increment L = \sqrt{\left(-R\right)^2 \cdot \left(\increment a\right)^2} \: .
+  \label{eqn:f2}
+\end{equation}
+Aus Gleichung \ref{eqn:masse} und einer molaren Masse von $\SI{120.91}{\gram\per\mol}$
 \cite{chemie3} folgt:
 \input{Tabelle4.tex}
-
+Die Fehler berechenen sich hierbei durch:
+\begin{equation}
+  \increment \frac{dm}{dt} = \sqrt{\left(\frac{1}{L^2}(m_2c_w+m_kc_k) \frac{d T_2}{dt} \right)^2 \cdot \left(\increment L\right)^2
+  + \left(\frac{1}{L}(m_2c_w+m_kc_k)\right)^2 \cdot \left(\increment \frac{d T_2}{dt} \right)^2}} \: .
+  \label{eqn:f3}
+\end{equation}
 \subsection{Bestimmung der mechanischen Kompressorleistung}
 Die Werte zur Berechnung der mechanischen Kompressorleistung lauten:
 \begin{align*}
-  \kappa = 1,14 \\
-  \rho_0 = \SI{5.51}{gram\per\liter} \\
-  \T_0 = \SI{20.5}{\Celsius}
+  \kappa &= 1,14 \\
+  \rho_0 &= \SI{5.51}{\gram\per\liter} \\
+  T_0 &= \SI{20.5}{\celsius}
 \end{align*}
 Zunächst muss hierzu noch die Dichte $\rho$ bestimmt werden, wobei mit der idealen Gasgleichung
 die Gleichung
 \begin{equation}
-  pV =nRT \equals \frac{pV}{T}{nR}
+  pV =nRT \iff \frac{pV}{T}{nR}
 \end{equation}
 folgt. Aus $n_1R =n_2R$ folgt nun
 \begin{equation}
@@ -106,8 +126,14 @@ folgt. Aus $n_1R =n_2R$ folgt nun
 \end{equation}
 und mit $\rho = \frac{m}{V}$, $\rho_2=\rho$ und $p_2 =p_a$ schlussendlich:
 \begin{equation}
-  \frac{p_0}{T_0\rho_0} = \frac{p_a}{T_2 \rho} \equals \rho = \frac{\rho_0 T_0 p_a}{T_2p_0}
+  \frac{p_0}{T_0\rho_0} = \frac{p_a}{T_2 \rho} \iff \rho = \frac{\rho_0 T_0 p_a}{T_2p_0}
 \end{equation}
-Wird dies in Gleichung \ref{eqn:}, sowie die Werte für $p_a$ und $p_b$ aus Tabelle
+Wird dies in Gleichung \ref{eqn:Nmech}, sowie die Werte für $p_a$ und $p_b$ aus Tabelle
 \ref{tab:tabe1} eingesetzt, ergibt sich somit:
 \input{Tabelle5.tex}
+Die Fehlerrechnung erfolgt hierbei durch \ref{eqn:gaus} mit
+\begin{equation}
+  \increment N_{\text{mech}} = \sqrt{\left(\frac{1}{\kappa-1}\Biggl(p_{b}\sqrt[\kappa]{\frac{p_{a}}{p_{b}}}-p_{a}\Biggr)
+  \frac{\rho_0 T_0 p_a}{T_2p_0}\right)^2 \cdot \left(\increment \frac{dm}{dt} \right)^2} \: .
+  \label{eqn:f4}
+\end{equation}
