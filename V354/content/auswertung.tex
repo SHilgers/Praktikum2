@@ -24,7 +24,7 @@ und Zeit t befinden sich, getrennt nach Minima und Maxima, in Tabelle \ref{tab:t
 \noindent In Abbildung \ref{fig:plot1} sind die Messwerte zusammen mit der jeweils erechnete Ausgleichsfunktion
 zu sehen, welche sich durch eine Ausgleichsrechnung mt der Funktion
 \begin{equation}
-  A(t)= A_0 \cdot \exp{-2\pi \cdot \mu \cdot t}
+  A(t)= A_0 \cdot \exp{(-2\pi \cdot \mu \cdot t)}
 \end{equation}
 ergibt.
 \begin{figure}[H]
@@ -44,22 +44,31 @@ und bei den Maxima
   A_0 &= \SI{169.3(16)}{\volt} \\
   \mu&= \SI{980(13)}{1\per\second}
 \end{align*}
-sodass sich für $ \mu $ insgesamt ein Wert von
+sodass sich für $ \mu $ ein gemittelter Wert von
 \begin{align*}
-  \mu &= \SI{996(7)}{1\per\second}
+  \mu &= \frac{\mu_{\text{min}}+\mu_{\text{max}}}{2} = \SI{996(7)}{1\per\second}
 \end{align*}
-ergibt.
-Hieraus ergibt sich durch die Gleichungen \ref{eqn:eqn:lös} und \ref{eqn:tex}
+ergibt, wobei sich der Fehler durch
+\begin{equation}
+  \Delta \mu = \sqrt{(\frac{1}{2}\Delta \mu_{min})^2 + (\frac{1}{2}\Delta \mu_{max})^2}
+\end{equation}
+berechnet.
+Hieraus ergibt sich durch die Gleichungen \ref{eqn:lös} und \ref{eqn:tex}
 \begin{align*}
-  R= \SI{126.5(10)}{\ohm} \\
-  T= \SI{159.9(12)}{\micro\second} \: .
+  R&= \SI{126.5(10)}{\ohm} \\
+  T&= \SI{159.9(12)}{\micro\second} \: .
 \end{align*}
-Die Fehler berechnen sich hierbei durch die Gauß´sche Fhlerfortpflanzung
+Die Fehler berechnen sich hierbei durch die Gauß´sche Fehlerfortpflanzung
 \begin{equation}
   \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
   \cdot (\increment x_i)^2  } \: .
   \label{eqn:gaus}
 \end{equation}
+Also:
+\begin{align}
+  \Delta R &=4 \pi \sqrt{(\mu \Delta L )^2 +(L \Delta \mu )^2} \\
+  \Delta T &= \sqrt{\left(\frac{1}{2\pi\mu} \Delta \mu \right)^2}
+\end{align}
 \subsection{Bestimmung des Dämpfungswiderstands mit dem Aperiodischen Grenzfall}
 
 Die gemessenen Werte des Widerstands $R_{ap}$ beim aperiodischen Grenzfall lauten

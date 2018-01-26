@@ -2,13 +2,13 @@
 Im diesem Versuch wird der RLC-Schwingkreis untersucht, dieser besteht aus folgenden
 Bauteilen: Widerstand $R$, Induktivität $L$ und Kondensator $C$.
 Ähnlich zum RLC-Schingkreis ist der RC-Schwingkreis aufgebaut, er bestitzt nur einen
-Energiespeicher, den Kondensator $C$.
+Energiespeicher, den Kondensator $C$. Daher kann der Strom $I$ nur in eine Richtung fließen.
 Der RLC-Schwingkreis besitzt zwei Energiespeicher, einen Kondensator und eine
 Spule. Wird nun Energie in das System hineingepumt, pendelt diese zwischen Kondensator und
 Spule, wodurch der Strom sein Vorzeichen ändert. Der Widerstand, der hier dem
 Dämpfungsfaktor entspricht, wandelt einen Teil der Energie in Wärme um. Nach einer
-gewissen Zeitspanne ist keine elektrische Energie mehr vorhanden und die Schwingung
-kommt zum erliegen. Dieses Verhalten wird auch als gedämpfte Schwingung bezeichnet.
+gewissen Zeitspanne ist keine elektrische Energie mehr vorhangen und die Schwingung
+kommt zum erliegen. Dieses Verhalten wirdauch als gedämpfte Schwingung bezeichnet.
 Wenn kein Widerstand $R$ im System verbaut ist, wird dieses System als
 ungedämpften Schwingung bezeichnet.
 \begin{figure}[H]
@@ -32,14 +32,14 @@ In einem RLC-Schwingkreis, der wie in Abbildung \ref{fig:RLC} aufgebaut ist, gil
   U_{R}(t)+U_{L}(t)+U_{C}(t)=0.
   \label{eqn:max}
 \end{equation}
-%Die Spannungen lassen sich auch wie folgt ausdrücken:
-%\begin{align}
-%  U_{R}&=RI\\
-%  U_{C}&=\frac{Q(t)}{C}\\
-%  U_{L}&=L\frac{dI}{dt}\\
-%\text{außerdem gilt:}\:\:I&=\frac{dQ}{dt}.
-%\end{align}
-Ableiten nach der Zeit und umschreiben der Spanungen liefert dann die Differentialgleichung
+Die Spannungen lassen sich auch wie folgt ausdrücken:
+\begin{align}
+  U_{R}&=RI\\
+  U_{C}&=\frac{Q(t)}{C}\\
+  U_{L}&=L\frac{dI}{dt}\\
+\text{außerdem gilt:}\:\:I&=\frac{dQ}{dt}.
+\end{align}
+Eingesetzt in Gleichung \ref{eqn:max} und ableiten nach der Zeit liefert dann die Differentialgleichung
 für die gedämpfte Schwingung
 \begin{equation}
   \ddot{I}+\frac{R}{L}\dot{I}+\frac{1}{LC}I=0.
@@ -141,6 +141,7 @@ als $U_{0}$ sein kann. Diese Frequenz $\omega_{\text{res}}$ wird als Resonanzfre
 bezeichnet. Für sie gilt:
 \begin{equation}
   \omega_{\text{res}}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}.
+  \label{eqn:res}
 \end{equation}
 
 Für den Spezialfall, dass
