@@ -1,3 +1,4 @@
+<<<<<<< 748b67fd60b26d45750e10209255345ebe612814
 .DS_STORE
 build
 *.pdf
@@ -9,3 +10,27 @@ main.blg
 main.log
 main.run.xml
 texput.log
+||||||| merged common ancestors
+.DS_STORE
+build
+*.pdf
+main.toc
+main.aux
+main.bbl
+main.bcf
+main.blg
+main.log
+main.run.xml
+texput.log
+=======
+.DS_STORE
+build
+main.toc
+main.aux
+main.bbl
+main.bcf
+main.blg
+main.log
+main.run.xml
+texput.log
+>>>>>>> michelson

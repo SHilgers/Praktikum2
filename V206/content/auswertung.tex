@@ -1,3 +1,4 @@
+<<<<<<< 748b67fd60b26d45750e10209255345ebe612814
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bestimmung der Güteziffer}
@@ -137,3 +138,232 @@ Die Fehlerrechnung erfolgt hierbei durch \ref{eqn:gaus} mit
   \frac{\rho_0 T_0 p_a}{T_2p_0}\right)^2 \cdot \left(\increment \frac{dm}{dt} \right)^2} \: .
   \label{eqn:f4}
 \end{equation}
+||||||| merged common ancestors
+\section{Auswertung}
+\label{sec:Auswertung}
+\subsection{Bestimmung der Güteziffer}
+In Tabelle \ref{tab:tabe1} sind die gemessen Werte der Wärmepumpe aufgeführt.
+\input{Tabelle1.tex}
+\noindent Die Temperaturverläufe von $ T_1 $ (warmes Reservoir) und $ T_2 $ (kaltes
+Reservoir) sind in Abbildung \ref{fig:plot1} in Abhängigkeit der Zeit dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Messwerte und Ausgleichsfunktionen der Temperaturverläufe}
+  \label{fig:plot1}
+\end{figure}
+Die Augleichsfunktionen wurde durch eine Ausgleichsrechung mit der Funktion
+\begin{equation}
+  T(t) = at^2 +bt +c
+\end{equation}
+erstellt, wobei sich bei dem wärmeren Reservoir die Parameter
+\begin{align*}
+  a_w &= (-33,3 \: \pm \: 1,0) \cdot 10^{-7} \\
+  b_w &= (-21,50 \: \pm \: 0,21) \cdot 10^{-3} \\
+  c_w &= (19,732 \: \pm \: 0,091) \\
+\end{align*}
+und bei dem kälteren Reservoir die Parameter
+\begin{align*}
+  a_k &= (33,7 \: \pm \: 1,0) \cdot 10^{-7} \\
+  b_k &= (-15,44 \: \pm \: 0,21) \cdot 10^{-3} \\
+  c_k &= (21,199 \: \pm \: 0,088) \\
+\end{align*}
+ergeben.
+
+Um den Differentialquotienten zu bilden, wird die Funktion T(t) nun nach t abgeleitet, sodass
+sich
+\begin{equation}
+  \frac{d T(t)}{d t} = 2at +b
+\end{equation}
+ergibt.
+Setzt man nun die entsprechnenden Parameter, sowie die vier beliebig gewählten Zeiten
+$t_1 = \SI{480}{\second}$, $t_2 = \SI{960}{\second}$, $t_3 = \SI{1500}{\second}$
+und $t_4 = \SI{1980}{\second}$ ein, ergeben sich die jeweiligen Differentialquotienten.
+\input{Tabelle2.tex}
+Die Fehler berechnen sich hierbei aus den Fehlern der Ausgleichsrechnung durch die Gauß´sche
+Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: .
+  \label{eqn:gaus}
+\end{equation}
+\\
+\\
+\noindent Um die Güteziffer zu bestimmen nutzt man die Gleichungen \ref{eqn:},
+wobei die spezifischen Wärmekapazität von Wasser $\SI{4183}{\joule\per\kilo\gram\per\kelvin}$ \cite{chemie}
+beträgt, die Masse des Wassers $\SI{4}{\kilo\gram}$ und die Wärmekapazität des Kupfers
+$\SI{750}{\joule\per\kelvin}$. Die entsprechende Leistung kann in der Tabelle \ref{tab:tabe1}
+abgelesen werden. Die Theoriewerte für die ideale Wärmepumpe berechnen sich dabei durch die Gleichung
+\ref{eqn:} (die Temperatur muss zunächst noch in Kelvin umgerechnet werden) und die Abweichungen durch
+\begin{equation*}
+  \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Messung}}} \: .
+\end{equation*}
+Die Fehler ergeben sich erneut durch Gleichung \ref{eqn:gaus}
+Somit ergibt sich insgesamt für die jeweils entsprechenden Differentialquotienten:
+\input{Tabelle3.tex}
+
+\subsection{Bestimmung des Massendurchsatzes}
+Um den Massendurchsatz zu bestimmen, muss zunächst die Verdampfungswärme L des
+verwendeten Gases bestimmt werden.
+Hierzu wird zunächst der Logarithmus des Verhältnisses $\frac{p_b}{p_0}$ gebildet werden
+(Annahme: $p_0 \approx \SI{1}{\bar}$), was daraufhin gegen den Kehrwert der Temperatur $T_1$
+aufgetragen wird. Dann wird eine lineare Ausgleichsrechnung durchgeführt, wie in
+Abbildung \ref{fig:plot2} zu sehen ist.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Dampfdruckkurve mit linearer Regression}
+  \label{fig:plot2}
+\end{figure}
+Hieraus ergeben sich die Parameter
+\begin{align*}
+  a&= -2340 \pm 69 \: \si{\kelvin} \\
+  b&= 9,77 \pm 0,22 \\
+\end{align*}
+und für die Verdampfungswärme somit
+\begin{equation*}
+  L= -a*R = \SI{19.46(58)e3}{\joule\per\mol}
+\end{equation*}
+wobei R= $\SI{8.3144}{\joule\per\mol\kelvin}$ \cite{chemie2} die allgemeine Gaskonstante ist.
+Aus Gleichung \ref{eqn:} und einer molaren Masse von $\SI{120.91}{\gram\per\mol}$
+\cite{chemie3} folgt:
+\input{Tabelle4.tex}
+
+\subsection{Bestimmung der mechanischen Kompressorleistung}
+Die Werte zur Berechnung der mechanischen Kompressorleistung lauten:
+\begin{align*}
+  \kappa = 1,14 \\
+  \rho_0 = \SI{5.51}{gram\per\liter} \\
+  \T_0 = \SI{20.5}{\Celsius}
+\end{align*}
+Zunächst muss hierzu noch die Dichte $\rho$ bestimmt werden, wobei mit der idealen Gasgleichung
+die Gleichung
+\begin{equation}
+  pV =nRT \equals \frac{pV}{T}{nR}
+\end{equation}
+folgt. Aus $n_1R =n_2R$ folgt nun
+\begin{equation}
+  \frac{p_0 V_0}{T_0} = \frac{p_2 V_2}{T_2}
+\end{equation}
+und mit $\rho = \frac{m}{V}$, $\rho_2=\rho$ und $p_2 =p_a$ schlussendlich:
+\begin{equation}
+  \frac{p_0}{T_0\rho_0} = \frac{p_a}{T_2 \rho} \equals \rho = \frac{\rho_0 T_0 p_a}{T_2p_0}
+\end{equation}
+Wird dies in Gleichung \ref{eqn:}, sowie die Werte für $p_a$ und $p_b$ aus Tabelle
+\ref{tab:tabe1} eingesetzt, ergibt sich somit:
+\input{Tabelle5.tex}
+=======
+\section{Auswertung}
+\label{sec:Auswertung}
+\subsection{Bestimmung der Güteziffer}
+In Tabelle \ref{tab:tabe1} sind die gemessen Werte der Wärmepumpe aufgeführt.
+\input{Tabelle1.tex}
+\noindent Die Temperaturverläufe von $ T_1 $ (warmes Reservoir) und $ T_2 $ (kaltes
+Reservoir) sind in Abbildung \ref{fig:plot1} in Abhängigkeit der Zeit dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Messwerte und Ausgleichsfunktionen der Temperaturverläufe}
+  \label{fig:plot1}
+\end{figure}
+Die Augleichsfunktionen wurde durch eine Ausgleichsrechung mit der Funktion
+\begin{equation}
+  T(t) = at^2 +bt +c
+\end{equation}
+erstellt, wobei sich bei dem wärmeren Reservoir die Parameter
+\begin{align*}
+  a_w &= (-33,3 \: \pm \: 1,0) \cdot 10^{-7} \\
+  b_w &= (-21,50 \: \pm \: 0,21) \cdot 10^{-3} \\
+  c_w &= (19,732 \: \pm \: 0,091) \\
+\end{align*}
+und bei dem kälteren Reservoir die Parameter
+\begin{align*}
+  a_k &= (33,7 \: \pm \: 1,0) \cdot 10^{-7} \\
+  b_k &= (-15,44 \: \pm \: 0,21) \cdot 10^{-3} \\
+  c_k &= (21,199 \: \pm \: 0,088) \\
+\end{align*}
+ergeben.
+
+Um den Differentialquotienten zu bilden, wird die Funktion T(t) nun nach t abgeleitet, sodass
+sich
+\begin{equation}
+  \frac{d T(t)}{d t} = 2at +b
+\end{equation}
+ergibt.
+Setzt man nun die entsprechnenden Parameter, sowie die vier beliebig gewählten Zeiten
+$t_1 = \SI{480}{\second}$, $t_2 = \SI{960}{\second}$, $t_3 = \SI{1500}{\second}$
+und $t_4 = \SI{1980}{\second}$ ein, ergeben sich die jeweiligen Differentialquotienten.
+\input{Tabelle2.tex}
+Die Fehler berechnen sich hierbei aus den Fehlern der Ausgleichsrechnung durch die Gauß´sche
+Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: .
+  \label{eqn:gaus}
+\end{equation}
+\\
+\\
+\noindent Um die Güteziffer zu bestimmen nutzt man die Gleichungen \ref{eqn:},
+wobei die spezifischen Wärmekapazität von Wasser $\SI{4183}{\joule\per\kilo\gram\per\kelvin}$ \cite{chemie}
+beträgt, die Masse des Wassers $\SI{4}{\kilo\gram}$ und die Wärmekapazität des Kupfers
+$\SI{750}{\joule\per\kelvin}$. Die entsprechende Leistung kann in der Tabelle \ref{tab:tabe1}
+abgelesen werden. Die Theoriewerte für die ideale Wärmepumpe berechnen sich dabei durch die Gleichung
+\ref{eqn:} (die Temperatur muss zunächst noch in Kelvin umgerechnet werden) und die Abweichungen durch
+\begin{equation*}
+  \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Messung}}} \: .
+\end{equation*}
+Die Fehler ergeben sich erneut durch Gleichung \ref{eqn:gaus}
+Somit ergibt sich insgesamt für die jeweils entsprechenden Differentialquotienten:
+\input{Tabelle3.tex}
+
+\subsection{Bestimmung des Massendurchsatzes}
+Um den Massendurchsatz zu bestimmen, muss zunächst die Verdampfungswärme L des
+verwendeten Gases bestimmt werden.
+Hierzu wird zunächst der Logarithmus des Verhältnisses $\frac{p_b}{p_0}$ gebildet werden
+(Annahme: $p_0 \approx \SI{1}{\bar}$), was daraufhin gegen den Kehrwert der Temperatur $T_1$
+aufgetragen wird. Dann wird eine lineare Ausgleichsrechnung durchgeführt, wie in
+Abbildung \ref{fig:plot2} zu sehen ist.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Dampfdruckkurve mit linearer Regression}
+  \label{fig:plot2}
+\end{figure}
+Hieraus ergeben sich die Parameter
+\begin{align*}
+  a&= -2340 \pm 69 \: \si{\kelvin} \\
+  b&= 9,77 \pm 0,22 \\
+\end{align*}
+und für die Verdampfungswärme somit
+\begin{equation*}
+  L= -a*R = \SI{19.46(58)e3}{\joule\per\mol}
+\end{equation*}
+wobei R= $\SI{8.3144}{\joule\per\mol\kelvin}$ \cite{chemie2} die allgemeine Gaskonstante ist.
+Aus Gleichung \ref{eqn:} und einer molaren Masse von $\SI{120.91}{\gram\per\mol}$
+\cite{chemie3} folgt:
+\input{Tabelle4.tex}
+
+\subsection{Bestimmung der mechanischen Kompressorleistung}
+Die Werte zur Berechnung der mechanischen Kompressorleistung lauten:
+\begin{align*}
+  \kappa = 1,14 \\
+  \rho_0 = \SI{5.51}{gram\per\liter} \\
+  \T_0 = \SI{20.5}{\Celsius}
+\end{align*}
+Zunächst muss hierzu noch die Dichte $\rho$ bestimmt werden, wobei mit der idealen Gasgleichung
+die Gleichung
+\begin{equation}
+  pV =nRT \equals \frac{pV}{T}{nR}
+\end{equation}
+folgt. Aus $n_1R =n_2R$ folgt nun
+\begin{equation}
+  \frac{p_0 V_0}{T_0} = \frac{p_2 V_2}{T_2}
+\end{equation}
+und mit $\rho = \frac{m}{V}$, $\rho_2=\rho$ und $p_2 =p_a$ schlussendlich:
+\begin{equation}
+  \frac{p_0}{T_0\rho_0} = \frac{p_a}{T_2 \rho} \equals \rho = \frac{\rho_0 T_0 p_a}{T_2p_0}
+\end{equation}
+Wird dies in Gleichung \ref{eqn:}, sowie die Werte für $p_a$ und $p_b$ aus Tabelle
+\ref{tab:tabe1} eingesetzt, ergibt sich somit:
+\input{Tabelle5.tex}
+>>>>>>> michelson
