@@ -6,7 +6,7 @@ $\Delta d = 3 \si{\milli\meter}$
 mit dem Kehrwert $\frac{1}{\text{Ü}}$ der Hebelübersetzung $\text{Ü}=5.017$ multipliziert werden,
 um somit die reale Verschiebung des Spiegels $\Delta d_{\text{real}} \approx 0.598$ zu erhalten.
 Aus dieser wird zusammen mit den gezählten Interferenzmaxima $z$ durch die Formel
-\ref{eqn???} die jeweilige Wellenlänge $\lambda$ berechnet. Diese Ergebnisse sind
+\ref{eqn:interferenz} die jeweilige Wellenlänge $\lambda$ berechnet. Diese Ergebnisse sind
 zusammen mit den Messwerten für z in Tabelle \ref{tab:tabe1} abzulesen.
 \input{Tabelle1.tex}
 Die einzelnen Ergebnisse werden nun durch die Gleichung
@@ -26,7 +26,7 @@ Somit ergibt sich insgesamt eine Wellenlänge von
   \lambda= \SI{613.46(72)e-9}{\meter}
 \end{equation*}
 \subsection{Bestimmung des Brechungsindex von Luft}
-Der Brechungsindex von Luft wird durch Formel \ref{eqn} berechnet, wobei die für
+Der Brechungsindex von Luft wird durch Formel \ref{eqn:brech} berechnet, wobei die für
 den Normaldruck $p_0$, die Normaltemperatur $T_0$, die Umgebungstemperatur T und die
 Länge der evakuierten Zelle b folgende Werte verwendet werden:
 \begin{align*}
@@ -38,7 +38,7 @@ Länge der evakuierten Zelle b folgende Werte verwendet werden:
 Der Kammerdruck wurde jeweils um etwa $\SI{0.8}{\bar}$ im Vergleich zum Normaldruck
 gesenkt, sodass dieser
 ungefähr $ p = \SI{0.2132}{\bar}$ beträgt.
-Da die Wellenlänge des ersten Auswertungsteils bereits Fehlerbelastet ist, muss
+Da die Wellenlänge des ersten Auswertungsteils bereits fehlerbelastet ist, muss
 hierbei die Gauß´sche Fehlerfortpflanzung
 \begin{equation}
   \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
@@ -47,7 +47,9 @@ hierbei die Gauß´sche Fehlerfortpflanzung
 \end{equation}
 beachtet werden, die in diesem Fall
 \begin{equation}
-  ???????
+  \increment n= \sqrt{\left(\frac{ z}{2b}\frac{T}{T_{0}}\frac{p_{0}}{p-p'}\right)^2\cdot
+  \increment \lambda^2}
+  \label{eqn:gaus1}
 \end{equation}
 lautet.
 Die Messwerte sind zusammen mit den jeweils errechneten Brechungsindizes in Tabelle
@@ -56,5 +58,7 @@ Die Messwerte sind zusammen mit den jeweils errechneten Brechungsindizes in Tabe
 Durch Mittelung durch die Formeln \ref{eqn:mit} und \ref{eqn:mitf} ergibt sich somit insgesamt
 ein Brechungsindex von
 \begin{equation*}
-  n = 1,00028712 \pm 0,00000034
+  n = 1,00028712 \pm 0,0000021 \: .
 \end{equation*}
+Der durch Formel \ref{eqn:gaus1} berechnete Fehler beträgt hierbei 0,00000034 und ist somit kleiner
+als der Fehler durch die Bildung des Mittelwertes, also ist letzterer der signifikante Fehler des Ergebnisses.

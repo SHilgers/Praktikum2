@@ -13,3 +13,7 @@ print(n)
 q = np.mean(n)
 #m =sem(n)
 print('Mittelwert', q)#, 'Fehler', m)
+n
+o = 1 + a*613.46 *10**(-9)/(2*0.05)*(295.15/273.15)*(1.0132/(-0.2132+1.0132))
+m =sem(o)
+print('Mittelwertfehler =', m)
