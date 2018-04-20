@@ -8,4 +8,4 @@ main.blg
 main.log
 main.run.xml
 texput.log
-
+*.pdf
