@@ -5,19 +5,19 @@ from uncertainties import ufloat
 
 x,y = np.genfromtxt('Werte1.txt', unpack=True)
 
-y=y*10**(-1)-0.1*10**(-1) #y=gemessener Strom
+y=y*10**(-9)-0.1*10**(-9) #y=gemessener Strom
 x=x/1000 #position von Detektor
 l=635*10**(-9) #Wellenlänge
 L=1.085 #Abstand Spalt-Schirm
 #m= x0, theoretischer Mittelpunkt
 
 def f(x, s, m, b):
-    return 4*np.cos((np.pi*s*np.sin((x-m)/L))/l)**(2)*(l/(np.pi*b*np.sin((x-m)/L)))**(2)*np.sin((np.pi*b*np.sin((x-m)/L))/l)**(2)
+    return 8*np.cos((np.pi*s*np.sin((x-m)/L))/l)**(2)*(l/(np.pi*b*np.sin((x-m)/L)))**(2)*np.sin((np.pi*b*np.sin((x-m)/L))/l)**(2)
+#normal faktor 4
 
-
-params, cov = curve_fit(f, x, y, p0=(0.0001, 0.025, 0.00015))
+params, cov = curve_fit(f, x, y,  p0=(0.0001, 0.025, 0.00015))
 errors = np.sqrt(np.diag(cov))
-#p0=(0.025, 0.000000008, 1)
+# p0=(0.0001, 0.025, 0.00015)
 print('b =', params[0], '±', errors[0])
 print('s =', params[1], '±', errors[1])
 print('m =', params[2], '±', errors[2])
