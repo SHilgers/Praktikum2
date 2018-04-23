@@ -1,11 +1,115 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Die Werte für die Wellenlänge $\lambda$ des Lasers, sowie der Abstand $L$ vom Optischen Element zum
+Detektor betragen:
+\begin{align*}
+  \lambda=\SI{635}{\nm}\\
+  L=\SI{1,085}{\m}.
+\end{align*}
 
-Test
+Für den Dunkelstrom wurden
+\begin{equation*}
+   I_{\text{Dunkel}}=\SI{0.1}{\nA}
+\end{equation*}
+gemessen.\\
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+Die Messwerte für den ersten Doppelspant sind in Tabelle \ref{tab:tabelle1} zu sehen.
+Mit Hilfe einer Ausgleichsfunktion werden die Werte für die Spaltbreite $b$, den
+Spaltabstand $s$ und die Verschiebung des Maximuns vom Nullpunkt $x_{0}$ bestimmt.
+Diese Ausgleichsfunktion wird nach Gleichung \ref{eqn:??} berechnet und ist in
+Abbildung \ref{fig:plot1} zu sehen. Für $\phi$ wurde die Relation $\phi=\frac{x-x_{0}}{L}$
+verwendet.
+Für den ersten Spalt sind
+\begin{align*}
+  b=\SI{0,15}{\mm} &\;\;\;\;\;\;\;\;\;\; s=\SI{1}{\mm}
+\end{align*}
+vom Hersteller angegeben.
+
+\input{Tabelle1.tex}
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{Figure_1.png}
+  \caption{Messwerte und Ausgleichsfunktion für den ersten Doppelspalt.}
+  \label{fig:plot1}
+\end{figure}
+
+Die Regression ergibt für den erten Spalt folgende Werte:
+\begin{align*}
+  b &=\SI{2.48(13631278)e-7}{\mm}\\
+  s &=\SI{24.9(0)}{\mm}\\
+  x_{0} &=\SI{0.12(3)}{\mm}
+\end{align*}
+
+Um die Messwerte mit den Herstellerangaben zu vergleichen wird die Abweichung nach folgender
+Formel berechnet:
+\begin{equation}
+  \text{Abweichung}=\frac{\text{Messwert}-\text{Herstellerangabe}}{\text{Herstellerangabe}}*100
+\end{equation}
+Daraus ergibt sich, dass die Spaltbreite $b$ um -99\% abweicht  %(-0+/-9)e+01
+und der Spaltabstand $s$ um 2390\%. Um die Abweichung der Nulllinie zu bestimmen wird
+der Winkel $\phi$ nach $\phi=\frac{x-x_{0}}{L}$ berechnet. Theoretisch liegt die
+Nulllinie bei $\Delta \phi=0\;\text{rad} $. Es ergibt sich
+\begin{equation*}
+  \Delta \phi =\SI{0.023(3)}\; \text{rad}.
+\end{equation*}
+%23.91+/-0.04
+\\
+Für den zweiten Doppelspalt wird anaglog vorgegeangen, die Messwerte sind in Tabelle
+\ref{tab:tabelle2} zu finden und die Ausgleichsfunktion in Abbildung \ref{fig:plot2}.
+Für diesen Doppelspalt wurden vom Hersteller
+\begin{align*}
+  b=\SI{0,1}{\mm}  &\;\;\;\;\;\;\;\;\;\; s=\SI{0,4}{\mm}
+\end{align*}
+angegeben.
+
+\input{Tabelle2}
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{Figure_2.png}
+  \caption{Ausgleichsfunktion und Messwerte des zweiten Doppelspaltes.}
+  \label{fig:plot2}
+\end{figure}
+
+Hier ergibt die Regression:
+\begin{align*}
+  b =&\SI{3.148(0)e-2}{\mm}\\
+  s =&\SI{24.699(0)}{\mm}\\
+  x_{0} =&\SI{2.611(1)e-2}{\mm}.
+\end{align*}
+Die Abweichungen von den Herstellerangaben berechnen sich analog zum
+ersten Doppelspalt, es ergibt sich für den Spaltabstand $s$ eine Abweichung von
+6075\% und für die Spaltbreite eine Abweichung von -69\%. Für den Winkel der
+Nulllinie ergibt sich:
+\begin{equation}
+  \Delta \phi =\SI{0.023(0)}\; \text{rad}.
+\end{equation}
+%-0.685+/-0.009
+%5.17+/-0.04
+
+Für die Ausgleichfunktion in Abblildung \ref{fig:plot3} des Einzelspaltes
+wird Gleichung \ref{eqn:??} verwendet.
+Die dazugehörigen Messwerte stehen in Tabelle \ref{tab:tabelle3}.
+Vom Hersteller wird hier die Spaltbreite mit $b=\SI{0,15}{\mm}$ angegeben.
+
+\input{Tabelle3}
+\begin{figure}
+  \centering
+  \includegraphics[height=7cm]{Figure_4.png}
+  \caption{Ausgleichsfunktion und Messwerte des Einzelspaltes.}
+  \label{fig:plot3}
+\end{figure}
+
+Die Regression ergibt für den Einzelspalt diese Werte:
+\begin{align*}
+  b =&\SI{0.15(4)}{\mm}\\
+  x_{0} =&\SI{24.89(12)}{\mm}.
+\end{align*}
+Hier ist zu beachten, dass der Wert des Maximuns aus der Ausgleichsrechnung ausgenommen
+wurde, da sich ansonsten kein numerisch zu verarbeitender Wert ergibt.
+Hier beträgt die Abweichung der Spaltbreite 0\%.
+Die Abweichung der Nulllinie wir äquivalent wie beim Doppelspalt berechnet.
+Es ergibt sich
+\begin{equation*}
+  \Delta \phi= \SI{0.006(11)}\; \text{rad}.
+\end{equation*}
+%0.006+/-0.028
