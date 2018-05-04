@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Die Werte für die Wellenlänge $\lambda$ des Lasers, sowie der Abstand $L$ vom Optischen Element zum
+Die Werte für die Wellenlänge $\lambda$ des Lasers, sowie der Abstand $L$ vom optischen Element zum
 Detektor betragen:
 \begin{align*}
   \lambda=\SI{635}{\nm}\\
@@ -11,14 +11,17 @@ Für den Dunkelstrom wurden
 \begin{equation*}
    I_{\text{Dunkel}}=\SI{0.1}{\nA}
 \end{equation*}
-gemessen.\\
+gemessen. Außerdem kann für den Winkel $\phi$ mit Hilfe der Kleinwinkelnäherung
+\begin{equation}
+  \phi= \frac{x-x_{0}}{L}
+\end{equation}
+angenommen werden.
 
 Die Messwerte für den ersten Doppelspant sind in Tabelle \ref{tab:tabelle1} zu sehen.
 Mit Hilfe einer Ausgleichsfunktion werden die Werte für die Spaltbreite $b$, den
 Spaltabstand $s$ und die Verschiebung des Maximuns vom Nullpunkt $x_{0}$ bestimmt.
 Diese Ausgleichsfunktion wird nach Gleichung \ref{eqn:doppelinf} berechnet und ist in
-Abbildung \ref{fig:plot1} zu sehen. Für $\phi$ wurde die Relation $\phi=\frac{x-x_{0}}{L}$
-verwendet.
+Abbildung \ref{fig:plot1} zu sehen.
 Für den ersten Spalt sind
 \begin{align*}
   b=\SI{0,15}{\mm} &\;\;\;\;\;\;\;\;\;\; s=\SI{1}{\mm}
@@ -43,7 +46,7 @@ Die Regression ergibt für den erten Spalt folgende Werte:
 Um die Messwerte mit den Herstellerangaben zu vergleichen wird die Abweichung nach folgender
 Formel berechnet:
 \begin{equation}
-  \text{Abweichung}=\frac{\text{Messwert}-\text{Herstellerangabe}}{\text{Herstellerangabe}}*100
+  \text{Abweichung}=\frac{\text{Messwert}-\text{Herstellerangabe}}{\text{Herstellerangabe}}\cdot100
 \end{equation}
 Daraus ergibt sich, dass die Spaltbreite $b$ um -99\% abweicht  %(-0+/-9)e+01
 und der Spaltabstand $s$ um 2390\%. Um die Abweichung der Nulllinie zu bestimmen wird
@@ -104,10 +107,10 @@ Die Regression ergibt für den Einzelspalt diese Werte:
   b =&\SI{0.15(4)}{\mm}\\
   x_{0} =&\SI{24.89(12)}{\mm}.
 \end{align*}
-Hier ist zu beachten, dass der Wert des Maximuns aus der Ausgleichsrechnung ausgenommen
+Hier ist zu beachten, dass der Wert des Maximums aus der Ausgleichsrechnung ausgenommen
 wurde, da sich ansonsten kein numerisch zu verarbeitender Wert ergibt.
 Hier beträgt die Abweichung der Spaltbreite 0\%.
-Die Abweichung der Nulllinie wir äquivalent wie beim Doppelspalt berechnet.
+Die Abweichung der Nulllinie wird äquivalent wie beim Doppelspalt berechnet.
 Es ergibt sich
 \begin{equation*}
   \Delta \phi= \SI{0.006(11)}\; \text{rad}.
