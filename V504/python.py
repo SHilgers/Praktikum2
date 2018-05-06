@@ -3,6 +3,7 @@ from numpy import log, pi
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
+from scipy.stats import sem
 N=1
 U1=4.3
 I1=2
@@ -35,9 +36,6 @@ p3=(-k*c/o)*np.log(S3*h**3/(4*np.pi*o*r*m*k*k*c**2))
 p4=(-k*d/o)*np.log(S4*h**3/(4*np.pi*o*r*m*k*k*d**2))
 print('P1= ',p1,'P2= ', p2,'P3= ', p3,'P4= ', p4)
 
-y=ufloat(4.74,4.80,4.82,4.85)
-q = np.mean(y)
-
-print('Mittelwert', q)
-m =sem(y)
-print('Mittelwertfehler =', m)
+y=[4.74,4.80,4.82,4.85]
+s =sem(y)
+print('Fehler = ', s)

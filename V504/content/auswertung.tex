@@ -23,10 +23,10 @@ Die Heizströme $I_{H}$ und die entsprechenden Spannung $U_{H}$  der 5 Messungen
 
 Die Ausgleichsfunktionen werden dabei durch einen Fit mit der Funktion
 \begin{equation}
-  f(x) = s- \exp{-c*d}
+  f(x) = s- \exp{(-c\cdot d)}
 \end{equation}
 erstellt, wobei der Parameter s den Sättigungsstrom angibt.
-Aus dem Diagramm lassen sich ungfähr Heizstrome von
+Aus dem Diagramm lassen sich ungfähr Heizströme von
 \begin{align*}
   I_{S1} &\approx \SI{0.10}{\milli\ampere}  \\
   I_{S2} &\approx \SI{0.23}{\milli\ampere}  \\
@@ -43,16 +43,16 @@ Aus der Ausgleichsrechnung ergeben sich zudem noch rechnerisch die folgenden Wer
   I_{S2} &\approx \SI{0.233(3)}{\milli\ampere}  \\
   I_{S3} &\approx \SI{0.572(10)}{\milli\ampere}  \\
   I_{S4} &\approx \SI{1.441(72)}{\milli\ampere}  \\
-  I_{S5} &\approx \SI{32(23)}{\milli\ampere} \: . \\
+  I_{S5} &\approx \SI{32(23)}{\milli\ampere} \\
 \end{align*}
 
 \subsection{Bestimmung des Exponenten im Raumladungsgebiet}
 Die Messwerte des maximalen Heizstroms von $\SI{2.5}{\ampere}$ bei $\SI{6.2}{\volt}$
 sind in Tabelle \ref{tab:tabe2} abzulesen.
 \input{Tabelle2.tex}
-Das Langmuir-Schottkysche Raumladungsgesetz gilt dabei im gresamten Wertebereich.
+Das Langmuir-Schottkysche Raumladungsgesetz gilt dabei im gesamten Wertebereich.
 Zur Bestimmung des Exponenten der Strom-Spannungs-Beziehung werden die Messwerte
-in einem logarithmischen Diagramm (\ref{fig:plot2} ) gegeneinander aufgetragen und
+in einem logarithmischen Diagramm (\ref{fig:plot2}) gegeneinander aufgetragen und
 es wird eine lineare Ausgleichsrechnung der Form
 \begin{equation}
   y = a\cdot x +b
@@ -72,7 +72,7 @@ Hieraus ergeben sich die Parameter
   a = 1.172 \pm 0.005 \\
   b = -5.4 \pm 0.02 \: ,\\
 \end{align*}
-wobei a den gesuchten Exponenten angibt.
+wobei $a$ den gesuchten Exponenten angibt.
 \subsection{Bestimmung der Kathodentemperatur aus dem Anlaufstromgebiet}
 Die Messwerte des Anlaufstromgebietes für einen Heizstrom von $\SI{2.5}{\ampere}$
 befinden sich in Tabelle \ref{tab:tabe3}.
@@ -89,19 +89,19 @@ durchgeführt.
 \end{figure}
 Hieraus ergeben sich die Parameter
 \begin{align*}
-  a = -4.47 \pm 0.05 \si{\per\volt}\\
-  b = 2.33 \pm 0.03 \si \: .\\
+  a &= -4.47 \pm 0.05 \: \frac{1}{V}\\
+  b &= 2.33 \pm 0.03  \: .\\
 \end{align*}
-Aus der Gleichung \ref{eqn:???} folgt, dass die Kathodentemperatur T gegeben ist durch
+Aus der Gleichung \ref{eqn:anlauf} folgt, dass die Kathodentemperatur T gegeben ist durch
 durch die Gleichung
 \begin{equation}
   T = \frac{e_0}{k \cdot a} \: ,
 \end{equation}
 wobei $e_0= 1,602 \cdot 10^{-19} \si{\coulomb} $ \cite{q1} die Elemantarladung bezeichnet,
-und $k=1,3806 \cdot 10^{-23} \si{\joule\per\kelvin} $\cite{q2} die Boltzmann-Konstante.
+und $k=1,3806 \cdot 10^{-23} \si{\joule\per\kelvin} $ \cite{q2} die Boltzmann-Konstante.
 Somit ergibt sich also insgesamt eine Kathodentemperatur von
 \begin{align*}
-  T= \SI{-2596(32)}{\kelvin} \: ,
+  T= \SI{2596(32)}{\kelvin} \: ,
 \end{align*}
 wobei sich der Fehler aus der Gauß´schen Fehlerfortpflanzung
 \begin{equation}
@@ -114,31 +114,27 @@ ergibt, also in diesem Fall
   \increment T = \sqrt{(\frac{e_0}{k \cdot a^2})^2 \cdot (\increment a)^2} \: .
 \end{equation}
 \subsection{Bestimmung der Kathodentemperatur}
-Zur Bestimmung der Kathodentemperatur wird die Formel \ref{eqn:???} verwendet, wobei
+Zur Bestimmung der Kathodentemperatur wird die Formel \ref{eqn:????} verwendet, wobei
 die Werte der Heizspannung und des Heizstromes aus dem ersten Auswertungsteil zu
 entnehmen sind. Hieraus ergeben sich die folgenden Werte der Kathodentemperatur :
 \begin{align*}
-  T1= \SI{1964.07}{\kelvin} \\
-  T2= \SI{2041.43}{\kelvin} \\
-  T3= \SI{2115.03}{\kelvin} \\
-  T4= \SI{2174.56}{\kelvin} \\
-  T5= \SI{2253.03}{\kelvin} \\
+  T_1= \SI{1964.07}{\kelvin} \\
+  T_2= \SI{2041.43}{\kelvin} \\
+  T_3= \SI{2115.03}{\kelvin} \\
+  T_4= \SI{2174.56}{\kelvin} \\
+  T_5= \SI{2253.03}{\kelvin} \\
 \end{align*}
-Hierbei berechnen sich die Fehler nach Formel \ref{eqn:gaus} durch
-\begin{equation}
-  \increment T = \sqrt{???????} \: .
-\end{equation}
 \subsection{Bestimmung der Austrittsarbeit}
-Zur Bestimmung der Austrittsarbeit wird Formel \ref{eqn:???} verwendet, wobei
-$m_0 = \SI{9.109e-31}{\kilo\gram} $\cite{q3} die Elektronenmasse und $h= \SI{6.626e-34}{\joule\second}$ \cite{q4}
+Zur Bestimmung der Austrittsarbeit wird Formel \ref{eqn:satt} verwendet, wobei
+$m_0 = \SI{9.109e-31}{\kilo\gram} $ \cite{q3} die Elektronenmasse und $h= \SI{6.626e-34}{\joule\second}$ \cite{q4}
 das Plancksche Wirkungsquantum bezeichnet.
 Aus den jeweiligen Sättigungsstrom (abgelesen) und Temperatur Wertepaaren lassen sich
 folgende Werte der Austrittsarbeit für Wolfram bestimmen:
 \begin{align*}
-  W_{A1}= \SI{4.74}{\electronvolt} \\
-  W_{A2}= \SI{4.80}{\electronvolt} \\
-  W_{A3}= \SI{4.82}{\electronvolt} \\
-  W_{A4}= \SI{4.85}{\electronvolt} \: .\\
+  W_{A1} &= \SI{4.74}{\electronvolt} \\
+  W_{A2} &= \SI{4.80}{\electronvolt} \\
+  W_{A3} &= \SI{4.82}{\electronvolt} \\
+  W_{A4} &= \SI{4.85}{\electronvolt} \: .\\
 \end{align*}
 Dabei lässt sich für die fünfte Messreihe keine Austrittsarbeit bestimmen, da sich
 kein genauer Sättigungsstrom ablesen lässt.
@@ -155,5 +151,5 @@ Durch die Gleichung
 \end{equation}
 ergibt, sodass für die gemittelte Austrittsarbeit folgt :
 \begin{align*}
-  W_A = \SI{4.8025}
+  W_A = \SI{4.80(2)}{\electronvolt} \\
 \end{align*}
