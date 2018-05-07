@@ -3,8 +3,8 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 
-x,y = np.genfromtxt('Werte1b.txt', unpack=True)
-X,Y = np.genfromtxt('Werte1a.txt', unpack=True)
+x,y = np.genfromtxt('Werte2b.txt', unpack=True)
+X,Y = np.genfromtxt('Werte2a.txt', unpack=True)
 
 y=y*10**(-1)-0.1*10**(-1) #y=gemessener Strom
 x=x/1000 #position von Detektor
@@ -21,7 +21,7 @@ def f(X ,I, S, M, B):
     return I*np.cos(((np.pi*S*np.sin(X-M))/l))**(2)*np.sinc((B*np.sin(X-M))/l)**(2)
 
 
-params, cov = curve_fit(f, X, Y,  p0=(8, 0.0001, 0.025, 0.00015))
+params, cov = curve_fit(f, X, Y,  p0=(3, 0.0004, 0.0255, 0.0001))
 errors = np.sqrt(np.diag(cov))
 # p0=(0.0001, 0.025, 0.00015)
 print('I =', params[0], '±', errors[0])
@@ -32,7 +32,7 @@ print('M =', params[3], '±', errors[3])
 def g(x, i, s, m, b):
     return i*np.cos(((np.pi*s*np.sin(x-m))/l))**(2)*np.sinc((b*np.sin(x-m))/l)**(2)
 
-params2, cov2 = curve_fit(g, x, y ,p0=(8, 0.0001, 0.025, 0.00015))
+params2, cov2 = curve_fit(g, x, y ,p0=(3, 0.0004, 0.0255, 0.0001))
 errors2 = np.sqrt(np.diag(cov2))
 # p0=(8, 0.0001, 0.025, 0.00015)
 #p0=(3, 0.001, 0.00025, 0.000015)
@@ -53,4 +53,4 @@ plt.ylabel(r'Intensität I in nA')
 plt.legend()
 plt.tight_layout()
 plt.show()
-plt.savefig('plot1.pdf')
+plt.savefig('plot2x.pdf')

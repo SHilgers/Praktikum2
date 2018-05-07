@@ -19,9 +19,12 @@ angenommen werden.
 
 Die Messwerte für den ersten Doppelspant sind in Tabelle \ref{tab:tabelle1} zu sehen.
 Mit Hilfe einer Ausgleichsfunktion werden die Werte für die Spaltbreite $b$, den
-Spaltabstand $s$ und die Verschiebung des Maximuns vom Nullpunkt $x_{0}$ bestimmt.
+Spaltabstand $s$, die Amplitude $i_0$ und die Verschiebung des Maximuns vom Nullpunkt $x_{0}$ bestimmt.
 Diese Ausgleichsfunktion wird nach Gleichung \ref{eqn:doppelinf} berechnet und ist in
-Abbildung \ref{fig:plot1} zu sehen.
+Abbildung \ref{fig:plot1} zu sehen. Da die Messwerte nicht ganz symmetrisch sind werden
+die rechte und linke Seite der Messwerte für die Ausgleichsgerade getrennt betrachtet.
+Außerdem werden dem Programm Startwerte vorgegeben, dafür wurde $i_0$ aus \ref{tab:tabelle1}
+abgelesen und für $b$ und $s$ wurden die Herstellerangaben als Startwerte gewält.
 Für den ersten Spalt sind
 \begin{align*}
   b=\SI{0,15}{\mm} &\;\;\;\;\;\;\;\;\;\; s=\SI{1}{\mm}
@@ -38,27 +41,41 @@ vom Hersteller angegeben.
 
 Die Regression ergibt für den erten Spalt folgende Werte:
 \begin{align*}
-  b &=\SI{2.48(13631278)e-7}{\mm}\\
-  s &=\SI{24.9(0)}{\mm}\\
-  x_{0} &=\SI{0.12(3)}{\mm}
+  I =& \SI{8.1(2)}{\nA}\\
+  B =& \SI{1.77(8)e-4}{\mm}\\
+  S =& \SI{24.84(4)}{\mm}\\
+  M =& \SI{0.13(1)}{\mm}\\
+  i =& \SI{7.8(2)}{\nA}\\
+  b =& \SI{9(198564)e-7}{\mm}\\
+  s =& \SI{24.9(4)}{\mm}\\
+  m =& \SI{0.1(34)}{\mm}
 \end{align*}
+
+Dabei wurden die Parameter der linken Seite mit Großbuchstaben, die Parameter der rechten Seite
+mit Kleinbuchstaben bezeichnet. Da die Messwerte wie in \ref{fig:plot1} zu sehen auf der rechten
+Seite nicht zum zu erwartenden Interferenzbild passen sind die Parameter dmentsprechend ungenau und
+zum Teil mit großen Fehlern belastet. Daher werden im Folgenden die Werte für
+$b$ und $m$ nicht beachtet.
 
 Um die Messwerte mit den Herstellerangaben zu vergleichen wird die Abweichung nach folgender
 Formel berechnet:
 \begin{equation}
   \text{Abweichung}=\frac{\text{Messwert}-\text{Herstellerangabe}}{\text{Herstellerangabe}}\cdot100
 \end{equation}
-Daraus ergibt sich, dass die Spaltbreite $b$ um -99\% abweicht  %(-0+/-9)e+01
-und der Spaltabstand $s$ um 2390\%. Um die Abweichung der Nulllinie zu bestimmen wird
+Daraus ergibt sich, dass die Spaltbreite $b$ um 18\% abweicht
+und der Spaltabstand $s$ um 2387\%.
+Um die Abweichung der Nulllinie zu bestimmen wird
 der Winkel $\phi$ nach $\phi=\frac{x-x_{0}}{L}$ berechnet. Theoretisch liegt die
 Nulllinie bei $\Delta \phi=0\;\text{rad} $. Es ergibt sich
 \begin{equation*}
-  \Delta \phi =\SI{0.023(3)}\; \text{rad}.
-\end{equation*}
-%23.91+/-0.04
-\\
+  \Delta \phi =\SI{0.0228(9)}\; \text{rad}.
+\end{equation*}\\
+
 Für den zweiten Doppelspalt wird anaglog vorgegeangen, die Messwerte sind in Tabelle
 \ref{tab:tabelle2} zu finden und die Ausgleichsfunktion in Abbildung \ref{fig:plot2}.
+Auch hier wird die Ausgleichsunktion aufgeteilt, die Parameter der linken Seite weden mit
+Großbuchstaben beschieben und die der rechten Seite mit Kleinbuchstaben. Außerdem wurden erneut die Herstellerangaben
+als Startwerte vorgegeben und $I_0$ aus \ref{tab:tabelle2} abgelesen.
 Für diesen Doppelspalt wurden vom Hersteller
 \begin{align*}
   b=\SI{0,1}{\mm}  &\;\;\;\;\;\;\;\;\;\; s=\SI{0,4}{\mm}
@@ -75,23 +92,29 @@ angegeben.
 
 Hier ergibt die Regression:
 \begin{align*}
-  b =&\SI{3.148(0)e-2}{\mm}\\
-  s =&\SI{24.699(0)}{\mm}\\
-  x_{0} =&\SI{2.611(1)e-2}{\mm}.
+ I =& \SI{3.42(27)}{\nA}\\
+ B =& \SI{0.44(4)}{\mm}\\
+ S =& \SI{25.54(0)}{\mm}\\
+ M =& \SI{3.76(14)}{\mm}\\
+ i =& \SI{3.7(3)}{\nA}\\
+ b =& \SI{0.46(4)}{\mm}\\
+ s =& \SI{25.4(0)}{\mm}\\
+ m =& \SI{0.05(1)}{\mm}
 \end{align*}
+
 Die Abweichungen von den Herstellerangaben berechnen sich analog zum
 ersten Doppelspalt, es ergibt sich für den Spaltabstand $s$ eine Abweichung von
-6075\% und für die Spaltbreite eine Abweichung von -69\%. Für den Winkel der
+6267.5\% und für die Spaltbreite eine Abweichung von 350\%. Für den Winkel der
 Nulllinie ergibt sich:
 \begin{equation}
-  \Delta \phi =\SI{0.023(0)}\; \text{rad}.
+  \Delta \phi =\SI{0.021(0)}\; \text{rad}.
 \end{equation}
-%-0.685+/-0.009
-%5.17+/-0.04
 
 Für die Ausgleichfunktion in Abblildung \ref{fig:plot3} des Einzelspaltes
 wird Gleichung \ref{eqn:einzel1} verwendet.
 Die dazugehörigen Messwerte stehen in Tabelle \ref{tab:tabelle3}.
+Wie zuvor auch wird die Ausgleichsfunktion wieder aufgespalten, Großbuchstaben
+beschreiben die rechte Seite, Kleinbuchstaben die linke Seite.
 Vom Hersteller wird hier die Spaltbreite mit $b=\SI{0,15}{\mm}$ angegeben.
 
 \input{Tabelle3}
@@ -104,15 +127,19 @@ Vom Hersteller wird hier die Spaltbreite mit $b=\SI{0,15}{\mm}$ angegeben.
 
 Die Regression ergibt für den Einzelspalt diese Werte:
 \begin{align*}
-  b =&\SI{0.15(4)}{\mm}\\
-  x_{0} =&\SI{24.89(12)}{\mm}.
+  i =& \SI{5(1)}{\nA}\\
+  b =& \SI{0.08(1)}{\mm}\\
+  m =& \SI{26(1)}{\mm}\\
+  I =& \SI{5.5(2)}{\nA}\\
+  B =& \SI{0.08(1)}{\mm}\\
+  M =& \SI{26(1)}{\mm}
 \end{align*}
 Hier ist zu beachten, dass der Wert des Maximums aus der Ausgleichsrechnung ausgenommen
 wurde, da sich ansonsten kein numerisch zu verarbeitender Wert ergibt.
-Hier beträgt die Abweichung der Spaltbreite 0\%.
+Hier beträgt die Abweichung der Spaltbreite -56.66\%.
 Die Abweichung der Nulllinie wird äquivalent wie beim Doppelspalt berechnet.
 Es ergibt sich
 \begin{equation*}
-  \Delta \phi= \SI{0.006(11)}\; \text{rad}.
+  \Delta \phi= \SI{0.0005(9)}\; \text{rad}.
 \end{equation*}
 %0.006+/-0.028
