@@ -4,9 +4,10 @@
 \label{sec:Auswertung}
 Für die Auswertung sind folgende Daten der Apperaturen gegeben:
 \begin{align*}
-  L=&\SI{14,3}{\cm}\;\;\;\;\;\;\;p_{x}=&\SI{1,9}{\cm}\:\:\:\: p_{y}=&\SI{1,9}{\cm}\\
-  d_{x}=&\SI{0,43}{\cm}\;\;\;\;\,\;\;\; d_{y}=&\SI{0,38}{\cm}\:\:\:\: n=&20    \\
-  r=&\SI{0,282}{\m}\\
+  L=&\SI{14,3}{\cm} \\
+  p_{x}=&\SI{1,9}{\cm}\\
+  n=&20    \\
+  r=&\SI{0,282}{\m}
 \end{align*}
 
 Mit der Empfindlichkeit einer Kathodenstrahlröhre wird das Verhältnis zwischen Ablenkung $D$
@@ -64,13 +65,21 @@ berechnet sich die Abweichung zu 4,07\%, wobei die Beträge verwendet werden.
 
 
 Aus den gemessenen Synchrosinationsfrequenzen in Tabelle \ref{tab3} wird die Frequenz der
-Sinusspannung berechnet, es gilt
+Sinusspannung ermittelt, denn stehende Bilder bilden sich nur für ein rationales Verhältnis
+von $\nu_{Säge}$ zu $\nu_{Wechsel}$.
+Es gilt die Formrl
 \begin{equation}
-  n\nu_{Säge}=m\nu_{Wechsel}.
+  n\nu_{Säge}=\nu_{Wechsel}
 \end{equation}
+und da $n$ ein rationales Verhältnis einnehmen muss, hier $\frac{n}{2}$,
+kann daraus die Wechselspannung ermittelt werden. Die wErte dafür sind in Tabelle
+\ref{tab3} zu sehen.
 \input{Tabelle3.tex}
 
-
+Aus diesen Werten wird der Mittelwert berechnet und es ergibt sich
+$\nu_{Wechsel}=\SI{21.02(92)}{\Hz}$.
+Außerdem wurchde die Maximale Auslenkung der stehenden Welle in y-Richtung ausgemessen, diese
+beträgt 2,5\;cm.
 
 
 
@@ -106,7 +115,11 @@ Für $U_{B}=\SI{250}{V}$ und $U_{B}=\SI{350}{\V}$ ergiben die Regressionen folge
   D=\SI{25.79(14)}{\centi\meter\per\milli\tesla}\cdot B+\SI{0.03(2)}{\centi\meter}
 \end{equation}
 
-Aus der Gleichung \ref{eqn:???} lässt sich die Steigung
+Aus der Gleichung
+\begin{equation}
+  D=\biggl(L+\frac{l}{2}\biggr)\frac{lB\sqrt{e}}{\sqrt{2U_B}m_e}
+\end{equation}
+lässt sich die Steigung
 \begin{equation}
   a=\biggl(L+\frac{l}{2}\biggr)\frac{l\sqrt{2U_B}}{\sqrt{\frac{e}{m_e}}}
   \label{eqn:steig}
