@@ -15,7 +15,7 @@ und angelegter Spannung $U_d$ bezeichnet. In einem $D\text{-}U_d$-Diagramm entsp
 Steigung. Um die Empfindlichkeit zu bestimmen wird die Ablenkung $D$ gegen die
 Spannung $U_D$ aufgetragen, dies ist in Abbildung \ref{fig:plot1} zu sehen.
 Die dazu verwendeten Messdaten sowie die berchneten Empfindlichkeiten
-sind in Tabelle \ref{tab:tabelle1} zu finden.\\
+sind in Tabelle \ref{tab:tab1} zu finden.\\
 \\
 \input{Tabelle1.tex}
 \begin{figure}
@@ -53,9 +53,9 @@ Die Steigung der Ausgleichsgerade gibt nach folgender Beziehung die Apperaturkon
 \end{equation}
 
 Als theoretischer Wert für die Apperaturkonstante ergibt sich nach \ref{eqn:apper}
-\begin{equation}
+\begin{equation*}
   K=\SI{35,75}{\cm}.
-\end{equation}
+\end{equation*}
 
 Nach der Formel
 \begin{equation}
@@ -64,7 +64,7 @@ Nach der Formel
 berechnet sich die Abweichung zu 4,07\%, wobei die Beträge verwendet werden.
 
 
-Aus den gemessenen Synchrosinationsfrequenzen in Tabelle \ref{tab3} wird die Frequenz der
+Aus den gemessenen Synchrosinationsfrequenzen in Tabelle \ref{tab:tab3} wird die Frequenz der
 Sinusspannung ermittelt, denn stehende Bilder bilden sich nur für ein rationales Verhältnis
 von $\nu_{Säge}$ zu $\nu_{Wechsel}$.
 Es gilt die Formrl
@@ -72,13 +72,13 @@ Es gilt die Formrl
   n\nu_{Säge}=\nu_{Wechsel}
 \end{equation}
 und da $n$ ein rationales Verhältnis einnehmen muss, hier $\frac{n}{2}$,
-kann daraus die Wechselspannung ermittelt werden. Die wErte dafür sind in Tabelle
-\ref{tab3} zu sehen.
+kann daraus die Wechselspannung ermittelt werden. Die Werte dafür sind in Tabelle
+\ref{tab:tab3} zu sehen.
 \input{Tabelle3.tex}
 
 Aus diesen Werten wird der Mittelwert berechnet und es ergibt sich
 $\nu_{Wechsel}=\SI{21.02(92)}{\Hz}$.
-Außerdem wurchde die Maximale Auslenkung der stehenden Welle in y-Richtung ausgemessen, diese
+Außerdem wurchde die maximale Auslenkung der stehenden Welle in y-Richtung ausgemessen, diese
 beträgt 2,5\;cm.
 
 
@@ -86,8 +86,9 @@ beträgt 2,5\;cm.
 \subsection{Elektronen im magnetischen Feld}
 
 Nun soll die Ablenkung der Elektronen im magnetischen Feld untersucht werden.
-Dazu sind in Tabelle \ref{tab:tabelle2} die Messwerte für den Spulenstrom $I$, das
+Dazu sind in Tabelle \ref{tab:tab2} die Messwerte für den Spulenstrom $I$, das
 dazugehörige magnetische Feld $B$, sowie die Ablenkung $D$ der Elektronen zu finden.
+Dabei wird $B$ nach Formel \ref{eqn:helmholtz} berechnet.
 
 \input{Tabelle2.tex}
 
@@ -110,10 +111,11 @@ Die Messwerte und die lineare Regression sind in den Abblildungen \ref{fig:plot4
 \end{figure}
 
 Für $U_{B}=\SI{250}{V}$ und $U_{B}=\SI{350}{\V}$ ergiben die Regressionen folgende Ausgleichsgeraden:
-\begin{equation}
+\begin{align*}
   D=\SI{30,49(18)}{\centi\meter\per\milli\tesla}\cdot B+\SI{0.02(2)}{\centi\meter}\\
   D=\SI{25.79(14)}{\centi\meter\per\milli\tesla}\cdot B+\SI{0.03(2)}{\centi\meter}
-\end{equation}
+\end{align*}
+
 
 Aus der Gleichung
 \begin{equation}
@@ -133,10 +135,10 @@ ergibt
 
 Mit den Werten $L=\SI{14,3}{\cm}$ und $l=\SI{4}{cm}$ ergeben sich für die
 beiden Messreihen die folgen Werte für die spezifische Masse des Elektrons:
-\begin{equation*}
+\begin{align*}
+  \frac{e}{m_e}=\SI{1.26(0)e6}{\coulomb\per\kg}\\
   \frac{e}{m_e}=\SI{1.26(0)e6}{\coulomb\per\kg}
-  \frac{e}{m_e}=\SI{1.26(0)e6}{\coulomb\per\kg}
-\end{equation*}
+\end{align*}
 
 
 
@@ -144,7 +146,7 @@ beiden Messreihen die folgen Werte für die spezifische Masse des Elektrons:
 Aus den weiteren Messwerten wird die Stärke des Erdmagnetfeldes bestimmt. Dazu wurde der
 Inklinationswinkel mit $\phi=65°$ und die angelegte Spannung mit
 \begin{align*}
-  I_1=\SI{0,16}{\A} \text{und} I_2=\SI{0,16}{\A}
+  I_1=\SI{0,16}{\A} \;\;\;\;\text{und}\;\;\;\; I_2=\SI{0,16}{\A}
 \end{align*}
 bestimmt.
 
