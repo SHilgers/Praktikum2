@@ -1,11 +1,117 @@
 \section{Auswertung}
-\label{sec:Auswertung}
+\subsection{Überprüfung der Bragg Bedingung}
+Die Messwerte zur Überprüfung der Bragg Bedingung befinden sich in Tabelle \ref{tab:tab1}
+\input{Tabelle1.tex}
 
-Test
+Hieraus lässt sich ein Maximum von 140 Impulsen pro s bei einem Winkel von 28,2°
+ablesen.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\subsection{Emissionsspektrum der Cu-Röntgenröhre}
+Die Messwerte des Emissionsspektrums sind in Tabelle \ref{tab:tabe2} abzulesen. In
+der Abbildung \ref{fig:plot1} sind sie zudem grafisch dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Messwerte des Emissionsspektrums}
+  \label{fig:plot1}
+\end{figure}
+Der Grenzwinkel beträgt hierbei etwa 10°, woraus sich nach Formel \ref{eqn:???} eine minimale
+Wellenlänge von $ \SI{35.106}{\pico\meter}$ und eine maximale Energie von $\SI{5.658}{\femto\joule}$
+bzw. $\SI{35.317}{\kilo \electronvolt}$ berechen lässt. Die Theoriewerte ergeben sich
+aus Gleichung \ref{eqn:???} zu einer minimalen Wellenlänge von $ \SI{35.424}{\pico\meter}$
+und einer maximalen Energie von $\SI{5.608}{\femto\joule}$
+bzw. $\SI{35}{\kilo \electronvolt}$
+Durch die Formel
+\begin{equation*}
+  \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Theorie}}}
+  \label{eqn:abw}
+\end{equation*}
+ergibt sich somit eine relative Abweichung von $0.9 \%$.
+
+Aus Abbildung \ref{fig:plot1} lässt sich für die Halbwertsbreite der K$\alpha$-Linie
+ein Wert von etwa $\Delta \theta$= 0,7° (zwischen 39,70° und 40,40°) ablesen und für die K$\beta$-Linie ein
+Wert von etwa $\Delta \theta$= 0,8° (zwischen 44,15° und 44,95°).
+Hieraus lässt sich durch $\Delta$E = $\text{E}_1$ - $\text{E}_2$
+eine Auflösung von $\SI{0.15}{\kilo\electronvolt}$ (aus K$\alpha$) bzw. $\SI{0.14}{\kilo\electronvolt}$
+(aus K$\beta$) berechnen.
+Durch die Gleichung
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+\noindent lässt sich der Mittelwert bilden, wobei der dazugehörige Fehler sich durch
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}
+  \label{eqn:mitf}
+\end{equation}
+ergibt.
+Somit ergibt sich also insgesamt eine Auflösung von $\SI{0.145(5)}{\kilo\electronvolt}$.
+
+
+Die Energiedifferenz zwischen der K$\alpha$-Linie und der K$\beta$-Linie beträgt etwa $\SI{0.835}{\kilo\electronvolt}$.
+Aus der Gleichung \ref{eqn:???} ergibt sich hieraus eine Abschirmkonstante von
+
+
+
+\subsection{Absorptionsspektren}
+\subsubsection{Brom}
+Die Messwerte des Absorptionsspektrums von Brom sind in Tabelle \ref{tab:tab3} aufgeführt und
+in Abbildung \ref{fig:brom} graphisch dargestellt.
+\input{Tabelle3.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{Brom.pdf}
+  \caption{Absorptionsspektrum von Brom}
+  \label{fig:brom}
+\end{figure}
+Die K-Kante liegt hierbei bei einem Winkel von ungefähr 26,05°, woraus sich nach Formel
+\ref{eqn:???} eine Absorptionsenergie von $\SI{13.657}{\kilo}{\electronvolt}$. Durch Gleichung
+\ref{eqn:abw} ergibt sich somit eine prozentuale Abweichung von
+zum Theoriewert aus der Vorbereitung.
+
+
+Aus Gleichung \ref{eqn:???} lässt sich aus dieser Absorptionsenergie eine Abschirmkonstante
+von ???? berechnen.
+
+\subsubsection{Strontium}
+Die Messwerte des Absorptionsspektrums von Strontium sind in Tabelle \ref{tab:tab4} aufgeführt und
+in Abbildung \ref{fig:Strontium} graphisch dargestellt.
+\input{Tabelle4.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{Strontium.pdf}
+  \caption{Absorptionsspektrum von Strontium}
+  \label{fig:Strontium}
+\end{figure}
+Die K-Kante liegt hierbei bei einem Winkel von etwa 21,70°. Nach analoger Rechnung zu Brom
+ergibt sich für Strontium somit eine Absorptionsenergie von $\SI{13.657}{\kilo}{\electronvolt}$
+(relative Abweichung: ) und eine Abschirmkonstante von (relative Abweichung: ).
+
+\subsubsection{Zink}
+Die Messwerte des Absorptionsspektrums von Zink sind in Tabelle \ref{tab:tab5} aufgeführt und
+in Abbildung \ref{fig:Zink} graphisch dargestellt.
+\input{Tabelle5.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{Zink.pdf}
+  \caption{Absorptionsspektrum von Zink}
+  \label{fig:Zink}
+\end{figure}
+Die K-Kante liegt hierbei bei einem Winkel von etwa 36,75°. Nach analoger Rechnung
+ergibt sich für Zink somit eine Absorptionsenergie von $\SI{13.657}{\kilo}{\electronvolt}$
+(relative Abweichung: ) und eine Abschirmkonstante von (relative Abweichung: ).
+
+\subsubsection{Zirkonium}
+Die Messwerte des Absorptionsspektrums von Zirkonium sind in Tabelle \ref{tab:tab6} aufgeführt und
+in Abbildung \ref{fig:Zirkonium} graphisch dargestellt.
+\input{Tabelle6.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{Zirkonium.pdf}
+  \caption{Absorptionsspektrum von Zirkonium}
+  \label{fig:Zirkonium}
+\end{figure}
+Die K-Kante liegt hierbei bei einem Winkel von etwa 19,35°. Nach analoger Rechnung
+ergibt sich für Zirkonium somit eine Absorptionsenergie von $\SI{13.657}{\kilo}{\electronvolt}$
+(relative Abweichung: ) und eine Abschirmkonstante von (relative Abweichung: ).
