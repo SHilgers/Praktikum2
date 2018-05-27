@@ -84,15 +84,22 @@ in Y-Richtung, sodass es auf eine krummlinige Bahn in der YZ-Ebene gelenkt wird.
 Da die Kraft allerdings immer senkrecht auf dem Wegelement steht, ändert sich die
 potentielle Energie nicht und somit muss die kinetische Energie
 \begin{equation}
-  \text{E}_{\text{kin}}
+  \text{E}_{\text{kin}} = \frac{1}{2} \text{m}_0 \text{v}^2
+  \label{eqn:ekin}
 \end{equation}
-mit dem Energiesatz folgt, das der Strahl hierdurch einen Kreis mit Radius
+erhalten sein, woraus folgt, dass
 \begin{equation}
-  r = \frac{\text{m}_0 \cdot \text{v}_0}{\text{m}_0} \cdot B
+  \lvert\vec{v}\rvert = \text{v}_0
+\end{equation}
+in jedem Bahnpunkt konstant ist.
+Hieraus folgt, mittels gleichsetzten der Lorentzkraft und der
+Zentrifugalkraft, dass der Strahl einen Kreis mit Radius
+\begin{equation}
+  r = \frac{\text{m}_0 \cdot \text{v}_0}{\text{e}_0\cdot B}
   \label{eqn:radius}
 \end{equation}
 beschreibt.
-Die konstante Geschwindigkeit der Elektronen $\text{v}_0$ lässt sich in mithilfe
+Die konstante Geschwindigkeit der Elektronen $\text{v}_0$ lässt sich mithilfe
 des Energiesatzes zu
 \begin{equation}
   \text{v}_0 = \sqrt{2 U_B \cdot \text{e}_0 / \text{m}_0}
@@ -101,7 +108,7 @@ des Energiesatzes zu
 bestimmen.
 
 Die tatsächlich messbare Verschiebung des Auftreffpunkts auf dem Leuchtschirm
-ergibt sich somit durch die Gleichungen \ref{eqn:radius} und \ref{eqn:v0} und die
+ergibt sich somit durch die Gleichungen (\ref{eqn:radius}) und (\ref{eqn:v0}) und die
 geometrischen Beziehungen, welche in Abbildung \ref{fig:magnet} dargestellt sind zu
 \begin{equation}
    \frac{D}{D^2 + L^2} = \frac{1}{\sqrt{8 U_B}}\sqrt{\frac{\text{e}_0}{\text{m}_0}}\cdot B \: .
