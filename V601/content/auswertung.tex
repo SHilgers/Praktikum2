@@ -1,11 +1,118 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Mittlere Weglänge}
 
-Test
+Um die mittlere Weglänge $\bar{w}$ der Elektronen zu bestimmen werden die Gleichungen
+\ref{??} und \ref{eqn:??} genutzt. Die berechneten Werte sind in Tabelle
+\ref{tab:1} zu finden. Die mittlere Weglänge $\bar{w}$ wird mit dem Abstand
+$a=\SI{1e-2}{\m}$ zwischen
+Kathode und Beschleunigungselektrode verglichen.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\input{tabelle1.tex}
+
+\subsection{Differentielle Energieverteilung}
+Hier werden die Graphen 1 und 2 aus dem Anhang verwendet.
+Zunächst wird aus der Skalierung der x-Achse ermittelt, wie viele
+Skalenteile einem Volt entsprechen. Dazu werden die Skalenteile zwischen einer
+Markierung (entspricht einem Volt) abgezählt, die Ergebnisse sind in
+Tabelle \ref{tab:tab2} zu sehen. Da auf Millimeterpapier gezeichnet wird entspricht
+ein Skalenteil einem Millimeter.
+
+\input{tabelle2.tex}
+Da der Abstand zwischen zwei Markierungen einem Volt entspricht wird der
+Kehrwert der Mittelwerte gebildet:
+\begin{align*}
+  V_1=\SI{0,041(1)}{\V}\\
+  V_2=\SI{0,042(1)}{\V}.
+\end{align*}
+Um aus der integralen
+Energieverteilung die differentielle Energieverteilung zu erhalten, werden
+Steigungsdreiecke eingezeichnet. Die Abgelesenen Steigungen, sowie
+die dazugehörigen Werte der Bremsspannung stehen in Tabelle \ref{tab:tab3}.
+
+\input{tabelle3.tex}
+
+In Abbildung \ref{fig:plot1} und \ref{fig:plot2} wird
+diese Steigung gegen die Bremsspannung $U_A$ aufgetragen. Dabei ist zu beachten, dass
+die Steigung proportional zu Anzahl der Elektronen ist, während die Bremsspannung $U_A$
+ein Maß für die Energie der Elektronen ist.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=7cm]{plot1.pdf}
+  \caption{Differentielle Energieverteilung bei 300\;K }
+  \label{fig:plot1}
+\end{figure}
+
+ \begin{figure}[H]
+   \centering
+   \includegraphics[height=7cm]{plot2.pdf}
+   \caption{Differentielle Energieverteilung bei 422\;K}
+   \label{fig:plot2}
+ \end{figure}
+
+Aus Abbildung \ref{fig:plot1} lässt sich ablesen, dass die meisten Elektronen
+die Energie $E=\SI{6,73}{\eV}$ besitzen.
+Da eine Beschleunigungsspannung von $U_B=\SI{11}{V}$ angelegt wurde berechnet sich das
+Kontaktpotential nach Formel \ref{??} wie folgt:
+\begin{equation}
+  K=\frac{1}{e_0}(\SI{6,73}{\eV})=\SI{6,73}{\V}.
+  \label{kontakt}
+\end{equation}
+Daraus ergibt sich das effektive Beschleunigungspotential:
+\begin{equation}
+  U_{\text{B,eff}}= U_B -K =\SI{4,27}{\V}.
+\end{equation}
+
+Zwischen Abbildung \ref{fig:plot1} und \ref{fig:plot2} ist ein deutlicher
+Unterschied zu erkennen. Das lässt sich über die freie Weglänge, bzw. das Verhältnis
+$\frac{a}{\bar{w}}$ erklären. Bei Zimmertemperatur ist der Gasdruck deutlich geringer,
+also ist die freie Weglänge größer und damit das Verhältnis $\frac{a}{\bar{w}}$
+kleiner. Also stoßen die Elektronen nicht so häufig gegen Hg-Atome. Das ist bei der zweiten
+Messreihe schon deutlich öfter der Fall und da die Elektronen bei jedem Stoß ihre
+Richtung und Geschwindigkeit ändern, kommt es zu einer breiteren Energieverteilung
+an der Anode.
+%Einbruch bei ca. 2,5V
+
+\subsection{Frank-Hertz-Kurve}
+Hier wird zu Beginn ebenfalls über die Skalierung der x-Achse ermittelt wie viele
+Skalenteile einem Volt entsprechen.
+\input{tabelle4.tex}
+Hier wurden die Markierungen in Abständen von $\SI{5}{\V}$ gemacht, somit ergibt
+sich aus den Mittelwerten der Skaleneinheiten:
+\begin{align*}
+  V3=\SI{0,239(4)}{\V}\\
+  V4=\SI{0,243(4)}{\V}\\
+  V5=\SI{0,244(9)}{\V}.
+\end{align*}
+Um die erste Anregungsenergie $E_1$ zu bestimmen werden die Abstände zwischen den
+Maxima von Anhang 3-5 gemessen, dies ist in Tabelle \ref{tab:tab5} zu sehen.
+Denn der Abstand zwischen den Maxima multipliziert mit
+$e_0$ entspricht der ersten Anregungsenergie.
+\input{tabelle5}
+Die Abstände der Maxima umgerechnet in Volt ergeben:
+\begin{align*}
+  V_{3,A}=\SI{4,99(14)}{\V}\\
+  V_{4,A}=\SI{5,05(20)}{\V}\\
+  V_{5,A}=\SI{4,97(20)}{\V}.
+\end{align*}
+
+So ergibt sich der Mittelwert für die erste Anregungsenergie $E_1$:
+\begin{align*}
+  E_1=\SI{5,01(10)}{\eV}.
+\end{align*}
+
+Mit der Beziehung $\lambda=\frac{c}{\nu}$ und $E=h\nu$ ergibt sich für die Wellenlänge
+\begin{equation}
+  \lambda=\SI{247(5)}{\nm}.
+\end{equation}
+
+\subsection{Ionisierungsenergie}
+Um die Ionisierungsenergie zu ermitteln wird in Anhang 6 eine Asymptote eingezeichnet,
+diese schneidet die x-Achse bei $X=\SI{15,2}{\V}$.
+Mit dem Kontaktpotential, dass schon in Rechnung \ref{kontakt} bestimmt
+wurde ergibt sich:
+\begin{equation}
+  U_{\text{Ionisierung}}=(X-K)\cdot e_0=\SI{8,47}{\eV}.
+\end{equation}

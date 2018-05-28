@@ -6,8 +6,8 @@ Für die Auswertung sind folgende Daten der Apperaturen gegeben:
 \begin{align*}
   L=&\SI{14,3}{\cm} \\
   p_{x}=&\SI{1,9}{\cm}\\
-  n=&20    \\
-  r=&\SI{0,282}{\m}
+  N=&20    \\
+  R=&\SI{0,282}{\m}
 \end{align*}
 
 Mit der Empfindlichkeit einer Kathodenstrahlröhre wird das Verhältnis zwischen Ablenkung $D$
@@ -15,7 +15,8 @@ und angelegter Spannung $U_d$ bezeichnet. In einem $D\text{-}U_d$-Diagramm entsp
 Steigung. Um die Empfindlichkeit zu bestimmen wird die Ablenkung $D$ gegen die
 Spannung $U_D$ aufgetragen, dies ist in Abbildung \ref{fig:plot1} zu sehen.
 Die dazu verwendeten Messdaten sowie die berchneten Empfindlichkeiten
-sind in Tabelle \ref{tab:tab1} zu finden.\\
+sind in Tabelle \ref{tab:tab1} zu finden. Die Ablenkung $D$ wurde in Kästcheneinheiten
+des Beobachungsschirms abgelesen, dabei entspricht ein Kästchen $\SI{0,6}{\cm}$.\\
 \\
 \input{Tabelle1.tex}
 \begin{figure}
@@ -66,10 +67,10 @@ berechnet sich die Abweichung zu 4,07\%, wobei die Beträge verwendet werden.
 
 Aus den gemessenen Synchrosinationsfrequenzen in Tabelle \ref{tab:tab3} wird die Frequenz der
 Sinusspannung ermittelt, denn stehende Bilder bilden sich nur für ein rationales Verhältnis
-von $\nu_{Säge}$ zu $\nu_{Wechsel}$.
-Es gilt die Formrl
+von $\nu_{\text{Säge}}$ zu $\nu_{\text{Wechsel}}$.
+Es gilt die Formel
 \begin{equation}
-  n\nu_{Säge}=\nu_{Wechsel}
+  n\nu_{\text{Säge}}=\nu_{\text{Wechsel}}
 \end{equation}
 und da $n$ ein rationales Verhältnis einnehmen muss, hier $\frac{n}{2}$,
 kann daraus die Wechselspannung ermittelt werden. Die Werte dafür sind in Tabelle
@@ -77,7 +78,7 @@ kann daraus die Wechselspannung ermittelt werden. Die Werte dafür sind in Tabel
 \input{Tabelle3.tex}
 
 Aus diesen Werten wird der Mittelwert berechnet und es ergibt sich
-$\nu_{Wechsel}=\SI{21.02(92)}{\Hz}$.
+$\nu_{Wechsel}=\SI{59,26(1820)}{\Hz}$.
 Außerdem wurchde die maximale Auslenkung der stehenden Welle in y-Richtung ausgemessen, diese
 beträgt 2,5\;cm.
 
@@ -110,38 +111,26 @@ Die Messwerte und die lineare Regression sind in den Abblildungen \ref{fig:plot4
   \label{fig:plot5}
 \end{figure}
 
-Für $U_{B}=\SI{250}{V}$ und $U_{B}=\SI{350}{\V}$ ergiben die Regressionen folgende Ausgleichsgeraden:
+Aus den Regressionen in Abbildung \ref{fig:plot4} und \ref{fig:plot5}
+ergeben sich für $U_{B}=\SI{250}{V}$ und $U_{B}=\SI{350}{\V}$ folgende Steigungen $a$:
 \begin{align*}
-  D=\SI{30,49(18)}{\centi\meter\per\milli\tesla}\cdot B+\SI{0.02(2)}{\centi\meter}\\
-  D=\SI{25.79(14)}{\centi\meter\per\milli\tesla}\cdot B+\SI{0.03(2)}{\centi\meter}
+  a_{\text{250}}&=\SI{12846,32(18)}{\m\per\tesla}\\
+  a_{\text{350}}&=\SI{10833,09(18)}{\m\per\tesla}
 \end{align*}
 
+Da $\frac{D}{D^{2}+L^{2}} $ gegen $B$ aufgetragen wurde, kann aus der Formel \ref{eqn:magnet} eine Beziehung für
+die Steigung abgelesen werden. Durch umstellen nach $\frac{e_0}{m_e}$ kann die
+spezifische Ladung berechnet werden.
+\begin{align}
+  &a=\frac{1}{8U_{B}}\cdot\frac{e_0}{m_e}\\
+  \iff &\frac{e_0}{m_0}=a^{2}\cdot 8 U_{B}^2
+\end{align}
 
-Aus der Gleichung
-\begin{equation}
-  D=\biggl(L+\frac{l}{2}\biggr)\frac{lB\sqrt{e}}{\sqrt{2U_B}m_e}
-\end{equation}
-lässt sich die Steigung
-\begin{equation}
-  a=\biggl(L+\frac{l}{2}\biggr)\frac{l\sqrt{2U_B}}{\sqrt{\frac{e}{m_e}}}
-  \label{eqn:steig}
-\end{equation}
-ablesen. Umstellen nach $\frac{e}{m_e}$
-ergibt
-\begin{equation}
-  \frac{e}{m_e}= \frac{2U_{B} a^(2)}{l^{2}(L+\frac{l}{2})^{2}}.
-  \label{em}
-\end{equation}
-
-Mit den Werten $L=\SI{14,3}{\cm}$ und $l=\SI{4}{cm}$ ergeben sich für die
-beiden Messreihen die folgen Werte für die spezifische Masse des Elektrons:
+Für die beiden Messreihen ergeben sich folgende Werte:
 \begin{align*}
-  \frac{e}{m_e}=\SI{1.26(0)e6}{\coulomb\per\kg}\\
-  \frac{e}{m_e}=\SI{1.26(0)e6}{\coulomb\per\kg}
+  \frac{e_0}{m_0}&=\SI{8,25(23)e+13}{\coulomb\per\kg}\\
+  \frac{e_0}{m_0}&=\SI{1,15(4)e+14}{\coulomb\per\kg}.
 \end{align*}
-
-
-
 
 Aus den weiteren Messwerten wird die Stärke des Erdmagnetfeldes bestimmt. Dazu wurde der
 Inklinationswinkel mit $\phi=65°$ und die angelegte Spannung mit
@@ -150,13 +139,13 @@ Inklinationswinkel mit $\phi=65°$ und die angelegte Spannung mit
 \end{align*}
 bestimmt.
 
-Daraus ergibtsich folgender Wert für die horizontale Komponente des Erdmagnetfeldes:
+Daraus ergibt sich folgender Wert für die horizontale Komponente des Erdmagnetfeldes:
 \begin{equation*}
-  B_1=\SI{1e-5}{\milli\tesla}.
+  B_1=\SI{1e-8}{\tesla}.
 \end{equation*}
 
 
-Unter der berücksichtigung des Inklinationswinkels ergibt sich für das
+Unter der Berücksichtigung des Inklinationswinkels ergibt sich für das
 Erdmagnetfeld
 \begin{equation*}
   B_\text{Erde}=\SI{1,77}{\milli\tesla}.
