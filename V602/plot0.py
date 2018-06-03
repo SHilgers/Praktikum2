@@ -3,7 +3,7 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 from uncertainties import ufloat
 
-a, b= np.genfromtxt('MessungZirkonium.txt', unpack=True)
+a, b= np.genfromtxt('Messung1.txt', unpack=True)
 
 plt.plot (a, b, 'r', label='Messwerte')
 
@@ -18,5 +18,5 @@ plt.xlabel(r'$ 2\theta / °$')
 plt.ylabel(r'Impulse pro s')
 plt.legend(loc="best")
 plt.tight_layout()
-plt.savefig('Zirkonium.pdf')
+plt.savefig('plot0.pdf')
 plt.show()
