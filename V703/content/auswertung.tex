@@ -10,6 +10,12 @@ der Fehler der Messung bestimmen.
 Die Werte sind, zusammen mit den entsprechenden Fehlerbalken, in Abbildung \ref{fig:plot1}
 dargestellt, wobei der erste Wert bei $\SI{300}{\volt}$ zur besseren Skalierung
 außer Acht gelassen wird.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Messwerte der Zählrohrcharakteristik mit Ausgleichsgerade}
+  \label{fig:plot1}
+\end{figure}
 Es lässt sich erkennen, dass das Plateau in einem Bereich von etwa $\SI{400}{\volt}$
 bis $\SI{650}{\volt}$ liegt. In diesem Bereich wird dann eine lineare Ausgleichsrechnung
 der Form
@@ -40,17 +46,23 @@ $\SI{450}{\volt}$ in einer Minute :
   N_2 &= 15937 \pm 126 \\
   N_{1+2} &= 28081 \pm 168 \\
 \end{align*}
-Aus Gleichung \ref{eqn:???} ergibt sich somit eine Totzeit von
+Aus Gleichung \ref{eqn:tot} ergibt sich somit eine Totzeit von
 \begin{equation*}
   \text{T} \approx \SI{101(34)}{\micro\second} \: ,
 \end{equation*}
-wobei sich der Fehlre nach Gleichung \ref{eqn:gaus} durch die Formel
+wobei sich der Fehler hierbei durch die Gauß´sche Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: .
+  \label{eqn:gaus}
+\end{equation}
+ergibt, in diesem Fall also
 \begin{equation}
   \increment T = \sqrt{\left( \frac{\text{N}_{1}^2-\text{N}_{2}^2-\text{N}_{12}}{2\text{N}_{1}^2\text{N}_{2}} \right)^2 \cdot (\increment \text{N}_{1})^2 \\
    + \left( \frac{\text{N}_{2}^2-\text{N}_{1}^2-\text{N}_{12}}{2\text{N}_{1}\text{N}_{2}^2} \right)^2 \cdot (\increment \text{N}_{2})^2
-  +\left( \frac{1}{2\text{N}_{1}\text{N}_{2}} \right)^2 \cdot (\increment \text{N}_{12})^2 }
+  +\left( \frac{1}{2\text{N}_{1}\text{N}_{2}} \right)^2 \cdot (\increment \text{N}_{12})^2 } \: .
 \end{equation}
-ergibt. \\
+ \\
 Die mithilfe des Oszilloskops gemessenen Totzeiten sind in Tabelle \ref{tab:tabe3}
 abzulesen.
 \input{Tabelle3.tex}
@@ -70,10 +82,13 @@ ergibt. Hierdurch ergibt sich somit insgesamt eine Totzeit von
   \text{T} \approx \SI{184(9)}{\micro\second}
 \end{align*}
 \subsection{Freigesetzte Ladung}
-Die pro Teilchen vom Zählrohr freigesetzten Ladungsmenge lässt sich die Formel
-\ref{eqn:???} berechen, wobei $\increment t$= 60s beträgt. Der Fehler lässt sich nach Gleichung \ref{eqn:gaus} durch
+Die pro Teilchen vom Zählrohr freigesetzten Ladungsmenge lässt sich durch die Formel
 \begin{equation}
-   \text{Fehler} \: \increment Q = \frac{\bar{I} \cdot \increment t}{\text{N}^2} \cdot \increment \text{N}
+  \bar\text{I}= \frac{\increment \text{Q}}{\increment \text{t}} \text{N}
+\end{equation}
+berechen, wobei $\increment t$= 60s beträgt. Der Fehler lässt sich nach Gleichung \ref{eqn:gaus} durch
+\begin{equation}
+   \text{Fehler} \: \increment \text{Q} = \frac{\bar{\text{I}} \cdot \increment t}{\text{N}^2} \cdot \increment \text{N}
 \end{equation}
 berechnen.
 Die so berechneten Werte lassen sich in Tabelle \ref{tab:tabe4} ablesen.
