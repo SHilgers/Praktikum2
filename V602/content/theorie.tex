@@ -1,18 +1,16 @@
 \section{Theorie}
 \label{sec:Theorie}
 \subsection{Zielsetzung}
-In diesem Versuch wird mit Hilfe von Röntgenstrahlung (ca. $\SI{10}{\eV}$ bis $\SI{100}{\eV}$)
+In diesem Versuch wird mit Hilfe von Röntgenstrahlung
 das Emissionsspektrum einer
 Cu-Röntgenröhre bestimmt. Außerdem werden die Absorptionsspektren verschiedener
 Materialien untersucht.
 
-\subsection{Grundlagen}
+\subsection{Emission von Röntgenstrahlung}
 Wenn Elektronen in einer evakuierten Röhre aus einer Glühkathode ausgelöst und
 dann zur Anode beschleunigt werden, wo sie auf das Anodenmaterial treffen, entsteht
 Röntgenstrahlung. Diese besteht aus dem kontinuierlichen Bremsspektrum und dem
 charakteristischen Spektum des Anodenmaterials.
-
-\subsection{Emission von Röntgenstrahlung}
 
 Im Coulombfeld des Atomkerns wird das Elektron abgebremst, dabei wird ein
 Photon (Röntgenquant) ausgesendet, das so entstehende Spekrum wird als Bremsspektrum
@@ -46,15 +44,8 @@ Anodenmaterial und wird dementsprechend charakteristische Strahlung genannt.
 Die einzelnen charakteristischen Linien werden mit $K_{\alpha}, K_{\beta}, L_{\alpha}...$
 bezeichnet, wobei $K$,$L$,$M$...die Schale angibt auf dem das Elektron endet, während
 der Index angibt von welcher Schale das Elektron kommt. Das charakteristische Spektrum
-ist dem Bremsspektrum überlagert, dies ist gut in Abbildung \ref{fig:kont2} zu sehen.
-\begin{figure}
-  \centering
-  \includegraphics[height=5cm]{kont2.png}
-  \caption{Bremsspektrum überlagert mit kontinuierlichem Spektrum.}
-  \label{fig:kont2}
-  \cite{skript}
-\end{figure}
-\\
+ist dem Bremsspektrum überlagert.\\
+
 Bei größeren Atomen wird die Coulombanziehung des Kerns durch die anderen Hüllenelektronen
 abgeschirmt, deshalb wird eine effektive Kernladungszahl $z_{eff}=z-\sigma$
 eingeführt. Damit folgt für die Bindungsenergie eines Hüllenelektrons:
@@ -75,6 +66,31 @@ Jede charakteristische Linien lässt sich in eine Feinstruktur unterteilen, da
 äußere Elektronen aufgrund des Bahndrehimpulses und des Elektronenspins unterschiedlich
 viel Energie besitzen. Diese Feinstruktur wird in diesem Versuch jedoch nicht genauer
 untersucht.
+
+\subsection{Absorption von Röntgenstrahlung}
+Für den Fall, dass die Energie der Röntgenstrahlung unter $\SI{1}{\mega\electronvolt}$ liegt,
+sind der Photoeffekt und der Comptoneffekt die dominierenden Effekte.
+Mit zunehmender Energie nimmt der Absorptionskoeffizient so lange ab, bis
+er plötzlich sprunghaft ansteigt. Dies geschieht genau dann, wenn die Energie der
+Röntgenstrahlung gerade größer ist als die Bindungsenergie eines Hüllenelektrons
+der inneren Schale ist.
+
+\begin{figure}
+  \centering
+  \includegraphics[height=5cm]{kont2.png}
+  \caption{Beispielhaftes Spektrum der Absorption.}
+  \label{fig:kont2}
+  \cite{skript}
+\end{figure}
+Dieser sprunghafte Anstieg wird als Absoptionskante bezeichnet, diese hat die Lage von
+\begin{equation}
+  h\nu_{\text{abs}}=E_n - E_{\infty}.
+\end{equation}
+Die Absoptionskanten werden je nach Schale aus der das Elektron stammt mit
+K-, L-, M-,... Absorptionskanten bezeichnet. Diese lassen sich noch weiter in
+eine Feinstruktur unterteilen, da die Feinstruktur in diesem Versuch nicht untersucht wird,
+wird nicht näher darauf eingegangen.
+
 Um die Abschirmkonstante aus den L-Kanten zu bestimmen wird zunächst die Energiedifferenz
 \begin{equation}
   \Delta \text{E}_L = \text{E}_{LII} - \text{E}_{LIII}
@@ -83,7 +99,8 @@ berechnet. Die $\text{E}_{LI}$ Kante wird nicht verwendet, da die Auflösung der
 Apparatur nicht hoch genug ist.
 Die Berechnung der Abschirmkonstante erfolgt dann durch die Formel
 \begin{equation}
-  \sigma_L = \text{Z} - \left(\frac{4}{\alpha}\sqrt{\frac{\Delta\text{E}_L}{\text{R}_{\infty}}} \right)^{(1/2)}
+  \sigma_L = \text{Z} - \left(\frac{4}{\alpha}\sqrt{\frac{\Delta\text{E}_L}{\text{R}_{\infty}}}-
+  \frac{5 \Delta E_L}{R_{\infty}} \right)^{(1/2)}
   \left(1+\frac{19}{32}\alpha^2\frac{\Delta\text{E}_L}{\text{R}_\infty}\right)^{(1/2)} \: ,
   \label{eqn:L}
 \end{equation}
@@ -93,21 +110,7 @@ wobei $\alpha=7,297353 \cdot 10^{-3}$ die Feinstrukturkonstante bezeichnet.
 %kontinuierlichen Bremsstrahlung überlagert. Dies ist beispielsweise in Abbildung
 %\ref{fig:spektrum} dargestellt.
 
-\subsection{Absorption von Röntgenstrahlung}
-Für den Fall, dass die Energie der Röntgenstrahlung unter $\SI{1}{\mega\electronvolt}$ liegt,
-sind der Photoeffekt und der Comptoneffekt die dominierenden Effekte.
-Mit zunehmender Energie nimmt der Absorptionskoeffizient so lange ab, bis
-er plötzlich sprunghaft ansteigt. Dies geschieht genau dann, wenn die Enrgie der
-Röntgenstrahlung gerade größer ist als die Bindungsenergie eines Hüllenelektrons
-der inneren Schale ist.
-Dieser sprunghafte Anstieg wird als Absoptionskante bezeichnet, diese hat die Lage von
-\begin{equation}
-  h\nu_{\text{abs}}=E_n - E_{\infty}.
-\end{equation}
-Die Absoptionskanten werden je nach Schale aus der das Elektron stammt mit
-K-, L-, M-,... Absorptionskanten bezeichnet. Diese lassen sich noch weiter in
-eine Feinstruktur unterteilen, da die Feinstruktur in diesem Versuch nicht untersucht wird,
-wird nicht näher darauf eingegangen.
+\subsection{Bragg-Bedingung}
 
 Um die Energie und damit auch die Wellenlänge der Röntgenstrahlung zu bestimmen wird die
 Bragg-Bedingung ausgenutzt. Hierbei fällt die Röntgenstrahlung auf einen Kristall und wird an den
@@ -127,6 +130,8 @@ Mathematisch ausgedrückt hat die Bragg-Bedingung folgende Gestallt:
   \cite{skript}
 \end{figure}
 
+
+
 \section{Vorbereitung}
 
 Zur Vorbereitung auf diesen Versuch wurden Energiewerte sowie zu erwartende Glanzwinkel verschiedener
@@ -134,8 +139,9 @@ Metalle ermittelt, um den Messbereich genauer wählen zu können.
 Für die Überprüfung der Absorption wurden folgende Daten für Kupfer ermittelt:
 \begin{align*}
   Cu-K_{\alpha}-Linie:& \;\;\;E_K=\SI{8,10}{\keV}\;\;\;\;&\theta &=22,7°\\
-  Cu-K_{\beta}-Linie:& \;\;\;E_K=\SI{8,92}{\keV}\;\;\;\;&\theta &=20,15°.
+  Cu-K_{\beta}-Linie:& \;\;\;E_K=\SI{8,92}{\keV}\;\;\;\;&\theta &=20,15°
 \end{align*}
+\cite{leifi}, \cite{kbeta}.
 In Tabelle \ref{tab:tabvor} sind Daten zu finden, die für die Absorptionsmessung
 vorbereitet wurden. Es sind hier nur die Metalle aufgelistet, die auch im Versuch
 untersucht werden.
