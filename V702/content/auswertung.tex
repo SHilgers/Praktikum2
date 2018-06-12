@@ -1,11 +1,129 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Allgemein lässt sich aus den Werten für die Anzahl $N$ der Impulse der Fehler
+über
+\begin{equation}
+  \Delta N= \sqrt{N}
+  \label{eqn:fehler}
+\end{equation}
+Bei der Nullmessung wird $N_u$=215 gemessen. Unter Berücksichtigujng der Zeitspanne von
+$\Delta t=900\;s$ und Gleichung \ref{eqn:fehler} eigibt sich als normierte Nullmessung:
+\begin{equation}
+  N_{un}=\SI{0,24(2)}.
+\end{equation}
 
-Test
+Die Ergebnisse der Messung Halbwertszeitmessung von Silber sind in Tabelle
+\ref{tab:tab1} zu sehen. Diese werden zunächst in Abbildung \ref{fig:plot3}
+halblogarithmisch gegen die Zeit $t$ aufgetragen.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\input{Tabelle1.tex}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=7cm]{plot3.pdf}
+  \caption{Halblogarithmisch aufgetragene Messwerte für Ag mit Fehlerbalken.}
+  \label{fig:plot3}
+\end{figure}
+
+In einem zweiten Diagramm \ref{fig:plot1} werden folgende Ausgleichsgeraden eingezeichnet:\\
+1) Von $t=0$ bis $t^{*}$ eine Ausgleichsgerade für den gesamten Zerfall\\
+2) Von $t^{*}$ an für den langlebigen Zerfall von $\ce{^{108}Ag}$. \\
+3) Von $t=0$ bis $t^{*}$ die Differenz aus dem Gesamten Zerfall und dem langlebigen Zerfall, somit
+bleibt der kurzlebige Zerfall von $\ce{^{110}Ag}$ übrig.
+Außerdem wird die Zeit $t^{*}=\SI{240}{\s}$, an der das kurzlebige Isotop zerfallen ist abgelesen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=7cm]{plot1.pdf}
+  \caption{Halblogarithmisch aufgetragene Messwerte für Ag mit Ausgleichsgeraden.}
+  \label{fig:plot1}
+\end{figure}
+
+Aus Gleichung \ref{eqn:??} kann entnommen werden, dass die Steigungen der Ausgleichsgeraden
+gerade der Zerfallskonstante $\lambda$ entsprechen, da $ln(N_0(1-\exp{(-\lambda\Delta t)}))$
+eine Konstante ist kann auch
+\begin{equation}
+  ln(N_{\Delta t}(t))= -\lambda t +b
+  \label{eqn:gerade}
+\end{equation}
+geschrieben werden.
+Es werden folgende Geradensteigungen ermittelt:
+\begin{align*}
+  \lambda_{\text{ges}}=\SI{11,22(82)e-3}{\per\s}\\
+  \lambda_{\text{lang}}=\SI{1,50(137)e-3}{\per\s}\\
+  \lambda_{\text{kurz}}=\SI{9,7(16)e-3}{\per\s}\\
+\end{align*}
+Somit lauten die dazugehörigen Geradengleichungen:
+
+\begin{align*}
+  ln(N_{\Delta t\;\text{ges}}(t))&=\SI{11,22(82)e-3}{\per\s}\cdot t+(\SI{4,73(11)}{})\\
+  ln(N_{\Delta t\;\text{lang}}(t))&=\SI{1,50(137)e-3}{\per\s}\cdot t +(\SI{2,68(47)}{})\\
+  ln(N_{\Delta t\;\text{kurz}}(t))&=\SI{9,7(16)e-3}{\per\s}\cdot + (\SI{2,0(5)}{})
+\end{align*}
+
+Nach Formel \ref{eqn:gerade} entspricht $ln(N_0(1-\exp{[-\lambda\Delta t]}))$ gerade $b$, somit folgt:
+\begin{align*}
+  N_{0,kurz}(1-\exp{[-\lambda\Delta t]})=\SI{10(7)}{}\\
+  N_{0,lang}(1-\exp{[-\lambda\Delta t]})=\SI{12(8)}{}\\
+  N_{0,ges}(1-\exp{[-\lambda\Delta t]})=\SI{114(13)}{}\\
+\end{align*}
+
+Aus den Zerfallskonstanten lassen sich nach Gleichung \ref{eqn:??} die Halbwertszeiten berechnen:
+\begin{align*}
+  T_{ges}=\SI{62(5)}{\s}\\
+  T_{lang}=\SI{500(400)}{\s}\\
+  T_{kurz}=\SI{71(12)}{\s}\\
+\end{align*}
+
+Um zu zeigen, dass die Relation
+\begin{equation}
+  N_{\Delta t,\text{kurz}}(t_i) <<N_{\Delta t,\text{lang}}(t_i)
+\end{equation}
+gilt, werden die Werte an der Stelle $t^{*}$ berechnet.
+\begin{align}
+  N_{\Delta t,\text{kurz}}(t^{*}) &<<N_{\Delta t,\text{lang}}(t^{*})\\
+  \SI{0,1(6)}{}&<<\SI{2,4(5)}{}\\
+\end{align}
+Da die Steigungen beide negativ sind, ist diese Ungleichung also immer erfüllt, wenn sie
+am Ort $t^{*}$ erfüllt ist.
+
+Zuletzt werden die Summenkurve aus den errechneten Werten zusammen mit den Messwerten in
+einem Diagramm dargestellt, dies ist in Abbildung \ref{fig:plot4} zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=7cm]{plot4.pdf}
+  \caption{Summenkurve zusammen mit den Messwerten.}
+  \label{fig:plot4}
+\end{figure}
+
+%Indium
+Für Indium, dessen Messwerte in Tabelle \ref{tab:tab2} zu sehen sind, wird ähnlich vorgegangen.
+Die Messwerte werden werden mit Fehlerbalken und Ausgleichsgerade halblogarithmisch
+aufgetragen, dies ist in Abbildung \ref{fig:plot2} dargestellt ist.
+\input{Tabelle2.tex}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=7cm]{plot2.pdf}
+  \caption{Messwerte für Indium mit Fehlerbalken und Ausgleichsgerade.}
+  \label{fig:plot2}
+\end{figure}
+
+Die so ermittelte Geradengleichung lautet:
+
+\begin{equation*}
+  N_{\Delta t}(t)=\SI{23,1(94)e-5}{\per\s}\cdot t + (\SI{7,81(2)}{})
+\end{equation*}
+
+Der vergleich mit Gleichung \ref{eqn:gerade} zeigt, dass die Größe
+$ln(N_0(1-\exp{[-\lambda\Delta t]}))$ gerade dem y-Achsenabschnitt entspricht.
+Daraus folgt, dass
+\begin{equation*}
+  N_0(1-\exp{[-\lambda\Delta t]})=\SI{2,47(5)e+3}{}
+\end{equation*}
+
+Äquivalent zur vorherigen Rechnung ergibt sich aus der Zerfallskonstante $\lambda$, bzw. der
+Steigung der Geraden nach Formel \ref{eqn:??} die Halbwertszeit
+\begin{equation*}
+  T=\SI{3,01(012)e+3}{\s}.
+\end{equation*}
