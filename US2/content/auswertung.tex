@@ -1,11 +1,83 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Test
+\subsection{Acrylblock A-Scan}
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+Aus den in Tabelle \ref{tab:tab1} gegebenen Messwerten für die Schalllaufzeit
+kann nach Formel \ref{eqn:??} die Tiefe der Störstelle $s$ berechent werden.
+Die Ergebnisse sind ebenfalls in Tabelle \ref{tab:tab1} zu sehen.
+Die Schallgeschwindigkeit $c$ für Acryl wird Tabelle \ref{tab:tab??}
+entnommen.
+\input{Tabelle1.tex}
+Für die Messwerte der zweiten Messreihe, nachdem der Zylinder umgedreht wurde,
+wird äquivalent vorgegangen. Die Schalllaufzeiten und dazugehörigen Tiefen $s$
+sind in Tabelle \ref{tab:tab2} dargestellt.
+\input{Tabelle2.tex}
+
+Die Ergebnisse für die Tiefen der Störstelle werden nach der Formel
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+gemittelt. Der dazugehörige Fehler ergibt sich durch
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}.
+  \label{eqn:mitf}
+\end{equation}
+
+Es ergeben sich folgende Werte:
+\begin{align*}
+  s_1&=\SI{}{\m}\\
+  s_2&=\SI{}{\m}\\
+\end{align*}
+
+AUs der Höhe des Zylinders $h=\SI{}{\m}$, die mit der Schieblehre gemessen wurde und den
+berechneten Tiefen $s$ kann die Größe der Störstelle $S$ mit
+\begin{equation}
+  S=h-s_1 -s_2
+\end{equation}
+berechnet werden.
+Es ergibt sich
+\begin{equation}
+  S=\SI{}{\m}.
+\end{equation}
+
+%bessere AUflösung?
+%Laufzeitkorrektur durch Schutzschicht aus Sonde
+
+
+
+
+
+
+
+
+
+\subsection{Acrylblock B-Scan}
+Der B-Scan des Acrylblocks liefert folgende Bilder:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{/path/to/figure}
+  \caption{}
+  \label{}
+\end{figure}
+
+Aus ihnen wird die Größe der Störstelle abgelesen:
+\begin{align*}
+  S&=\SI{}{\m}\\
+  S&=\SI{}{\m}\\
+\end{align*}
+
+Der Vergleich mit den berechneten Werten aus dem A-Scan zeigt, dass
+
+
+
+
+
+
+\subsection{Herzmodell TM-Scan}
+Aus dem A-Scan ergeben sich die in Tabelle \ref{tab:tab3} zu sehen Laufzeiten
+für das Echo.
+\input{Tabelle3.tex}
