@@ -1,11 +1,128 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung des Winkels zwischen den brechenden Oberflächen}
 
-Test
+Die Messwerte zur Bestimmung des Winkels $\varphi$ zwischen den brechenden Oberflächen befinden sich
+in Tabelle \ref{tab:tabe1},
+zusammen mit den durch Gleichung \ref{eqn:???} errechneten Werten.
+\input{Tabelle1.tex}
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+Durch die Gleichung
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+\noindent lässt sich der Mittelwert bilden, wobei der dazugehörige Fehler sich durch
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}
+  \label{eqn:mitf}
+\end{equation}
+ergibt. Somit ergibt sich insgesamt:
+\begin{align*}
+  \varphi = 60,01° \: \pm \: 0,02 °
+\end{align*}
+\subsection{Bestimmung der Brechungsinidizes}
+Die gemessenen Wertepaare aus $\omega_{l}$ und $\omega_{r}$ lassen sich in Tabelle \ref{tab:tabe2}
+ablesen. Aus Gleichung \ref{eqn:???} lässt sich hieraus der Winkel $\eta$ berechnen, aus welchem sich
+wiederum durch Gleichung \ref{eqn:???} der jeweilige Brechungsindex bestimmen lässt.
+Die Ergebnisse sind ebenfalls in Tabelle \ref{tab:tabe2} aufgeführt.
+\input{Tabelle2.tex}
+Der Fehler von n ergibt sich hierbei durch die Gauß´sche Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: ,
+  \label{eqn:gaus}
+\end{equation}
+in diesem Fall also
+\begin{equation}
+  \increment n = \sqrt{ \left( \frac{ \sin(-\frac{\eta}{2})}{\sin^2(\frac{\varphi}{2})} \right)^2
+  \cdot (\increment \varphi)^2 } \: .
+\end{equation}
+
+\subsection{Bestimmung der Dispersionskurve}
+Die Wertepaare aus $n^2$ und $\lambda$ werden zunächst in der Abbildung \ref{fig:plot1}
+graphisch dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Wertepaare zur Ermittlung der Dispersionskurve}
+  \label{fig:plot1}
+\end{figure}
+
+Nun muss zwischen den beiden möglichen Dispersionskurven unterschieden werden.
+Dazu werden zunächst die optimalen Parameter $\text{A}_0$ und $\text{A}_2$, sowie
+$\text{A}'_0$ und $\text{A}'_2$
+bestimmt, indem eine lineare Ausgleichsrechnung der Form
+\begin{equation}
+  y = a\cdot x +b
+  \label{eqn:linear}
+\end{equation}
+durchgeführt wird. Für die Gleichung \ref{eqn:???} werden dazu Wertepaare aus $\frac{1}{\lambda^2}$
+und $n^2$ verwendet (Dispersionskurve 1), für die Gleichung \ref{eqn:???} Wertepaare aus $\lambda^2$
+und $n^2$ (Dispersionskurve 2).
+Hieraus ergeben sich die Parameter:
+\begin{align*}
+  \text{A}_0 &= 2.92 \pm 0,01 \\
+  \text{A}_2 &= \SI{68122(3750)}{\meter\squared} \\
+  \text{A}'_0 &= 3.41 \pm 0.03 \\
+  \text{A}'_2 &= \SI{-8.2(1)e-7}{\per\meter\squared}
+\end{align*}
+Durch diese Parameter lassen sich die jeweiligen Dispersionskurven erstellen, welche in Abbildung
+\ref{fig:plot2} graphisch dargestellt sind.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Wertepaare und Dispersionskurven}
+  \label{fig:plot2}
+\end{figure}
+Hieran lässt sich bereits erkennen, dass die Dispersionskurve 1 die Wertepaare genauer
+approximiert und somit vermutlich geeigneter ist.
+Um eine genauere Aussage treffen zu können, werden zudem die Abweichungsquadrate gemäß
+Gleichung \ref{eqn:???} bestimmt, woraus sich für die jeweiligen Abweichungsquadrate
+die Werte
+\begin{align*}
+  \text{s}_{\text{n}}^2 &= 0,00010 \\
+  \text{s}_{\text{n}}'^2 &= 0,00047
+\end{align*}
+ergeben.
+Auch hieran lässt sich erkennen, dass $\text{s}_{\text{n}}'^2$, also das Abweichungsquadrat
+von Dispersionskurve 2 deutlich größer ist (Faktor 4,7) als $\text{s}_{\text{n}}^2$.
+Dispersionskurve 1 approximiert die Kurve also deutlich besser, sodass sich also
+der Brechungsindex durch die Formel
+\begin{equation}
+  n(\lambda) = \sqrt{2.92 + \frac{\SI{68122}{\meter\squared}}{{\lambda}^2}}
+  \label{eqn:brech}
+\end{equation}
+annähern lässt.
+
+\subsection{Abbesche Zahl}
+Zur Bestimmung der Abbeschen Zahl wird Gleichung \ref{eqn: ???} verwendet.
+Hierzu müssen zunächst die Brechungsindizes der Fraunhofer Linien bestimmt werden,
+wozu Gleichung \ref{eqn:brech} genutzt wird. Die Ergebnisse befinden sich in Tabelle
+\ref{tab:tabe3}
+\input{Tabelle3.tex}
+Hieraus ergibt sich die Abbesche Zahl zu
+\begin{align}
+  \nu = 20.8365 \: .
+\end{align}
+
+\subsection{Auflösungsvermögen}
+Das Auflösungsvermögen lässt sich aus der Gleichung \ref{eqn:???}
+bestimmen, wobei $\text{b}=\SI{3}{\centi\meter}$ die Basislänge des Prismas
+bezeichnet.
+Hiermit wird das Auflösungsvermögen für die Fraunhofer Linien bestimmt, wobei die
+Ergebnisse in Tabelle \ref{tab:tabe4} angegeben sind.
+\input{Tabelle4.tex}
+
+\subsection{Bestimmung der nächsten Absorptionsstelle}
+Aus Gleichung \ref{???} folgt, dass die nächste Absorptionsstelle sich durch die
+Gleichung
+\begin{equation}
+  \lambda = \sqrt{\frac{\text{A}_2}{\text{A}_0-1}}
+\end{equation}
+gegeben ist, die sich somit zu
+\begin{align*}
+    \lambda = \SI{188.45}{\nano\meter}
+\end{align*}
+ergibt und im ultravioletten Bereich liegt.
