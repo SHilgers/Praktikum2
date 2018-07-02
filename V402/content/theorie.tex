@@ -63,9 +63,9 @@ dieses lautet:
 Die Dispersionsgleichung beschreibt den Zusammenhang zwischen Wellenlänge
 und Brechungsindex. Um sie herzuleiten darf das Medium nicht als Kontinuum
 angesehen werden, sondern es muss die elektrische Ladungsverteilung durch
-Elektronen und Ionenrümpfen berücksichtigt werden. Diese befinden sich in einer Gleichgewichtslage, welche
+Elektronen und Ionenrümpfe berücksichtigt werden. Diese befinden sich in einer Gleichgewichtslage, welche
 durch das elektrische Wechselfeld der Lichtwellen zu erzwungen Schwingungen
-angeregt werden. Allgemein existiert bei Schwingungsphänomenen eine Resonanzfrequenz,
+angeregt wird. Allgemein existiert bei Schwingungsphänomenen eine Resonanzfrequenz,
 hier wird jedoch der Wellenlängenbereich betrachtet, in dem keine
 Resonanz, also nur geringe Absorption auftritt. Für andere Wellenlängenbereiche
 muss das Problem quantenmechanisch betrachtet werden.
@@ -90,7 +90,7 @@ und eine Reibungskraft
 
 Daraus ergibt sich die Differentialgleichung
 \begin{equation}
-  m_h\frac{d^{2}\vec{x_h}}{dt^{2}}+f_h\frac{d\vec{x_h}}{dt}+a_h\vec{x_h}=q_h\vec{E_0}\exp{(t\omega t)},
+  m_h\frac{d^{2}\vec{x_h}}{dt^{2}}+f_h\frac{d\vec{x_h}}{dt}+a_h\vec{x_h}=q_h\vec{E_0}\exp{(i\omega t)},
 \end{equation}
 durch Umformungen mit der Relation $\sum_{h}{N_h q_h \vec{x_h}}$ und der
 Maxwellrealtion $n^{2}=\epsilon$ ergibt sich
@@ -134,7 +134,7 @@ Wird die Gleichung \ref{eqn:nquadrat} in eine Potenzreihe entwickelt ergibt
 sich:
 \begin{equation}
   n^2(\lambda)=1+\frac{N_1 q^{2}_1 \lambda_{1}^{2}}{4\pi^2c^2\epsilon_0 m_1}
-  \Bigr(1+\Bigr(\frac{\lambda_1}{\lambda}\Bigl)^2 +\Bigl(\frac{\lambda_1}{\lambda}\Bigr)^4+...).
+  \Bigr(1+\Bigr(\frac{\lambda_1}{\lambda}\Bigl)^2 +\Bigl(\frac{\lambda_1}{\lambda}\Bigr)^4+...\Bigr).
   \label{eqn:nquadratpotenz1}
 \end{equation}
 Vereinfacht kann auch
@@ -155,13 +155,13 @@ Abbildung \ref{fig:krumminnen} an.
   \cite{skript}
 \end{figure}
 
-Aus einem Koeffizientenvergleich der Gleichungen \ref{eqn:nquadratpotenz1}
-und \ref{nquadrat1} lässt sicf fhlgender Ausdruck für die
-Absorptionsstelle $\lambda_1$ schreiben:
-\begin{equation}
-  \lambda_1=\sqrt{\frac{A_2}{A_0}-1}
-  \label{eqn:absorption}
-\end{equation}
+%Aus einem Koeffizientenvergleich der Gleichungen \ref{eqn:nquadratpotenz1}
+%und \ref{eqn:nquadrat1} lässt sicf folgender Ausdruck für die
+%Absorptionsstelle $\lambda_1$ schreiben:
+%\begin{equation}
+%  \lambda_1=\sqrt{\frac{A_2}{A_0-1}}
+%  \label{eqn:absorption}
+%\end{equation}
 
 \subsection{Fallunterscheidung für Wellenlängen kleiner als die Absorptionswellenlänge}% $\lambda=\lambda_1$}
 Für diesen Fall nähert sich die verwendete Wellenlänge von einem kurzwelligeren
@@ -169,7 +169,7 @@ Bereich an die Absorptionsstelle an. Hier lässt sich Gleichung
 \ref{eqn:nquadrat} zu
 \begin{equation}
   n^2(\lambda)=1-\frac{N_1 q^{2}_1}{4\pi^2c^2\epsilon_0 m_1}
-  \Bigr(\Bigr(\lambda^2+\frac{\lambda^4}{\lambda^{2}_1}+\frac{\lambda^6}{\lambda^{4}_1}...).
+  \Bigl(\Bigl(\lambda^2+\frac{\lambda^4}{\lambda^{2}_1}+\frac{\lambda^6}{\lambda^{4}_1}...\Bigr).
   \label{eqn:nquadratpotenz2}
 \end{equation}
 entwickeln. Mit den Koeffizienten $A'_i>0$ ergibt sich vereinfacht:
@@ -213,9 +213,9 @@ spaltförmige Blende. Deshalb wird in der Brennebene kein scharfes Bild, sondern
 eine Beugungsfigur abgebildet.
 Fallen nun zwei Wellen mit leicht unterschiedlicher Wellenlänge in den
 Spektralapparat, so werden sie aufgrund der Dispersion unterschiedlich
-stark gebrochen.Der Richtungsunterschied sei $\Delta \eta$.
-Es entstehen in der Brennebene als zwei leicht unterschiedliche Brechungsfiguren,
-deren Maximum leicht gegeneinander verschoben ist.Siehe dazu Abbildung
+stark gebrochen. Der Richtungsunterschied sei $\Delta \eta$.
+Es entstehen in der Brennebene zwei leicht unterschiedliche Brechungsfiguren,
+deren Maximum leicht gegeneinander verschoben ist. Siehe dazu Abbildung
 \ref{fig:auflösung}.
 
 \begin{figure}[H]
@@ -274,7 +274,7 @@ $A_i$ und $A'_1$ zu bestimmen.
 Die Summe der Abweichungsquadrate errechnet sich nach:
 \begin{align}
   s_{n}^{2}&=\frac{1}{z-2}\sum_{i=1}^{z} \Bigl(n^2(\lambda_i)-A_0-\frac{a_2}{\lambda_{i}^{2}}\Bigr) \\
-  \text{bzw.}\\
+  \text{bzw.}
   s_{n}'^{2}&=\frac{1}{z-2}\sum_{i=1}^{z} \Bigl(n^2(\lambda_i)-A'_0+A'_{2}\lambda_{i}^{2}\Bigr) \\.
   \label{eqn:abweichungquadrat}
 \end{align}
@@ -286,6 +286,6 @@ Nicht jedes Material streut die Farben gleich stark, daher wird mit
   \label{eqn:abbel}
 \end{equation}
 die Abbelsche Zahl definiert, die ein Maß für die Farbstreuung darstelt.
-Dabei sind $n_C, n_D und n_F$ als die Brechungsindices der Frauenhoferschen
-Linien definiert.
+Dabei sind $n_C, n_D \text{und} n_F$ als die Brechungsindices der Frauenhoferschen
+Linien definiert.\\
 $\lambda_C=656\;nm,\;\lambda_D=589\;nm,\;\lambda_F=486\;nm$
