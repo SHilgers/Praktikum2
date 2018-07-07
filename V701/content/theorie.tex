@@ -1,4 +1,55 @@
+\section{Zielsetzung}
+Bei diesem Versuch soll die Reichweite in Luft und die Energie von
+$\alpha$-Strahlung bestimmt werden.
+Zudem wird die Statistik des Radioaktiven Zerfalls untersucht.
+
+
 \section{Theorie}
 \label{sec:Theorie}
-
-%\cite{sample}
+Beim Durchlaufen von Materie verlieren $\alpha$-Teilchen Energie, beispielsweise
+durch Ionisationsprozesse, Dissoziation oder Anregung von Molekülen oder Rutherford
+Streuung, wobei letzteres einen eher kleinen Anteil liefert. \\
+Bei kleineren Geschwindigkeiten ist der Wirkungsquerschnitt der Strahlung höher,
+sodass die Wechselwirkungswahrscheinlichkeit zunimmt. Im Allgemeinen ist der
+Energieverlust $-\text{d}E_{\alpha}/\text{d}x$ abhängig von der Dichte des durchlaufenen
+Materials und der Energie der $\alpha$-Strahlung.
+Ist die Energie groß genug, sodass keine Ladungsaustauschprozesse stattfinden,
+lässt sich der Energieverlust durch die
+Formel
+\begin{equation}
+  -\frac{\text{d}E_{\alpha}}{\text{d}x}=\frac{z^2 e^4}{4\pi\epsilon_0m_e}\cdot
+  \frac{n\text{Z}}{v^2}\log{\left(\frac{2m_e v^2}{I}\right)}
+  \label{eqn:bb}
+\end{equation}
+beschreiben, welche auch als Bethe-Bloch-Gleichung bezeichnet wird, wobei $z$ die
+Ladung und $v$ die Geschwindigkeit der $\alpha$-Teilchen bezeichnet. Z ist zudem
+die Ordnungszahl des durchlaufenen Gases, $n$ die Teilchendichte und $I$ gibt
+die Ionisationsenergie des Gases an.\\
+Die Gleichung
+\begin{equation}
+  R = \int_0^{E_{\alpha}} \frac{\text{d}E_{\alpha}}{-\text{d}E_{\alpha}/\text{d}x}
+  \label{eqn:weg}
+\end{equation}
+gibt die Strecke bis zur vollständigen Abbremsung eines $\alpha$-Teilchens an,
+was auch als Reichweite $R$ bezeichnet wird.\\
+Wird eine bestimmte Energie unterschritten, verliert die Bethe-Bloch-Gleichung
+(\ref{eqn:bb}) aufgrund von Ladungsaustauschprozessen ihre Gültigkeit, sodass hier
+die mittlere Reichweite aus empirisch bestimmten Kurven ermittelt werden muss.
+Dabei kann die Reichweite in Luft bei Energien $E_{\alpha} \leq \SI{2.5}{\mega\electronvolt}$
+durch die Relation
+\begin{equation}
+  R_m = 3,1 \cdot E_{\alpha}^{3/2}
+  \label{eqn:kleine}
+\end{equation}
+angenähert werden, wobei $R_m$ in der Einheit $\si{\milli\meter}$ und $E_{\alpha}$
+in $\si{\mega\electronvolt}$ angegeben wird.\\
+Sind die Temperatur und das Volumen konstant, ergibt sich eine Proportionaliät
+zum Druck $p$ gemäß der Form
+\begin{equation}
+  x = x_0 \frac{p}{p_0} \:.
+  \label{eqn:compare_rho_temp}
+\end{equation}
+Somit kann die Reichweite bestimmt werden, indem die Absorption in Abhängigkeit vom
+Druck gemessen wird. Der feste Abstand zwischen dem Detektor und der Quelle wird dabei als
+$x_0$ bezeichnet und $p_0=\SI{1013}{\milli\bar}$ ist der Normaldruck, sodass sich $x$ als effektive
+Länge ergibt.
