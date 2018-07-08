@@ -1,15 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{Bestimmung der Reichweite}
-
 Die bei $\SI{0}{\milli\bar}$ gemessene Position des Maximums entspricht einer
 Energie von ca. $\SI{4}{\MeV}$. Unter der Annahme einer linearen
 Energieskala können mit diesem Startwert die anderen Energien $E_{\alpha}$
 berechnet werden, die Ergebnisse sind in Tabelle \ref{tab:tab1} zu sehen.
-(Ab $\SI{850}{\milli\bar}$ ist die Messung des Energiemaximuns nicht möglich, deshalb kann
-für diese Werte auch keine Energie berechnet werden.)
-Dort sind auch die nach Formel \ref{eqn:compare_rho_temp} berechneten
+Dort sind auch die nach Formel \ref{eqn:??} berechneten
 effektiven Längen eingetragen, für die Berechneung wird der bei der
 ersten Messung eingestelle Abstand von $x_0=\SI{2,5}{\cm}$ verwendet.
 
@@ -46,7 +42,7 @@ berechnet, für diesen Fall ergibt sich
   \Bigl(\Delta m\Bigr)^2}.
 \end{equation}
 
-Aus Gleichung \ref{eqn:kleine} ergibt sich somit eine Energie von
+Aus Gleichung \ref{eqn:??} ergibt sich somit eine Energie von
 \begin{equation*}
   E_{\alpha}=\SI{13.0(31)}{\MeV}.
 \end{equation*}
@@ -86,8 +82,6 @@ die Energie nicht bestimmt werden.
   \label{fig:plot2}
 \end{figure}
 
-
-\subsection{Statistik des radioaktiven Zerfalls}
 
 Die Messergebnisse des zweiten Versuchsteils sind in Tabelle \ref{tab:tab3}
 dargestellt und werden in Abbildung \ref{fig:plot4} in einem Histogramm
