@@ -44,18 +44,20 @@ covv2 = np.sqrt(np.diag(cov2))
 
 #print(params1[0],'pm',covv1[0], 'und b ist ',params1[1],'pm',covv1[1])
 #print(params2[0],'pm',covv2[0], 'und b2 ist ',params2[1],'pm',covv2[1])
-
-lc = (params1[0]*1/656**2 + params1[1])**(1/2)
-ld = (params1[0]*1/589**2 + params1[1])**(1/2)
-lf = (params1[0]*1/486**2 + params1[1])**(1/2)
+Ao=ufloat(params1[0], covv1[0])
+Az=ufloat(params1[1], covv1[1])
+lc = (Ao*1/656**2 + Az)**(1/2)
+ld = (Ao*1/589**2 + Az)**(1/2)
+lf = (Ao*1/486**2 + Az)**(1/2)
 #print(lc, ld, lf)
 ab = (ld-1)/(lf-lc)
 #print(ab)
 
-auf = 3*10**7*(params1[0])/((656**3)*(params1[1]+params1[0]/(656**2)))
-auf2 = 3*10**7*(params1[0])/((589**3)*(params1[1]+params1[0]/(656**2)))
-auf3 = 3*10**7*(params1[0])/((486**3)*(params1[1]+params1[0]/(656**2)))
-#print(auf, auf2, auf3)
+auf = 3.000000*10**7*(Ao)/((656.0**3)*(Az+Ao/(656.0**2))**(1/2))
+auf2 = 3.000000*10**7*(Ao)/((589.0**3)*(Az+Ao/(589.0**2))**(1/2))
+auf3 = 3.00000*10**7*(Ao)/((486.0**3)*(Az+Ao/(486.0**2))**(1/2))
+
+print(auf, auf2, auf3)
 sor = (params1[0]/(params1[1]-1))**(1/2)
 #print(sor)
 sn = []
@@ -65,7 +67,7 @@ for k in range(0,8) :
     k = k+1
 
 ges = (1/6)*(sn[0]+sn[1]+sn[2]+sn[3]+sn[4]+sn[5]+sn[6]+sn[7])
-print(ges)
+#print(ges)
 
 sn2 = []
 k2 = 0
@@ -74,4 +76,7 @@ for k2 in range(0,8) :
     k2 = k2+1
 
 ges2 = (1/6)*(sn2[0]+sn2[1]+sn2[2]+sn2[3]+sn2[4]+sn2[5]+sn2[6]+sn2[7])
-print(ges2)
+#print(ges2)
+
+l2 = (Ao/(Az-1))**(1/2)
+print(l2)
