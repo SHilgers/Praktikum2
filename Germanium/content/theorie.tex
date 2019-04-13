@@ -24,13 +24,14 @@ Wirkungsquerschnitt der sich aus den verschiedenen Wechselwirkungen zusammensetz
   \caption{Der Extinkionskoeffizient in Abhängigkeit der Energie. \cite{Gilmore2}}
   \label{fig:Extin}
 \end{figure}
-Wie in \ref{fig:Extin} zu sehen ist dominieren bei verschiedenen Energien
+Wie in Abbildung \ref{fig:Extin} zu sehen ist dominieren bei verschiedenen Energien
 unterschiedliche Prozesse. Für geringe Energien dominiert der Photoeffekt welcher mit
 steigender Energie abnimmt, dadurch gewinnt der Comptoneffekt an Bedeutung. Für hohe
 Energien dominiert die Paarerzeugung.
 Da diese drei Prozesse für die Wechselwirkung von Gammaquanten mit Materie von großer Bedeutung sind
 werden sie im Folgenden näher betrachtet.
-[Springer3]
+\cite{Springer3}
+\\
 \\
 \textbf{1. Photoeffekt}\\
 Ein Gammaquant wird von einem kernnahen Hüllenelektron (bevorzugt aus der K-Schale) absorbiert,
@@ -54,10 +55,11 @@ beschreibt mit $r_e$ als klassischen Elektronenradius.
 Der totale Wirkungsquerschnitt für den Photoeffekt ist von der Ordnungszahl des Materials
 und der Photonenergie abhängig:
 \begin{equation}
-  \sigma_{\text{Photo}}\sim Z^5 E_{\gamma}^{-7/2}.
+  \sigma_{\text{Photo}}\sim Z^5\cdot E_{\gamma}^{-7/2}.
   \label{eqn:WQphoto}
 \end{equation}
 \cite{Karlsruhe}
+\\
 \\
 \textbf{2. Componeffekt}\\
 Der Comptoneffekt beschreibt die Streuung von Photonen an äußeren Hüllenelektronen, da
@@ -67,7 +69,7 @@ Spektrum, das Comptonkontinuum bildet. Dieses Spektrum bricht an der Comptonkant
 beträgt der Streuwinkel 180° und der Energieübertrag $E_{\text{max}}$ ist maximal, trotzdem gibt das
 Gammaquant nicht seine gesamte Energie ab
 \begin{equation}
-  E_{max}=E_{\gamma}\frac{2\epsilon}{1+2\epsilon}\;\;<E_{\gamma}.
+  E_{max}=E_{\gamma}\cdot\frac{2\epsilon}{1+2\epsilon}\;\;<E_{\gamma}.
   \label{eqn:kante}
 \end{equation}
 [Springer3]
@@ -78,12 +80,13 @@ den differentiellen Wirkungsquerschnitt:
   \frac{h\nu-E}{h\nu}-\frac{2}{\epsilon}\bigg(\frac{h\nu-E}{h\nu}\bigg) \bigg]\bigg)
   \label{eqn:diffCompton}
 \end{equation}
-mit $\epsilon=\sfrac{E_{\gamma}}{m_e c^2}$ und dem Thomsonschen Schreuquerschnitt $\sigma_{\text{Th}}=\sfrac{8\pi}{3}r_e^2$.
+mit $\epsilon=\sfrac{E_{\gamma}}{m_e c^2}$.
 Für den totalen Wirkungsquerschnitt gilt der Zusammenhang
 \begin{equation}
   \sigma_{\text{Compton}}\sim \frac{Z}{E_{\gamma}}.
   \label{eqn:WPCompton}
 \end{equation}
+\\
 \\
 \textbf{3. Paarerzeugung}\\
 Sind die Photonen energiereich genug können Elektron-Positron-Paare erzeugt werden, dafür müssen
@@ -99,23 +102,36 @@ Der differentielle Wirkungsquerschnitt für den Prozess der Paarerzeugung ist du
 \end{equation}
 gegeben, während der totale Wirkungsquerschnitt folgende Proportionalität besitzt:
 \begin{equation}
-  \sigma_{\text{Paar}}\sim Z^2\ln(\frac{2E_{\gamma}}{m_e c^2})
+  \sigma_{\text{Paar}}\sim Z^2\cdot\ln\Bigg(\frac{2E_{\gamma}}{m_e c^2}\Bigg).
   \label{eqn:WQPaar}
 \end{equation}
+\\
 
+Eine Übersicht über die möglichen Wechselwirkungen von Gammaquanten mit Materien liefert
+Abbildung \ref{fig:Effekt}.
 \begin{figure}[H]
   \centering
-  \includegraphics[height=7cm]{Effekte.png}
-  \caption{Übersicht der Prozesse im Detektor. \cite{Gilmore2}.}
+  \includegraphics[height=5cm]{Effekte.png}
+  \caption{Übersicht der Prozesse im Detektor. \cite{Gilmore2}}
   \label{fig:Effekt}
 \end{figure}
 
 
 \subsection{Grundlagen der Halbleiterinstrumente}
-Halbleiter werden zwischen direkten und indirekten Halbleitern unterschieden. Bei direkten Halbleitern
+Halbleiter werden zwischen direkten und indirekten Halbleitern unterschieden, dies wird
+in Abbildung \ref{fig:Band} dargestellt. Bei direkten Halbleitern
 liegt das Maximum des Valenzbands genau unter dem Minimum des Leitungsbandes, somit ist ein direkter Bandübergang möglich.
 Bei indirekten Halbleitern liegen Minima und Maxima nicht übereinander, für diesen indirekten Bandübergang ist
 ein weiteres Photon nötig.\\
+
+\begin{figure}
+  \centering
+  \includegraphics[height=6cm]{Band.png}
+  \caption{Bandstruktur für direkte und indirekte Halbleiter.}
+  \label{fig:Band}
+  \cite{Springer3}
+\end{figure}
+
 Außerdem werden die Eigenschaften von Halbleitern durch ihre Dotierung beeinflusst. Germanium besitzt
 beispielsweise 4 Valenzelektronen, wird nun ein Material mit fünf Valenzelektronen hinzugegeben bleibt nach
 Eingehen der Bindungen ein freies Elektron übrig, somit dominieren die Elektronen als Ladungsträger und es handelt
@@ -123,25 +139,34 @@ sich um einen n-dotierten Halbleiter.
 Wird stattdessen ein dreiwertiges Element verwendet bleibt ein Loch, somit stehen die Löcher als
 positive Ladungsträger zur Verfügung und es handelt sich um einen p-dotierten Halbleiter.\\
 
-Werden p- und n-dotierte Halbleiter zusammengebracht werden entsteht ein pn-Übergang, in einem
-Teilbereich vernichten sich Elektronen und Löcher wodurch sich eine Verarmungszone bildet.
+\begin{figure}
+  \centering
+  \includegraphics[height=6cm]{pn.png}
+  \caption{Bildung einer Verarmungsschicht im pn-Übergang und Verbreiterung dieser durch
+  anlegen einer äußeren Spannung.}
+  \label{fig:pn}
+  \cite{Gilmore2}
+\end{figure}
+
+Wie in Abbildung \ref{fig:pn} gezeigt entsteht ein pn-Übergang wenn p- und n-dotierte Halbleiter zusammengebracht werden,
+Elektronen und Löcher vernichten sich in einem Teilbereich wodurch eine Verarmungszone entsteht.
 Durch anlegen einer äußeren Spannung kann die Größe der Verarmungszone verändert werden. Für die
 Verwendung als Detektor ist eine große Verarmungszone gewünscht, da dieser Bereich den
 Detektorbereich bildet, also wird die Spannung in Sperrrichtung angelegt.
 
+
 \subsection{Der Halbleiterdetektor}
-Bei dem Verwendeten Detektor handelt es sich um einen koaxialen Ge-Detektor wie in
+Bei dem Verwendeten Detektor handelt es sich um einen koaxialen Ge-Detektor wie in Abbildung
 \ref{fig:Aufbau} zu sehen ist. Der gesamte Detektor befindet sich unter einer Aluminium
-Schutzhaube und ist von außen mit Li-Atomen n-dotiert wodurch die Oberfläche
+Schutzhaube und ist von außen mit Li-Atomen n-dotiert, wodurch die Oberfläche
 gut leitend wird. Im Inneren befindet sich eine Bohrung, diese innere Oberfläche ist
 mit Au-Atomen p-dotiert. (Die Dotierung ist hier etwas anders als oben beschrieben, da es sich um
 Metall-Halbleiterkontakte handelt.) An diese dotierten Schichten wird die
 äußere Spannung angelegt, die n-dotierte Schicht dient als Anschluss für den Pluspol.
 Durch die p- und n-dotierten Bereiche bildet sich eine
-Verarmungszone im Detektor. Um diese Verarmungszone, den Detektorbereich, zu erreichen müssen die
-Photonen erst die Al-Schicht und die Li-Schicht durchdringen, wodurch es zu einer unteren Nachweisgrenze
-für Gammaenergien kommt. Für den hier verwendeten Detektor liegt die untere Nachweisgrenze
-bei 40 bis 50\;keV.
+Verarmungszone im Detektor die den Detektorbereich bildet. Somit müssen die Gammaquanten erst
+die Al-Schicht und die Li-Schicht durchdringen um detektiert zu werden, dadurch kommt es zu einer
+unteren Nachweisenergie der Gammaenergie, diese liegt bei 40 bis 50\;keV.
 
 \begin{figure}
   \centering
@@ -150,24 +175,32 @@ bei 40 bis 50\;keV.
   \label{fig:Aufbau}
 \end{figure}
 
-Dringt ein ionisierendes Teilchen in die Verarmungszone ein erzeugt es ein Elektronen-Loch-Paar, duch die Spannung
-wird das Paar räumlich getrennt wodurch eine Rekombination verhindert wird. Der dadurch entstehende Ladungsimpuls
-wird verstärkt und bildet das Detektorsignal, dieses ist proportional zu einfallenden Photonenergie, da mit
+Dringt ein Gammaquant in die Verarmungszone ein wechselwirkt es mit der Materie und kann
+z.B. ein Elektron auslösen welches mit anderen Elektronen stößt und ein Elektronen-Loch-Paar erzeugt.
+Duch die angelegte Spannung wird das Paar räumlich getrennt wodurch eine Rekombination verhindert wird,
+der dadurch entstehende Ladungsimpuls
+wird verstärkt und bildet das Detektorsignal. Dieses ist proportional zu einfallenden Photonenergie, da mit
 einer höheren Energie auch mehr Elektronen-Loch-Paare erzeugt werden können.
-
-\textbf{Eigenschaften eines Halbleiterdetektors}
+Dringt das Gammaquant außerhalb der Verarmungszone in den Detektor ein rekombinieren die
+Elektronen-Loch-Paare sofort, somit kann kein Signal gemessen werden.\\
+Um Störsignale zu minimieren wird der Detektor mit Stickstoff auf 77\;K gekühlt, denn durch die
+hohe externe Spannung kommt es zu thermischen Effekten wodurch sich noch Ladungsträger in der Verarmungszone
+befinden und das Signal stören können.
+\\
+\\
+\textbf{Eigenschaften eines Halbleiterdetektors}\\
 Eine charakteristische Größe des Detektors ist das Auflösungsvermögen, dieses wird duch die
 Halbwertsbreite $\Delta E_{1/2}$ der Impulshöhenverteilung beschrieben. Energien mit den Mittelwerten
 $E_1$ und $E_2$ können noch voneinander unterschieden werden, wenn der Energieunterschied mindestens
 $\Delta E_{1/2}$ beträgt.
 
-Um die Vollenergienachweiswahrscheinlichkeit bestimmen zu können muss die aktuelle Aktivität der
-Probe bekannt sein. Dieser theoretisch Werte für alle Energien kann mit den Messergebnissen,
-die über alle Energien summiert werden, verglichen werden um die Vollenergienachweiswahrscheinlichkeit
-zu erhalten.
+Die Vollenergienachweiswahrscheinlichkeit eines Detektors gibt die Nachweiswahrscheinlichkeit eines Detektors
+in Abhängigkeit der Energie an. Um sie zu bestimmen wird aus der aktuellen Aktivität der Probe der
+theoretische Linieninhalt bestimmt, der Quotient aus gemessenem Linieninhalt und theoretischem
+Linieninhalt gibt die Nachweiswahrscheinlichkeit des Detektors an.
 
 \section{Das Spektrum eines monochromatischen Gammastrahlers}
-Das Spektrum eines monochromatischen Gammastrahlers zeigt mehrere Besonderheiten auf, wie in \ref{fig:Spektrum} zu
+Das Spektrum eines monochromatischen Gammastrahlers zeigt mehrere Besonderheiten auf, wie in Abbildung \ref{fig:Spektrum} zu
 sehen. Wesentliche Bestandteile sind das Comptonkontinuum mit der Comptonkante, der Rückstreupeak
 und der Photopeak. Der Photopeak entsteht dadurch, dass die Gammaquanten ihre gesamte Energie im Detektor deponieren
 und wird daher auch Vollenergiepeak genannt. Er entsteht wenn die Gammaquanten im Detektor durch
@@ -194,7 +227,7 @@ Photonen den Detektor entsteht der double-escape Peak. [Gilmore2]
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{Spektrum.png}
-  \caption{Gammaspektrum von 28-Al.Die Componkante ist hier nicht eingezeichnet, sie ist der Peak zwischen single escape und Photopeak,
+  \caption{Gammaspektrum von 28-Al. Die Componkante ist hier nicht eingezeichnet, sie ist der Peak zwischen single escape und Photopeak,
   das Comptonkontinuum verläuft von der y-Achse bis zur Comptonkante.}\cite{Gilmore2}
   \label{fig:Spektrum}
 \end{figure}
