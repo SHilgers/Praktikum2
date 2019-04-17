@@ -2100,19 +2100,22 @@
     <bcf:citekey order="1">Gilmore2</bcf:citekey>
     <bcf:citekey order="2">Gilmore2</bcf:citekey>
     <bcf:citekey order="3">Springer3</bcf:citekey>
-    <bcf:citekey order="4">Karlsruhe</bcf:citekey>
-    <bcf:citekey order="5">Gilmore2</bcf:citekey>
-    <bcf:citekey order="6">Gilmore2</bcf:citekey>
-    <bcf:citekey order="7">Springer3</bcf:citekey>
+    <bcf:citekey order="4">Springer3</bcf:citekey>
+    <bcf:citekey order="5">Karlsruhe</bcf:citekey>
+    <bcf:citekey order="6">Springer3</bcf:citekey>
+    <bcf:citekey order="7">Gilmore2</bcf:citekey>
     <bcf:citekey order="8">Gilmore2</bcf:citekey>
-    <bcf:citekey order="9">skript</bcf:citekey>
-    <bcf:citekey order="10">skript</bcf:citekey>
-    <bcf:citekey order="11">Gilmore2</bcf:citekey>
-    <bcf:citekey order="12">lara</bcf:citekey>
-    <bcf:citekey order="13">lara</bcf:citekey>
-    <bcf:citekey order="14">lara</bcf:citekey>
-    <bcf:citekey order="15">Lara</bcf:citekey>
+    <bcf:citekey order="9">Springer3</bcf:citekey>
+    <bcf:citekey order="10">Gilmore2</bcf:citekey>
+    <bcf:citekey order="11">skript</bcf:citekey>
+    <bcf:citekey order="12">skript</bcf:citekey>
+    <bcf:citekey order="13">Gilmore2</bcf:citekey>
+    <bcf:citekey order="14">Gilmore2</bcf:citekey>
+    <bcf:citekey order="15">lara</bcf:citekey>
     <bcf:citekey order="16">lara</bcf:citekey>
+    <bcf:citekey order="17">lara</bcf:citekey>
+    <bcf:citekey order="18">lara</bcf:citekey>
+    <bcf:citekey order="19">lara</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

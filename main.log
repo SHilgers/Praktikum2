@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2017.10.31)  17 APR 2019 15:03
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2017.10.31)  17 APR 2019 15:47
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -602,7 +602,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.228 seconds)
+luaotfload | main : initialization completed in 0.219 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2308,7 +2308,7 @@ File: Extin.png Graphic file (type png)
 Package luatex.def Info: Extin.png used on input line 23.
 (luatex.def)             Requested size: 204.76344pt x 227.62204pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--48
+Underfull \hbox (badness 10000) in paragraph at lines 28--49
 
  []
 
@@ -2318,150 +2318,146 @@ eneric/fonts/otl/lmroman8-regular.luc)(load luc: /Users/Lara/Library/texlive/201
 /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regula
 r.luc)(load luc: /Users/Lara/Library/texlive/2016/texmf-var/luatex-cache/generic
 /fonts/otl/lmroman6-regular.luc)
-Underfull \hbox (badness 10000) in paragraph at lines 60--71
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <7.63431> on input line 83.
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
+
+ []
+
+[4]
+LaTeX Font Info:    Calculating math sizes for size <7.63431> on input line 86.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 7.63441pt on input line 83.
+(Font)              scaled to size 7.63441pt on input line 86.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 5.34406pt on input line 83.
+(Font)              scaled to size 5.34406pt on input line 86.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 3.8172pt on input line 83.
+(Font)              scaled to size 3.8172pt on input line 86.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 7.63419pt on input line 83.
+(Font)              scaled to size 7.63419pt on input line 86.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.34389pt on input line 83.
+(Font)              scaled to size 5.34389pt on input line 86.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 3.8171pt on input line 83.
+(Font)              scaled to size 3.8171pt on input line 86.
 (compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl
 /lmroman5-regular.luc)(load luc: /Users/Lara/Library/texlive/2016/texmf-var/luat
-ex-cache/generic/fonts/otl/lmroman5-regular.luc) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 88--99
+ex-cache/generic/fonts/otl/lmroman5-regular.luc)
+Underfull \hbox (badness 10000) in paragraph at lines 91--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
-<Effekte.png, id=83, 354.32375pt x 250.9375pt>
+<Effekte.png, id=84, 354.32375pt x 250.9375pt>
 File: Effekte.png Graphic file (type png)
  <use Effekte.png>
-Package luatex.def Info: Effekte.png used on input line 114.
+Package luatex.def Info: Effekte.png used on input line 117.
 (luatex.def)             Requested size: 200.88531pt x 142.26378pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--126
+Underfull \hbox (badness 10000) in paragraph at lines 124--129
 
  []
 
-<Band.png, id=87, 557.08125pt x 384.43625pt>
+[5<./Effekte.png>] <Band.png, id=100, 557.08125pt x 384.43625pt>
 File: Band.png Graphic file (type png)
- <use Band.png>
-Package luatex.def Info: Band.png used on input line 129.
+
+<use Band.png>
+Package luatex.def Info: Band.png used on input line 132.
 (luatex.def)             Requested size: 247.38611pt x 170.71652pt.
- [5<./Effekte.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--144
 
  []
 
-<pn.png, id=101, 233.87375pt x 218.8175pt>
+<pn.png, id=102, 233.87375pt x 218.8175pt>
 File: pn.png Graphic file (type png)
  <use pn.png>
-Package luatex.def Info: pn.png used on input line 144.
+Package luatex.def Info: pn.png used on input line 147.
 (luatex.def)             Requested size: 182.4636pt x 170.71652pt.
  [6<./Band.png>]
-<Aufbau.png, id=113, 804.00375pt x 450.68375pt>
+<Aufbau.png, id=114, 804.00375pt x 450.68375pt>
 File: Aufbau.png Graphic file (type png)
  <use Aufbau.png>
-Package luatex.def Info: Aufbau.png used on input line 173.
+Package luatex.def Info: Aufbau.png used on input line 180.
 (luatex.def)             Requested size: 355.30853pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--196
+Underfull \hbox (badness 10000) in paragraph at lines 185--203
 
  []
 
-[7<./pn.png><./Aufbau.png>] [8]
-<Spektrum.png, id=129, 343.2825pt x 231.86626pt>
+[7<./pn.png>] [8<./Aufbau.png>]
+<Spektrum.png, id=132, 343.2825pt x 231.86626pt>
 File: Spektrum.png Graphic file (type png)
  <use Spektrum.png>
-Package luatex.def Info: Spektrum.png used on input line 229.
+Package luatex.def Info: Spektrum.png used on input line 237.
 (luatex.def)             Requested size: 294.88194pt x 199.16928pt.
-)
-(./content/durchfuehrung.tex) (./content/auswertung.tex [9<./Spektrum.png>]
-<Eu.pdf, id=142, 462.52798pt x 346.89601pt>
+(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl
+/lmroman7-regular.luc)(load luc: /Users/Lara/Library/texlive/2016/texmf-var/luat
+ex-cache/generic/fonts/otl/lmroman7-regular.luc)) (./content/durchfuehrung.tex)
+(./content/auswertung.tex [9<./Spektrum.png>] [10]
+<Eu.pdf, id=153, 462.52798pt x 346.89601pt>
 File: Eu.pdf Graphic file (type pdf)
  <use Eu.pdf>
 Package luatex.def Info: Eu.pdf used on input line 56.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
-(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl
-/lmroman7-regular.luc)(load luc: /Users/Lara/Library/texlive/2016/texmf-var/luat
-ex-cache/generic/fonts/otl/lmroman7-regular.luc) (./Tabelle1.tex) [10] (./Tabel
-le2.tex) [11<./Eu.pdf>] <plot3.pdf, id=196, 462.52798pt x 346.89601pt>
+ (./Tabelle1.tex)
+[11<./Eu.pdf>] (./Tabelle2.tex) [12]
+<plot3.pdf, id=206, 462.52798pt x 346.89601pt>
 File: plot3.pdf Graphic file (type pdf)
  <use plot3.pdf>
 Package luatex.def Info: plot3.pdf used on input line 93.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
-
-(./Tabelle3.tex) [12] [13<./plot3.pdf>] (./Tabelle4.tex)
-<plot4.pdf, id=276, 462.52798pt x 346.89601pt>
+ (./Tabelle3.tex
+[13<./plot3.pdf>]) (./Tabelle4.tex [14])
+<plot4.pdf, id=291, 462.52798pt x 346.89601pt>
 File: plot4.pdf Graphic file (type pdf)
  <use plot4.pdf>
 Package luatex.def Info: plot4.pdf used on input line 182.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
 
-<Cs.pdf, id=280, 462.52798pt x 346.89601pt>
+<Cs.pdf, id=295, 462.52798pt x 346.89601pt>
 File: Cs.pdf Graphic file (type pdf)
  <use Cs.pdf>
 Package luatex.def Info: Cs.pdf used on input line 197.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
- [14] [15<./plot4.pdf>] <Plot6.pdf, id=345, 462.52798pt x 346.89601pt>
+ [15] [16<./plot4.pdf><./Cs.pdf>] <Plot6.pdf, id=392, 462.52798pt x 346.89601pt
+>
 File: Plot6.pdf Graphic file (type pdf)
  <use Plot6.pdf>
 Package luatex.def Info: Plot6.pdf used on input line 233.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
- [16<./Cs.pdf>]
-[17<./Plot6.pdf>] <Ba.pdf, id=463, 462.52798pt x 346.89601pt>
+
+[17<./Plot6.pdf>] [18] <Ba.pdf, id=471, 462.52798pt x 346.89601pt>
 File: Ba.pdf Graphic file (type pdf)
- <use Ba.pdf>
+
+<use Ba.pdf>
 Package luatex.def Info: Ba.pdf used on input line 354.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
-
-(./Tabelle5.tex [18]) (./Tabelle6.tex [19<./Ba.pdf>])
-<Plot9.pdf, id=524, 462.52798pt x 346.89601pt>
+ (./Tabelle5.tex) [19] (./Tabelle6.tex) [20<./Ba.pdf>]
+<Plot9.pdf, id=535, 462.52798pt x 346.89601pt>
 File: Plot9.pdf Graphic file (type pdf)
  <use Plot9.pdf>
 Package luatex.def Info: Plot9.pdf used on input line 386.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
 
-<Un.pdf, id=527, 462.52798pt x 346.89601pt>
+<Un.pdf, id=538, 462.52798pt x 346.89601pt>
 File: Un.pdf Graphic file (type pdf)
  <use Un.pdf>
 Package luatex.def Info: Un.pdf used on input line 400.
 (luatex.def)             Requested size: 341.44666pt x 256.0748pt.
  (./Tabelle7.tex)
-[20] [21<./Plot9.pdf><./Un.pdf>] (./Tabelle8.tex) [22] [23]
-<Plot11.pdf, id=639, 462.52798pt x 346.89601pt>
-File: Plot11.pdf Graphic file (type pdf)
- <use Plot11.pdf>
-Package luatex.def Info: Plot11.pdf used on input line 438.
-(luatex.def)             Requested size: 341.44666pt x 256.0748pt.
-
-<plot12.pdf, id=640, 462.52798pt x 346.89601pt>
-File: plot12.pdf Graphic file (type pdf)
- <use plot12.pdf>
-Package luatex.def Info: plot12.pdf used on input line 444.
-(luatex.def)             Requested size: 341.44666pt x 256.0748pt.
-)
-(./content/diskussion.tex [24<./Plot11.pdf>]) [25<./plot12.pdf>](compiling luc: 
-/usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-r
-egular.luc)(load luc: /Users/Lara/Library/texlive/2016/texmf-var/luatex-cache/ge
-neric/fonts/otl/lmromancaps10-regular.luc)
+[21] [22<./Plot9.pdf><./Un.pdf>] (./Tabelle8.tex) [23])
+(./content/diskussion.tex) [24](compiling luc: /usr/local/texlive/2016/texmf-var
+/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc)(load luc: /Users/Lara
+/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-reg
+ular.luc)
 LaTeX Font Info:    Try loading font information for EU2+lmtt on input line 23.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu2lmtt.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu2lmtt.fd
 File: eu2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/ot
 l/lmmono10-regular.luc)(load luc: /Users/Lara/Library/texlive/2016/texmf-var/lua
@@ -2471,7 +2467,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
- [26]
+ [25]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
  (./main.aux
 Language ngerman already loaded; id is 8)
@@ -2482,16 +2478,17 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
 Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: 599ECD42DB3D35376B71A5C1E900FD18;18868
-(rerunfilecheck)             After:  52C87F487A6549EBF7882C2DCBB7C283;18894.
+(rerunfilecheck)             Before: 1CE325989E699A8339FB4A81BBA4E84D;18497
+(rerunfilecheck)             After:  D0F2AF39217488E382335C9A213D086E;18474.
+Package rerunfilecheck Info: File `main.toc' has not changed.
+(rerunfilecheck)             Checksum: BEA865E657515B57C1B8EE09150EE45C;1402.
 
-Package rerunfilecheck Warning: File `main.toc' has changed. Rerun.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `main.toc':
-(rerunfilecheck)             Before: C2291170F3818C7D085CAA0A35271167;1397
-(rerunfilecheck)             After:  867C972417376AAE65E99C962B9F1473;1397.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 
@@ -2499,15 +2496,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 44740 strings out of 495119
+ 44723 strings out of 495119
  100000,1648299 words of node,token memory allocated
- 9063 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 998 glue, 1 kern, 397 attribute, 58 glue_spec, 397 
+ 8753 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 960 glue, 1 kern, 386 attribute, 58 glue_spec, 386 
 attribute_list, 1 write, 5 pdf_action nodes
-   avail lists: 1:2,2:1412,3:159,4:70,5:257,6:3339,7:1345,8:96,9:477,10:18,11:47
-5
- 46718 multiletter control sequences out of 65536+600000
- 200 fonts using 70332295 bytes
+   avail lists: 1:2,2:1435,3:166,4:72,5:269,6:3655,7:1381,8:96,9:469,10:18,11:42
+8
+ 46708 multiletter control sequences out of 65536+600000
+ 200 fonts using 70330967 bytes
  63i,22n,104p,8501b,2464s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmromancaps10-reg
@@ -2523,10 +2520,10 @@ entype/public/lm/lmroman10-regular.otf></usr/local/texlive/2016/texmf-dist/fonts
 /opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2016/texmf-dist/fo
 nts/opentype/public/lm/lmsans10-bold.otf></usr/local/texlive/2016/texmf-dist/fon
 ts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (26 pages, 415107 bytes).
+Output written on main.pdf (25 pages, 399728 bytes).
 
-PDF statistics: 874 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
- 106 named destinations out of 1000 (max. 131072)
+PDF statistics: 791 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 131072)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

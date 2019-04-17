@@ -263,7 +263,7 @@ Das Verhältniss dieser beiden Größen ist unabhängig von den jeweiligen Param
 Kurve stets
 \begin{equation}
   \frac{\symup{E}_{1/2}}{\symup{E}_{1/10}} = \sqrt{\frac{ln2}{ln10}}
-  \approx 0.549 \: ,
+  \approx 0.549 \: .
 \end{equation}
 Diese theoretisch erhaltenen Werte werden mit den abglesenen verglichen, wobei sich
 die Abweichung über die Formel
@@ -317,7 +317,7 @@ Der Theoriewert nach Gleichung \ref{eqn:Rückstreu} ergibt sich zu $\SI{184.3184
 \\
 Zur Bestimmung der Absorptionswahrscheinlichkeiten wird die Formel
 \begin{equation}
-  \symup{p} = 1-\exp{-\mu \cdot l}
+  \symup{p} = 1-\symup{e}^{-\mu \cdot l}
 \end{equation}
 verwendet, wobei $l$ die Länge des Detektors, in diesem Fall also $\SI{3.9}{\centi\meter}$, bezeichnet
 und $\mu$ den Extinkionskoeffizient, welcher für den Comptoneffekt etwa
@@ -331,7 +331,7 @@ Dies führt zu Absorptionswahrscheinlicheiten von
 sodass sich theoretisch ein Verhältniss zwischen den Inhalten des Photopeaks und des
 Comptonkontinuums von
 \begin{equation*}
-  (\frac{\symup{I}_{VEL}}{\symup{I}_{Compton}})_{\text{theo}} = 1-\symup{e}{-\mu \cdot l}
+  (\frac{\symup{I}_{VEL}}{\symup{I}_{Compton}})_{\text{theo}} = 1-\symup{e}^{-\mu \cdot l}
   = 0.03975
 \end{equation*}
 ergeben sollte. Das tatsächliche Verhältniss aus den Messdaten beträgt
@@ -359,7 +359,7 @@ Die Peaks werden erneut mit Gleichung \ref{eqn:gausk} gefittet und die resultier
 Parameter in Tabelle \ref{tab:tabe5} dargestellt.
 \input{Tabelle5.tex}
 Durch einen Vergleich mit der Datenbank
-\cite{Lara} fällt auf, dass die Peaks mit denen von Barium übereinstimmen und es sich somit
+\cite{lara} fällt auf, dass die Peaks mit denen von Barium übereinstimmen und es sich somit
 bei der Probe offensichtlich um Barium handelt. Die Zuordnung zu den theoretischen Emissionslinien
 und die entsprechenden Absorptionswahrscheinlickeiten sind in Tabelle \ref{tab:tabe6} angegeben.
 \input{Tabelle6.tex}
@@ -372,7 +372,7 @@ erkennen, wobei der Proportionalitätsfaktor durch
 \end{equation}
 gegeben ist. Zur Bestimmung der Aktivität wird also eine Lineare Ausgleichsrechnung
 gemäß Formel \ref{eqn:li} mit Wertepaaren aus $l$ und $\symup{I}$ durchgeführt,
-wobei der Fitparameter a die Aktivität angibt. Dabei wird die $\SI{81.0657}{\kilo\electronvolt}$
+wobei der Fitparameter a die Aktivität angibt. Dabei wird die $\SI{81.0657}{\kilo\electronvolt}$-Linie
 außer Acht gelassen, da bei so niedrigen Energien der Quotient $Q$ der Vollenergienachweiswahrscheinlichkeit
 zu ungenau ist. Somit ergeben sich die Parameter
 \begin{align*}
@@ -390,7 +390,7 @@ Die Wertepaare und die Ausgleichsgerade sind in Abbildung \ref{fig:plot9} darges
 
 
 
-\subsection{Nuklididentikation}
+\subsection{Nuklididentifikation}
 Im letzten Versuchsteil wird eine Probe unbekannter Zusammensetzung untersucht, wobei die
 Messzeit $\SI{4064}{\second}$ beträgt. Von den 8191 gemessenen Kanälen werden die ersten 6000 zur Auswertung
 verwendet, die entsprechenden Messwerte werden gemäß Gleichung \ref{eqn:gerade} kalibriert und
@@ -418,30 +418,30 @@ $\ce{^{238}U}$ oder $\ce{^{234}Th}$ bestand, welches über  die Zeit zerfallen i
 radioaktiven Tochternuklide $\ce{^{226}Ra}$, $\ce{^{214}Pb}$ und $\ce{^{214}Bi}$ erklärt.
 Alle weiteren Nuklide der Reihe haben keine, oder zumindest nur sehr schwache
 Gammasignaturen, sodass diese nicht detektiert werden können.
-Für die Aktivitätsbestimmung sind nur bei $\ce{^{214}Pb}$ und $\ce{^{214}Bi}$ genügend
-Linien vorhanden um eine nicht allzu ungenaue Rechnung durchführen zu können. Das Vorgehen ist analog zur
-Bestimmung der Aktivität von $\ce{^{133}Ba}$ und die resultierenden Ausgleichsgeraden sind in den
-Abbildungen \ref{fig:plot11} und \ref{fig:plot12} dargestellt. Bei der Aktivitätsbestimmung
-von $\ce{^{214}Pb}$ wurde die $\SI{77.1088}{\kilo\electronvolt}$ Linie außer acht gelassen,
-da hier der Quotient $Q$ zu ungenau ist.
-Es ergeben sich die Fitparameter
-\begin{align*}
-  a_{\text{Pb}} &= 1106 \pm 17 \\
-  b_{\text{Pb}} &= -6\pm 69 \\
-  a_{\text{Bi}} &= 1442 \pm 89 \\
-  b_{\text{Bi}} &= 7 \pm 21 \\
-\end{align*}
-und somit Aktivitäten von $\SI{1106(17)}{\becquerel} $ für $\ce{^{214}Pb}$ und
-$\SI{1442(89)}{\becquerel} $ für $\ce{^{214}Bi}$.
-\begin{figure}
-  \centering
-  \includegraphics[height=9cm]{Plot11.pdf}
-  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{214}Pb}$}
-  \label{fig:plot11}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[height=9cm]{plot12.pdf}
-  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{214}Bi}$}
-  \label{fig:plot12}
-\end{figure}
+%Für die Aktivitätsbestimmung sind nur bei $\ce{^{214}Pb}$ und $\ce{^{214}Bi}$ genügend
+%Linien vorhanden um eine nicht allzu ungenaue Rechnung durchführen zu können. Das Vorgehen ist analog zur
+%Bestimmung der Aktivität von $\ce{^{133}Ba}$ und die resultierenden Ausgleichsgeraden sind in den
+%Abbildungen \ref{fig:plot11} und \ref{fig:plot12} dargestellt. Bei der Aktivitätsbestimmung
+%von $\ce{^{214}Pb}$ wurde die $\SI{77.1088}{\kilo\electronvolt}$ Linie außer acht gelassen,
+%da hier der Quotient $Q$ zu ungenau ist.
+%Es ergeben sich die Fitparameter
+%\begin{align*}
+%  a_{\text{Pb}} &= 1106 \pm 17 \\
+%  b_{\text{Pb}} &= -6\pm 69 \\
+%  a_{\text{Bi}} &= 1442 \pm 89 \\
+%  b_{\text{Bi}} &= 7 \pm 21 \\
+%\end{align*}
+%und somit Aktivitäten von $\SI{1106(17)}{\becquerel} $ für $\ce{^{214}Pb}$ und
+%$\SI{1442(89)}{\becquerel} $ für $\ce{^{214}Bi}$.
+%\begin{figure}
+%  \centering
+%  \includegraphics[height=9cm]{Plot11.pdf}
+%  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{214}Pb}$}
+%  \label{fig:plot11}
+%\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[height=9cm]{plot12.pdf}
+%  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{214}Bi}$}
+%  \label{fig:plot12}
+%\end{figure}
