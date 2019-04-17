@@ -1,0 +1,447 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+\subsection{Energiekalibration und Bestimmung der Vollenergienachweiswahrscheinlichkeit}
+Zur Kalibration wird ein $\ce{^{152}Eu}$-Strahler verwendet, dessen Aktivität am 01.10.2000
+%\begin{align*}
+%  \SI{4130(60)}{\becquerel}
+%\end{align*}
+$\SI{4130(60)}{\becquerel} $ betrug. \\
+Nach dem Gesetz des radioaktiven Zerfalls berechnet sich die Aktivität am Messtag (08.04.2019) durch
+
+\begin{equation}
+  \symup{A} (t) = \symup{A}(0)\cdot \symup{e}^{-\lambda t} \: ,
+\end{equation}
+
+wobei $\lambda=\SI{1.6244(19)e-9}{\per\second}$ \cite{lara} die Zerfallskonstante
+von $\ce{^{152}Eu}$ bezeichnet.
+
+Der Fehler ergibt sich hierbei nach der Gauß´schen Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: ,
+  \label{eqn:gaus}
+\end{equation}
+also gemäß
+\begin{equation}
+  \increment \symup{A} (t) = \sqrt{ (\symup{e}^{-\lambda t})^{2}\cdot (\increment \symup{A}(0))^2
+   + (-t\cdot\symup{A}(0)\cdot \symup{e}^{-\lambda t})^2\cdot(\increment \lambda)^2}
+\end{equation}
+Die Anzahl der Tage vom 01.10.2000 bis zum 08.04.2019 beträgt 6763 Tage, was
+584323200 Sekunden entspricht, sodass sich insgesamt der Wert $\SI{1599(29)}{\becquerel} $
+für die Aktivität der Probe am Messtag ergibt. \\
+Der abgedeckte Raumwinkel lässt sich aus dem gemessenen Abstand a der Probe
+zum Detektor, wobei auch der Abstand von $\SI{1.5}{\centi\meter}$ zwischen Al-Haube und Detektor
+berücksichtigt wird,
+und dem angegebenen Radius r des Detektorvolumens bestimmen. Die entsprechenden Werte
+betragen
+\begin{align*}
+  a &= \SI{8.8}{\centi\meter} \\
+  r &= \SI{2.25}{\centi\meter} \: .
+\end{align*}
+
+Die Formel zur Berechnung des abgedeckten Raumwinkelanteils ergibt sich dabei
+über geometrische Überlegungen zu
+\begin{equation}
+  \frac{\Omega}{4\pi}= \frac{1}{2}(1-\frac{a}{\sqrt{a^2+r^2}})   \: ,
+\end{equation}
+in diesem Fall also $\frac{\Omega}{4\pi}= 0.01558$.
+Diese somit errechneten Werte sind später wichtig zur Bestimmung der Vollenergienachweiswahrscheinlichkeit. \\
+Das gemessene Spektrum des kalibrierten $\ce{^{152}Eu}$-Strahlers ist in Abbildung
+\ref{fig:plot1} dargestellt. Es sind jedoch nur die ersten 4000 Kanäle dargestellt,
+da bei höheren Kanälen keine signifikanten Messwerte mehr zu sehen sind. Die Messwerte
+reichen bis Kanalnummer 8191 und die Messzeit beträgt $\SI{3598}{\second}$.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Eu.pdf}
+  \caption{Spektrum des $\ce{^{152}Eu}$-Strahlers}
+  \label{fig:plot1}
+\end{figure}
+
+Um mit diesem die Energiekalibration durchzuführen, werden die Peaks des Spektrums
+jeweils mit einer Gaußverteilung der Form
+\begin{equation}
+  \symup{g} (x) = a + b \cdot \symup{e}^{(\frac{x-z}{c})^2}
+  \label{eqn:gausk}
+\end{equation}
+gefittet.
+
+Die sich daraus ergebenen Parameter sind in Tabelle \ref{tab:tabe1} angegebenen.
+\input{Tabelle1.tex}
+
+Die zentrale Lage der Peaks im Hinblick auf die Kanalnummer ist durch den Parameter
+z gegeben. Diese Werte werden zusammen mit der jeweiligen relativen Höhe mit den theoretischen
+Emissionslinien der Datenbank \cite{lara} verglichen und es wird jedem Peak eine Linie
+zugeordent. Diese Zuordnung ist zusammen mit der jeweiligen relativen Emissionswahrscheinlichkeit P
+in Tabelle \ref{tab:tabe2} dargestellt.
+\input{Tabelle2.tex}
+Mit den Wertepaaren aus Kanalnummer und Linienenergie wird nun eine lineare Ausgleichsrechnung der
+Form
+\begin{equation}
+  f(x) = a\cdot x +b
+  \label{eqn:li}
+\end{equation}
+durchgeführt, woraus sich die Parameter
+\begin{align}
+  a &= \SI{0.403169(29)}{\kilo\electronvolt} \\
+  b &= \SI{-3.034(60)}{\kilo\electronvolt}
+\end{align}
+ergeben. Die Wertepaare sind zusammen mit der resultierenden Gerade in Abbildung \ref{fig:plot3}
+dargestellt. Die Fehler der Messwerte sind aufgrund ihrer sehr geringen relativen Größe dabei zu vernachlässigen.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{plot3.pdf}
+  \caption{Lineare Ausgleichsrechnung zur Energiekalibration}
+  \label{fig:plot3}
+\end{figure}
+Die Energiekalibration erfolgt somit gemäß
+\begin{equation}
+  \symup{E}_{\gamma} (x) = \SI{0.403169}{\kilo\electronvolt}\cdot x - \SI{3.034}{\kilo\electronvolt}
+  \label{eqn:gerade}
+\end{equation}
+wobei x die Kanalnummer bezeichnet.
+Der dazugehörige Fehler ergibt mittels Gleichung \ref{eqn:gaus} durch
+\begin{equation}
+   \increment \symup{E}_{\gamma} (x) =\sqrt{ (\SI{0.000029}{\kilo\electronvolt}\cdot x)^2 +
+   (\SI{0.060}{\kilo\electronvolt})^2}
+   \label{eqn:fgerade}
+\end{equation}
+\\
+Zur Bestimmung der Vollenergienachweiswahrscheinlichkeit wird zunächst die Gleichung \ref{eqn:gausk}
+integriert, um den Inhalt der Peaks zu bestimmen, wobei der Untegrund $a$ vorher abgezogen wird.
+Es ergibt sich somit ein Linieninhalt von
+\begin{equation}
+  \symup{I} =\int_{-\infty}^{\infty} c \cdot \symup{e}^{(\frac{x-z}{b})^2} \symup{d}x
+  = c \cdot b \cdot \sqrt{\pi}
+  \label{eqn:inh}
+\end{equation}
+in Abhängigkeit der Parameter b und c.
+Der Fehler ergibt sich durch Gleichung \ref{eqn:gaus} über die Gleichung
+\begin{equation}
+  \increment \symup{I} = \sqrt{ (\increment c \cdot b \cdot \sqrt{\pi})^{2}
+   + (c \cdot \increment b \cdot \sqrt{\pi}})^{2} \: .
+     \label{eqn:inhf}
+\end{equation}
+Mit den Werten aus Tabelle \ref{tab:tabe1} lassen sich somit die einzelnen Linieninhalte berrechen,
+welche in Tabelle \ref{tab:tabe3} angegeben sind.
+\input{Tabelle3.tex}
+Zum Vergleich werden nun die Theoriewerte berrechnet, als Produkt
+der Emissionswahrscheinlichkeiten P aus Tabelle \ref{tab:tabe2},
+dem abgedeckten Raumwinkelanteil $\frac{\Omega}{4\pi}= 0.01558$, der errechneten Aktivität
+$A =\SI{1599(29)}{\becquerel} $
+und der Messzeit von $t = \SI{3598}{\second}$
+\begin{equation}
+  \symup{I}_{\text{theo}} = P\cdot \frac{\Omega}{4\pi} \cdot A \cdot t
+  \label{eqn:itheo}
+\end{equation}
+mit dem Fehler über Gleichung \ref{eqn:gaus} von
+\begin{equation}
+  \increment \symup{I}_{\text{theo}} = \sqrt{ (\increment P\cdot \frac{\Omega}{4\pi} \cdot A \cdot t)^{2}
+   + (P\cdot \frac{\Omega}{4\pi} \cdot \increment A \cdot t)^{2}} \: .
+\end{equation}
+Aus dem jeweiligen Quotienten
+\begin{equation}
+  \symup{Q} = \frac{\symup{I}}{\symup{I}_{\text{theo}}}
+  \label{eqn:ven1}
+\end{equation}
+mit dem dazugehörigen Fehler
+\begin{equation}
+  \increment \symup{Q} = \sqrt{ (\frac{1}{\symup{I}_{\text{theo}} \cdot \increment \symup{I})^{2}
+   + (\frac{\symup{I}}{\symup{I}_{\text{theo}}})^{2}}\cdot \increment \symup{I}_{\text{theo}})^{2}}
+\end{equation}
+ergibt sich somit jeweils die Nachweiswahrscheinlichkeit des Peaks, wie in Tabelle
+\ref{tab:tabe4} dargestellt ist.
+\input{Tabelle4.tex}
+Da die Nachweiswahrscheinlichkeit im Allgemeinen energieabhängig ist, wird Q in
+Abhängigkeit von $ \text{E}_{\gamma} $ dargestellt und mit einer Potenzfunktion der Form
+\begin{equation}
+  \symup{Q}(\text{E}_{\gamma}) = c\cdot (\text{E}_{\gamma}-a)^{d}
+  \label{eqn:ven2}
+\end{equation}
+gefittet, wie in Abbildung \ref{fig:plot4} dargestellt ist.
+Es ergeben sich hierbei die Parameter
+\begin{align*}
+  a &= -191 \pm 64 \\
+  c &= 2474 \pm 3467 \\
+  d &= -1.47 \pm 0.19 \: .
+\end{align*}
+ %Die Formel für die eigentliche Höhe eines
+%gemessenen Peaks ergibt sich aus Gleichungen \ref{eqn:ven1} und \ref{eqn:ven2} durch Umstellen zu
+%\begin{equation}
+%  \symup{I}_{\text{theo}} = \frac{\symup{I}}{\symup{Q}}=\frac{\symup{I}}{c\cdot (\text{E}_{\gamma}-a)^{d}}
+%  \label{eqn:ven}
+%\end{equation}
+%mit dem dazugehörigen Fehler
+%\begin{equation}
+%  \symup{I}_{\text{theo}} = \frac{\symup{I}}{\symup{Q}}=\frac{\symup{I}}{c\cdot (\text{E}_{\gamma}-a)^{d}}
+%  NAMNAM
+%  \label{eqn:ven}
+%\end{equation}
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{plot4.pdf}
+  \caption{Werte zur Bestimmung der Vollenergienachweiswahrscheinlichkeit sowie gefittete Potenzfunktion}
+  \label{fig:plot4}
+\end{figure}
+
+\subsection{Untersuchung eines monochromatischen Gamma-Spektrums}
+Zur Untersuchung des monochromatischen Gamma-Spektrums wird das aufgenommene Spektrum
+zunächst durch die Gleichung \ref{eqn:gerade} kalibriert, wobei sich der Fehler über
+\ref{eqn:fgerade} ergibt. Die so erhaltenen Werte sind in Abbildung \ref{fig:plot5}
+dargestellt, wobei auf Fehlerbalken aufgrund der geringen Fehler verzichtet wird. Die
+Messzeit beträgt $\SI{2593}{\second}$ und es wurden 8191 Kanäle gemessen, wobei nur die
+ersten 2000 dargestellt sind, da bei höheren Kanalnummern keine signifikanten Messwerte
+mehr zu erkennen sind.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Cs.pdf}
+  \caption{Kalibriertes Spektrum des $\ce{^{137}Cs}$-Strahlers }
+  \label{fig:plot5}
+\end{figure}
+Zur Bestimmung der Energie wird die Vollenergielinie mit der Gaußverteilung aus Gleichung
+\ref{eqn:gausk} gefittet, wobei sich die Parameter
+\begin{align*}
+  a &= 5.7 \pm 4.2 \\
+  b &= 1674 \pm 17 \\
+  c &= \SI{1.227(15)}{\kilo\electronvolt}\\
+  z &= \SI{661.5985(98)}{\kilo\electronvolt} \:
+\end{align*}
+ergeben.
+Die Energie des Strahlers ist dabei durch den Parameter $z$ gegeben, also
+\begin{align*}
+  \symup{E}_{Cs} = \SI{661.5985(98)}{\kilo\electronvolt} \: .
+\end{align*}
+Der Theoriewert von $\ce{^{137}Cs}$ beträgt $\SI{661.657(3)}{\kilo\electronvolt}$ \cite{lara}. \\
+Der Bereich um die Vollenergielinie ist in
+Abbildung \ref{fig:plot6} dargestellt, woraus sich die Halbwertsbreite und die
+Zehntelwertsbreite ablesen lässt, wobei eine Ungenauigkeit durch
+Ablesefehler von etwa $\SI{0.2}{\kilo\electronvolt}$ angenommen wird.
+Es ergibt sich hierdurch
+\begin{align*}
+  \symup{E}_{1/2} = \SI{662.6(2)}{\kilo\electronvolt} -\SI{660.6(2)}{\kilo\electronvolt}
+  =\SI{2.0(3)}{\kilo\electronvolt}\\
+  \symup{E}_{1/10} = \SI{663.3(2)}{\kilo\electronvolt} -\SI{659.6(2)}{\kilo\electronvolt}
+  =\SI{3.7(3)}{\kilo\electronvolt} \:
+\end{align*}
+woraus sich ein Verhältniss von
+\begin{equation}
+  \frac{\symup{E}_{1/2}}{\symup{E}_{1/10}} =  0.54 \pm 0.09 \:
+\end{equation}
+ergibt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot6.pdf}
+  \caption{Vollenergielinie}
+  \label{fig:plot6}
+\end{figure}
+Die Halbwertsbreite einer Gaußkurve gemäß Gleichung \ref{eqn:gausk} ist durch die
+Formel
+\begin{equation}
+  \symup{E}_{1/2} = 2c\cdot\sqrt{ln2}
+\end{equation}
+mit dem Fehler
+\begin{equation}
+  \increment \symup{E}_{1/2} = 2\increment b\cdot\sqrt{ln2} \: ,
+\end{equation}
+gegeben und beträgt somit
+\begin{align*}
+  \symup{E}_{1/2,theo} = \SI{1.701(21)}{\kilo\electronvolt} \: .
+\end{align*}
+Die Zehntelwertsbreite ergibt sich analog über die Gleichung
+\begin{equation}
+  \symup{E}_{1/10} = 2c\cdot\sqrt{ln10}
+\end{equation}
+mit dem Fehler
+\begin{equation}
+  \increment \symup{E}_{1/10} = 2\increment b\cdot\sqrt{ln10} \: ,
+\end{equation}
+zu
+\begin{align*}
+  \symup{E}_{1/10, theo} = \SI{5.651(69)}{\kilo\electronvolt} \: .
+\end{align*}
+Das Verhältniss dieser beiden Größen ist unabhängig von den jeweiligen Parametern der
+Kurve stets
+\begin{equation}
+  \frac{\symup{E}_{1/2}}{\symup{E}_{1/10}} = \sqrt{\frac{ln2}{ln10}}
+  \approx 0.549 \: ,
+\end{equation}
+Diese theoretisch erhaltenen Werte werden mit den abglesenen verglichen, wobei sich
+die Abweichung über die Formel
+\begin{equation}
+  \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Theorie}}}
+  \label{eqn:abw}
+\end{equation}
+berechnen lässt zu 1.64 \%. Diese Abweichung ist offensichtlich sehr gering und liegt innerhalb der
+Ableseunsicherheit, was auf eine gute Beschreibung der Vollenergielinie
+durch eine Gaußkurve schließen lässt. Die recht große Abweichung der Halb- und Zehntelwertsbreite
+an sich lässt sich dadurch erklären, dass wohlmöglich eine falsche Maximalhöhe des Peaks angenommen
+wurde.
+Der Inhalt der Vollenergielinie ergibt sich durch Gleichungen \ref{eqn:inh}
+und \ref{eqn:inhf} zu
+\begin{align*}
+  \symup{I}_{VEL} =  3641 \pm 58 \: .
+\end{align*}
+\\
+Aus den Messwerten und Abbildung \ref{fig:plot5} lässt sich erkennen, dass die
+Compton-Kante bei etwa $\SI{478(3)}{\kilo\electronvolt}$ liegt, da dort (Kanalnummer
+1198) das Spektrum ein lokales
+Maximum von 53 Counts animmt und anschließend abfällt, wobei die Ableseunsicherheit auf etwa
+$\SI{3}{\kilo\electronvolt}$ geschätzt wird.
+Aus Gleichung \ref{eqn:kante} ergibt sich der theoretische Wert zu $\SI{477.280(90)}{\kilo\electronvolt}$
+und die Abweichung somit zu 0.15 \%.
+Um den Inhalt des Comptonkontinuums zu bestimmen wird der Bereich zwischen $\SI{20}{\kilo\electronvolt}$
+und $\SI{478}{\kilo\electronvolt}$ mit der Funktion aus Gleichung \ref{eqn:diffCompton} gefittet,
+wobei der Term $a =\frac{3}{8}\sigma_{\text{Th}}\frac{1}{m_0 c^2 e^2}$ als Fitparameter
+verwendet wird. Für diesen ergibt sich
+\begin{align*}
+  a =  4.297 \pm 0.056 \: .
+\end{align*}
+Dieser Wert wird nun verwendet, um die Funktion numerisch in dem Bereich zwischen $\SI{20}{\kilo\electronvolt}$
+und $\SI{478}{\kilo\electronvolt}$
+zu integrieren, wodurch sich der Inhalt des Comptonkontinuums zu
+\begin{align*}
+  \symup{I}_{Compton} =  16266 \pm 214
+\end{align*}
+ergibt.
+
+Der Rückstreupeak wird erneut mit der Gleichung \ref{eqn:gausk} gefittet, wodurch sich
+die Parameter
+\begin{align*}
+  a &= 65.8 \pm 2.0 \\
+  b &= 36 \pm 28 \\
+  c &= \SI{0.28(28)}{\kilo\electronvolt}\\
+  z &= \SI{193.78(24)}{\kilo\electronvolt} \:
+\end{align*}
+ergeben, der Rückstreupeak liegt also bei $\SI{193.78(24)}{\kilo\electronvolt}$.
+Der Theoriewert nach Gleichung \ref{eqn:Rückstreu} ergibt sich zu $\SI{184.3184(76)}{\kilo\electronvolt}$.
+\\
+Zur Bestimmung der Absorptionswahrscheinlichkeiten wird die Formel
+\begin{equation}
+  \symup{p} = 1-\exp{-\mu \cdot l}
+\end{equation}
+verwendet, wobei $l$ die Länge des Detektors, in diesem Fall also $\SI{3.9}{\centi\meter}$, bezeichnet
+und $\mu$ den Extinkionskoeffizient, welcher für den Comptoneffekt etwa
+$\mu_{c}=\SI{0.38}{\per\centi\meter}$ und für den Photoeffekt etwa
+$\mu_{p}=\SI{0.008}{\per\centi\meter}$ beträgt.
+Dies führt zu Absorptionswahrscheinlicheiten von
+\begin{align*}
+  \symup{p}_{c} = 0.7728 \\
+  \symup{p}_{p} = 0.0307 \: ,
+\end{align*}
+sodass sich theoretisch ein Verhältniss zwischen den Inhalten des Photopeaks und des
+Comptonkontinuums von
+\begin{equation*}
+  (\frac{\symup{I}_{VEL}}{\symup{I}_{Compton}})_{\text{theo}} = 1-\symup{e}{-\mu \cdot l}
+  = 0.03975
+\end{equation*}
+ergeben sollte. Das tatsächliche Verhältniss aus den Messdaten beträgt
+\begin{equation*}
+  \frac{\symup{I}_{VEL}}{\symup{I}_{Compton}}
+  = 0.224 \pm 0.005
+\end{equation*}
+und weist somit eine Abweichung von 463.52 \% auf, gemäß Formel \ref{eqn:abw}.
+
+
+\subsection{Aktivitätsbestimmung}
+Bei dem dritten vermessenen Spektrum soll zunächst festgestellt werden, ob es sich bei der gemessenen
+Probe um einen $\ce{^{133}Ba}$-Strahler oder einen $\ce{^{125}Sb}$-Strahler handelt. Zu diesem
+Zweck wird das Spektrum zunächst gemäß Gleichung \ref{eqn:gerade} kalibriert, wie in Abbildung
+\ref{fig:plot7} dargestellt ist. Die Messzeit beträgt $\SI{4378}{\second}$; von den 8191 verwendeten
+Kanälen werden nur die ersten 2000 verwendet, da darüber hinaus keine signifikanten
+Messwerte mehr zu erkennen sind.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Ba.pdf}
+  \caption{Unbekanntes Spektrum}
+  \label{fig:plot7}
+\end{figure}
+Die Peaks werden erneut mit Gleichung \ref{eqn:gausk} gefittet und die resultierenden
+Parameter in Tabelle \ref{tab:tabe5} dargestellt.
+\input{Tabelle5.tex}
+Durch einen Vergleich mit der Datenbank
+\cite{Lara} fällt auf, dass die Peaks mit denen von Barium übereinstimmen und es sich somit
+bei der Probe offensichtlich um Barium handelt. Die Zuordnung zu den theoretischen Emissionslinien
+und die entsprechenden Absorptionswahrscheinlickeiten sind in Tabelle \ref{tab:tabe6} angegeben.
+\input{Tabelle6.tex}
+Zur Bestimmung der Aktivität wird mittels Gleichung \ref{eqn:inh} zunächst der Inhalt der Peaks errechnet.
+Aus Gleichung \ref{eqn:itheo} lässt sich ein linearer Zusammenhang zwischen diesem Inhalt und der Aktivität
+erkennen, wobei der Proportionalitätsfaktor durch
+\begin{equation}
+  l = P\cdot \frac{\Omega}{4\pi}\cdot t \cdot Q
+  \label{eqn:lin}
+\end{equation}
+gegeben ist. Zur Bestimmung der Aktivität wird also eine Lineare Ausgleichsrechnung
+gemäß Formel \ref{eqn:li} mit Wertepaaren aus $l$ und $\symup{I}$ durchgeführt,
+wobei der Fitparameter a die Aktivität angibt. Dabei wird die $\SI{81.0657}{\kilo\electronvolt}$
+außer Acht gelassen, da bei so niedrigen Energien der Quotient $Q$ der Vollenergienachweiswahrscheinlichkeit
+zu ungenau ist. Somit ergeben sich die Parameter
+\begin{align*}
+  a = 416.4 \pm 2.7 \\
+  b = 35 \pm 14
+\end{align*}
+und damit eine Aktivität von $\SI{416.4(27)}{\becquerel} $.
+Die Wertepaare und die Ausgleichsgerade sind in Abbildung \ref{fig:plot9} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot9.pdf}
+  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{133}Ba}$}
+  \label{fig:plot9}
+\end{figure}
+
+
+
+\subsection{Nuklididentikation}
+Im letzten Versuchsteil wird eine Probe unbekannter Zusammensetzung untersucht, wobei die
+Messzeit $\SI{4064}{\second}$ beträgt. Von den 8191 gemessenen Kanälen werden die ersten 6000 zur Auswertung
+verwendet, die entsprechenden Messwerte werden gemäß Gleichung \ref{eqn:gerade} kalibriert und
+sind in Abbildung \ref{fig:plot8} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Un.pdf}
+  \caption{Unbekanntes Spektrum}
+  \label{fig:plot8}
+\end{figure}
+
+Um die Energie der Peaks zu bestimmen und sie somit zuordnen zu können, werden sie
+wieder an die Gaußkurve gemäß Gleichung \ref{eqn:gausk} angepasst. Die Fitparameter sind in Tabelle
+\ref{tab:tabe7} angegeben.
+
+\input{Tabelle7.tex}
+Die Linienenergien werden dann mit der Datenbank \cite{lara} abgeglichen und
+passenden Nukliden zugeordent.
+Diese Zuordnung ist in Tabelle \ref{tab:tabe8} zusammen mit den jeweiligen Emissionswahrscheinlichkeiten
+dargestellt.
+\input{Tabelle8.tex}
+Alle identifizierten Nuklide gehören zu der Uran-Radium Zerfallsreihe, welche auch als 4n+2
+Reihe bekannt ist. Es lässt sich also vermuten, dass die Probe ursprünglich zum Teil aus
+$\ce{^{238}U}$ oder $\ce{^{234}Th}$ bestand, welches über  die Zeit zerfallen ist und somit die
+radioaktiven Tochternuklide $\ce{^{226}Ra}$, $\ce{^{214}Pb}$ und $\ce{^{214}Bi}$ erklärt.
+Alle weiteren Nuklide der Reihe haben keine, oder zumindest nur sehr schwache
+Gammasignaturen, sodass diese nicht detektiert werden können.
+Für die Aktivitätsbestimmung sind nur bei $\ce{^{214}Pb}$ und $\ce{^{214}Bi}$ genügend
+Linien vorhanden um eine nicht allzu ungenaue Rechnung durchführen zu können. Das Vorgehen ist analog zur
+Bestimmung der Aktivität von $\ce{^{133}Ba}$ und die resultierenden Ausgleichsgeraden sind in den
+Abbildungen \ref{fig:plot11} und \ref{fig:plot12} dargestellt. Bei der Aktivitätsbestimmung
+von $\ce{^{214}Pb}$ wurde die $\SI{77.1088}{\kilo\electronvolt}$ Linie außer acht gelassen,
+da hier der Quotient $Q$ zu ungenau ist.
+Es ergeben sich die Fitparameter
+\begin{align*}
+  a_{\text{Pb}} &= 1106 \pm 17 \\
+  b_{\text{Pb}} &= -6\pm 69 \\
+  a_{\text{Bi}} &= 1442 \pm 89 \\
+  b_{\text{Bi}} &= 7 \pm 21 \\
+\end{align*}
+und somit Aktivitäten von $\SI{1106(17)}{\becquerel} $ für $\ce{^{214}Pb}$ und
+$\SI{1442(89)}{\becquerel} $ für $\ce{^{214}Bi}$.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot11.pdf}
+  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{214}Pb}$}
+  \label{fig:plot11}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{plot12.pdf}
+  \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{214}Bi}$}
+  \label{fig:plot12}
+\end{figure}

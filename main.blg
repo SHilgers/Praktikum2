@@ -1,0 +1,23 @@
+[1] Config.pm:343> INFO - This is Biber 2.5
+[1] Config.pm:346> INFO - Logfile is 'main.blg'
+[88] biber-darwin:290> INFO - === Di Apr 16, 2019, 10:53:48
+[124] Biber.pm:351> INFO - Reading 'main.bcf'
+[269] Biber.pm:776> INFO - Found 6 citekeys in bib section 0
+[297] Biber.pm:3493> INFO - Processing section 0
+[327] Biber.pm:3657> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[329] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[330] bibtex.pm:1048> INFO - Found BibTeX data source 'lit.bib'
+[344] Utils.pm:149> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Lara' and 'lara' in file 'lit.bib'
+[345] Biber.pm:3657> INFO - Looking for bibtex format file 'programme.bib' for section 0
+[347] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[350] bibtex.pm:1048> INFO - Found BibTeX data source 'programme.bib'
+[351] Utils.pm:149> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Lara' and 'lara' in file 'programme.bib'
+[352] Utils.pm:149> WARN - I didn't find a database entry for 'skript' (section 0)
+[352] Utils.pm:149> WARN - I didn't find a database entry for 'Lara' (section 0)
+[386] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[386] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[387] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
+[387] Biber.pm:3310> INFO - No sort tailoring available for locale 'de-DE'
+[394] bbl.pm:526> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[395] bbl.pm:619> INFO - Output to main.bbl
+[396] Biber.pm:108> INFO - WARNINGS: 4
