@@ -1,6 +1,0 @@
-#Schraube Übersetzung Messwerte
-3 1 1952
-3 1 1946
-3 1 1944
-3 1 1957
-3 1 1949
