@@ -1,0 +1,178 @@
+\section{Auswertung}
+\subsection{Bestimmung der Schallgeschwindigkeit}
+
+Die Messwerte zur Bestimmung der Schallgeschwindigkeit in Acryl sind in Tabelle
+\ref{tab:tabe1} abzulesen.
+\input{Tabelle1.tex}
+Hieraus ergibt sich durch die Gleichung
+\begin{equation}
+  c = 2\frac{\text{l}}{\increment t}
+\end{equation}
+eine Schallgeschwindigkeit von $ \SI{2707.42}{\meter\per\second}$.
+Die zugehörige Graphik ist in Abbildung \ref{fig:bums} zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=13cm]{Bums.png}
+  \caption{Graphik zur Bestimmung der Schallgeschwindigkeit.}
+  \label{fig:bums}
+\end{figure}
+
+\subsection{Bestimmung der Dämpfung mit dem Impuls-Echo-Verfahren}
+Die gemessenen Daten zur Bestimmung der Dämpfung befinden sich in Tabelle
+\ref{tab:tabe2}.
+\input{Tabelle2.tex}
+Durch Umstellung der Gleichung \ref{eqn:intensität} ergibt sich die Gleichung
+\begin{equation}
+  - \text{ln}(\frac{\text{I}}{\text{I}_0})= x \cdot \alpha \: ,
+\end{equation}
+sodass sich die Dämpfungskonstante durch eine lineare Ausgleichsrechnung der Form
+\begin{equation}
+  y = a\cdot x +b
+  \label{eqn:linear}
+\end{equation}
+mit den Wertepaaren aus $\text{ln}(\frac{\text{I}}{\text{I}_0})$ und $2 \cdot$l
+ergibt. Die Werte sind zusammen mit der Ausgleichsgrade in Abbildung \ref{fig:plot1}
+dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=6cm]{plot1.pdf}
+  \caption{Wertepaare und Ausgleichsgrade}
+  \label{fig:plot1}
+\end{figure}
+Hieraus ergeben sich die Parameter:
+\begin{align*}
+  a &= 0,020 \pm 0,002 \: \frac{1}{\text{mm}} \\
+  b &= 1,4 \pm 0,3
+\end{align*}
+Die zu bestimmende Dämpfungskonstante ergibt sich somit insgesamt zu
+\begin{align*}
+  \alpha = 0,020 \pm 0,002 \: \frac{1}{\text{mm}} \: .
+\end{align*}
+
+\subsection{Schallgeschwindigkeitsbestimmung mit dem Impuls-Echo-Verfahren}
+Die gemessenen Wertepaare sind, zusammen mit den daraus errechneten
+Schallgeschwindigkeiten, in Tabelle \ref{tab:tabe3} aufgeführt.
+\input{Tabelle3.tex}
+Aufgrund der Anpassungsschicht weisen die Schallgeschwindigkeiten einen systematischen
+Fehler auf, %da sich die Durchlaufgeschwindigkeit aus dem Durchlaufen der Schicht und
+%aus dem Durchlaufen des Zylinders zusammensetzt, gemäß der Formel
+%\begin{equation}
+%  t_{\text{gemessen}} = \frac{2\cdot l}{c} + \frac{2 \cdot l_a}{c_w} \: ,
+%\end{equation}
+%wobei $l_a$ die Dicke der Anpassungsschicht angibt und $c_w = \SI{1480}{\meter\per\second}$
+%die Schallgeschwindigkeit in destilliertem Wasser.
+%Es lässt sich also ein
+%\begin{equation}
+%  \increment t = \frac{t_{\text{gemessen}}}{2} - \frac{l}{c}
+%\end{equation}
+%bestimmen, welches die Laufzeit in der Anpassungsschicht angibt, wodurch sich die
+%Dicke der Anpassungsschicht zu
+%\begin{equation}
+%  l_a = \increment t  \cdot c_w
+%\end{equation}
+%ergibt. Die somit berechneten Werte für die Anpassungsschicht sind in Tabelle \ref{tab:tabe6}
+%aufgeführt.
+%\input{Tabelle6.tex}
+%Durch die Gleichung
+%\begin{equation}
+%  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+%  \label{eqn:mit}
+%\end{equation}
+%\noindent lässt sich der Mittelwert bilden, wobei der dazugehörige Fehler sich durch
+%\begin{equation}
+%  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+%  (x_i - \bar{x})^2}
+%  \label{eqn:mitf}
+%\end{equation}
+%ergibt. Somit ergibt sich insgesamt:
+%\begin{align*}
+%  \increment t &= \SI{0.68(9)}{\micro\second} \\
+%  l_a &= \SI{1.01(13)}{\milli\meter}
+%\end{align*}
+welcher sich durch eine lineare Ausgleichsrechnung durch Gleichung \ref{eqn:linear}
+bestimmen lässt, wobei für die x-Werte die Länge der Zylinder verwendet werden und
+für die y-Werte die Durchlaufzeit. Die Wertepaare sind zusammen mit der
+Ausgleichsgeraden in Abbildung \ref{fig:plot2} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=6cm]{plot2.pdf}
+  \caption{Wertepaare und Ausgleichsgrade}
+  \label{fig:plot2}
+\end{figure}
+Hieraus ergeben sich die Parameter:
+\begin{align*}
+  a &= 0,370 \pm 0,004 \: \frac{\mu s}{\text{mm}} \\
+  b &= 0,85 \pm 0,6 \: \mu s
+\end{align*}
+Der y-Achsenabschnitt gibt hierbei die Zeit zum zweimaligen Durchlaufen der Anpassungsschicht
+an. Durch Division mit 2 und Multiplikation mit der Schallgeschwindigkeit $c_w = \SI{1480}{\meter\per\second}$
+in destilliertem Wasser lässt sich somit die Dicke der Anpassungsschicht bestimmen,
+wodurch sich insgesamt die Werte
+\begin{align*}
+  t_a &= \SI{0.43(3)}{\micro\second} \\
+  l_a &= \SI{0.64(4)}{\milli\meter}
+\end{align*}
+ergeben.
+
+
+\subsection{Schallgeschwindigkeitsbestimmung mit dem Durchschallungsverfahren}
+Die gemessenen Werte befinden sich zusammen mit den daraus errechneten Schallgeschwindigkeiten
+in Tabelle \ref{tab:tabe4}.
+\input{Tabelle4.tex}
+
+\subsection{Spektrale Analyse und Cepstrum}
+In Abbildung \ref{fig:cep} sind das Spektrum und Cepstrum der Mehrfachreflexionen
+dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=12cm]{Spektrum.pdf}
+  \caption{Spektrum und Cepstrum der Mehrfachreflexionen}
+  \label{fig:cep}
+\end{figure}
+
+\subsection{Biometrische Untersuchung eines Augenmodells}
+Die Messung des Augenmodells ist in Abbildung \ref{fig:messauge} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=12cm]{Auge2.png}
+  \caption{Messung des Auges}
+  \label{fig:messauge}
+\end{figure}
+Die Impulse liegen dabei bei den Zeiten:
+\input{Tabelle5.tex}
+Der Impuls 1 kommt hierbei durch die Reflexion am Beginn der Linse zustande, sodass
+sich dieser Abstand durch die Gleichung
+\begin{equation}
+  s_1 = \frac{1}{2} \cdot c_{GK} \cdot t_1 \: ,
+\end{equation}
+ergibt, wobei die Schallgeschwindigkeit $c_{GK}$ in der Glaskörperflüssigkeit $\SI{1410}{\meter\per\second}$
+beträgt. Dieser Abstand beträgt somit
+\begin{align*}
+  s_1 = \SI{8.037}{\milli\meter} \: .
+\end{align*}
+Der zweite Impuls ist bedingt durch Reflexion am Ende der Linse, sodass sich durch die
+Formel
+\begin{equation}
+  s_2 = \frac{1}{2} \cdot c_L \cdot (t_2-t_1)
+\end{equation}
+mit der Schallgeschwindigkeit $c_L = \SI{2500}{\meter\per\second}$ die Breite der
+Linse bestimmen lässt. Diese beträgt somit
+\begin{align*}
+  s_2 = \SI{7.875}{\milli\meter} \: .
+\end{align*}
+Die nächsten beiden Impulse kommen durch Mehrfachreflexionen zustanden, sodass diese
+keine weiteren Informationen über das Augenmodell liefern. Der fünfte Impuls entsteht
+durch Reflexion an der Rückwand des Auges, sodass sich der Abstand vom Ende der
+Linse bis zum Ende des Auges durch
+\begin{equation}
+  s_3 = \frac{1}{2} \cdot c_{GK} \cdot (t_5-t_2)
+\end{equation}
+zu
+\begin{align*}
+  s_3 = \SI{37.859}{\milli\meter}
+\end{align*}
+ergibt.
+Der Gesamtdurchmesser des Auges beträgt somit
+\begin{align*}
+  D = s_1 + s_2 + s_3 = \SI{53.771}{\milli\meter} \: .
+\end{align*}

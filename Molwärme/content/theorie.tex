@@ -1,0 +1,106 @@
+\section{Zielsetzung}
+Ziel des Versuches ist es, die Molwärme $\symup{C_{\text{v}}}$ in Abhängigkeit der
+Temperatur zu bestimmen und mit den Vorhersagen des klassischen Modells, des Einstein
+Modells und des Debye Modells zu vergleichen. Zufdem soll die Debye-Temperatur
+$\Theta_{\text{D}}$ bestimmt werden.
+
+\section{Theorie}
+\subsection{Spezifische Wärme}
+Als Wärmekapazität wird im Allgemeinen die Wärmemenge $\increment \text{Q}$ bezeichnet,
+die benötigt wird um
+die Temperatur eines
+bestimmten Stoffes um $\SI{1}{\kelvin}$ zu erhöhen:
+\begin{equation}
+  \text{C} = \frac{\increment \text{Q}}{\increment \text{T}}
+  \label{eqn:warm}
+\end{equation}
+Da diese Größe stets von der Menge des Stoffes abhängt, wird sie häufig im
+Bezug auf $\SI{1}{\mol}$ normiert
+\begin{equation}
+  \text{c} = \frac{\increment \text{Q}}{\increment \text{T} \: \text{mol}} \: ,
+  \label{eqn:cmol}
+\end{equation}
+wobei diese Größe dann als molare Wärmekapazität bezeichnet wird.  \\
+Es wird zudem zwischen der Wärmekapazität bei konstantem Druck $\symup{C_{\text{p}}}$ und der Wärmekapazität bei
+konstanten Volumen $\symup{C_{\text{v}}}$ unterschieden, wobei $\symup{C_{\text{p}}}$
+im Allgemeinen größer ist, da hier ein Teil der zugeführten Energie zur Volumensausdehnung verwendet
+wird und nicht nur zur Temperaturerhöhung.
+Dies ergibt sich durch den ersten Hauptsatz der Thermodynamik
+\begin{equation}
+  \text{dQ} = \text{dU} + \text{pdV} \: ,
+  \label{eqn:hs1}
+\end{equation}
+aus dem sich die Gleichungen
+\begin{equation}
+  \symup{C_{\text{v}}} = \frac{\partial\text{U}}{\partial\text{T}}\bigr|_{\text{v}} \\
+  \symup{C_{\text{p}}} = \frac{\partial\text{Q}}{\partial\text{T}}\bigr|_{\text{p}}
+  \label{eqn:cc}
+\end{equation}
+sowie die Beziehung zwischen beiden
+\begin{equation}
+  \symup{C_{\text{p}}}-\symup{C_{\text{v}}}=\text{TV}\alpha_{\text{v}}^2\text{B}
+  \label{eqn:cpcv}
+\end{equation}
+ergeben, wobei $\alpha_{\text{v}}$ den Volumensausdehnungskoeffizient und B den Bulk-Modul
+bezeichnet.
+
+\subsection{Klassisches Modell}
+Im Klassischen Modell setzt sich die innerer Energie U eines kristallinen Festkörpers
+aus der Grundenergie $\symup{U}^{\text{eq}}$ des Gitters und der Energie der Schwingungen
+des Kristallgitters zusammen.
+Diese setzt sich nach dem Äquipartitionstheorem aus jeweils $\frac{1}{2}\text{k}_{\text{B}}\text{T}$
+für potentielle Energie und kinetische Energie pro Freiheitsgrad zusammen. Bei einem Gitter
+mit einatomiger Basis gibt es 3 Freiheitsgrade in Form von Schwingungen, je einen für jede der
+drei Raumrichtungen.
+Somit ergibt sich die innere Energie zu
+\begin{equation}
+  \symup{U} = \symup{U}^{\text{eq}} + 3\text{N}\text{k}_{\text{B}}\text{T} \: ,
+  \label{eqn:Uklassisch}
+\end{equation}
+wobei $\text{N}=\nu \cdot \text{N}_{\text{A}}$ die Teilchenanzahl bezeichnet, mit der
+Avogadrokonstante $\text{N}_{\text{A}}$ und der Molzahl $\nu$.
+Somit beträgt die Wärmekapazität
+\begin{equation}
+  \symup{C_{\text{v}}} = 3\text{N}\text{k}_{\text{B}}
+  \label{eqn:Cklassich}
+\end{equation}
+und die molare Wärmekapazität entsprechend
+\begin{equation}
+  \symup{c_{\text{v}}} = 3\text{N}_{\text{A}}\text{k}_{\text{B}} = 3\text{R}
+  \label{eqn:Cklassich}
+\end{equation}
+mit der idealen Gaskonstante R. Dies ist auch als Dulong-Petit-Gesetz bekannt, wobei
+die molare Wärmekapazität unabhängig ist vom Material und der Temperatur.
+Diese Beschreibung gilt meist nur bei hohen Temperaturen und zeigt bei niedrigen
+Temperaturen häufig große Abweichungen, da Nullpunktsschwingungen in diesem Modell
+nicht berücksichtigt werden.
+
+\subsection{Einstein-Modell}
+Durch die Quantisierung der Gitterschwingungen, welche als Phononen bezeichnet
+werden, können nur noch diskrete Energien von $ \text{E}_{\text{n}}=(\text{n}+\frac{1}{2})
+\hbar \omega $ aufgenommen werden, mit der Kreisfrequenz $\omega$ der Schwingung
+und der Anregungszahl n. Zur Berechnung der mittleren inneren Energie wird nun eine Summation
+über alle Anregungen durchgeführt, dass heißt über alle
+\textbfq{q}-Vektoren und alle r Polarisationen, wobei jede Energie mit dem Boltzmann-Faktor
+$\text{e}^{-\beta \:\text{E}_{\text{n}}}$ gewichtet wird, dabei ist
+$\beta= \frac{1}{\text{k}_{\text{B}}\text{T}}$.
+Hieraus ergibt sich die innere Energie zu
+\begin{equation}
+  <\symup{U}> = \sum_{\textbfq{q} \: r}\hbar\omega_{\textbfq{q} \: r}(\frac{1}{2}+<\text{n}>)
+  \label{eqn:Uqm}
+\end{equation}
+mit der mittleren Besetzung
+\begin{equation}
+  <\symup{n}> =  \frac{1}{\symup{e}^{\hbar\omega\beta}-1}
+  \label{eqn:boseeinstein}
+\end{equation}
+gemäß der Bose-Einstein Verteilung, da es sich bei Phononen um Bosonen ohne
+chemisches Potential handelt.
+
+
+
+
+\subsection{Debye-Modell}
+
+
+nam

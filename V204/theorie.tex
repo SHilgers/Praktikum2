@@ -1,0 +1,89 @@
+\section{Theorie}
+\subsection{Zielsetzung}
+Mit Hilfe des Michelson-Interferometers ist es möglich die Wellenlänge von Licht
+zu bestimmen, sowie die Bechungsindizes von Gasen. Hier soll die Wällenlänge
+eines Lasers ausgemessen werden und der Brechungsindize von Luft bestimmt werden.
+
+\subsection{Kohärenz und Interferenz von Licht}
+Da Licht eine elektromagnetische Welle ist, kann es durch die Maxwell-Gleichungen
+beschrieben werden. Charakteristisch für eine Welle ist, dass sie sowohl zeitlich als
+auch räumlich periodisch ist. So lässt sich die zeitlich und räumlich periodische
+elektrische Feldstärke $\vec{E}$ für den einfachsten Fall (einer ebenen Welle) durch
+\begin{equation}
+  \vec{E}(x,t)=E_{0}\cos{kx-\ommega t -\delta}
+  \label{eqn:efeld}
+\end{equation}
+beschreiben.
+Dabei beschreibt $k=\frac{2\pi}{\lamda}$ die Wellenzahl, $\lamda$ ist die Wellenlänge,
+$\ommega$ ist die Kreisfrequenz und mit $\delta$ wird eine beliebige Phasenverschiebung bezeichnet.\\
+
+Für elektromagnetische Wellen gilt das Superpositionsprinzip: Die in einem Punkt P
+ankommenden elektromagnetischen Wellen überlagern sich.\\
+Die elektrische Feldstärke von Licht lässt sich aufgrung der hohen Frequenz (ca. $10^{15} \SI{Hz}$) nicht direkt messen,
+deshalb wird volgende Relation zwischen Intensität $I$ und elektrischem Feld $\vec{E}$ verwendet:
+\begin{equation}
+  I=const|\vec{E}^{2}|
+  \label{eqn:intensität}.
+\end{equation}
+Aus dem Superposituonsprinzip und Gleichung \ref{eqn:intensität} folgt für die
+Gesamtintensität:
+\begin{equation}
+  I_{ges}=2const\vec{E_0}^{2}(1+\cos(\delta_2-\delta_1))
+  \label{eqn:iges}.
+\end{equation}
+An diese Gleichung wird deulich, dass zur Summe der Intensitäten $2const\vec{E_0}^2$ noch
+ein Interferenzterm $2const\vec{E_0}^{2}\cos(\delta_2-\delta_1)$ hinzukommt. Dieser Interferenzterm
+kann werte zwischen $+2const\vec{E_0}^{2}$ und  $-2const\vec{E_0}^{2}$ annehmen. Insbesondere
+verschwindet er, wenn $\delta_2-\delta_1$ ein ungerades Vielfaches von $\pi$ ist.
+
+Für Interferen müssen bestimmte EIgenschaften erfüllt sein, so ist mit Licht aus
+natürlichen Quellen (z.B. Sonne) nur schwer Interferenz zu beobachen. Das liegt daran, dass
+die Phasendifferenz $\delta_2-\delta_1$ bei natürlichen Quellen beliebiege positive als
+auch negative Werte annimmt, also nicht konstant ist. Der Grund dafür liegt in der
+Entstehung des Lichts: Wenn Licht emittiert wird wechselt ein angeretes ELektron auf ein
+niedrigeres Energieniveau, dabei wird Energie in Form von Licht ausgesendet. Dieser ausgesendete
+Wellenzug hat eine endliche Länge. Da die Emission ein satistisch verteilter Vorgang ist
+kann es aus verschiedenen Lichtquellen oder Licht von verschieden Orten einer Quelle nicht zu
+einem konstanten Phasenunterschied kommen.\\
+
+Dieses Licht ohne konstanten Phasenunterschied wird als inköhärentes Licht bezeichnet.
+Dementsprechend besitzt köhärentes Licht einen konstanten Phasenunterschied $\ommega$, auch
+$k$ und $\ommega$ sind konstant.
+Köhärentes Licht ist interferenzfähig und wird beispielsweise von Lasern erzeugt.
+Unter bestimmten Voraussetzungen interferiert auch Licht aus konventionellen Quellen,
+dazu wird das Licht einer Quelle (hier ein Atom oder Molekül) in zwei Strahlen aufgeteilt.
+Dies erfolgt entweder über einen Strahlteile oder über eine Doppelblende wie in
+Abbildung \ref{fig:blende} zu sehen. Anschlieschend werden die beiden Strahlen wieder in
+einem Punkt zusammengeführt. Da die Lichtstrahlen dann unterschiedlich lange Wege zurückgelegt haben
+kommt es zu einer Phasenverschiebung. So kann, muss es aber nich zu Interferenz kommen.
+\begin{figure}[H]
+  \centering
+  \includegraphics{Unbekannt.JPG}
+  \caption{Anordnung zum spalten eines konventionellen Lichtstrahls um Interferenzerscheinungen zu erzeugen}
+  \label{fig:blende}.
+\end{figure}
+Eine wichtige Größe in diesem Zsammenhang ist die Kohärenzlänge $l$, die Emission eines 
+Lichtzuges dauert eine endliche Zeitspanne an, dementsprechend hat der Lichtzug auch eine
+endliche Länge. Ist der Wegunterschied größer als die Länge des Lichtzges kann es nicht zu
+Interferenz kommen, da die Lichtstrahlen zu unterschiedlichen Zeitpunkten am gleichen
+Punkt P eintreffen. Die kohärenzlänge $l$ ist genau die Länge, an der keine Interferenz mehr zu
+beobachten ist. Des W eiteren gilt folgender Zusammenhang zwischen der Kohärenzlänge $l$, der Anzahl an
+beobachten Interferenzmaxima $N$ sowie der Wellenlänge $\lamda$:
+\begin{equation}
+  l=N\lamda
+  \label{eqn:interf}
+\end{equation}
+
+\subsection{Das Michelson-Interferometer}
+
+
+
+
+
+
+
+
+
+\label{sec:Theorie}
+
+%\cite{sample}

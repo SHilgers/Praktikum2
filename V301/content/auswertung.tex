@@ -1,0 +1,120 @@
+\section{Auswertung}
+Die zu Beginn gemessene Leerlaufspannung $U_{0}$ der Monozelle und der
+Innenwiderstand $R_{V}$ des Voltmeters lauten:
+\begin{align*}
+  U_{0} &= \SI{1,53}{\volt} \\
+  R_{V} &\approx \SI{10}{\Mohm}.
+\end{align*}
+\noindent Um den Innenwiderstand $R_{i}$ und die Leerlaufspannung der Monozelle zu
+bestimmen, wird die Klemmspannung $U_{k}$ gegen den Belastunsstrom $I$ aufgetragen.
+Dies ist in Abbildung \ref{fig:plot1} zu sehen, die Steigung $a$ der Ausgleichsgeraden
+entspricht dabei dem Innenwiderstand $R_{i}$ und der y-Achsenabschnitt $b$ entspricht
+der Leerlaufspannung $U_{0}$.
+Die Messwerte dazu finden sich in Tallele \ref{tab:tabelle1}.
+\input{Tabelle1.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Lineare Regression der ersten Messung: Monozelle ohne Gegenspannung.}
+  \label{fig:plot1}
+\end{figure}
+
+\begin{align*}
+  -a &= R_{i} = \SI{16,563(119)}{\ohm} \\
+  b &= U_{0} = \SI{1,576(007)}{\volt}
+\end{align*}
+
+\noindent Die Berechnung des Innenwiderstandes $R_{i}$ und der Leerlaufspannung $U_{0}$ für
+die zweite Messung, die mit einer Gegenspannung an der Monozelle durchgeführt wurde,
+erfolgen äquivalent. Hier ist zu erwähnen, dass die Steigung im Vergleich
+zu Abbildung \ref{fig:plot1} genau andersherum verläuft, da der Strom nun in entgegengesetzte
+Richtung fließt.
+\input{Tabelle2.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Lineare Regression der zweiten Messung: Monozelle mit Gegenspannung.}
+  \label{fig:plot2}
+\end{figure}
+
+\begin{align*}
+  a &= R_{i} = \SI{17,97(102)}{\ohm} \\
+  b &= U_{0} = \SI{1,593(074)}{\volt}
+\end{align*}
+
+\noindent Nun folgt die Messung einer Rechteck- und Sinusschwingung eines RC-Generators.
+Die Messwerte sind in Tabelle \ref{tab:tabelle3} und dargestellt.
+\input{Tabelle3.tex}
+\noindent Der Innenwiderstand $R_{i}$ und die Leerlaufspannung $U_{0}$ werden erneut über Lineare Regression
+bestimmt, dass ist in Abbildung \ref{fig:plot3} zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Lineare Regression der dritten Messung: Rechteckspannung ohne Gegenspannung.}
+  \label{fig:plot3}
+\end{figure}
+\begin{align*}
+  -a &= R_{i} = \SI{222,95(703)}{\ohm} \\
+  b &= U_{0} = \SI{6,610(145)}{\volt}
+\end{align*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot4.pdf}
+  \caption{Lineare Regression der vierten Messung: Sinusspannung ohne Gegenspannung.}
+  \label{fig:plot4}
+\end{figure}
+\begin{align*}
+  -a &= R_{i} = \SI{191,8(121)}{\ohm} \\
+  b &= U_{0} = \SI{10,743(149)}{\volt}
+\end{align*}
+
+\noindent Im Folgenden wird der systematische Fehler der Leerlaufspannung $U_{0}$ berechnet,
+der dadurch entsteht, dass der Widerstand der Voltmeters nicht unendlich groß sein kann.
+Dafür wird die folgende Formel verwendet, die sich aus Gleichung \ref{eqn:formel} ergibt, indem
+die Beziehung $I=\frac{U_{k}}{R_{V}}$ verwendet wird:
+\begin{equation}
+  U_{0}=U_{k}+U_{k}\cdot \frac{R_{i}}{R_{a}}.
+\end{equation}
+Dabei entspricht $U_{k}$ dem anfangs gemessenen $U_{0}$ und $R_{a}$ ist der
+Widerstand des Voltmeters. Somit berechnet sich der Fehler zu
+\begin{equation}
+  \Delta U_{0} = \frac{R_{i}}{R_{a}} = \SI{1.7e-9}{\ohm}.
+\end{equation}
+\noindent Da dieser systematische Fehler sehr klein ist, kann er vernachläsigt werden und die
+Annahme eines unendlich großen Widerstandes im Voltmeter kann bestätigt werden.
+Wenn das Voltmeter an dem Punkt "H", wie in Abbildung \ref{fig:schalt2}
+zu sehen angeschlossen wird, entsteht ein sytematischer Fehler. Denn dann wird
+das Ampermeter in der Messung mit berücksichtigt und es wird nicht die reine
+Klemmspannung gemessen.
+
+\noindent Im Folgenden werden aus den Messwerten der ersten Messreihe die
+im Belastungswiderstand umgesetzte Leistung über $N=UI$ sowie der Belastungswiderstand
+über $R_{a}=U_{k}/I$ berechnet, dies ist in in folgender Tabelle \ref{tab:tabelle5} zu sehen.
+\input{Tabelle5}
+\noindent Die hier errechneten Werte für den Belastungswiderstand werden nun gegen
+die Leistung aufgetragen und mit der Theoriekurve
+\begin{equation*}
+  N=I²R_{a}=\frac{U_{0}^2}{(R_{a}+R_{i})^2}R_{a}
+\end{equation*}
+verglichen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot5.pdf}
+  \caption{Vergleich der Messwertw mit der Theoriekurve.}
+  \label{fig:plot5}
+\end{figure}
+\noindent Wie in Abbildung \ref{fig:plot5} zu sehen liegen die Messwerte genau auf der
+Theoriekurve. Nur zwei Messwerte weichen geringfügig von der Theoriekurve ab,
+da diese Abweichung aber sehr minimal ist nicht von einem
+systematischen Fehler auszugehen.
+
+\label{sec:Auswertung}
+
+%\begin{figure}
+%  \centering
+%  \includegraphics{plot.pdf}
+%  \caption{Plot.}
+%  \label{fig:plot}
+%\end{figure}

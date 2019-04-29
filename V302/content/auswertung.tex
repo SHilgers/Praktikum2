@@ -1,0 +1,160 @@
+\section{Auswertung}
+\subsection{Wheatstonesche Brücke}
+Die gemessenen Werte für die Widerstände $ R_2, \: R_3 \: \text{und} \: R_4 $ zur
+Bestimmung des unbekannten Widerstands $\text{R}_{x10} $ (Wert 10) befinden sich in
+der untenstehenden Tabelle \ref{tab:tabe1}.
+\input{Tabelle1.tex}
+\noindent Durch die Gleichung \ref{eqn:rx}
+und Mittelung mit
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \: ,
+\end{equation}
+\noindent wobei der dazugehörige Fehler sich durch
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}
+  \label{eqn:mitf}
+\end{equation}
+\noindent berechnet, ergibt sich somit:
+\begin{equation*}
+  \text{R}_{x10} = \SI{238.90 (64)}{\ohm}
+\end{equation*}
+\noindent Da das Verhältniss von $ \frac{R_3}{R_4} $ laut Hersteller mit einem
+Fehler von $ \pm 0.5 \% $  behaftet ist und $ \text{R}_2 $ bis auf
+0,2\% genau ist, muss hier auch die Gaußsche
+Fehlerfortpflanzung mit der Formel
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  }
+  \label{eqn:gaus}
+\end{equation}
+\noindent beachtet werden, durch die sich für $ \text{R}_{x10} $ ein Fehler von $ \pm 1,29 \: \si{\ohm} $
+ergibt, welcher deutlich größer als der Mittelwertfehler ist und somit der signifikante
+Fehler. Somit ergibt sich insgesamt
+\begin{equation*}
+  \text{R}_{x10} = \SI{239.7 (13)}{\ohm}
+\end{equation*}
+
+
+\noindent Analog lässt sich der Wert 11 berechnen, dessen Messwerte sich in Tabelle
+\ref{tab:tabe2} befinden.
+\input{Tabelle2.tex}
+\noindent Hierdurch ergibt sich für Wert 11:
+\begin{equation*}
+  \text{R}_{x11} = \SI{487.0 (26)}{\ohm}
+\end{equation*}
+\noindent wobei wieder der Gauß-Fehler der größere und somit signifikante ist. Der Fehler
+des Mittelwerts beträgt dabei $ \pm 0,12 \: \si{\ohm}$.
+
+\subsection{Kapazitätsmessbrücke}
+Im zweiten Teil sollen zwei unbekannte Kapazitäten und eine RC-Kombination
+vermessen werden. Die gemessenen Werte der ersten Kapazität $ \text{C}_{x3} $ (Wert 3) befinden
+sich in Tabelle \ref{tab:tabe3} und die der zweiten Kapazität $ \text{C}_{x1} $
+(Wert 1) in der
+darauf folgenden Tabelle \ref{tab:tabe4}
+\input{Tabelle3.tex}
+\input{Tabelle4.tex}
+\noindent Aus Gleichung \ref{eqn:cx}
+ergibt sich damit für
+\begin{align*}
+  \text{C}_{x3} &= \SI{420.6 (29)}{\nano\farad} \\
+  \text{C}_{x1} &= \SI{655.4 (35)}{\nano\farad}
+\end{align*}
+\noindent wobei bei $ \text{C}_{x3} $ der Fehler des Mittelwerts der größere war und bei
+$ \text{C}_{x1} $ der Gauß-Fehler durch die Ungenauigkeit von $C_2$ mit $ \pm 0.2
+\% $ und von dem Verhältniss von $ \frac{R_3}{R_4} $ mit $ \pm 0.5 \% $.
+Der Gauß-Fehler von $ \text{C}_{x3} $ beträgt
+dabei $ \pm 2,3 \: \si{\nano\farad} $ und der Mittelwertfehler von $ \text{C}_{x1} $
+beträgt $ \pm 2,9 \: \si{\nano\farad} $.
+
+
+\noindent Die RC-Kombination (Wert 9) mit der Kapazität $ \text{C}_{x9} $ und dem
+Widerstand $ \text{R}_{x9} $ ergibt sich
+mit den Werten aus Tabelle \ref{tab:tabe5} zu
+\begin{align*}
+  \text{C}_{x9} &= \SI{417 (13)}{\nano\farad} \\
+  \text{R}_{x9} &= \SI{475 (14)}{\ohm}
+\end{align*}
+\noindent Dabei wurde für die Kapazität $ \text{C}_{x9} $ der Mittelwertfehler verwendet und
+für den Widerstand $ \text{R}_{x9} $ der Fehler nach Gauß mit der Formel \ref{eqn:gaus}
+, welcher durch die Abweichung des variablen Widerstands $R_2$ mit $ \pm 3 \% $
+recht groß ausfällt. Der entsprechende Mittelwertfehler von $ \text{R}_{x9} $
+beträgt dabei $ \pm 0,54 \: \si{\ohm} $ und der Gauß-Fehler von $ \text{C}_{x9} $ beträgt
+$ \pm 2,56 \: \si{\nano\farad} $.
+\input{Tabelle5.tex}
+
+\subsection{Induktivitätsmessbrücke}
+
+Die Werte der unbekannten Induktivität $ \text{L}_{x16} $ und dem dazugehörigen
+Widerstand $ \text{R}_{x16} $(Wert 16) sind in Tabelle
+\ref{tab:tabe6} abzulesen.
+\input{Tabelle6.tex}
+\noindent Durch die Gleichungen \ref{eqn:lx}
+ergibt sich somit
+\begin{align*}
+  \text{R}_{x16} &= \SI{393 (12)}{\ohm} \\
+  \text{L}_{x16} &= \SI{51.3 (21)}{\milli\henry}
+\end{align*}
+\noindent mit den Fehlern aus Gleichung \ref{eqn:gaus}, da die Mittelwertfehler aus Gleichung
+\ref{eqn:mitf} mit
+$ \pm 3,8 \: \si{\ohm} $ für $ \text{R}_{x16} $ und $ \pm 0,076 \: \si{\milli\henry} $
+für $ \text{L}_{x16} $ jeweils kleiner sind.
+
+\subsection{Maxwell-Brücke}
+
+Bei der Messung wird eine Kapaziät $ \text{C}_{2} = \SI{450.0(9)}{\nano\farad} $
+verwendet. Die Messwerte befinden sich in Tabelle \ref{tab:tabe7}
+\input{Tabelle7.tex}
+\noindent Aus den Gleichungen \ref{eqn:mx}
+ergibt sich\begin{align*}
+  \text{R}_{x16} &= \SI{330 (29)}{\ohm} \\
+  \text{L}_{x16} &= \SI{49 (14)}{\milli\henry}
+\end{align*}
+\noindent wobei der Mittelwertfehler für $ \text{R}_{x16} $ verwendet wurde (Gauß-Fehler =
+$ \pm 14 \: \si{\ohm} $) und der Gauß-Fehler für $ \text{L}_{x16} $ (Mittelwertfehler=
+$ \pm 4,4 \: \si{\milli\henry} $).
+
+\subsection{Wien-Robinson-Brücke}
+Die Messung der Wien-Robinson-Brücke wird mit einer Kapazität C=$ 992 \: \si{\nano\farad}$
+und einem Widerstand von R= $664\: \si{\ohm}$ durchgeführt. Die Messwerte sind in Tabelle
+\ref{tab:tabe8} dargestellt.
+
+\input{Tabelle8.tex}
+
+\noindent In Abbildung \ref{fig:plot} ist das Verhältniss $\frac{U_b}{U_s}$ gegen
+$\frac{\nu}{\nu_0} $ aufgetragen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot.pdf}
+  \caption{Diagramm zur Wien-Robinson-Brücke}
+  \label{fig:plot}
+\end{figure}
+
+\noindent Der Theoriwert für $\omega_0$ ergibt sich zu
+\begin{equation*}
+  \omega_0 = \frac{1}{RC} = 1518,17 \: \si{\hertz}
+\end{equation*}
+\noindent und somit
+\begin{equation*}
+  \nu_0 = \frac{\omega_0}{2\pi} = 241,62 \: \si{\hertz}
+\end{equation*}
+
+\subsection{Klirrfaktorbestimmung}
+
+Das Minimum der Frequenz liegt bei einer Frequenz von 242 $\si{\hertz}$
+mit einer Brückenspannung $\text{U}_b = 0,016 \: \si{\volt} \: \text{und} \:
+\text{U}_s = 4,48 \: \si{\volt} $.
+Durch die Gleichung \ref{eqn:betrag}
+ergibt sich f(2) zu
+\begin{equation*}
+  f(\Omega =2) \approx 0.14907
+\end{equation*}
+\noindent Daraus folgt, dass
+\begin{equation*}
+  \text{U}_2 = \frac{\text{U}_b}{f(2)} = \SI{0.107}{\volt}
+\end{equation*}
+\noindent und schlussendlich
+\begin{equation*}
+  \text{k}= \frac{\text{U}_2}{\text{U}_1} = 0.024
+\end{equation*}

@@ -1,0 +1,119 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+Die bei $\SI{0}{\milli\bar}$ gemessene Position des Maximums entspricht einer
+Energie von ca. $\SI{4}{\MeV}$. Unter der Annahme einer linearen
+Energieskala können mit diesem Startwert die anderen Energien $E_{\alpha}$
+berechnet werden, die Ergebnisse sind in Tabelle \ref{tab:tab1} zu sehen.
+Dort sind auch die nach Formel \ref{eqn:??} berechneten
+effektiven Längen eingetragen, für die Berechneung wird der bei der
+ersten Messung eingestelle Abstand von $x_0=\SI{2,5}{\cm}$ verwendet.
+
+\input{Tabelle1.tex}
+
+Wird die Zählrate gegen die effektive Länge aufgetragen, so ergibt sich
+Abbildung \ref{fig:plot1}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=8cm]{plot1.pdf}
+  \caption{Zählrate $N$ aufgetragen gegen die effektive Länge $x$.}
+  \label{fig:plot1}
+\end{figure}
+
+Die mittlere Reichweite der $\alpha$-Teilchen wird bestimmt, indem
+der lineare Teil der Funktion gefittet wird, anschließend wird der Schnittpunkt
+der Ausgleichsgerade mit $\sfrac{N}{2}$ berechnet. So ergibt sich
+der Schnittpunkt:
+\begin{equation}
+  R_m=\frac{\sfrac{N}{2}-b}{m},
+  \label{eqn:mittel}
+\end{equation}
+woraus sich die mittlere Reichweite von $\SI{1,93(23)}{\cm}$ ergibt.
+Der Fehler wird mit der Gauß'schen Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: .
+  \label{eqn:gaus}
+\end{equation}
+berechnet, für diesen Fall ergibt sich
+\begin{equation}
+  \Delta R_m=\sqrt{\Bigl(\frac{-1}{m}\Bigr)^2 \Bigl(\Delta b\Bigr)^2+ \Bigl(\frac{\sfrac{N}{2}+b}{m^2}\Bigr)^2
+  \Bigl(\Delta m\Bigr)^2}.
+\end{equation}
+
+Aus Gleichung \ref{eqn:??} ergibt sich somit eine Energie von
+\begin{equation*}
+  E_{\alpha}=\SI{13.0(31)}{\MeV}.
+\end{equation*}
+Der zugehörige Fehler berechnet sich nach der Formel:
+\begin{equation}
+  \Delta E_{\alpha}=\sqrt{\Biggl(\frac{2}{3\Bigl(\sqrt[3]{\frac{R_m}{3,1}}^2\Bigr)}\Biggl)^2\cdot \Bigl(\Delta R_m\Bigr)^2}
+\end{equation}
+
+In Abbildung \ref{fig:plot13} wird die Energie gegen die effektive Länge aufgetragen,
+aus der linearen Ausgleichsgeraden wird die Ableitung $\sfrac{dE}{dx}$ bestimmt, die
+den Energieverlust $\sfrac{-dE}{dx}$ darstellt.
+Es ergibt sich ein Energieverlust von:
+\begin{equation*}
+  \frac{-dE}{dx}=\SI{0,49(2)}{\MeV}.
+\end{equation*}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=8cm]{plot13.pdf}
+  \caption{Energie $E$ aufgetragen gegen die effektive Länge $x$.}
+  \label{fig:plot13}
+\end{figure}
+
+Für die zweite Messreihe mit Abstand $a=\SI{2}{\cm}$, dessen Messwerte in Tabelle \ref{tab:tab2} zu
+sehen sind, wird ebenfalls die Zählrate $N$ gegen die effektive Länge $x$ aufgetragen.
+An den Messwerten ist zu erkennen, das die Werte für die Zählrate deutlich langsamer
+abfallen als dies bei der ersten Messreihe der Fall ist.
+\input{Tabelle2.tex}
+Wie in Abbildung \ref{fig:plot2} zu sehen überschneiden sich die Messwerte nicht mit
+der $\sfrac{N}{2}$-Linie. Daher kann die mittlere Reichweite und somit auch
+die Energie nicht bestimmt werden.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=8cm]{plot2.pdf}
+  \caption{Zählrate $N$ aufgetragen gegen die effektive Länge $x$.}
+  \label{fig:plot2}
+\end{figure}
+
+
+Die Messergebnisse des zweiten Versuchsteils sind in Tabelle \ref{tab:tab3}
+dargestellt und werden in Abbildung \ref{fig:plot4} in einem Histogramm
+veranschaulicht, welches normiert wird.
+\input{Tabelle3.tex}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=8cm]{plot4.pdf}
+  \caption{Histogramm der Zählraten mit Gauß- und Poissonverteilung.}
+  \label{fig:plot4}
+\end{figure}
+
+Es werden sowohl die Gauß-, als auch die Poissonverteilung eingezeichnet, um
+diese mit den Messwerten vergleichen zu können.
+Da die Poissonverteilung von dem Mittelwert $\bar{N}$ der Messwerte und die
+Gaußverteilung von dem Mittelwert $\bar{N}$ und der Varianz $\sigma^{2}$ abhängen, werden diese
+mit Hilfe der allgemeinen Formeln berechnet. Diese lauten für den Mittelwert
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+und für die Standardabweichung
+\begin{equation}
+  \sigma=\increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}.
+  \label{eqn:mitf}
+\end{equation}
+Dabei ist die Varianz das Quadrat der Standardabweichung $\sigma$.
+Für die aufgenommenen Messwerte ergeben sich mit den Formeln \ref{eqn:mit} und
+\ref{eqn:mitf} folgende Werte:
+\begin{align*}
+  \bar{N}&=\SI{1015.52}{}\\
+  \sigma^{2}&=\SI{10.88}{}.\\
+\end{align*}

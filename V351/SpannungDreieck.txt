@@ -1,0 +1,7 @@
+#Messwerte/Spannung Dreiecksschwingung
+
+2.66
+0.29
+0.10
+0.05
+0.03
