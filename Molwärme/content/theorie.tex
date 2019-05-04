@@ -1,7 +1,7 @@
 \section{Zielsetzung}
-Ziel des Versuches ist es, die Molwärme $\symup{C_{\text{v}}}$ von Kupfer in Abhängigkeit der
+Ziel des Versuches ist es, die Molwärme $\symup{C_{\text{v}}}$ in Abhängigkeit der
 Temperatur zu bestimmen und mit den Vorhersagen des klassischen Modells, des Einstein
-Modells und des Debye Modells zu vergleichen. Zudem soll die Debye-Temperatur
+Modells und des Debye Modells zu vergleichen. Zufdem soll die Debye-Temperatur
 $\Theta_{\text{D}}$ bestimmt werden.
 
 \section{Theorie}
@@ -36,14 +36,13 @@ aus dem sich die Gleichungen
   \symup{C_{\text{p}}} = \frac{\partial\text{Q}}{\partial\text{T}}\bigr|_{\text{p}}
   \label{eqn:cc}
 \end{equation}
-ergeben. Die Beziehung zwischen $\symup{C_{\text{p}}}$ und $\symup{C_{\text{v}}}$
-ergibt sich aus der Thermodynamik zu
+sowie die Beziehung zwischen beiden
 \begin{equation}
-  \symup{C_{\text{p}}}-\symup{C_{\text{v}}}=9 \text{TV}_0\:\alpha^2\kappa \: ,
+  \symup{C_{\text{p}}}-\symup{C_{\text{v}}}=\text{TV}\alpha_{\text{v}}^2\text{B}
   \label{eqn:cpcv}
 \end{equation}
-wobei $\alpha$ den linaren Ausdehnungskoeffizient, $\kappa$ den Kompressionsmodul und
-$\text{V}_0$ das Molvolumen bezeichnet.
+ergeben, wobei $\alpha_{\text{v}}$ den Volumensausdehnungskoeffizient und B den Bulk-Modul
+bezeichnet.
 
 \subsection{Klassisches Modell}
 Im Klassischen Modell setzt sich die innerer Energie U eines kristallinen Festkörpers
@@ -82,12 +81,12 @@ werden, können nur noch diskrete Energien von $ \text{E}_{\text{n}}=(\text{n}+\
 \hbar \omega $ aufgenommen werden, mit der Kreisfrequenz $\omega$ der Schwingung
 und der Anregungszahl n. Zur Berechnung der mittleren inneren Energie wird nun eine Summation
 über alle Anregungen durchgeführt, dass heißt über alle
-\textbf{q}-Vektoren, wobei jede Energie mit dem Boltzmann-Faktor
+\textbfq{q}-Vektoren und alle r Polarisationen, wobei jede Energie mit dem Boltzmann-Faktor
 $\text{e}^{-\beta \:\text{E}_{\text{n}}}$ gewichtet wird, dabei ist
 $\beta= \frac{1}{\text{k}_{\text{B}}\text{T}}$.
 Hieraus ergibt sich die innere Energie zu
 \begin{equation}
-  <\symup{U}> = \sum_{\textbf{q}}\hbar\omega_{\textbf{q}}(\frac{1}{2}+<\text{n}>)
+  <\symup{U}> = \sum_{\textbfq{q} \: r}\hbar\omega_{\textbfq{q} \: r}(\frac{1}{2}+<\text{n}>)
   \label{eqn:Uqm}
 \end{equation}
 mit der mittleren Besetzung
@@ -97,65 +96,11 @@ mit der mittleren Besetzung
 \end{equation}
 gemäß der Bose-Einstein Verteilung, da es sich bei Phononen um Bosonen ohne
 chemisches Potential handelt.
-Zur Bestimmung der mittleren inneren Energie wird bei großen N häufig der Kontinuumslimes
-verwendet, dass heißt die Summe über $\textbf{q}$ wird zu einem Integral, wobei die
-Dispersionsrelation $\omega(\textbf{q})$ sowie die Zustandsdichte D($\omega$)
-benötigt wird.
-Im Einstein-Modell wird dabei eine konstante Frequenz
-für alle 3N-Schwingungsmoden angenommen, also
-\begin{equation}
-  \symup{D}(\omega) = 3\text{N}\delta(\omega-\omega_{\text{E}}) \: ,
-  \label{eqn:zdeinst}
-\end{equation}
-sodass sich die mittlere innere Energie zu
-\begin{equation}
-  <\symup{U}> = 3\text{N}\omega_{\text{E}}(\frac{1}{2}+\frac{1}{\text{e}^{\hbar\omega_{\text{E}}/
-  \text{k}_{\text{B}}T}-1})
-  \label{eqn:Uein}
-\end{equation}
-und die Wärmekapazität sich somit zu
-\begin{equation}
-  \symup{C_{\text{v}}} = 3\text{N}\text{k}_{\text{B}}\bigl(\frac{\Theta_{\text{E}}}{T}\bigr)^2
-  \frac{\text{exp}(\Theta_{\text{E}}/T)}{(\text{exp}(\Theta_{\text{E}}/T)-1)^2}
-  \label{eqn:Cein}
-\end{equation}
-mit der Einstein-Temperatur
-$\Theta_{\text{E}} = \frac{\hbar\omega_{\text{E}}}{\text{k}_{\text{B}}}$ ergibt.
-Für hohe Temperaturen, also $T >> \Theta_{\text{E}}$ ergibt sich als Grenzwert
-auch hier das klassische Gesetz von Dulong-Petit. Für kleine Temperaturen
-$T << \Theta_{\text{E}}$ ergibt sich die Näherung
-\begin{equation}
-  \symup{C_{\text{v}}} \approx 3\text{N}\text{k}_{\text{B}}\bigl(\frac{\Theta_{\text{E}}}{T}\bigr)^2
-  \text{e}^{(-\Theta_{\text{E}}/T)}
-  \label{eqn:ChochE}
-\end{equation}
-Die Beschreibung mit konstanter Frequenz passt jedoch besser zu optischen Phononen,
-welche im Allgemeinen eher bei höheren Temperaturen angeregt werden und somit ist
-dieses Modell zur Beschreibung des
-Verhaltens für tiefe Temperaturen eher ungeeignet.
+
+
+
 
 \subsection{Debye-Modell}
-Im Debye-Modell wird anstelle der konstanten Frequenz eine lineare Dispersionsrelation
-gewählt, also $ \omega = \text{v}_sq$ mit der Schallgeschwindigkeit
-$\text{v}_s$ des Körpers. Diese Beschreibung passt insbesondere gut für
-akustische Phononen, welche bei auch bei tieferen Temperaturen als die optischen Phononen
-besetzt sind.
-Durch Einführen der Debye-Temperatur
-\begin{equation}
-  \Theta_{\text{D}} = \frac{\hbar\text{v}_s\text{q}_{\text{D}}}{\text{k}_{\text{B}}}
-  = \frac{\hbar\text{v}_s}{\text{k}_{\text{B}}}(6\pi^2\frac{N}{V})^{1/3}
-  \label{eqn:TDebye}
-\end{equation}
-und der Substitution $ x=\hbar\text{v}_s\text{q} /\text{k}_{\text{B}}T $
-ergibt sich eine Wärmekapazität von
-\begin{equation}
-  \symup{C_{\text{v}}} = 9\text{N}\text{k}_{\text{B}}\bigl(\frac{\Theta_{\text{D}}}{T}\bigr)^3
-  \int_0^{\Theta_{\text{D}}/T} \frac{x^4\text{e}^x}{(\text{e}^x-1)^2}
-  \label{eqn:CDebye}
-\end{equation}
-Auch hier ergibt sich das Dulong-Petit Gesetz als Grenzwert für hohe Temperaturen
-$T>>\Theta_{\text{D}}$, für niedrige Temperaturen $T<<\Theta_{\text{D}}$ ergibt sich hingegen
-\begin{equation}
-  \symup{C_{\text{v}}} = \frac{12\pi^4}{5}\text{N}\text{k}_{\text{B}}\bigl(\frac{\Theta_{\text{D}}}{T}\bigr)^3 \:.
-  \label{eqn:ChochD}
-\end{equation}
+
+
+nam
