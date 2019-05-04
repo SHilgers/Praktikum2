@@ -1,10 +1,11 @@
 \section{Zielsetzung}
-Ziel des Versuches ist es, die Molwärme $\symup{C_{\text{v}}}$ in Abhängigkeit der
+Ziel des Versuches ist es, die Molwärme $\symup{C_{\text{v}}}$ von Kupfer in Abhängigkeit der
 Temperatur zu bestimmen und mit den Vorhersagen des klassischen Modells, des Einstein
-Modells und des Debye Modells zu vergleichen. Zufdem soll die Debye-Temperatur
+Modells und des Debye Modells zu vergleichen. Zudem soll die Debye-Temperatur
 $\Theta_{\text{D}}$ bestimmt werden.
 
 \section{Theorie}
+Zur Vorbereitung der Theorie wurde das Buch \cite{fkp} verwendet.
 \subsection{Spezifische Wärme}
 Als Wärmekapazität wird im Allgemeinen die Wärmemenge $\increment \text{Q}$ bezeichnet,
 die benötigt wird um
@@ -36,13 +37,14 @@ aus dem sich die Gleichungen
   \symup{C_{\text{p}}} = \frac{\partial\text{Q}}{\partial\text{T}}\bigr|_{\text{p}}
   \label{eqn:cc}
 \end{equation}
-sowie die Beziehung zwischen beiden
+ergeben. Die Beziehung zwischen $\symup{C_{\text{p}}}$ und $\symup{C_{\text{v}}}$
+ergibt sich aus der Thermodynamik zu
 \begin{equation}
-  \symup{C_{\text{p}}}-\symup{C_{\text{v}}}=\text{TV}\alpha_{\text{v}}^2\text{B}
+  \symup{C_{\text{p}}}-\symup{C_{\text{v}}}=9 \text{TV}_0\:\alpha^2\kappa \: ,
   \label{eqn:cpcv}
 \end{equation}
-ergeben, wobei $\alpha_{\text{v}}$ den Volumensausdehnungskoeffizient und B den Bulk-Modul
-bezeichnet.
+wobei $\alpha$ den linaren Ausdehnungskoeffizient, $\kappa$ den Kompressionsmodul und
+$\text{V}_0$ das Molvolumen bezeichnet.
 
 \subsection{Klassisches Modell}
 Im Klassischen Modell setzt sich die innerer Energie U eines kristallinen Festkörpers
@@ -81,26 +83,81 @@ werden, können nur noch diskrete Energien von $ \text{E}_{\text{n}}=(\text{n}+\
 \hbar \omega $ aufgenommen werden, mit der Kreisfrequenz $\omega$ der Schwingung
 und der Anregungszahl n. Zur Berechnung der mittleren inneren Energie wird nun eine Summation
 über alle Anregungen durchgeführt, dass heißt über alle
-\textbfq{q}-Vektoren und alle r Polarisationen, wobei jede Energie mit dem Boltzmann-Faktor
+\textbf{q}-Vektoren, wobei jede Energie mit dem Boltzmann-Faktor
 $\text{e}^{-\beta \:\text{E}_{\text{n}}}$ gewichtet wird, dabei ist
 $\beta= \frac{1}{\text{k}_{\text{B}}\text{T}}$.
 Hieraus ergibt sich die innere Energie zu
 \begin{equation}
-  <\symup{U}> = \sum_{\textbfq{q} \: r}\hbar\omega_{\textbfq{q} \: r}(\frac{1}{2}+<\text{n}>)
+  \bigl<\symup{U}\bigr> = \sum_{\textbf{q}}\hbar\omega_{\textbf{q}}\Bigl(\frac{1}{2}+\bigl<\text{n}\bigr>\Bigr)
   \label{eqn:Uqm}
 \end{equation}
 mit der mittleren Besetzung
 \begin{equation}
-  <\symup{n}> =  \frac{1}{\symup{e}^{\hbar\omega\beta}-1}
+  \bigl<\symup{n}\bigr> =  \frac{1}{\symup{e}^{\hbar\omega\beta}-1}
   \label{eqn:boseeinstein}
 \end{equation}
 gemäß der Bose-Einstein Verteilung, da es sich bei Phononen um Bosonen ohne
 chemisches Potential handelt.
-
-
-
+Zur Bestimmung der mittleren inneren Energie wird bei großen N häufig der Kontinuumslimes
+verwendet, dass heißt die Summe über $\textbf{q}$ wird zu einem Integral, wobei die
+Dispersionsrelation $\omega(\textbf{q})$ sowie die Zustandsdichte D($\omega$)
+benötigt wird.
+Im Einstein-Modell wird dabei eine konstante Frequenz
+für alle 3N-Schwingungsmoden angenommen, also
+\begin{equation}
+  \symup{D}(\omega) = 3\text{N}\delta(\omega-\omega_{\text{E}}) \: ,
+  \label{eqn:zdeinst}
+\end{equation}
+sodass die mittlere innere Energie durch
+\begin{equation}
+  \bigl<\symup{U}\bigr> = 3\text{N}\omega_{\text{E}}\Bigl(\frac{1}{2}+\frac{1}{\text{e}^{\hbar\omega_{\text{E}}/
+  \text{k}_{\text{B}}T}-1}\Bigr)
+  \label{eqn:Uein}
+\end{equation}
+gegeben ist
+und die Wärmekapazität sich somit zu
+\begin{equation}
+  \symup{C_{\text{v}}} = 3\text{N}\text{k}_{\text{B}}\Bigl(\frac{\Theta_{\text{E}}}{T}\Bigr)^2
+  \frac{\text{exp}(\Theta_{\text{E}}/T)}{(\text{exp}(\Theta_{\text{E}}/T)-1)^2}
+  \label{eqn:Cein}
+\end{equation}
+ergibt mit der Einstein-Temperatur
+$\Theta_{\text{E}} = \frac{\hbar\omega_{\text{E}}}{\text{k}_{\text{B}}}$ .
+Für hohe Temperaturen, also $T \gg \Theta_{\text{E}}$, ergibt sich als Grenzwert
+auch hier das klassische Gesetz von Dulong-Petit. Für kleine Temperaturen
+$T \ll \Theta_{\text{E}}$ ergibt sich die Näherung
+\begin{equation}
+  \symup{C_{\text{v}}} \approx 3\text{N}\text{k}_{\text{B}}\Bigl(\frac{\Theta_{\text{E}}}{T}\Bigr)^2 \: .
+  \text{e}^{(-\Theta_{\text{E}}/T)}
+  \label{eqn:ChochE}
+\end{equation}
+Die Beschreibung mit konstanter Frequenz passt jedoch besser zu optischen Phononen,
+welche im Allgemeinen eher bei höheren Temperaturen angeregt werden und somit ist
+dieses Modell zur Beschreibung des
+Verhaltens für tiefe Temperaturen eher ungeeignet.
 
 \subsection{Debye-Modell}
-
-
-nam
+Im Debye-Modell wird anstelle der konstanten Frequenz eine lineare Dispersionsrelation
+gewählt, also $ \omega = \text{v}_sq$ mit der Schallgeschwindigkeit
+$\text{v}_s$ des Körpers. Diese Beschreibung passt insbesondere gut für
+akustische Phononen, welche bei auch bei tieferen Temperaturen als die optischen Phononen
+besetzt sind.
+Durch Einführen der Debye-Temperatur
+\begin{equation}
+  \Theta_{\text{D}} = \frac{\hbar\text{v}_s\text{q}_{\text{D}}}{\text{k}_{\text{B}}}
+  = \frac{\hbar\text{v}_s}{\text{k}_{\text{B}}}\Bigl(6\pi^2\frac{N}{V}\Bigr)^{1/3}
+  \label{eqn:TDebye}
+\end{equation}
+und der Substitution $ x=\hbar\text{v}_s\text{q} /\text{k}_{\text{B}}T $
+ergibt sich eine Wärmekapazität von
+\begin{equation}
+  \symup{C_{\text{v}}} = 9\text{N}\text{k}_{\text{B}}\Bigl(\frac{\Theta_{\text{D}}}{T}\Bigr)^3
+  \int_0^{\Theta_{\text{D}}/T} \frac{x^4\text{e}^x}{(\text{e}^x-1)^2}
+  \label{eqn:CDebye}
+\end{equation}
+Auch hier ergibt sich das Dulong-Petit Gesetz als Grenzwert für hohe Temperaturen
+$T \gg \Theta_{\text{D}}$, für niedrige Temperaturen $T \ll \Theta_{\text{D}}$ ergibt sich hingegen
+\begin{equation}
+  \symup{C_{\text{v}}} = \frac{12\pi^4}{5}\text{N}\text{k}_{\text{B}}\Bigl(\frac{\Theta_{\text{D}}}{T}\Bigr)^3 \:.
+  \label{eqn:ChochD}
+\end{equation}
