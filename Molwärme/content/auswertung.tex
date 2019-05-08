@@ -1,42 +1,46 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-$1*10^{-3}$
-$\alpha*10^{-3}$
-Um die molare Wämekapazität, welche in \ref{eqn:??} gegeben ist, zu bestimmen muss die zugeführte
-Wämemenge ermittelt werden. Diese lässt sich mit den gemessenen Strom-Spannungs-Messwerten über
+Um die molare Wärmekapazität aus Gleichung \ref{eqn:cmol} zu bestimmen, muss die zugeführte
+Wärmemenge ermittelt werden. Diese lässt sich mit den gemessenen Strom-Spannungs-Messwerten über
 die Formel
 \begin{equation}
-  \Delta Q = UI\Delta Q
+  \Delta Q = UI\Delta t
   \label{eqn:zuführ}
 \end{equation}
 berechnen.
-Somit folgt aus Formel \ref{eqn:??} und \ref{eqn:zuführ} und einer Stoffmenge $n=\frac{m}{M}$
+Somit folgt aus Formel \ref{eqn:cmol} und \ref{eqn:zuführ} und einer Stoffmenge $n=\sfrac{m}{M}$
 für die Molwärme bei konstantem Druck der Ausdruck
 \begin{equation}
   C_p=\frac{UIM\Delta t}{\Delta T m}.
   \label{eqn:Cp}
 \end{equation}
 Die Masse $m$ der Probe ist mit $m=\SI{0.342}{\kg}$ gegeben und die molare Masse $M$ von
-Kupfer beträgt $\SI{63.55}{\g\per\mol}$.
+Kupfer beträgt $\SI{63.55}{\g\per\mol}$ \cite{kompress}.
 Um die Temperatur zu berechnen wird die monotone Temperaturfunktion der
-Pt-100-Widerstände verwendet, welche über
-\begin{equation}
-  T=0,00134R^2 + 2,296R - 243,02
-  \label{eqn:Pt100}
-\end{equation}
-gegeben ist. Dabei bezeichnet $R$ den Widerstand in Ohm.
+Pt-100-Widerstände verwendet, welche in Gleichung \ref{eqn:Widerstand}
+%\begin{equation}
+%  T=0,00134R^2 + 2,296R - 243,02
+%  \label{eqn:Pt100}
+%\end{equation}
+gegeben ist. %Dabei bezeichnet $R$ den Widerstand in Ohm.
 Die Messwerte, als auch die berechneten Werte der Probentemperatur und die
-Molwärme bei konstantem Druck sind in \ref{tab:tab1} angegeben.
+Molwärme bei konstantem Druck sind in Tabelle \ref{tab:tab1} angegeben.
 \input{Tabelle1.tex}
 
-Mittels der Korrekturformel
-\begin{equation}
-  C_p - C_V= 9\alpha^2\kappa V_0 T
-  \label{eqn:korrektur}
-\end{equation}
-lässt die molare Wärmekapazität bei konstantem Volumen berechnen. Dabei bezeichnet
-$\kappa=\SI{137.8}{\giga\Pa}$ das Kompressionsmodul und $V_0=\SI{7.11}{\cm^3\per\mol}$
-das Molvolumen von Kupfer. Die Werte für den linearen Ausdehnungskoeffizienten $\alpha$
+Mittels der Korrekturformel aus Gleichung \ref{eqn:cpcv}
+%\begin{equation}
+%  C_p - C_V= 9\alpha^2\kappa V_0 T
+%  \label{eqn:korrektur}
+%\end{equation}
+lässt die molare Wärmekapazität bei konstantem Volumen berechnen.
+Für das Kompressionsmodul wird der Wert $\kappa=\SI{137.8}{\giga\Pa}$ \cite{kompress}
+und für das Molvolumen wird $V_0=\SI{7.11}{\cm^3\per\mol}$
+\cite{mol} verwendet.
+
+%Dabei bezeichnet
+%$\kappa=\SI{137.8}{\giga\Pa}$ das Kompressionsmodul und $V_0=\SI{7.11}{\cm^3\per\mol}$
+%das Molvolumen von Kupfer.
+Die Werte für den linearen Ausdehnungskoeffizienten $\alpha$
 werden mit Hilfe der Tabelle aus der Versuchsanleitung \cite{skript} ermittelt.
 Die gegebenen Werte werden in Abbildung \ref{fig:alpha} gegen $\sfrac{1}{T}$
 aufgetragen und mit der Formel
@@ -45,12 +49,13 @@ aufgetragen und mit der Formel
 \end{equation}
 gefittet. Die Ausgleichsrechnung ergibt folgende Parameter:
 \begin{align}
-  m = \SI{-872.2(38)e-6}{}\\
-  b = \SI{19.40(3)}{\per\K}
+  m &= \SI{-872.2(38)e-6}{}\\
+  b &= \SI{19.40(3)}{\per\K}
 \end{align}
 
 \begin{figure}[H]
-  \includegraphics{alpha.pdf}
+  \centering
+  \includegraphics[height=7cm]{alpha.pdf}
   \caption{Linearer Zusammenhang des Ausdehnungskoeffizienten $\alpha$ mit der
   inversen Temperatur $\sfrac{1}{T}$.}
   \label{fig:alpha}
@@ -63,20 +68,21 @@ Der Zusammenhang zwischen der Temperatur $T$ und der Molwärme bei konstantem Vo
 $C_V$ ist in Abbildung \ref{fig:Cv} dargestellt.
 
 \begin{figure}[H]
-  \includegraphics{plot2.pdf}
+  \centering
+  \includegraphics[height=7cm]{plot2.pdf}
   \caption{Zusammenhang zwischen der Temperatur $T$ und der Molwärme bei konstantem Volumen
   $C_V$.}
   \label{fig:Cv}
-\end{figure} 
+\end{figure}
 
 Um aus den gemessenen $(C_V, T)$-Wertepaaren die Debye-Temperatur $\theta_D$ zu ermitteln
-wird wird Tabelle 1 aus dem Skript \ref{skript} verwedet. Zunächst wird $\sfrac{\theta_D}{T}$
-abgelegsen, nach Multiplikation mit $T$ erhält man die gesuchte Debye-Tempetatur $\theta_D$.
+wird Tabelle 1 aus dem Skript \cite{skript} verwendet. Zunächst wird $\sfrac{\theta_D}{T}$\;
+abgelesen, nach Multiplikation mit $T$ erhält man die gesuchte Debye-Tempetatur $\theta_D$.
 Hier werden nur Messwerte bis $\SI{170}{\K}$ verwendet.
 \input{Tabelle3.tex}
 Es ergibt sich ein Mittelwert von
 \begin{equation}
-  \theta_{D_\text{exp}}=\SI{580.99(26)}{\K}.
+  \theta_{D_\text{exp}}=\SI{580.98(26)}{\K}.
 \end{equation}
 
 Der theoretische Wert für die Debye-Temperatur $\theta_{D_theo}$ wird mit der Formel
@@ -97,13 +103,13 @@ berechnet. Dabei wird die Zustandsdichte für jeden Dispersionszweig mit
 verwendet.
 Somit ergibt sich folgender Ausdruck für die Debye-Temperatur $\theta_D$:
 \begin{equation}
-  \theta_D=\frac{\hbar}{k_B}\sqrt{3}(\frac{18\pi^2 N_A \rho}{M}(v_l^{-3}+2v_t^{-3})^{-1}).
+  \theta_D=\frac{\hbar}{k_B}\sqrt[3]{\frac{18\pi^2 N_A \rho}{M}(v_l^{-3}+2v_t^{-3})^{-1}}.
 \end{equation}
 %Dabei kann die Teilchenzahl mit $N_L=N_A\frac{m}{M}$ berechnet werden.
 Mit den Werten $v_l=\SI{4.7}{\km\per\s}$ und $v_t=\SI{2.26}{\km\per\s}$ folgt für
 den theoretischen Wert der Debye-Temperatur
 \begin{equation}
-  \theta_{D_theo}=\SI{331.98}{\K}.
+  \theta_{D_\text{theo}}=\SI{331.98}{\K}.
 \end{equation}
 Daraus ergibt sich für die Debye-Frequenz $\omega_D$
 \begin{equation}
