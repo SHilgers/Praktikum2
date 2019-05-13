@@ -24,15 +24,36 @@ Pt-100-Widerstände verwendet, welche in Gleichung \ref{eqn:Widerstand}
 %\end{equation}
 gegeben ist. %Dabei bezeichnet $R$ den Widerstand in Ohm.
 Die Messwerte, als auch die berechneten Werte der Probentemperatur und die
-Molwärme bei konstantem Druck sind in Tabelle \ref{tab:tab1} angegeben.
+Molwärme bei konstantem Druck sind in Tabelle \ref{tab:tab1} angegeben.\\
+\\
+Als Fehler für die Messgräte (Ampere-, Volt- und Ohm-Meter) wird ein Fehler von
+$\pm 1$ auf die erste Nachkommastelle angenommen. Für die Ablesezeit wird ein
+Fehler von 3\;s angenommen.
+Dabei werden die Fehler mit der Gauß´schen Fehlerfortpflanzung:
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \:
+  \label{eqn:gaus}
+\end{equation}
+berechnet. Für $C_P$ ergibt sich:
+\begin{equation}
+  \Delta C_P=\sqrt{\Big(\frac{I\Delta t M}{\Delta T m}\Big)^2 (\Delta U)^2+\Big(\frac{U\Delta t M}{\Delta T m}\Big)^2 (\Delta I)^2
+  +\Big(\frac{UIM}{\Delta m}\Big)^2 (\Delta t)^2  +\Big (-\frac{UI\Delta t M}{m \Delta T^2}\Big)^2 (\Delta T)^2}.
+  \label{eqn:fehler}
+\end{equation}
 \input{Tabelle1.tex}
+
 
 Mittels der Korrekturformel aus Gleichung \ref{eqn:cpcv}
 %\begin{equation}
 %  C_p - C_V= 9\alpha^2\kappa V_0 T
 %  \label{eqn:korrektur}
 %\end{equation}
-lässt die molare Wärmekapazität bei konstantem Volumen berechnen.
+lässt sich die molare Wärmekapazität bei konstantem Volumen berechnen.
+Der Fehler ergibt sich zu
+\begin{equation}
+  \Delta C_V=\sqrt{(\Delta C_p)^2 +(-9V_0 \alpha^2 \kappa)^2(\Delta T)^2 +(-9TV_02\alpha\kappa)^2(\Delta \alpha)^2}.
+\end{equation}
 Für das Kompressionsmodul wird der Wert $\kappa=\SI{137.8}{\giga\Pa}$ \cite{kompress}
 und für das Molvolumen wird $V_0=\SI{7.11}{\cm^3\per\mol}$
 \cite{mol} verwendet.
@@ -50,18 +71,17 @@ aufgetragen und mit der Formel
 gefittet. Die Ausgleichsrechnung ergibt folgende Parameter:
 \begin{align}
   m &= \SI{-872.2(38)e-6}{}\\
-  b &= \SI{19.40(3)}{\per\K}
+  b &= \SI{19.40(3)}{\per\K}.
 \end{align}
-
 \begin{figure}[H]
   \centering
-  \includegraphics[height=7cm]{alpha.pdf}
+  \includegraphics[height=9cm]{alpha.pdf}
   \caption{Linearer Zusammenhang des Ausdehnungskoeffizienten $\alpha$ mit der
   inversen Temperatur $\sfrac{1}{T}$.}
   \label{fig:alpha}
 \end{figure}
 
-Die Ergebnisse $\alpha$ und $C_V$ sind in Tabelle \ref{tab:tab2} zu sehen.
+Die Ergebnisse für $\alpha$ und $C_V$ sind in Tabelle \ref{tab:tab2} zu sehen.
 \input{Tabelle2.tex}
 
 Der Zusammenhang zwischen der Temperatur $T$ und der Molwärme bei konstantem Volumen
@@ -69,7 +89,7 @@ $C_V$ ist in Abbildung \ref{fig:Cv} dargestellt.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[height=7cm]{plot2.pdf}
+  \includegraphics[height=9cm]{plot2.pdf}
   \caption{Zusammenhang zwischen der Temperatur $T$ und der Molwärme bei konstantem Volumen
   $C_V$.}
   \label{fig:Cv}
@@ -82,10 +102,10 @@ Hier werden nur Messwerte bis $\SI{170}{\K}$ verwendet.
 \input{Tabelle3.tex}
 Es ergibt sich ein Mittelwert von
 \begin{equation}
-  \theta_{D_\text{exp}}=\SI{580.98(26)}{\K}.
+  \theta_{D_\text{exp}}=\SI{312.5(2)}{\K}.
 \end{equation}
 
-Der theoretische Wert für die Debye-Temperatur $\theta_{D_theo}$ wird mit der Formel
+Der theoretische Wert für die Debye-Temperatur $\theta_{D_\text{theo}}$ wird mit der Formel
 \begin{equation}
   \int_{0}^{\omega_D} Z(\omega) d\omega = 3N_L
 \end{equation}
@@ -115,8 +135,8 @@ Daraus ergibt sich für die Debye-Frequenz $\omega_D$
 \begin{equation}
   \omega_D=\SI{4.35e13}{\Hz}.
 \end{equation}
-Für die Debye-Temperatur ergibt sich aus den Werten $\theta_{D_exp}$ und $\theta_{D_theo}$
+Für die Debye-Temperatur ergibt sich aus den Werten $\theta_{D_\text{exp}}$ und $\theta_{D_\text{theo}}$
 eine Abweichung von
 \begin{equation}
-  \frac{|\theta_{D_\text{theo}}-\theta_{D_\text{exp}}|}{\theta_{D_\text{theo}}}\cdot 100=75.01\;\%.
+  \frac{|\theta_{D_\text{theo}}-\theta_{D_\text{exp}}|}{\theta_{D_\text{theo}}}\cdot 100=5.9\;\%.
 \end{equation}

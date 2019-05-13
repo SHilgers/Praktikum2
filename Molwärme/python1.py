@@ -18,10 +18,14 @@ def Temperatur(R):
 #Fehler auf alle Werte
 Rp=unp.uarray(Rp, 0.1)
 Up=unp.uarray(Up, 0.1)
-Ip=unp.uarray(Ip*1e-3, 0.1)
+Ip=unp.uarray(Ip*1e-3, 0.1*1e-3)
 Rz=unp.uarray(Rz, 0.1)
 dt=unp.uarray(dt, 3)
 
+print(Rp)
+print(Up)
+print(Ip)
+print(dt)
 #Temperaturen berechnen in °C
 Tp=Temperatur(Rp)
 Tz=Temperatur(Rz)
