@@ -31,16 +31,18 @@ $\pm 1$ auf die erste Nachkommastelle angenommen. Für die Ablesezeit wird ein
 Fehler von 3\;s angenommen.
 Dabei werden die Fehler mit der Gauß´schen Fehlerfortpflanzung:
 \begin{equation}
-  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
-  \cdot (\increment x_i)^2  } \:
+  \delta f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\delta x_i)^2  } \:
   \label{eqn:gaus}
 \end{equation}
 berechnet. Für $C_P$ ergibt sich:
 \begin{equation}
-  \Delta C_P=\sqrt{\Big(\frac{I\Delta t M}{\Delta T m}\Big)^2 (\Delta U)^2+\Big(\frac{U\Delta t M}{\Delta T m}\Big)^2 (\Delta I)^2
-  +\Big(\frac{UIM}{\Delta m}\Big)^2 (\Delta t)^2  +\Big (-\frac{UI\Delta t M}{m \Delta T^2}\Big)^2 (\Delta T)^2}.
+  \delta C_P=\sqrt{\Big(\frac{I\Delta t M}{\Delta T m}\Big)^2 (\delta U)^2+\Big(\frac{U\Delta t M}{\Delta T m}\Big)^2 (\delta I)^2
+  +\Big(\frac{UIM}{\Delta m}\Big)^2 (\delta t)^2  +\Big (-\frac{UI\Delta t M}{m (\Delta T)^2}\Big)^2 (\delta\Delta T)^2}.
   \label{eqn:fehler}
 \end{equation}
+%Hier ist der Unterschied zwischen Temperatur-/Zeitdifferenzen und den jeweiligen Fehlern zu beachten, deshalb
+%sind die Fehler hier mit $\delta$ benannt.
 \input{Tabelle1.tex}
 
 
@@ -52,7 +54,7 @@ Mittels der Korrekturformel aus Gleichung \ref{eqn:cpcv}
 lässt sich die molare Wärmekapazität bei konstantem Volumen berechnen.
 Der Fehler ergibt sich zu
 \begin{equation}
-  \Delta C_V=\sqrt{(\Delta C_p)^2 +(-9V_0 \alpha^2 \kappa)^2(\Delta T)^2 +(-9TV_02\alpha\kappa)^2(\Delta \alpha)^2}.
+  \delta C_V=\sqrt{(\delta C_p)^2 +(-9V_0 \alpha^2 \kappa)^2(\delta T)^2 +(-9TV_02\alpha\kappa)^2(\delta \alpha)^2}.
 \end{equation}
 Für das Kompressionsmodul wird der Wert $\kappa=\SI{137.8}{\giga\Pa}$ \cite{kompress}
 und für das Molvolumen wird $V_0=\SI{7.11}{\cm^3\per\mol}$
