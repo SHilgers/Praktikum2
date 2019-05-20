@@ -11,6 +11,7 @@ k= ufloat(0.403169, 0.000029)
 c =b*k
 b= b*0.403169-3.034
 
+plt.yscale('log')
 plt.plot (b[0:2000], a[0:2000], 'k-', label='Messwerte')
 plt.grid()
 plt.xlabel(r'$ E_{γ}\: /\: keV$')

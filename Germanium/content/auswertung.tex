@@ -25,13 +25,13 @@ Der Fehler ergibt sich hierbei nach der Gauß´schen Fehlerfortpflanzung
 also gemäß
 \begin{equation}
   \increment \symup{A} (t) = \sqrt{ (\symup{e}^{-\lambda t})^{2}\cdot (\increment \symup{A}(0))^2
-   + (-t\cdot\symup{A}(0)\cdot \symup{e}^{-\lambda t})^2\cdot(\increment \lambda)^2}
+   + (-t\cdot\symup{A}(0)\cdot \symup{e}^{-\lambda t})^2\cdot(\increment \lambda)^2} \: .
 \end{equation}
-Die Anzahl der Tage vom 01.10.2000 bis zum 08.04.2019 beträgt 6763 Tage, was
-584323200 Sekunden entspricht, sodass sich insgesamt der Wert $\SI{1599(29)}{\becquerel} $
+Die Anzahl der Tage vom 01.10.2000 bis zum 08.04.2019 beträgt $\SI{6763}{\day}$, was
+$\SI{584323200}{\second}$ entspricht, sodass sich insgesamt der Wert $\SI{1599(29)}{\becquerel} $
 für die Aktivität der Probe am Messtag ergibt. \\
 Der abgedeckte Raumwinkel lässt sich aus dem gemessenen Abstand a der Probe
-zum Detektor, wobei auch der Abstand von $\SI{1.5}{\centi\meter}$ zwischen Al-Haube und Detektor
+zum Detektor, wobei auch der Abstand von $\SI{1.5}{\centi\meter}$ zwischen Aluminium-Haube und Detektor
 berücksichtigt wird,
 und dem angegebenen Radius r des Detektorvolumens bestimmen. Die entsprechenden Werte
 betragen
@@ -61,12 +61,12 @@ reichen bis Kanalnummer 8191 und die Messzeit beträgt $\SI{3598}{\second}$.
 Um mit diesem die Energiekalibration durchzuführen, werden die Peaks des Spektrums
 jeweils mit einer Gaußverteilung der Form
 \begin{equation}
-  \symup{g} (x) = a + b \cdot \symup{e}^{(\frac{x-z}{c})^2}
+  \symup{g} (x) = a + b \cdot \symup{e}^{-(\frac{x-z}{c})^2}
   \label{eqn:gausk}
 \end{equation}
-gefittet.
+gefittet, wobei jeweils 50 Kanäle berücksichtigt werden.
 
-Die sich daraus ergebenen Parameter sind in Tabelle \ref{tab:tabe1} angegebenen.
+Die sich daraus ergebenden Parameter sind in Tabelle \ref{tab:tabe1} angegebenen.
 \input{Tabelle1.tex}
 
 Die zentrale Lage der Peaks im Hinblick auf die Kanalnummer ist durch den Parameter
@@ -84,7 +84,7 @@ Form
 durchgeführt, woraus sich die Parameter
 \begin{align}
   a &= \SI{0.403169(29)}{\kilo\electronvolt} \\
-  b &= \SI{-3.034(60)}{\kilo\electronvolt}
+  b &= \SI{-3.03(6)}{\kilo\electronvolt}
 \end{align}
 ergeben. Die Wertepaare sind zusammen mit der resultierenden Gerade in Abbildung \ref{fig:plot3}
 dargestellt. Die Fehler der Messwerte sind aufgrund ihrer sehr geringen relativen Größe dabei zu vernachlässigen.
@@ -96,14 +96,14 @@ dargestellt. Die Fehler der Messwerte sind aufgrund ihrer sehr geringen relative
 \end{figure}
 Die Energiekalibration erfolgt somit gemäß
 \begin{equation}
-  \symup{E}_{\gamma} (x) = \SI{0.403169}{\kilo\electronvolt}\cdot x - \SI{3.034}{\kilo\electronvolt}
+  \symup{E}_{\gamma} (x) = \SI{0.403169}{\kilo\electronvolt}\cdot x - \SI{3.03}{\kilo\electronvolt} \: ,
   \label{eqn:gerade}
 \end{equation}
 wobei x die Kanalnummer bezeichnet.
 Der dazugehörige Fehler ergibt mittels Gleichung \ref{eqn:gaus} durch
 \begin{equation}
    \increment \symup{E}_{\gamma} (x) =\sqrt{ (\SI{0.000029}{\kilo\electronvolt}\cdot x)^2 +
-   (\SI{0.060}{\kilo\electronvolt})^2}
+   (\SI{0.06}{\kilo\electronvolt})^2} \: .
    \label{eqn:fgerade}
 \end{equation}
 \\
@@ -111,7 +111,7 @@ Zur Bestimmung der Vollenergienachweiswahrscheinlichkeit wird zunächst die Glei
 integriert, um den Inhalt der Peaks zu bestimmen, wobei der Untegrund $a$ vorher abgezogen wird.
 Es ergibt sich somit ein Linieninhalt von
 \begin{equation}
-  \symup{I} =\int_{-\infty}^{\infty} c \cdot \symup{e}^{(\frac{x-z}{b})^2} \symup{d}x
+  \symup{I} =\int_{-\infty}^{\infty} b \cdot \symup{e}^{-(\frac{x-z}{c})^2} \symup{d}x
   = c \cdot b \cdot \sqrt{\pi}
   \label{eqn:inh}
 \end{equation}
@@ -155,15 +155,16 @@ ergibt sich somit jeweils die Nachweiswahrscheinlichkeit des Peaks, wie in Tabel
 Da die Nachweiswahrscheinlichkeit im Allgemeinen energieabhängig ist, wird Q in
 Abhängigkeit von $ \text{E}_{\gamma} $ dargestellt und mit einer Potenzfunktion der Form
 \begin{equation}
-  \symup{Q}(\text{E}_{\gamma}) = c\cdot (\text{E}_{\gamma}-a)^{d}
+  \symup{Q}(\text{E}_{\gamma}) = c\cdot (\text{E}_{\gamma}/\si{\kilo\electronvolt}-a)^{d}
   \label{eqn:ven2}
 \end{equation}
-gefittet, wie in Abbildung \ref{fig:plot4} dargestellt ist.
+gefittet, wie in Abbildung \ref{fig:plot4} dargestellt ist. Hierbei wird der Messwert
+bei $\SI{121.7817}{\kilo\electronvolt}$ vernachlässigt.
 Es ergeben sich hierbei die Parameter
 \begin{align*}
-  a &= -191 \pm 64 \\
-  c &= 2474 \pm 3467 \\
-  d &= -1.47 \pm 0.19 \: .
+  a &= 60 \pm 30 \\
+  c &= 49 \pm 26 \\
+  d &= -0,93 \pm 0,07 \: .
 \end{align*}
  %Die Formel für die eigentliche Höhe eines
 %gemessenen Peaks ergibt sich aus Gleichungen \ref{eqn:ven1} und \ref{eqn:ven2} durch Umstellen zu
@@ -201,15 +202,15 @@ mehr zu erkennen sind.
 Zur Bestimmung der Energie wird die Vollenergielinie mit der Gaußverteilung aus Gleichung
 \ref{eqn:gausk} gefittet, wobei sich die Parameter
 \begin{align*}
-  a &= 5.7 \pm 4.2 \\
+  a &= 6 \pm 4 \\
   b &= 1674 \pm 17 \\
   c &= \SI{1.227(15)}{\kilo\electronvolt}\\
-  z &= \SI{661.5985(98)}{\kilo\electronvolt} \:
+  z &= \SI{661.599(10)}{\kilo\electronvolt} \:
 \end{align*}
-ergeben.
+ergeben. Der Wert von c bezüglich der Kanalnummer beträgt $3,04 \pm 0,04$.
 Die Energie des Strahlers ist dabei durch den Parameter $z$ gegeben, also
 \begin{align*}
-  \symup{E}_{Cs} = \SI{661.5985(98)}{\kilo\electronvolt} \: .
+  \symup{E}_{Cs} = \SI{661.599(10)}{\kilo\electronvolt} \: .
 \end{align*}
 Der Theoriewert von $\ce{^{137}Cs}$ beträgt $\SI{661.657(3)}{\kilo\electronvolt}$ \cite{lara}. \\
 Der Bereich um die Vollenergielinie ist in
@@ -225,7 +226,7 @@ Es ergibt sich hierdurch
 \end{align*}
 woraus sich ein Verhältniss von
 \begin{equation}
-  \frac{\symup{E}_{1/2}}{\symup{E}_{1/10}} =  0.54 \pm 0.09 \:
+  \frac{\symup{E}_{1/2}}{\symup{E}_{1/10}} =  0,54 \pm 0,09 \:
 \end{equation}
 ergibt.
 \begin{figure}
@@ -241,11 +242,11 @@ Formel
 \end{equation}
 mit dem Fehler
 \begin{equation}
-  \increment \symup{E}_{1/2} = 2\increment b\cdot\sqrt{ln2} \: ,
+  \increment \symup{E}_{1/2} = 2\increment c\cdot\sqrt{ln2} \: ,
 \end{equation}
 gegeben und beträgt somit
 \begin{align*}
-  \symup{E}_{1/2,theo} = \SI{1.701(21)}{\kilo\electronvolt} \: .
+  \symup{E}_{1/2,theo} = \SI{2.042(24)}{\kilo\electronvolt} \: .
 \end{align*}
 Die Zehntelwertsbreite ergibt sich analog über die Gleichung
 \begin{equation}
@@ -253,17 +254,17 @@ Die Zehntelwertsbreite ergibt sich analog über die Gleichung
 \end{equation}
 mit dem Fehler
 \begin{equation}
-  \increment \symup{E}_{1/10} = 2\increment b\cdot\sqrt{ln10} \: ,
+  \increment \symup{E}_{1/10} = 2\increment c\cdot\sqrt{ln10} \: ,
 \end{equation}
 zu
 \begin{align*}
-  \symup{E}_{1/10, theo} = \SI{5.651(69)}{\kilo\electronvolt} \: .
+  \symup{E}_{1/10, theo} = \SI{3.72(4)}{\kilo\electronvolt} \: .
 \end{align*}
 Das Verhältniss dieser beiden Größen ist unabhängig von den jeweiligen Parametern der
 Kurve stets
 \begin{equation}
   \frac{\symup{E}_{1/2}}{\symup{E}_{1/10}} = \sqrt{\frac{ln2}{ln10}}
-  \approx 0.549 \: .
+  \approx 0,549 \: .
 \end{equation}
 Diese theoretisch erhaltenen Werte werden mit den abglesenen verglichen, wobei sich
 die Abweichung über die Formel
@@ -271,15 +272,13 @@ die Abweichung über die Formel
   \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Theorie}}}
   \label{eqn:abw}
 \end{equation}
-berechnen lässt zu 1.64 \%. Diese Abweichung ist offensichtlich sehr gering und liegt innerhalb der
+berechnen lässt zu 1,64 \%. Diese Abweichung ist offensichtlich sehr gering und liegt innerhalb der
 Ableseunsicherheit, was auf eine gute Beschreibung der Vollenergielinie
-durch eine Gaußkurve schließen lässt. Die recht große Abweichung der Halb- und Zehntelwertsbreite
-an sich lässt sich dadurch erklären, dass wohlmöglich eine falsche Maximalhöhe des Peaks angenommen
-wurde.
+durch eine Gaußkurve schließen lässt.
 Der Inhalt der Vollenergielinie ergibt sich durch Gleichungen \ref{eqn:inh}
 und \ref{eqn:inhf} zu
 \begin{align*}
-  \symup{I}_{VEL} =  3641 \pm 58 \: .
+  \symup{I}_{VEL} =  9020 \pm 150 \: .
 \end{align*}
 \\
 Aus den Messwerten und Abbildung \ref{fig:plot5} lässt sich erkennen, dass die
@@ -288,32 +287,29 @@ Compton-Kante bei etwa $\SI{478(3)}{\kilo\electronvolt}$ liegt, da dort (Kanalnu
 Maximum von 53 Counts animmt und anschließend abfällt, wobei die Ableseunsicherheit auf etwa
 $\SI{3}{\kilo\electronvolt}$ geschätzt wird.
 Aus Gleichung \ref{eqn:kante} ergibt sich der theoretische Wert zu $\SI{477.280(90)}{\kilo\electronvolt}$
-und die Abweichung somit zu 0.15 \%.
-Um den Inhalt des Comptonkontinuums zu bestimmen wird der Bereich zwischen $\SI{20}{\kilo\electronvolt}$
-und $\SI{478}{\kilo\electronvolt}$ mit der Funktion aus Gleichung \ref{eqn:diffCompton} gefittet,
-wobei der Term $a =\frac{3}{8}\sigma_{\text{Th}}\frac{1}{m_0 c^2 e^2}$ als Fitparameter
+und die Abweichung somit zu 0,15 \%.
+Um den Inhalt des Comptonkontinuums zu bestimmen wird der Bereich zwischen $\SI{220}{\kilo\electronvolt}$
+und $\SI{420}{\kilo\electronvolt}$ mit der Funktion aus Gleichung \ref{eqn:diffCompton} gefittet,
+wobei der Term $a =\frac{3}{8}\sigma_{\text{Th}}\frac{1}{m_0 c^2}$ als Fitparameter
 verwendet wird. Für diesen ergibt sich
 \begin{align*}
-  a =  4.297 \pm 0.056 \: .
+  a =  \SI{6.83(8)}{\barn\per\kilo\electronvolt}\: .
 \end{align*}
-Dieser Wert wird nun verwendet, um die Funktion numerisch in dem Bereich zwischen $\SI{20}{\kilo\electronvolt}$
+
+Dieser Wert wird nun verwendet, um die Funktion numerisch in dem Bereich zwischen $\SI{50}{\kilo\electronvolt}$
 und $\SI{478}{\kilo\electronvolt}$
 zu integrieren, wodurch sich der Inhalt des Comptonkontinuums zu
 \begin{align*}
-  \symup{I}_{Compton} =  16266 \pm 214
+  \symup{I}_{Compton} =  35600 \pm 400
 \end{align*}
 ergibt.
 
-Der Rückstreupeak wird erneut mit der Gleichung \ref{eqn:gausk} gefittet, wodurch sich
-die Parameter
-\begin{align*}
-  a &= 65.8 \pm 2.0 \\
-  b &= 36 \pm 28 \\
-  c &= \SI{0.28(28)}{\kilo\electronvolt}\\
-  z &= \SI{193.78(24)}{\kilo\electronvolt} \:
-\end{align*}
-ergeben, der Rückstreupeak liegt also bei $\SI{193.78(24)}{\kilo\electronvolt}$.
-Der Theoriewert nach Gleichung \ref{eqn:Rückstreu} ergibt sich zu $\SI{184.3184(76)}{\kilo\electronvolt}$.
+Die Lage des Rückstreupeaks wird aus den Messwerten abgelesen, er befindet sich in etwa bei
+Kanal 483, wo ein lokales Maximum der Messwerte liegt. Nach Gleichung \ref{eqn:gerade}
+entspricht dies einer Energie von $\SI{191.79(6)}{\kilo\electronvolt}$. Das Ablesen
+ist jedoch nur recht ungenau möglich, sodass hier ein Ablesefehler von $\SI{5}{\kilo\electronvolt}$
+angenommen wird. Der experimentelle Wert ergibt sich somit zu $\SI{192(5)}{\kilo\electronvolt}$.
+Der Theoriewert nach Gleichung \ref{eqn:Rückstreu} ergibt sich zu $\SI{184.318(8)}{\kilo\electronvolt}$.
 \\
 Zur Bestimmung der Absorptionswahrscheinlichkeiten wird die Formel
 \begin{equation}
@@ -325,21 +321,21 @@ $\mu_{c}=\SI{0.38}{\per\centi\meter}$ und für den Photoeffekt etwa
 $\mu_{p}=\SI{0.008}{\per\centi\meter}$ beträgt.
 Dies führt zu Absorptionswahrscheinlicheiten von
 \begin{align*}
-  \symup{p}_{c} = 0.7728 \\
-  \symup{p}_{p} = 0.0307 \: ,
+  \symup{p}_{c} = 0,7728 \\
+  \symup{p}_{p} = 0,0307 \: ,
 \end{align*}
 sodass sich theoretisch ein Verhältniss zwischen den Inhalten des Photopeaks und des
 Comptonkontinuums von
 \begin{equation*}
-  (\frac{\symup{I}_{VEL}}{\symup{I}_{Compton}})_{\text{theo}} = 1-\symup{e}^{-\mu \cdot l}
-  = 0.03975
+  (\frac{\symup{I}_{VEL}}{\symup{I}_{Compton}})_{\text{theo}} = \frac{\symup{p}_{p}}{\symup{p}_{c}}
+  = 0,03975
 \end{equation*}
 ergeben sollte. Das tatsächliche Verhältniss aus den Messdaten beträgt
 \begin{equation*}
   \frac{\symup{I}_{VEL}}{\symup{I}_{Compton}}
-  = 0.224 \pm 0.005
+  = 0,253 \pm 0,005
 \end{equation*}
-und weist somit eine Abweichung von 463.52 \% auf, gemäß Formel \ref{eqn:abw}.
+und weist somit eine Abweichung von 536,8 \% auf, gemäß Formel \ref{eqn:abw}.
 
 
 \subsection{Aktivitätsbestimmung}
@@ -374,14 +370,16 @@ gegeben ist. Zur Bestimmung der Aktivität wird also eine Lineare Ausgleichsrech
 gemäß Formel \ref{eqn:li} mit Wertepaaren aus $l$ und $\symup{I}$ durchgeführt,
 wobei der Fitparameter a die Aktivität angibt. Dabei wird die $\SI{81.0657}{\kilo\electronvolt}$-Linie
 außer Acht gelassen, da bei so niedrigen Energien der Quotient $Q$ der Vollenergienachweiswahrscheinlichkeit
-zu ungenau ist. Somit ergeben sich die Parameter
+zu ungenau ist.
+Die benötigten Werte sind in Tabelle \ref{tab:tabe9} angegeben und in Abbildung \ref{fig:plot9}
+zusammen mit der Ausgleichsgeraden dargestellt. Somit ergeben sich die Parameter
 \begin{align*}
-  a = 416.4 \pm 2.7 \\
-  b = 35 \pm 14
+  a = \SI{1038(4)}{\becquerel}\\
+  b = -131 \pm 12
 \end{align*}
-und damit eine Aktivität von $\SI{416.4(27)}{\becquerel} $.
-Die Wertepaare und die Ausgleichsgerade sind in Abbildung \ref{fig:plot9} dargestellt.
-\begin{figure}
+und damit eine Aktivität von $\SI{1038(4)}{\becquerel} $.
+\input{Tabelle9.tex}
+\begin{figure}[H]
   \centering
   \includegraphics[height=9cm]{Plot9.pdf}
   \caption{Lineare Regression zur Aktivitätsbestimmung von $\ce{^{133}Ba}$}
@@ -390,10 +388,11 @@ Die Wertepaare und die Ausgleichsgerade sind in Abbildung \ref{fig:plot9} darges
 
 
 
+
 \subsection{Nuklididentifikation}
 Im letzten Versuchsteil wird eine Probe unbekannter Zusammensetzung untersucht, wobei die
 Messzeit $\SI{4064}{\second}$ beträgt. Von den 8191 gemessenen Kanälen werden die ersten 6000 zur Auswertung
-verwendet, die entsprechenden Messwerte werden gemäß Gleichung \ref{eqn:gerade} kalibriert und
+verwendet. Die entsprechenden Messwerte werden gemäß Gleichung \ref{eqn:gerade} kalibriert und
 sind in Abbildung \ref{fig:plot8} dargestellt.
 \begin{figure}
   \centering
@@ -405,8 +404,8 @@ sind in Abbildung \ref{fig:plot8} dargestellt.
 Um die Energie der Peaks zu bestimmen und sie somit zuordnen zu können, werden sie
 wieder an die Gaußkurve gemäß Gleichung \ref{eqn:gausk} angepasst. Die Fitparameter sind in Tabelle
 \ref{tab:tabe7} angegeben.
-
 \input{Tabelle7.tex}
+\newpage
 Die Linienenergien werden dann mit der Datenbank \cite{lara} abgeglichen und
 passenden Nukliden zugeordent.
 Diese Zuordnung ist in Tabelle \ref{tab:tabe8} zusammen mit den jeweiligen Emissionswahrscheinlichkeiten

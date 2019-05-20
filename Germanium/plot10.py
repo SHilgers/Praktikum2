@@ -8,16 +8,16 @@ from scipy.stats import sem
 acs = np.genfromtxt('Caesium.txt', unpack=True)
 bc = np.linspace(1, 8191, 8192)
 bcs=bc*0.403169-3.034
-Ecae = 661.5985
-eps = Ecae/(510.998946)
+Ecae = (661.5985+3.034)/0.403169
+eps = Ecae/((510.998946+3.034)/0.403169)
 def f(x, b):
-    return b*(2+(Ecae/(x-Ecae))**2+((1/eps**2)+((x-Ecae)/x)-2/eps*((x-Ecae)/x)))
-x = np.linspace(20, 478, 50000)
-#params, cov = curve_fit(f, bcs[100:1198], acs[100:1198])
-#covv = np.sqrt(np.diag(cov))
-#print('a1 ist ',params4,'pm',covv4)
-plt.plot (bcs[:2000], acs[0:2000], 'k-', label='Messwerte')
-plt.plot (x, f(x,4.29702205), 'r-', label='Fit')
+    return b*(1/eps**2)*(2+(Ecae/(x-Ecae))**2+((1/eps**2)+((x-Ecae)/x)-2/eps*((x-Ecae)/x)))
+x = np.linspace(50, 1050, 50000)
+params4, cov = curve_fit(f, bc[553:1049], acs[553:1049])
+covv4 = np.sqrt(np.diag(cov))
+print('a1 ist ',params4,'pm',covv4)
+plt.plot (bc[0:1050], acs[0:1050], 'k-', label='Messwerte')
+plt.plot (x, f(x, 6.77907707), 'r-', label='Fit')
 #plt.errorbar(wx, wy, xerr=dx, yerr=dy  ,fmt='k.',label='Messwerte')
 plt.xlabel(r'L')
 plt.ylabel(r'$ I $ ')
