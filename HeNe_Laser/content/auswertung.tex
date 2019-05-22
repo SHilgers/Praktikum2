@@ -1,11 +1,107 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Test
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+
+\subsection{Überprüfung der Stabilitätsbedingung}
+
+\subsubsection{Zwei konkave Spiegel}
+Die gemessenen Werte für die Anordnung mit zwei konkaven Spiegeln mit einem
+Krümmungsradius von jeweils $r_i = \SI{1400}{\milli\meter}$ sind in Tabelle \ref{tab:tabe1}
+angegeben. Der theoretische Verlauf entspricht nach Gleichung \ref{eqn:???} einer Parabel,
+sodass die Werte an eine Funktion der Form
+\begin{equation}
+  blub
+\end{equation}
+angepasst werden, wobei ???? der Fitparameter ist.
+Es ergibt sich hierdurch
+\begin{align*}
+ jjjj
+\end{align*}
+für diesen Parameter. Die Messwerte sind zusammen mit der
+entsprechenden Kurve in Abbildung \ref{fig:plot1} dargestellt.
+
+\begin{minipage}{0.5\textwidth}
+\input{Tabelle1.tex}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\input{Tabelle2.tex}
+\end{minipage}
+
+
+\subsection{Vermessen der ersten beiden transversalen Moden}
+Die Messwerte der $\text{T}_{00}$ sind in Tabelle \ref{tab:tabe3} angegeben. Diese werden
+mit einer Gaußkurve der Form
+\begin{equation}
+  \symup{I}(x) =I_0\cdot \symup{e}^{-(\frac{(x-x_0)^2}{c^2})}
+  \label{eqn:gausk}
+\end{equation}
+gefittet, wodurch sich für die Fitparameter
+\begin{align*}
+  I_0 = \SI{688(5)}{\micro\ampere}
+  x_0 = \SI{21.84(5)}{\milli\meter}
+  c = \SI{9.58(8)}{\milli\meter}
+\end{align*}
+ergeben. Die entsprechende Kurve ist zusammen mit den Messwerten in Abbildung \ref{fig:plot3}
+dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot3.pdf}
+  \caption{Ausgleichskurve und Messwerte der $\text{T}_{00}$Mode}
+  \label{fig:plot3}
+\end{figure}
+Für die $\text{T}_{01}$ ist die theoretische Kurve der Intensität entlang der x-Achse nicht mehr
+durch eine Gaußkurve gegeben, sondern durch eine Funktion der Form
+\begin{equation}
+  \symup{I}(x) =I_0\cdot(x-x_0)^2 \cdot \symup{e}^{-2(\frac{(x-x_0)^2}{c^2})} \: .
+  \label{eqn:gausk}
+\end{equation}
+Hierbei ergeben sich die Parameter
+\begin{align*}
+  I_0 = \SI{688(5)}{\micro\ampere}
+  x_0 = \SI{21.84(5)}{\milli\meter}
+  c = \SI{9.58(8)}{\milli\meter} \: .
+\end{align*}
+Die Ausgleichskurve und die Messwerte sind in Abbildung \ref{fig:plot4} graphisch dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot3.pdf}
+  \caption{Ausgleichskurve und Messwerte der $\text{T}_{01}$Mode}
+  \label{fig:plot4}
+\end{figure}
+
+\subsection{Messung der Polarisation}
+Die Messwerte zur Untersuchung der Polarisation sind in Tabelle \ref{tab:tabe5} angegeben.
+Theoretisch ergibt sich bei vollständig polarisiertem Licht eine Verteilung gemäß
+\begin{equation}
+  I(\theta) = I_0 \cdot \text{cos}^2(\theta-\theta_0) \:,
+\end{equation}
+sodass die Messwerte mit dieser Funktion gefittet werden. Dabei ergeben sich die Parameter zu
+\begin{align*}
+  I_0= \SI{99.1(16)}{\micro\ampere}
+  \theta_0 = 20,036° \pm 0,014°
+\end{align*}
+Die daraus resultierende Funktion ist zusammen mit den Messwerten in Abbildung \ref{fig:plot4}
+angegeben.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot4.pdf}
+  \caption{Messwerte und Ausgleichsrechnung zur Untersuchung der Polarisation}
+  \label{fig:plot4}
+\end{figure}
+
+\subsection{Bestimmung der Wellenlänge}
+Für die Bestimmung der Wellenlänge wurde einmal ein Gitter mit 100 Linien pro Millimeter
+verwendet und eines mit 80 Linien pro Millimeter.
+Aus der Bedingung für konstruktive Interferenz am Gitter
+\begin{equation}
+  \increment s = k \cdot \lambda
+\end{equation}
+mit dem Gangunterschied $\increment s$ lässt sich die Formel
+\begin{equation}
+  \lambda = \frac{b \cdot d_i}{i \cdot \sqrt{a^2+d_i^2}}
+\end{equation}
+herleiten, wobei $i$ die Ordnung des Maximums bezeichnet, $d_i$ den Abstand des
+Maximums zur optischen Achse, $a$ den Abstand zwischen Schirm und Gitter und $b$ die
+Gitterkonstante.
+Die gemessenen Werte lauten zusammen mit der jeweiligen Ableseunsicherheit:
