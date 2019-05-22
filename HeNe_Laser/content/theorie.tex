@@ -59,7 +59,9 @@ von der Länge des Resonators $L$ und der Krümmung der Resonatorspiegel $r_i$ a
 
 \subsection{Der HeNe-Laser}
 Das Laserrohr des Helium-Neon-Lasers ist mit einem Helium-Neon Gasgemisch im Verhältnis 5:1 gefüllt,
-Helium wird als Pumpquelle verwedet und Neon als Lasermedium. Das Laserrohr ist mit Elektroden versehen,
+Helium wird als Pumpquelle verwedet und Neon als Lasermedium. An den Enden des Laserrohrs befinden sich
+Brewsterfenster, die einen verlustfreien Durchtritt von Licht ermöglichen, indem p-Polarisiertes Lich
+durchgelassen und s-Polarisiertes Licht reflektiert wird.Außerdem ist das Laserrohr ist mit Elektroden versehen,
 zwischen denen eine Gasentladung stattfindet. Diese Gasentladung bringt die Heliumatome durch Elektronenstoß in einen
 langlebigen, metastabilen angeregten Zustand, über Stöße 2. Art wird die Energie der angeregten Heliumatome an die
 Neonatome abgegeben:
@@ -78,3 +80,44 @@ wird auch als Pumpvorgang bezeichnet.
 
 Die vom HeNe-Laser bekannte rote Laserlinie bei 633\;nm wird durch den Übergang $3s_2 \rightarrow 2p_4$
 erzeugt.
+
+\section{Moden}
+Die Resonatorlänge ist viel größer als die Wellenlänge $\lambda$ des Lichts, wodurch viele Frequenzen die
+Resonanzbedingung einer stehenden Welle erzeugen.
+Die longitudinale Mode des Resonators bezeichnet die Anzahl $q$ der Wellenlängen im Resonator. Es können
+auch transversale Moden entstehen, diese werden durch Unebenheiten oder Verkippungen der Spiegel verursacht.
+Die Moden werden mit $\text{TEM}_{lpq}$ (TEM=transverse rlectromagnetic mode) bezeichnet. Mit der
+transversalen Modenzahl $l$ und $p$ werden dabei die Knoten in x- und y-Richtung bezeichnet,
+während die longitude Modenzahl $q$ wird meistens weggelassen wird.
+Höhere Moden haben in der Regel größere Verluste als niedrige. Deshalb ist die Mode mit den geringsten
+Verlusten und der höchsten Symmetrie die Grundmode $\text{TEM}_{00}$.
+Für einen konfokalen Resonator mit runden Spiegeln ist die Feldverteilung gegeben durch:
+\begin{equation}
+  E_{lpq} \sim \cos(l\phi)\frac{(2\rho)^2}{(1+Z^2)^{(1+l)/2}}
+                     L_p^q\left(\frac{(2\rho)^2}{1+Z^2}\right) \exp\left(-\frac{\rho^2}{1+Z^2}\right)\\
+                   \cdot\exp\left(
+                     -i\left(\frac{(1+Z)\pi R}{\lambda}+\frac{\rho^2Z}{1+Z^2}-(l+2p+1)
+                     \left(\frac{\pi}{2}-\arctan\frac{1-Z}{1+Z}\right)\right)\right)
+\end{equation}
+mit
+\begin{align}
+  \rho &= \sqrt{\frac{2\pi}{R\lambda}} \\
+  Z &= \frac{2z}{R}.
+\end{align}
+Dabei bezeichnet $L_p^q(u)$ das Laguerre-Polynom.
+
+Die Intensitätsverteilungen für verschieden Moden sin in Abbildung \ref{fig:??} dargestellt.
+
+Die Intensitätsverteilung der $\text{TEM}_{00}$-Grundmode wird durch eine Gaußverteilung der Form
+\begin{equation}
+  I(r)=I_0\exp{\frac{-2r^2}{\omega^2}}
+\end{equation}
+beschrieben. Die Maximalintensität wird dabei mit $I_0$ beschrieben und $r$ bezeichnet den Abstand
+zur optischen Achse. Mit $2\omega$ wird der Strahldurchmesser beschrieben, dabei lässt dich Strahlradius
+wie folgt berechnen:
+\begin{equation}
+  \omega(z)=\omega_0\sqrt{1+\Big(\frac{\theta_z}{\omega_0}\Big)^2}
+  \label{eqn:Strahlradius}
+\end{equation}
+Dabei wird mit $\omega_0$ die Strahlweite bezeichnet und mit $z$ der Abstand zu dieser.
+Die Stahldivergenz des Gaußschen Strahlers kann über $\theta=(\sfrac{\lambda}{\pi})\cdot\omega_0$ berechnet werden.
