@@ -8,18 +8,45 @@
 \subsubsection{Zwei konkave Spiegel}
 Die gemessenen Werte für die Anordnung mit zwei konkaven Spiegeln mit einem
 Krümmungsradius von jeweils $r_i = \SI{1400}{\milli\meter}$ sind in Tabelle \ref{tab:tabe1}
-angegeben. Der theoretische Verlauf entspricht nach Gleichung \ref{eqn:???} einer Parabel,
+angegeben. Der theoretische Verlauf entspricht nach Gleichungen \ref{eqn:stab1}
+und \ref{stab2} einer Parabel,
 sodass die Werte an eine Funktion der Form
 \begin{equation}
-  blub
+  I(d)= I_0(\frac{d^2}{r^2}-\frac{2d}{r}+1)
 \end{equation}
-angepasst werden, wobei ???? der Fitparameter ist.
+angepasst werden. Es werden jedoch nur die Messwerte bis $\SI{118}{\centi\meter}$
+bei dem Fit berücksichtigt, da bei höheren Distanzen offensichtlich ein systematischer
+Fehler in der Messung vorliegt.
 Es ergibt sich hierdurch
 \begin{align*}
- jjjj
+  I_0= \SI{570(50)}{\micro\ampere} \\
+  r=\SI{998(11)}{\milli\meter}
 \end{align*}
-für diesen Parameter. Die Messwerte sind zusammen mit der
+für die Parameter. Die Messwerte sind zusammen mit der
 entsprechenden Kurve in Abbildung \ref{fig:plot1} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot1.pdf}
+  \caption{Untersuchung der Stabilität mit zwei konkaven Spiegeln}
+  \label{fig:plot3}
+\end{figure}
+
+  \subsubsection{Ein konkaver und ein planarer Spiegel}
+
+In Tabelle \ref{tab:tabe2} sind die Messwerte der Anordnung mit einem planaren und einem
+konkaven Spiegel mit $r_i = \SI{1400}{\milli\meter}$ angegeben.
+Aus Gleichungen \ref{eqn:stab1}
+und \ref{stab2} ergibt sich die Form der Stabilitätskurve zu einer Geraden, der
+Fit wird also mit einer Funktion der Form
+\begin{equation}
+  I(d)= I_0(1-\frac{d}{r})
+\end{equation}
+durchgeführt, wobei $r$ und $I_0$ die Fitparameter sind. Für diese ergibt sich hierdurch
+\begin{align*}
+  I_0= \SI{5.16(4)}{\micro\ampere} \\
+  r=\SI{1180(50)}{\milli\meter} \: .
+\end{align*}
+
 
 \begin{minipage}{0.5\textwidth}
 \input{Tabelle1.tex}
@@ -58,9 +85,9 @@ durch eine Gaußkurve gegeben, sondern durch eine Funktion der Form
 \end{equation}
 Hierbei ergeben sich die Parameter
 \begin{align*}
-  I_0 = \SI{688(5)}{\micro\ampere}
-  x_0 = \SI{21.84(5)}{\milli\meter}
-  c = \SI{9.58(8)}{\milli\meter} \: .
+  I_0 = \SI{3.8(7)}{\micro\ampere} \\
+  x_0 = \SI{24.3(6)}{\milli\meter} \\
+  c = \SI{13.4(8)}{\milli\meter} \: .
 \end{align*}
 Die Ausgleichskurve und die Messwerte sind in Abbildung \ref{fig:plot4} graphisch dargestellt.
 \begin{figure}
@@ -103,5 +130,34 @@ mit dem Gangunterschied $\increment s$ lässt sich die Formel
 \end{equation}
 herleiten, wobei $i$ die Ordnung des Maximums bezeichnet, $d_i$ den Abstand des
 Maximums zur optischen Achse, $a$ den Abstand zwischen Schirm und Gitter und $b$ die
-Gitterkonstante.
-Die gemessenen Werte lauten zusammen mit der jeweiligen Ableseunsicherheit:
+Gitterkonstante. Der Abstand $a$ beträgt bei dieser Messung $\SI{160(2)}{\centi\meter}$.
+Bei der Berechnung der Wellenlänge muss zudem auf die Gaußsche Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  }
+  \label{eqn:gaus}
+\end{equation}
+geachtet werden, da die gemessenen Werte mit einer Ableseunsicherheit behaftet sind.
+In diesem Fall ergibt sich der Fehler also über
+\begin{equation}
+  \increment \lambda =
+\end{equation}
+Die gemessenen Werte lauten zusammen mit der jeweiligen Ableseunsicherheit und den resultierenden
+Wellenlängen:
+\input{Tabelle6.tex}
+Durch die Gleichung
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+\noindent lässt sich der Mittelwert bilden, wobei der dazugehörige Fehler sich durch
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}
+  \label{eqn:mitf}
+\end{equation}
+ergibt. Der Fehler durch die Gaußsche Fehlerfortpflanzung ergibt sich gemäß Gleichung
+\ref{eqn:gaus} durch
+\begin{equation}
+  \increment \lambda =
+\end{equation}
