@@ -23,12 +23,12 @@ zum IR-Bereich reichen. Die Pumpquelle wird benötigt, um eine Besetzungsinversi
 induzierte Emission zu erzeugen. Der Resonator dient zur optischen Rückkopplung, wodurch das
 Licht erneut durch das Lasermedium geschickt wird.
 
-In einem Atom mit zwei Energieniveaus, dem Grundzustand und einem angeregten Zustand gibt es
+In einem Atom mit zwei Energieniveaus, dem Grundzustand und einem angeregten Zustand, gibt es
 drei verschiedene Wechselwirkungen von Photonen, diese sind in Abbildung \ref{fig:Emission} dargestellt.
 Ein Photon kann absorbiert werden, wenn es die
 Energie des Übergangs hat. Wechselt ein Photon spontan vom angeregten Zustand in den Grundzustand
 handelt es sich um spontane Emission. Dieser Vorgang kann auch durch ein einfallendes Photon
-stimuliert werden, dann spricht man von stimulierter Emission. Das ausgelöste und stimulierte Photon
+stimuliert werden, dann spricht man von stimulierter Emission. Das ausgelöste und das stimulierte Photon
 haben dabei die gleiche Energie, Phase und Ausbreitungsrichtung.
 
 \begin{figure}[H]
@@ -43,7 +43,7 @@ mit dem Lasermaterial zu einer Verstärkung des einfallenden Lichts führt. Dazu
 Emission der spontanen überwiegen, denn nur dann ist eine hohe Kohärenz und Verstärkung der Strahlung möglich.
 Die Voraussetzung für stimulierte Emission ist eine Besetzungsinversion, diese liegt vor, wenn der angeregte Zustand
 eine höhere Besetzungszahl aufweist, als der Grundzustand. Aufgrund der Boltzmann-Verteilung ist der Grundzustand im
-thermischen Gleichgewicht jedoch stärker besetzt. Um trotzdem eine Besetzungsinversion zu erreichen wird dem
+thermischen Gleichgewicht jedoch stärker besetzt. Um trotzdem eine Besetzungsinversion zu erreichen, wird dem
 Lasermedium über die Pumpquelle permanent Energie von außen zugeführt, dies kann über über Elektronenstoß
 oder optische Anregung erfolgen.
 Da die Verstärkung exponentiell mit dem Laufweg im Lasermedium ansteigt wird ein optischer Resonator verdendet, um den
@@ -52,13 +52,14 @@ dem Spiegel reflektiert und durchläuft das Lasermedium somit mehrfach. Einer de
 auszukoppeln. Für den Aufbau des Resonators gibt es verschiedene Möglichkeiten, er kann aus planparallelen Spiegeln, spährischen
 Spiegeln oder einer Mischung daraus bestehen. Je nach verwendeter Spiegelart spricht man von einem planparallelem oder spährischen
 Resonator. Ziel ist es, so einen selbsterregten Oszillator zu erzeugen. Dafür müssen die Verluste durch den Resonator möglichst gering
-gehalten werden, das ist bei einem konfokalen Resonator der Fall, bei dem die Spiegelbrennpunkte zusammenfallen.
+gehalten werden, dies ist bei einem konfokalen Resonator der Fall, bei dem die Spiegelbrennpunkte zusammenfallen.
 
 Ein stabiler Resonator liegt vor, wenn die Verluste geringer sind als als die Verstärkung durch induzierte Emission.
-Dies ist erfüllt, wenn die Stabilitätsbedingung erfüllt ist:
+Dies ist erfüllt, wenn die Stabilitätsbedingung
 \begin{equation}
-  0< g_1 \cdot g_2 <1.
+  0< g_1 \cdot g_2 <1
 \end{equation}
+erfüllt ist.
 Dabei ist der Resonatorparameter
 \begin{equation}
   g_i = 1- \frac{L}{r_i}
@@ -69,7 +70,7 @@ von der Länge des Resonators $L$ und der Krümmung der Resonatorspiegel $r_i$ a
 Das Laserrohr des Helium-Neon-Lasers ist mit einem Helium-Neon Gasgemisch im Verhältnis 5:1 gefüllt,
 Helium wird als Pumpquelle verwendet und Neon als Lasermedium. An den Enden des Laserrohrs befinden sich
 Brewsterfenster, die einen verlustfreien Durchtritt von Licht ermöglichen, indem p-Polarisiertes Lich
-durchgelassen und s-Polarisiertes Licht reflektiert wird.Außerdem ist das Laserrohr ist mit Elektroden versehen,
+durchgelassen und s-Polarisiertes Licht reflektiert wird. Außerdem ist das Laserrohr ist mit Elektroden versehen,
 zwischen denen eine Gasentladung stattfindet. Diese Gasentladung bringt die Heliumatome durch Elektronenstoß in einen
 langlebigen, metastabilen angeregten Zustand, über Stöße 2. Art wird die Energie der angeregten Heliumatome an die
 Neonatome abgegeben:
@@ -86,18 +87,18 @@ wird auch als Pumpvorgang bezeichnet.
   \label{fig:entladung}
 \end{figure}
 
-Die vom HeNe-Laser bekannte rote Laserlinie bei 633\;nm wird durch den Übergang $3s_2 \rightarrow 2p_4$
+Die vom HeNe-Laser bekannte rote Laserlinie bei 633\;nm wird durch den Neonübergang $3s_2 \rightarrow 2p_4$
 erzeugt.
 
-\section{Moden}
+\subsection{Moden}
 Die Resonatorlänge ist viel größer als die Wellenlänge $\lambda$ des Lichts, wodurch viele Frequenzen die
 Resonanzbedingung einer stehenden Welle erzeugen.
 Die longitudinale Mode des Resonators bezeichnet die Anzahl $q$ der Wellenlängen im Resonator. Es können
 auch transversale Moden entstehen, diese werden durch Unebenheiten oder Verkippungen der Spiegel verursacht.
 Die Moden werden mit $\text{TEM}_{lpq}$ (TEM=transverse rlectromagnetic mode) bezeichnet. Mit der
 transversalen Modenzahl $l$ und $p$ werden dabei die Knoten in x- und y-Richtung bezeichnet,
-während die longitudinale Modenzahl $q$ wird meistens weggelassen wird.
-Höhere Moden haben in der Regel größere Verluste als niedrige. Deshalb ist die Mode mit den geringsten
+während die longitudinale Modenzahl $q$ meistens weggelassen wird.
+Höhere Moden haben in der Regel größere Verluste als niedrige, deshalb ist die Mode mit den geringsten
 Verlusten und der höchsten Symmetrie die Grundmode $\text{TEM}_{00}$.
 %Für einen konfokalen Resonator mit runden Spiegeln ist die Feldverteilung gegeben durch:
 %\begin{equation}
@@ -114,7 +115,7 @@ Verlusten und der höchsten Symmetrie die Grundmode $\text{TEM}_{00}$.
 %\end{align}
 %Dabei bezeichnet $L_p^q(u)$ das Laguerre-Polynom.
 
-Die Intensitätsverteilungen für verschieden Moden sin in Abbildung \ref{fig:TEM} dargestellt.
+Die Intensitätsverteilungen für verschieden Moden sind in Abbildung \ref{fig:TEM} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=11cm]{TEM.png}
@@ -130,7 +131,7 @@ beschrieben. Die Maximalintensität wird dabei mit $I_0$ beschrieben und $r$ bez
 zur optischen Achse. Mit $2\omega$ wird der Strahldurchmesser beschrieben, dabei lässt dich Strahlradius
 wie folgt berechnen:
 \begin{equation}
-  \omega(z)=\omega_0\sqrt{1+\Big(\frac{\theta_z}{\omega_0}\Big)^2}
+  \omega(z)=\omega_0\sqrt{1+\Big(\frac{\theta_z}{\omega_0}\Big)^2}.
   \label{eqn:Strahlradius}
 \end{equation}
 Dabei wird mit $\omega_0$ die Strahlweite bezeichnet und mit $z$ der Abstand zu dieser.
