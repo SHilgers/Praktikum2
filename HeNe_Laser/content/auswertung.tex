@@ -9,18 +9,18 @@
 Die gemessenen Werte für die Anordnung mit zwei konkaven Spiegeln mit einem
 Krümmungsradius von jeweils $r_i = \SI{1400}{\milli\meter}$ sind in Tabelle \ref{tab:tabe1}
 angegeben. Der theoretische Verlauf entspricht nach Gleichungen \ref{eqn:stab1}
-und \ref{stab2} einer Parabel,
+und \ref{eqn:stab2} einer Parabel,
 sodass die Werte an eine Funktion der Form
 \begin{equation}
-  I(d)= I_0(\frac{d^2}{r^2}-\frac{2d}{r}+1)
+  I(d)= I_0\Bigl(\frac{d^2}{r^2}-\frac{2d}{r}+1\Bigr)
 \end{equation}
 angepasst werden. Es werden jedoch nur die Messwerte bis $\SI{118}{\centi\meter}$
 bei dem Fit berücksichtigt, da bei höheren Distanzen offensichtlich ein systematischer
 Fehler in der Messung vorliegt.
 Es ergibt sich hierdurch
 \begin{align*}
-  I_0= \SI{570(50)}{\micro\ampere} \\
-  r=\SI{998(11)}{\milli\meter}
+  I_0 &= \SI{570(50)}{\micro\ampere} \\
+  r &=\SI{998(11)}{\milli\meter}
 \end{align*}
 für die Parameter. Die Messwerte sind zusammen mit der
 entsprechenden Kurve in Abbildung \ref{fig:plot1} dargestellt.
@@ -28,7 +28,7 @@ entsprechenden Kurve in Abbildung \ref{fig:plot1} dargestellt.
   \centering
   \includegraphics[height=9cm]{Plot1.pdf}
   \caption{Untersuchung der Stabilität mit zwei konkaven Spiegeln}
-  \label{fig:plot3}
+  \label{fig:plot1}
 \end{figure}
 
   \subsubsection{Ein konkaver und ein planarer Spiegel}
@@ -36,51 +36,61 @@ entsprechenden Kurve in Abbildung \ref{fig:plot1} dargestellt.
 In Tabelle \ref{tab:tabe2} sind die Messwerte der Anordnung mit einem planaren und einem
 konkaven Spiegel mit $r_i = \SI{1400}{\milli\meter}$ angegeben.
 Aus Gleichungen \ref{eqn:stab1}
-und \ref{stab2} ergibt sich die Form der Stabilitätskurve zu einer Geraden, der
+und \ref{eqn:stab2} ergibt sich die Form der Stabilitätskurve zu einer Geraden, der
 Fit wird also mit einer Funktion der Form
 \begin{equation}
-  I(d)= I_0(1-\frac{d}{r})
+  I(d)= I_0\Bigl(1-\frac{d}{r}\Bigr)
 \end{equation}
 durchgeführt, wobei $r$ und $I_0$ die Fitparameter sind. Für diese ergibt sich hierdurch
 \begin{align*}
-  I_0= \SI{5.16(4)}{\micro\ampere} \\
-  r=\SI{1180(50)}{\milli\meter} \: .
+  I_0 &= \SI{5.16(4)}{\micro\ampere} \\
+  r &=\SI{1180(50)}{\milli\meter} \: .
 \end{align*}
-
+Die entsprechende Kurve ist zusammen mit den Messwerten in Abbildung \ref{fig:plot2}
+dargestellt.
 
 \begin{minipage}{0.5\textwidth}
 \input{Tabelle1.tex}
 \end{minipage}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.5\textwidth}
 \input{Tabelle2.tex}
 \end{minipage}
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot2.pdf}
+  \caption{Untersuchung der Stabilität mit einem konkaven und einem planaren Spiegel}
+  \label{fig:plot2}
+\end{figure}
+
 
 
 \subsection{Vermessen der ersten beiden transversalen Moden}
-Die Messwerte der $\text{T}_{00}$ sind in Tabelle \ref{tab:tabe3} angegeben. Diese werden
+Die Messwerte der $\text{T}_{00}$ Mode sind in Tabelle \ref{tab:tabe3} angegeben.
+\input{Tabelle3.tex}
+Diese werden
 mit einer Gaußkurve der Form
 \begin{equation}
-  \symup{I}(x) =I_0\cdot \symup{e}^{-(\frac{(x-x_0)^2}{c^2})}
+  \symup{I}(x) =I_0\cdot \symup{e}^{-\Bigl(\frac{(x-x_0)^2}{c^2}\Bigr)}
   \label{eqn:gausk}
 \end{equation}
 gefittet, wodurch sich für die Fitparameter
 \begin{align*}
-  I_0 = \SI{688(5)}{\micro\ampere}
-  x_0 = \SI{21.84(5)}{\milli\meter}
-  c = \SI{9.58(8)}{\milli\meter}
+  I_0 &= \SI{688(5)}{\micro\ampere} \\
+  x_0 &= \SI{21.84(5)}{\milli\meter} \\
+  c &= \SI{9.58(8)}{\milli\meter}
 \end{align*}
 ergeben. Die entsprechende Kurve ist zusammen mit den Messwerten in Abbildung \ref{fig:plot3}
 dargestellt.
 \begin{figure}
   \centering
   \includegraphics[height=9cm]{Plot3.pdf}
-  \caption{Ausgleichskurve und Messwerte der $\text{T}_{00}$Mode}
+  \caption{Ausgleichskurve und Messwerte der $\text{T}_{00}$ Mode}
   \label{fig:plot3}
 \end{figure}
-Für die $\text{T}_{01}$ ist die theoretische Kurve der Intensität entlang der x-Achse nicht mehr
+Für die $\text{T}_{01}$ Mode ist die theoretische Kurve der Intensität entlang der x-Achse nicht mehr
 durch eine Gaußkurve gegeben, sondern durch eine Funktion der Form
 \begin{equation}
-  \symup{I}(x) =I_0\cdot(x-x_0)^2 \cdot \symup{e}^{-2(\frac{(x-x_0)^2}{c^2})} \: .
+  \symup{I}(x) =I_0\cdot(x-x_0)^2 \cdot \symup{e}^{-2\Bigl(\frac{(x-x_0)^2}{c^2}\Bigr)} \: .
   \label{eqn:gausk}
 \end{equation}
 Hierbei ergeben sich die Parameter
@@ -89,32 +99,35 @@ Hierbei ergeben sich die Parameter
   x_0 = \SI{24.3(6)}{\milli\meter} \\
   c = \SI{13.4(8)}{\milli\meter} \: .
 \end{align*}
-Die Ausgleichskurve und die Messwerte sind in Abbildung \ref{fig:plot4} graphisch dargestellt.
-\begin{figure}
+Die Messwerte sind in Tabelle \ref{tab:tabe4} angegeben und in Abbildung \ref{fig:plot4}
+zusammen mit der Ausgleichskurve graphisch dargestellt.
+\input{Tabelle4.tex}
+\begin{figure}[H]
   \centering
-  \includegraphics[height=9cm]{Plot3.pdf}
+  \includegraphics[height=9cm]{Plot4.pdf}
   \caption{Ausgleichskurve und Messwerte der $\text{T}_{01}$Mode}
   \label{fig:plot4}
 \end{figure}
 
 \subsection{Messung der Polarisation}
 Die Messwerte zur Untersuchung der Polarisation sind in Tabelle \ref{tab:tabe5} angegeben.
+\input{Tabelle5.tex}
 Theoretisch ergibt sich bei vollständig polarisiertem Licht eine Verteilung gemäß
 \begin{equation}
   I(\theta) = I_0 \cdot \text{cos}^2(\theta-\theta_0) \:,
 \end{equation}
 sodass die Messwerte mit dieser Funktion gefittet werden. Dabei ergeben sich die Parameter zu
 \begin{align*}
-  I_0= \SI{99.1(16)}{\micro\ampere}
+  I_0= \SI{99.1(16)}{\micro\ampere} \\
   \theta_0 = 20,036° \pm 0,014°
 \end{align*}
 Die daraus resultierende Funktion ist zusammen mit den Messwerten in Abbildung \ref{fig:plot4}
 angegeben.
 \begin{figure}
   \centering
-  \includegraphics[height=9cm]{Plot4.pdf}
+  \includegraphics[height=9cm]{Plot5.pdf}
   \caption{Messwerte und Ausgleichsrechnung zur Untersuchung der Polarisation}
-  \label{fig:plot4}
+  \label{fig:plot5}
 \end{figure}
 
 \subsection{Bestimmung der Wellenlänge}
@@ -126,9 +139,9 @@ Aus der Bedingung für konstruktive Interferenz am Gitter
 \end{equation}
 mit dem Gangunterschied $\increment s$ lässt sich die Formel
 \begin{equation}
-  \lambda = \frac{b \cdot d_i}{i \cdot \sqrt{a^2+d_i^2}}
+  \lambda = \frac{b \cdot d_n}{n \cdot \sqrt{a^2+d_n^2}}
 \end{equation}
-herleiten, wobei $i$ die Ordnung des Maximums bezeichnet, $d_i$ den Abstand des
+herleiten, wobei $n$ die Ordnung des Maximums bezeichnet, $d_n$ den Abstand des
 Maximums zur optischen Achse, $a$ den Abstand zwischen Schirm und Gitter und $b$ die
 Gitterkonstante. Der Abstand $a$ beträgt bei dieser Messung $\SI{160(2)}{\centi\meter}$.
 Bei der Berechnung der Wellenlänge muss zudem auf die Gaußsche Fehlerfortpflanzung
@@ -140,7 +153,8 @@ Bei der Berechnung der Wellenlänge muss zudem auf die Gaußsche Fehlerfortpflan
 geachtet werden, da die gemessenen Werte mit einer Ableseunsicherheit behaftet sind.
 In diesem Fall ergibt sich der Fehler also über
 \begin{equation}
-  \increment \lambda =
+  \increment \lambda = \sqrt{\frac{b^2 \cdot d^2_n}{n^2 \cdot (a^2+d_n^2)^3}\cdot (\increment a)^2
+  + \frac{b^2 \cdot a^4}{n^2 \cdot (a^2+d_n^2)^3}\cdot (\increment d_n)^2 }
 \end{equation}
 Die gemessenen Werte lauten zusammen mit der jeweiligen Ableseunsicherheit und den resultierenden
 Wellenlängen:
@@ -156,8 +170,11 @@ Durch die Gleichung
   (x_i - \bar{x})^2}
   \label{eqn:mitf}
 \end{equation}
-ergibt. Der Fehler durch die Gaußsche Fehlerfortpflanzung ergibt sich gemäß Gleichung
-\ref{eqn:gaus} durch
+ergibt. Der somit gemittelte Wert beträgt $\SI{634.0(9)}{\nano\meter}$.
+Es ergibt sich jedoch auch ein Fehler durch die Gaußsche Fehlerfortpflanzung gemäß Gleichung
+\ref{eqn:gaus} über
 \begin{equation}
-  \increment \lambda =
+  \increment \lambda = \sqrt{\frac{1}{N^2} \sum_{i=1}^{N} \increment \lambda_i} \:,
 \end{equation}
+welcher mit $\pm 7$ deutlich größer und somit der signifikante Fehler ist. Der experimentelle Wert der
+Wellenlänge beträgt somit $\SI{634(7)}{\nano\meter}$.
