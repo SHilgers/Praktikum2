@@ -5,7 +5,7 @@ Dazu werden insbesondere die Eigenschaften bei der Leitung über Hohlleiter unte
 
 \section{Theorie}
 Als Mikrowellen werden elektromagnetische Wellen im Wellenlängenbereich zwischen einigen $\si{\milli\meter}$
-und ca. $\SI{10}{\centi}{\meter}$ bezeichnet. Dies entspricht einem Frequenzbereich von etwa
+und ca. $\SI{10}{\centi\meter}$ bezeichnet. Dies entspricht einem Frequenzbereich von etwa
 $\SI{1}{\giga\hertz}$ bis $\SI{300}{\giga\hertz}$.  Da diese Frequenz zu hoch für einen gewöhnlichen
 Schwingkreis ist, erfolgt die Erzeugung von Mikrowellen über Klystrons, Wanderfeldröhren oder Magnetrons.
 
@@ -14,7 +14,7 @@ Eine spezielle Art des Klystrons ist das Reflexklystron, dessen Aufbau schematis
 dargestellt.
 \begin{figure}[H]
   \centering
-  \includegraphics[height=12cm]{Aufbau.png}
+  \includegraphics[height=12cm]{kly.png}
   \caption{Schematischer Aufbau eines Reflexklystrons \cite{Kly}.}
   \label{fig:kly}
 \end{figure}
@@ -65,12 +65,12 @@ Hieran sieht man, dass nur ein diskretes Spektrum an Wellen erlaubt ist, welche 
 Somit folgt
 \begin{equation}
   k^2 = k_x^2 + k_y^2 + k_z^2 \\
-  \equals k_z = \pm \sqrt{k^2-(k_x^2 + k_y^2)} = \sqrt{k^2-k_c^2}
+  \iff k_z = \pm \sqrt{k^2-(k_x^2 + k_y^2)} = \sqrt{k^2-k_c^2}
   \label{eqn:wellenv}
 \end{equation}
 mit
 \begin{equation}
-  k_c^2=k_x^2 + k_y^2= \Bigl(\frac{m\pi}{a}\Bigr)^2 + \Bigl(\frac{n\pi}{b}\Bigr)^2 /:.
+  k_c^2=k_x^2 + k_y^2= \Bigl(\frac{m\pi}{a}\Bigr)^2 + \Bigl(\frac{n\pi}{b}\Bigr)^2 \:.
   \ref{eqn:Wellenvektor}
 \end{equation}
 Für $k>k_c$ ergibt sich ein reelles $k_z$, welches eingesetzt in die Wellengleichung
@@ -85,7 +85,7 @@ Die Frequenz $\nu_c = \frac{c}{2\pi}k_c$ wird daher kritische Wellenlänge genan
 für Frequenzen unterhalb dieser kritischen Frequnz findet demnach keine
 Weiterleitung mehr statt. Die entsprechende kritische Wellenlänge
 \begin{equation}
-  \lambda_c = \frac{c}{\vu_c}=\frac{2\pi}{k_c} =\frac{2\pi}{\sqrt{\Bigl(\frac{m\pi}{a}\Bigr)^2 + \Bigl(\frac{n\pi}{b}\Bigr)^2}}
+  \lambda_c = \frac{c}{\nu_c}=\frac{2\pi}{k_c} =\frac{2\pi}{\sqrt{\Bigl(\frac{m\pi}{a}\Bigr)^2 + \Bigl(\frac{n\pi}{b}\Bigr)^2}}
   \label{eqn:Lambdac}
 \end{equation}
 ist somit die maximale Wellenlänge. Da sie genau das doppelte des Abstands zweier Minima im Stehwellenfeld
@@ -134,7 +134,7 @@ zwischen der maximalen und minimalen Spannung über
 definieren, wobei der Wert bei idealer Anpassung 1 beträgt. Der Zusammenhang zwischen Stehwellenverhältniss
 und Reflexionskoeffizient ist über
 \begin{equation}
-    S= \frac{1 + \lvert r\rvert}{1 - \lvert r\rvert} \equals \lvert r\rvert = \frac{s-1}{s+1}
+    S= \frac{1 + \lvert r\rvert}{1 - \lvert r\rvert} \iff \lvert r\rvert = \frac{s-1}{s+1}
   \label{eqn:reflundSWV}
 \end{equation}
 gegeben ist.
