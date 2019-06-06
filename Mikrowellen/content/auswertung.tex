@@ -1,11 +1,133 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{1. Das Reflexklystron}
 
-Test
+Die gemessenen Werte der Moden des Reflexklystrons sind in Tabelle \ref{tab:tab1} und das
+dazugehörige Modendiagramm ist in Abbildung \ref{fig:Mode} dargestellt.
+\input{Tabelle1.tex}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=9cm]{plot2.pdf}
+  \caption{Messwerte der Moden mit einer Ausgleichsrechnung.}
+  \label{fig:Mode}
+\end{figure}
+Die Messwerte werden mit einer Parabel der Form
+\begin{equation}
+  f(x)=-a\cdot(x-b)^2 +c
+\end{equation}
+gefittet.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\subsection{2. Messung von Wellenlänge und Frequenz }
+
+Die mit Hilfe des Frequenzmessers ermittelte Frequenz beträgt
+\begin{equation}
+  f=\SI{9009}{\MHz}.
+\end{equation}
+
+Die bei der Wellenlängenmessung gemessenen Sondenpositionen sind zusammen mit den daraus berechneten Abständen
+und der Wellenlänge in Tabelle \ref{tab:tab4} dargestellt. Um Ungenauigkeiten beim Ablesen zu berücksichtigen wird ein
+Fehler von $\pm$ 1 auf die letzte Nachkommastelle angenommen. Dabei entspricht die Wellenlänge dem doppelten
+Sondenabstand.
+\input{Tabelle4.tex}
+Aus diesen Daten ergibt sich für die mittlere Wellenlänge im Hohlleiter zu
+\begin{equation}
+  \lambda_g = \SI{48.6(1)}{\mm}.
+\end{equation}
+Nach der Formel
+\begin{equation}
+  f=c\cdot\sqrt{\Big(\frac{1}{\lambda_g}\Big)^2 + \Big(\frac{1}{2a}\Big)^2}
+\end{equation}
+lässt sich aus dem Mittelwert für $\lambda_g$ die Frequenz mit
+\begin{equation}
+  f=\SI{9009(13)}{\MHz}
+\end{equation}
+berechnen. Der dazugehörige Fehler wurde über die Gaußsche Fehlerfortpflanzug
+\begin{equation}
+  \Delta f=\sqrt{\frac{c^2\cdot\Delta \lambda^2_g}{\Big(\frac{1}{\lambda^2_g}\Big)+\Big(\frac{\lambda^3_g}{4a^2}\Big)}}
+\end{equation}
+berechnet.
+%Die Wellenlänge $\lambda_0$ im freien Raum wird über
+%\begin{equation}
+%  \lambda_0=\frac{1}{\sqrt{(\frac{1}{\lambda_g})^2} +(\frac{1}{2a})^2}
+%\end{equation}
+Mit der allgemeinen Bezieung $c=f\cdot\lambda_0$ lässt sich $\lambda_0$ zu
+\begin{equation}
+  \lambda_0=\SI{33.30(5)}{\mm}
+\end{equation}
+bestimmen. Um die Grenzwellenlänge zu berechnen wird Gleichung \ref{eqn:zsmhl} nach $\lambda_c$ umgestellt:
+\begin{equation}
+  \lambda_c=\frac{\lambda_0}{1-\Big(\frac{\lambda_0}{\lambda_g}\Big)^2}.
+\end{equation}
+Mit den bereits berechneten Wellenlängen $\lambda_g$ und $\lambda_0$ ergibt sich eine Grenzwellenlänge von
+\begin{equation}
+  \lambda_c=\SI{62.77(19)}{\mm}.
+\end{equation}
+Hier berechnet sich der Fehler über
+\begin{equation}
+  \Delta\lambda_c=\sqrt{\Bigg(\frac{\lambda^2_g\lambda^2_0 + \lambda^4_g}{(\lambda^2_0-\lambda^2_g)^2}\cdot\Delta\lambda_0\Bigg)^2+
+  \Bigg(\frac{-2\lambda^3_0}{\Big(1-\frac{\lambda^2_0}{\lambda^2_g}\Big)^2\cdot\lambda^3_g}\cdot\Delta\lambda_g\Bigg)^2}
+\end{equation}
+
+\subsection{3. Dämpfungsbestimmung}
+
+Die gemessenen Werte der Dämpfungsbestimmung über die Methode der Leistungsverhältnisse sind
+in Tabelle \ref{tab:tab2} dargestellt. Die Messwerte als auch die Theoriedaten sind in Abbildung \ref{fig:plot1}
+gegen die Mikrometereinstellung $d$ aufgetragen. Dabei gilt die Formel
+\begin{equation}
+  \Big(\frac{P_1}{P_2}\Big)\si{dB}=10\cdot\log\Big(\frac{P_1}{P_2}\Big).
+\end{equation}
+Die Skala des SWR-Mesters folgt der Beziehung $10\cdot\log\frac{V_0}{V}=10\cdot\log\frac{P_0}{P}$.
+
+\input{Tabelle2.tex}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{plot1.pdf}
+  \caption{Messdaten und Theoriewerte der Dämpfung.}
+  \label{fig:plot1}
+\end{figure}
+
+\subsection{4. Stehwellenverhältnis}
+
+Die Messwerte der direkten Methode der Stehwellenmessung sind in Tabelle \ref{tab:tab3} aufgetragen.
+\input{Tabelle3.tex}
+Da sich im Laufe der Messung die Wellenlänge im Hohlleiter veränder haben könnte, werden zur Kontrolle nochmals
+die Abstände der Minima gemessen und daraus die Wellenlänge berechnet. Die Abstände der Minima wurden mit
+\begin{align*}
+  x_1&=\SI{118.0(1)}{\mm}\:\:\text{und}\\
+  x_2&=\SI{93.7(1)}{\mm}
+\end{align*}
+gemessen.
+Daraus ergibt sich eine Wellenlänge von $\lambda_g=\SI{48.6(3)}{\mm}$.\\
+Die bei der “3-dB-Methode“ gemessenen Werte lauten:
+ \begin{align*}
+   d_\text{1}&=\SI{119.1(1)}{\mm} \:\:\text{und}\\
+   d_\text{2}&=\SI{117.0(1)}{\mm}
+ \end{align*}
+ Mit der Formel
+ \begin{equation}
+   S=\sqrt{1+\frac{1}{\sin^2\Big(\frac{\pi (d_1 - d_2)}{\lambda_g \cdot g}\Big)}}\sim\frac{\lambda_g}{\pi (d_1 - d_2)}
+ \end{equation}
+ und dem dazugehörigen Fehler
+ \begin{equation}
+   \Delta S=\sqrt{\Big(\frac{1}{\pi(d_1 - d_2)}\cdot\Delta\lambda_g\Big)^2+\Big(-\frac{\lambda_g}{\pi{(d_1 - d_2)^2}}\cdot\Delta d_1\Big)^2+
+   \Big(\frac{\lambda_g}{\pi(d_1 - d_2)^2}\cdot\Delta d_2\Big)^2}
+ \end{equation}
+ ergibt sich ein Stehwellenverhältnis von $S=\SI{7.4(5)}{}$.\\
+
+ Bei der Abschwächer-Methode wird das Stehwellenverhältnis über die Differenz der Abschwächeinstellungen bestimmt, wobei
+ ein Ablesefehler von $\pm 1$ angenommen wird.
+ Das Dämpfungsglied wird auf
+ \begin{align*}
+   A_1&=\SI{20(1)}{\dB} \:\:\text{und}\\
+   A_2&=\SI{43(1)}{\dB}
+ \end{align*}
+ eingestellt. Das Stehwellenverhältnis wird mit der Formel
+ \begin{equation}
+   S=10\cdot\frac{A_2 - A_1}{20}
+ \end{equation}
+ und der Fehlerformel
+ \begin{equation}
+   \Delta S=\sqrt{\Big(\frac{-1}{2}\cdot\Delta A_1\Big)^2+\Big(\cdot{\frac{1}{2}\cdot\Delta A_2}\Big)^2  }
+ \end{equation}
+zu $S=\SI{11.5(7)}{}$ berechnet.
