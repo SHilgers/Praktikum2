@@ -67,17 +67,27 @@ Hier berechnet sich der Fehler über
   \Delta\lambda_c=\sqrt{\Bigg(\frac{\lambda^2_g\lambda^2_0 + \lambda^4_g}{(\lambda^2_0-\lambda^2_g)^2}\cdot\Delta\lambda_0\Bigg)^2+
   \Bigg(\frac{-2\lambda^3_0}{\Big(1-\frac{\lambda^2_0}{\lambda^2_g}\Big)^2\cdot\lambda^3_g}\cdot\Delta\lambda_g\Bigg)^2}
 \end{equation}
-
+Zudem lässt sich nach der Formel \ref{eqn:vphase} die Phasengeschwindigkeit zu
+\begin{equation}
+  v_\text{Ph}=\SI{4,74(3)e5}{\m\per\s}
+\end{equation}
+mit der Fehlerformel
+\begin{equation}
+  \Delta v_\text{Ph}=\sqrt{\Bigg(\frac{c\cdot\lambda_0}{\lambda^2_c(1-\frac{\lambda^2_0}{\lambda^2_c})^{(3/2)}}\cdot\Delta\lambda_0\Bigg)^2
+  +\Bigg(-\frac{c\cdot\lambda^2_0}{(1-\frac{\lambda^2_0}{\lambda^2_c})^{(3/2)}\cdot\lambda^3_c} \cdot\Delta\lambda_c\Bigg)^2}
+\end{equation}
+berechnen.
 \subsection{3. Dämpfungsbestimmung}
 
 Die gemessenen Werte der Dämpfungsbestimmung über die Methode der Leistungsverhältnisse sind
 in Tabelle \ref{tab:tab2} dargestellt. Die Messwerte als auch die Theoriedaten sind in Abbildung \ref{fig:plot1}
-gegen die Mikrometereinstellung $d$ aufgetragen. Dabei gilt die Formel
-\begin{equation}
-  \Big(\frac{P_1}{P_2}\Big)\si{dB}=10\cdot\log\Big(\frac{P_1}{P_2}\Big).
-\end{equation}
-Die Skala des SWR-Mesters folgt der Beziehung $10\cdot\log\frac{V_0}{V}=10\cdot\log\frac{P_0}{P}$.
+direkt gegen die Mikrometereinstellung $d$ aufgetragen, da die Skala des SWR-Mesters der Beziehung
+$10\cdot\log\frac{V_0}{V}=10\cdot\log\frac{P_0}{P}$ folgt.
 
+%Dabei gilt die Formel
+%\begin{equation}
+%  \Big(\frac{P_1}{P_2}\Big)\si{dB}=10\cdot\log\Big(\frac{P_1}{P_2}\Big).
+%\end{equation}
 \input{Tabelle2.tex}
 
 \begin{figure}
@@ -99,6 +109,7 @@ die Abstände der Minima gemessen und daraus die Wellenlänge berechnet. Die Abs
 \end{align*}
 gemessen.
 Daraus ergibt sich eine Wellenlänge von $\lambda_g=\SI{48.6(3)}{\mm}$.\\
+
 Die bei der “3-dB-Methode“ gemessenen Werte lauten:
  \begin{align*}
    d_\text{1}&=\SI{119.1(1)}{\mm} \:\:\text{und}\\
