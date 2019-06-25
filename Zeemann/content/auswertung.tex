@@ -1,11 +1,136 @@
 \section{Auswertung}
-\label{sec:Auswertung}
 
-Test
+\subsection{Eichung des Magneten}
+Die gemessenen Werte zur Eichung des Magneten sind in Tabelle \ref{tab:tabe1} angegeben.
+\input{Tabelle1.tex}
+Um eine Eichkurve zu bestimmen werden diese Werte mit einem Polynom dritten Grades
+der Form
+\begin{equation}
+  B(I)=a\cdot I^3+b\cdot I^2 + c \cdot I +d
+\end{equation}
+gefittet.
+Die resultierenden Parameter lauten
+\begin{align*}
+  a &= \SI{-0.087(7)}{\milli\tesla\per\cubic\ampere} \\
+  b &= \SI{1.85(18)}{\milli\tesla\per\square\ampere}\\
+  c &= \SI{48.7(15)}{\milli\tesla\per\ampere}\\
+  d &= \SI{10(3)}{\milli\tesla}
+\end{align*}
+Die entsprechende Kurve ist zusammen mit den Messwerten in Abbildung \ref{fig:plot1}
+dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot1.pdf}
+  \caption{Eichkurve und Messwerte des Magneten}
+  \label{fig:plot1}
+\end{figure}
+Somit ergibt sich die Magnetfeldstärke bei gegebenem Strom über die Formel
+\begin{equation}
+  B(I)=\SI{-0.087}{\milli\tesla\per\cubic\ampere}\cdot I^3
+  +\SI{1.85}{\milli\tesla\per\square\ampere}\cdot I^2
+  +\SI{48.7}{\milli\tesla\per\ampere} \cdot I + \SI{10}{\milli\tesla} \; ,
+  \label{eqn:bfeld}
+\end{equation}
+wobei der Fehler sich gemäß der Gaußschen Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  }
+  \label{eqn:gaus}
+\end{equation}
+über
+\begin{equation}
+  \begin{split}
+  \increment B(I) &= \sqrt{ \left( \increment a \cdot I^3 \right)^2 + \left( \increment b \cdot I^2 \right)^2
+  + \left( \increment c \cdot I \right)^2 + \left( \increment d \right)^2} \\\
+  &= \sqrt{ \left( \SI{0.007}{\milli\tesla\per\cubic\ampere} \cdot I^3 \right)^2 +
+  \left(  \SI{0.18}{\milli\tesla\per\square\ampere} \cdot I^2 \right)^2
+  + \left( \SI{1.5}{\milli\tesla\per\ampere} \cdot I \right)^2 +
+  \left( \SI{3}{\milli\tesla} \right)^2}
+  \label{eqn:fbfeld}
+\end{split}
+\end{equation}
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\subsection{Auswertung der roten Linie}
+Die rote Linie bei $\SI{643.8}{\nano\meter}$  wurde einmal ohne Magnetfeld gemessen und einmal
+bei einem Magnetfeld bei einem Strom von $\SI{10}{\ampere}$. Nach Gleichungen
+\ref{bfeld} und \ref{fbfeld} entspricht dies einer Magnetfeldstärke von $\SI{0.595(25)}{\tesla}$,
+wobei sich der Theoriewert ???=1,0 aus Gleichung \ref{eqn:???} ergibt.
+Die aufgenommnen Bilder sind in Abbildungen \ref{fig:rot1} und \ref{fig:rot2} angegeben.
+\begin{figure}
+\begin{subfigure}[c]{0.5\textwidth}
+
+\includegraphics[width=0.8\textwidth]{Rot1.JPG}
+\subcaption{\tiny Linien ohne Aufspaltung}
+\label{fig:rot1}
+\end{subfigure}
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.8\textwidth]{Rot2.JPG}
+\subcaption{\tiny Linien mit Aufspaltung bei B=$\SI{0.595(25)}{\tesla}$}
+\label{fig:rot2}
+\end{subfigure}
+\caption{Bilder der roten Cadmium Linie}
+\end{figure}
+Aus den Bildern werden die Abstände der Linien in Pixeln vermessen. Die daraus resultierenden Messwerte sind
+in Tabelle \ref{tab:tabe2} angegeben. Die entsprechenden Wellenlängenänderungen lassen sich über
+\begin{equation}
+  \delta \lambda = \frac{\increment S}{2 \delta S} \increment \lambda_D
+\end{equation}
+berechnen, wobei $\increment \lambda_D$ für die rote Linie bei $\SI{643.8}{\nano\meter}$
+einem Wert von $\SI{0.0489}{\nano\meter}$ entspricht.
+\input{Tabelle2.tex}
+Durch die Gleichung
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+\noindent lässt sich der Mittelwert bilden, wobei der dazugehörige Fehler sich durch
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2}
+  \label{eqn:mitf}
+\end{equation}
+ergibt. Somit ergibt sich für $\delta \lambda$ ein Mittelwert von
+$ \delta \lambda = \SI{11.52(20)}{\pico\meter} $.
+Durch Gleichung \ref{eqn:???} ergibt sich letztendlich für ???
+\begin{align*}
+??=1,00 \pm 0,04 \: .
+\end{align*}
+
+\subsection{Auswertung der blauen Linie}
+Für die blaue Linie bei $\SI{480}{\nano\meter}$  wurde neben der Aufnahme ohne Magnetfeld einmal
+die Aufspaltung bei einem Strom von $\SI{5.5}{\ampere}$ für die $\sigma$-Linien aufgenommen
+und einmal bei einem Strom von $\SI{14}{\ampere}$ für die $\pi$-Linien. Nach Gleichungen
+\ref{bfeld} und \ref{fbfeld} entspricht dies Magnetfeldstärken von $\SI{0.319(10)}{\tesla}$
+und $\SI{0.82(5)}{\tesla}$ , mit dem theoretischen Werten ??=1..
+Die aufgenommnen Bilder sind in Abbildungen \ref{fig:blau1},\ref{fig:blau2} und \ref{fig:blau3} angegeben.
+\begin{figure}
+\begin{subfigure}[c]{0.5\textwidth}
+
+\includegraphics[width=0.8\textwidth]{Blau1.JPG}
+\subcaption{\tiny Linien ohne Aufspaltung}
+\label{fig:blau1}
+\end{subfigure}
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.8\textwidth]{Blau2.JPG}
+\subcaption{\tiny Linien mit Aufspaltung bei B=$\SI{0.319(10)}{\tesla}$}
+\label{fig:blau2}
+\end{subfigure}
+\begin{subfigure}[c]{0.5\textwidth}
+\includegraphics[width=0.8\textwidth]{Blau3.JPG}
+\subcaption{\tiny Linien mit Aufspaltung bei B=$\SI{0.82(5)}{\tesla}$}
+\label{fig:blau3}
+\end{subfigure}
+\caption{Bilder der blauen Cadmium Linie}
+\end{figure}
+Die gemessenen Abstände und die entsprechenden Wellenlängenänderungen mit dem Wert
+$\increment \lambda_D = \SI{0.02695}{\nano\meter}$ der blauen Linie sind in Tabelle
+\ref{tab:tabe3} angegeben.
+Der Mittelwert der Wellenlängenänderung ergibt sich nach Gleichungen \ref{eqn:mit} und
+\ref{eqn:mitf} zu $ \delta \lambda_{\sigma} = \SI{6.17(4)}{\pico\meter} $ für die $\sigma$-Linie
+und zu $ \delta \lambda_{\pi} = \SI{5.01(5)}{\pico\meter} $ für die $\pi$-Linie.
+Aus Gleichung \ref{eqn:????} ergibt sich somit
+\begin{align}
+  ???&=1,80 \pm 0,06 \; , \sigma-\text{Linie}\\
+  ???&=0,57 \pm 0,032 \; , \pi-\text{Linie}
+\end{align}
+für die Werte von ??? der beiden Linien.
