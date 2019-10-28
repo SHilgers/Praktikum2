@@ -14,7 +14,7 @@ Die resultierenden Parameter lauten
   a &= \SI{-0.087(7)}{\milli\tesla\per\cubic\ampere} \\
   b &= \SI{1.85(18)}{\milli\tesla\per\square\ampere}\\
   c &= \SI{48.7(15)}{\milli\tesla\per\ampere}\\
-  d &= \SI{10(3)}{\milli\tesla}
+  d &= \SI{10(3)}{\milli\tesla} \: .
 \end{align*}
 Die entsprechende Kurve ist zusammen mit den Messwerten in Abbildung \ref{fig:plot1}
 dargestellt.
@@ -49,29 +49,32 @@ wobei der Fehler sich gemäß der Gaußschen Fehlerfortpflanzung
   \label{eqn:fbfeld}
 \end{split}
 \end{equation}
-
+ergibt.
 \subsection{Auswertung der roten Linie}
 Die rote Linie bei $\SI{643.8}{\nano\meter}$  wurde einmal ohne Magnetfeld gemessen und einmal
-bei einem Magnetfeld bei einem Strom von $\SI{10}{\ampere}$. Nach Gleichungen
-\ref{bfeld} und \ref{fbfeld} entspricht dies einer Magnetfeldstärke von $\SI{0.595(25)}{\tesla}$,
-wobei sich der Theoriewert ???=1,0 aus Gleichung \ref{eqn:???} ergibt.
+bei einem Magnetfeld mit einem Strom von $\SI{10}{\ampere}$. Nach Gleichungen
+\ref{eqn:bfeld} und \ref{eqn:fbfeld} entspricht dies einer Magnetfeldstärke von $\SI{0.595(25)}{\tesla}$,
+wobei sich der Theoriewert $g_J\,=\,1,0$ aus Gleichung \ref{eqn:gJ} ergibt und allgemein für den normalen Zeeman
+Effekt gilt, um den es sich hier handelt.
 Die aufgenommnen Bilder sind in Abbildungen \ref{fig:rot1} und \ref{fig:rot2} angegeben.
 \begin{figure}
 \begin{subfigure}[c]{0.5\textwidth}
 
 \includegraphics[width=0.8\textwidth]{Rot1.JPG}
-\subcaption{\tiny Linien ohne Aufspaltung}
+\subcaption{\small Linien ohne Aufspaltung}
 \label{fig:rot1}
 \end{subfigure}
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.8\textwidth]{Rot2.JPG}
-\subcaption{\tiny Linien mit Aufspaltung bei B=$\SI{0.595(25)}{\tesla}$}
+\subcaption{\small Linien mit Aufspaltung}
 \label{fig:rot2}
 \end{subfigure}
 \caption{Bilder der roten Cadmium Linie}
 \end{figure}
 Aus den Bildern werden die Abstände der Linien in Pixeln vermessen. Die daraus resultierenden Messwerte sind
-in Tabelle \ref{tab:tabe2} angegeben. Die entsprechenden Wellenlängenänderungen lassen sich über
+in Tabelle \ref{tab:tabe2} angegeben.
+\input{Tabelle2.tex}
+Die entsprechenden Wellenlängenänderungen lassen sich über
 \begin{equation}
   \delta \lambda = \frac{\increment S}{2 \delta S} \increment \lambda_D
 \end{equation}
@@ -91,33 +94,51 @@ Durch die Gleichung
 \end{equation}
 ergibt. Somit ergibt sich für $\delta \lambda$ ein Mittelwert von
 $ \delta \lambda = \SI{11.52(20)}{\pico\meter} $.
-Durch Gleichung \ref{eqn:???} ergibt sich letztendlich für ???
+Um den Faktor $g_J$ zu bestimmen, muss zunächst die Energiedifferenz $\increment E$ bestimmt werden, welche
+der Wellenlängenänderung $\increment \lambda$ entspricht. Zu diesem Zweck wird die Formel
+\begin{equation}
+  E=\frac{\text{h}\, \text{c} }{\lambda}
+\end{equation}
+mit dem Plank´schen Wirkungsquantum h und der Lichtgeschwindigkeit c um kleine Änderungen $\increment \lambda$
+in erster Ordnung entwickelt, sodass sich
+\begin{equation}
+  \increment E =\frac{\text{h}\, \text{c} }{\lambda^2}\increment \lambda
+  \label{eqn:de}
+\end{equation}
+ergibt
+mit dem Fehler
+\begin{equation}
+  \delta E =\frac{\text{h}\, \text{c} }{\lambda^2}\delta \lambda
+  \label{eqn:fde}
+\end{equation}
+durch Gleichung \ref{eqn:gaus}.
+Zusammen mit Gleichung \ref{eqn:emag} ergibt sich letztendlich
 \begin{align*}
-??=1,00 \pm 0,04 \: .
+g_J=1,00 \pm 0,04 \: .
 \end{align*}
 
 \subsection{Auswertung der blauen Linie}
 Für die blaue Linie bei $\SI{480}{\nano\meter}$  wurde neben der Aufnahme ohne Magnetfeld einmal
 die Aufspaltung bei einem Strom von $\SI{5.5}{\ampere}$ für die $\sigma$-Linien aufgenommen
 und einmal bei einem Strom von $\SI{14}{\ampere}$ für die $\pi$-Linien. Nach Gleichungen
-\ref{bfeld} und \ref{fbfeld} entspricht dies Magnetfeldstärken von $\SI{0.319(10)}{\tesla}$
-und $\SI{0.82(5)}{\tesla}$ , mit dem theoretischen Werten ??=1..
-Die aufgenommnen Bilder sind in Abbildungen \ref{fig:blau1},\ref{fig:blau2} und \ref{fig:blau3} angegeben.
+\ref{eqn:bfeld} und \ref{eqn:fbfeld} entspricht dies Magnetfeldstärken von $\SI{0.319(10)}{\tesla}$
+und $\SI{0.82(5)}{\tesla}$.
+Die aufgenommnen Bilder sind in Abbildungen \ref{fig:blau1}, \ref{fig:blau2} und \ref{fig:blau3} angegeben.
 \begin{figure}
 \begin{subfigure}[c]{0.5\textwidth}
 
 \includegraphics[width=0.8\textwidth]{Blau1.JPG}
-\subcaption{\tiny Linien ohne Aufspaltung}
+\subcaption{\small Linien ohne Aufspaltung}
 \label{fig:blau1}
 \end{subfigure}
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.8\textwidth]{Blau2.JPG}
-\subcaption{\tiny Linien mit Aufspaltung bei B=$\SI{0.319(10)}{\tesla}$}
+\subcaption{\small $\sigma$-Linien mit Aufspaltung}
 \label{fig:blau2}
 \end{subfigure}
 \begin{subfigure}[c]{0.5\textwidth}
 \includegraphics[width=0.8\textwidth]{Blau3.JPG}
-\subcaption{\tiny Linien mit Aufspaltung bei B=$\SI{0.82(5)}{\tesla}$}
+\subcaption{\small $\pi$-Linien mit Aufspaltung}
 \label{fig:blau3}
 \end{subfigure}
 \caption{Bilder der blauen Cadmium Linie}
@@ -125,12 +146,14 @@ Die aufgenommnen Bilder sind in Abbildungen \ref{fig:blau1},\ref{fig:blau2} und 
 Die gemessenen Abstände und die entsprechenden Wellenlängenänderungen mit dem Wert
 $\increment \lambda_D = \SI{0.02695}{\nano\meter}$ der blauen Linie sind in Tabelle
 \ref{tab:tabe3} angegeben.
+\input{Tabelle3.tex}
 Der Mittelwert der Wellenlängenänderung ergibt sich nach Gleichungen \ref{eqn:mit} und
 \ref{eqn:mitf} zu $ \delta \lambda_{\sigma} = \SI{6.17(4)}{\pico\meter} $ für die $\sigma$-Linie
 und zu $ \delta \lambda_{\pi} = \SI{5.01(5)}{\pico\meter} $ für die $\pi$-Linie.
-Aus Gleichung \ref{eqn:????} ergibt sich somit
+
+Durch die Gleichungen \ref{eqn:de}, \ref{eqn:fde} und \ref{eqn:emag} ergibt sich somit
 \begin{align}
-  ???&=1,80 \pm 0,06 \; , \sigma-\text{Linie}\\
-  ???&=0,57 \pm 0,032 \; , \pi-\text{Linie}
+  g_J&=1,80 \pm 0,06 \; , \sigma-\text{Linie}\\
+  g_J&=0,57 \pm 0,032 \; , \pi-\text{Linie}
 \end{align}
-für die Werte von ??? der beiden Linien.
+für die Werte von $g_J$ der beiden Linien.
