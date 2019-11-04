@@ -1,11 +1,250 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung der Goldfoliendicke mittels Energieverlustmessung}
+Die gemessenen Werte zur Bestimmung der Foliendicke sind in Tabelle \ref{tab:tabe1} angegeben.
+\input{Tabelle1.tex}
+Die ersten 6 Messwerte ohne Folie zeigen eine deutliche Abweichung von dem erwarteten linearen
+Verhalten und werden somit in der weiteren Auswertung nicht berücksichtigt, da hier offensichtlich ein
+systematischer Fehler in der Messung besteht.
+Die verbleibenden Werten werden an eine lineare Ausgleichsgerade
+der Form
+\begin{equation*}
+  U(p)= a\cdot p+b
+\end{equation*}
+angepasst, woraus sich die Parameter
+\begin{align*}
+  a_0 &= \SI{-58(2)e-5}{\volt\per\pascal} \\
+  a_{\text{Folie}} &= \SI{-62.0(11)e-5}{\volt\per\pascal} \\
+  b_0 &= \SI{19.6(5)}{\volt} \\
+  b_{\text{Folie}} &= \SI{14.87(16)}{\volt} \\
+\end{align*}
+ergeben.
+Die Ausgleichsgrade ist zusammen mit den Messwerten in Abbildung \ref{fig:plot1} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot1.pdf}
+  \caption{Messwerte zur Bestimmung der Foliendicke sowie Ausgleichsgraden}
+  \label{fig:plot1}
+\end{figure}
+Mittels Extrapolation wird der y-Achsenabschnitt ermittelt, welcher durch den Parameter~$b$
+gegeben ist und der Impulshöhe im Vakuum entspricht. \\
+Zur Bestimmung des Energieverlustes durch die Goldfolie wird die Differenz zwischen
+der Vakuumimpulshöhe mit Folie und ohne Folie
+\begin{equation}
+  b_{\text{diff}} = b_0 - b_{\text{Folie}}
+\end{equation}
+gebildet, wobei sich der Fehler gemäß der Gaußschen Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  }
+  \label{eqn:gaus}
+\end{equation}
+über
+\begin{equation}
+    \increment b_{\text{diff}} = \sqrt{(\increment b_0)^2 + (\increment b_{\text{Folie}})^2}
+\end{equation}
+ergibt.
+Hierdurch ergibt sich ein Wert von
+\begin{align*}
+  b_{\text{diff}} = \SI{4.8(5)}{\volt} \: .
+\end{align*}
+Die Impulshöhe ${b_0\,=\,\SI{19.6(5)}{\volt}}$ im Vakuum entspricht der Energie von
+${E_0\,=\,\SI{5.638}{\mega\electronvolt}}$ \cite{online3}, wobei zwischen Energie und Impulshöhe ein linearer Zusammenhang
+besteht. Somit lässt sich aus diesen Werten die Energiedifferenz
+\begin{equation}
+  E_{\text{diff}} =   b_{\text{diff}} \frac{E_0}{b_0}
+\end{equation}
+mit dem Fehler
+\begin{equation}
+  \increment E_{\text{diff}} =\sqrt{(\frac{E_0}{b_0} \increment b_{\text{diff}})^2
+  + (b_{\text{diff}} \frac{E_0}{b_0^2} \increment b_0)^2}
+\end{equation}
+zu
+\begin{align*}
+  E_{\text{diff}} = \SI{1.37(11)}{\mega\electronvolt} \: .
+\end{align*}
+Die materialspezifischen Werte von Gold lauten \cite{online1}:
+\begin{align*}
+  \symup{Z} &= 79 \\
+  \symup{m}_{\symup{atomar}} &= 196,97 \symup{u} \\
+  \rho &= \SI{19.282}{\g\per\cubic\centi\metre} \\
+  \symup{I} &= \SI{9.225}{\electronvolt}
+\end{align*}
+mit der atomaren Masseneinheit \cite{online4}
+\begin{align*}
+  \symup{u}= \SI{1.660539e-27}{\kilo\gram}
+\end{align*}
+Hieraus lässt sich mit der Formel
+\begin{equation}
+  N=\frac{\rho}{\symup{m}_{\symup{atomar}}}
+\end{equation}
+die Teilchenzahldichte zu
+\begin{align*}
+  N=\SI{5.895e28}{\per\cubic\metre}
+\end{align*}
+bestimmen.
 
-Test
+Mit der Masse
+\begin{align}
+  \symup{m}_{\alpha}=\SI{6.64e-27}{\kilo\gram}
+\end{align}
+der Alphateilchen \cite{online2}
+lässt sich die Geschwindigkeit $v$ über die Formel
+\begin{equation}
+  v =\sqrt{\frac{2 E_0}{\symup{m}_{\alpha}}}
+\end{equation}
+zu
+\begin{align*}
+  v =0,055 \cdot \symup{c}
+\end{align*}
+berechnen mit der Vakuumlichtgeschwindigkeit \cite{online4}
+\begin{align*}
+  \symup{c}=\SI{299792458}{\metre\per\second} \:.
+\end{align*}
+Mit der Gleichung \ref{eqn:???}
+ergibt sich somit insgesamt eine Foliendicke von
+\begin{align*}
+  \symup{dx}=\SI{0.75(6)}{\micro\metre} \: ,
+\end{align*}
+wobei sich der Fehler gemäß Gleichung \ref{eqn:gauß} durch
+\begin{equation}
+  \increment \symup{dx}=????
+\end{equation}
+berechnen lässt.
+%mit der Elektronenmasse \cite{online4}
+%\begin{align*}
+%  \symup{m}_{\symup{e}}= \SI{9.11e-31}{\kilo\gram} \: ,
+%\end{align*}
+%der elektrischen Ladung
+%\begin{align*}
+%  \symup{e
+%\end{align*}
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+
+
+
+
+
+\subsection{Differentieller Streuquerschnitt}
+Die gemessenen Werte zur Bestimmung des differentiellen Wirkungsquerschnitts sind in
+Tabelle \ref{tab:tabe2} angegeben, wobei die Messzeit jeweils 6 Minuten beträgt. Der
+Fehler auf die Anzahl der gemessenen Counts $N$ ergibt sich gemäß der Poisson-Verteilung durch
+\begin{align*}
+  N \pm \sqrt{N} \: .
+\end{align*}
+\input{Tabelle2.tex}
+Die Counts pro Sekunde sind in Abhängigkeit des Winkel in Abbildung \ref{fig:plot2}
+dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot2.pdf}
+  \caption{Messwerte zur Messung der Winkelabhängigkeit}
+  \label{fig:plot2}
+\end{figure}
+Zur Bestimmung des Wirkungsquerschnitts wird der Raumwinkelanteil $\symup{\Omega}$ benötigt,
+welcher gegeben ist durch das Verhältniss der abgedeckten Fläche zu der Oberfläche einer Kugel, deren Radius
+durch den Abstand zur Quelle gegeben ist, also
+\begin{equation}
+  \symup{\Omega}= \frac{A}{4\pi r^2} \:.
+\end{equation}
+Die Fläche ist hier durch die aktive Detektorfläche mit ${A=\SI{1}{\centi\metre\squared}}$ \cite{online5}
+gegeben und der Abstand zur Quelle beträgt ${r=\SI{10.1}{\centi\metre}}$.
+Somit ergibt sich
+\begin{align*}
+  \symup{\Omega}= 7.8\cdot10^{-4} \: .
+\end{align*}
+Die Zerfallskonstante von $\ce{^{241}Am}$ \cite{online3} beträgt
+\begin{align*}
+  \lambda_{\text{Am}}=\SI{50.77(7)e-12}{\per\second} \: ,
+\end{align*}
+sodass sich mit der Formel
+\begin{equation}
+  \symup{A(t)}=\symup{e}^{-\lambda_{\text{Am}}t}\cdot \symup{A}_0
+\end{equation}
+eine Aktivität von
+\begin{align*}
+  \symup{A}=\SI{317}{\kilo\becquerel}
+\end{align*}
+am Messtag ergibt, wobei der Fehler aufgrund der Unsicherheit auf $\lambda_{\text{Am}}$
+vernachlässigbar ist. Der Zeitraum $t$ ist dabei die Zeit zwischen
+Oktober 1994 und dem Messtag, also ca. 25 Jahre und die ursprüngliche Aktivität
+betrug ${\symup{A}_0=\SI{330}{\kilo\becquerel}}$ \cite{skript}.
+
+%Der Raumwinkel, der durch einen rechteckigen Spalt abgedeckt ist, ist über die Formel
+%\begin{equation}
+%  \symup{\Omega}=4\text{arctan}(\frac{x\cdot y}{2r\sqrt{4r^2+x^2+y^2}})
+%\end{equation}
+%gegeben \cite{online6} mit den Spaltabmessungen $x$ und $y$, sowie dem Abstand zur Quelle
+%$r$. Mit den Abmessungen ${x=\SI{2}{\milli\metre}}$, ${y=\SI{10}{\milli\metre}}$ und
+%${r=\SI{39}{\milli\metre}}$ \cite{skript} ergibt sich somit
+%\begin{align*}
+%  \symup{\Omega}= 0.013 \: .
+%\end{align*}
+Somit lässt sich der differentielle Wirkungsquerschnitt gemäß der Formel
+\begin{equation}
+  \frac{d\sigma}{d\Omega}= \frac{A_{\text{exp}}}{dx\cdot \symup{A} N \cdot \symup{\Omega}^2}
+  \label{eqn:Wq}
+\end{equation}
+berechnen. Dabei ist $A_{\text{exp}}$ die gemessene Aktivität, also die gemessenen Counts
+pro Sekunde. Für die Foliendicke $dx$ wird der Theoriewert $\SI{2}{\micro\metre}$ verwendet,
+$\symup{A}=\SI{317}{\kilo\becquerel}$ ist die Aktivität der Quelle und N die Teilchenzahldichte.
+Der Fehler ergibt sich über die Gauß´sche Fehlerfortpflanzung \ref{eqn:gauß} durch
+\begin{equation}
+   \increment \frac{d\sigma}{d\Omega}= \frac{1}{dx\cdot \symup{A} N \cdot \symup{\Omega}^2}\increment A_{\text{exp}} \: .
+   \label{eqn:dWq}
+\end{equation}
+Die entsprechenden Theoriewerte lassen sich durch die Formel \ref{eqn:???} berechnen und sind in Tabelle
+\ref{tab:tabe4} angegeben, zusammen mit den experimentell ermittelten Werten und den jeweiligen Abweichungen,
+welche sich über die Gleichung
+\begin{equation}
+  \frac{\lvert \text{Wert}_{\text{Theorie}}-\text{Wert}_{\text{Messung}}\rvert}{\text{Wert}_{\text{Theorie}}}
+  \label{eqn:abw}
+\end{equation}
+berechnen lassen.
+\input{Tabelle4.tex}
+Die beiden unterschiedlich bestimmten Wirkungsquerschnitte sind zudem in Abbildung \ref{fig:plot3}
+in Abhängigkeit des Winkels dargestellt. Bei einem Winkel von 0° lässt sich kein theoretischer Wert angeben,
+da hier der Faktor $\frac{1}{\symup{sin(\phi)}}$ divergiert.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot3.pdf}
+  \caption{Vergleich zwischen experimentell bestimmten Wirkungsquerschnitt und dem jeweiligen Theoriewert}
+  \label{fig:plot3}
+\end{figure}
+
+
+\subsection{Z-Abhängigkeit}
+Die Werte zur Bestimmung der Z-Abhängigkeit wurden mit einer Messzeit von $\SI{360}{\second}$
+bei einem Winkel von 7° gemessen und sind in Tabelle
+\ref{tab:tabe3} zusammen mit den materialspezifischen Werten angegeben.
+\input{Tabelle3.tex}
+Die Fehler ergeben sich auch hier über das $\sqrt{\text{N}}$-Gesetz der Poisson-Verteilung.
+Analog zum Vorgehen im vorherigen Auswertungsteil, lassen sich für die unterschiedlichen
+Materialien jeweils der experimentell bestimmte Wirkungsquerschnitt über Gleichungen \ref{eqn:WQ}
+und \ref{eqn:dWQ} bestimmen, sowie der theoretische Wert durch Gleichung \ref{eqn:??}.
+Die somit berechneten Werte sind zusammen mit der jeweiligen Abweichung gemäß
+Gleichung \ref{eqn:abe} in Tabelle \ref{tab:tabe5}
+angegeben.\\
+\input{Tabelle5.tex}
+Die Werte sind doppellogarithmisch in Abhängigkeit der Kernladungszahl Z in Abbildung \ref{fig:plot5}
+dargestellt.
+Nach Gleichung \ref{eqn:???} ist ein quadratisches Anwachsen des Wirkungsquerschnittes
+mit der Kernladungszahl zu erwarten, also ${\frac{d\sigma}{d\Omega} \sim \symup{Z}^2}$.
+Doppellogarithmisch ergibt sich daraus eine Gerade mit Steigung 2, wie es auch
+an den theoretischen Werten zu erkennen ist. Die experimentellen Werte steigen zwar auch mit
+wachsender Kernladungszahl, jedoch ist keine Gerade zu erkennen, da insbesondere der Wert für Gold
+zu niedrig ist.
+Durch eine lineare Ausgleichsrechnung der doppellogarithmischen Werte ergeben sich die Parameter
+\begin{align*}
+  a =  1,2 \pm 0,9 \\
+  b =  -56 \pm 3 \: ,
+\end{align*}
+wie in Abbildung \ref{fig:plot5} dargestellt ist und somit ergibt sich eine Abweichung von 40\% vom Theoriewert 2 der Steigung a. Wird der Wert
+von Gold vernachlässigt und nur die Werte von Aluminium und Bismut mit einer Gerade verbunden
+ergibt sich eine Steigung von 1,73 und somit sinkt die Abweichung auf 13,5\%.
+\begin{figure}
+  \centering
+  \includegraphics[height=9cm]{Plot5.pdf}
+  \caption{Z-Abhängigkeit des Wirkungsquerschnittes}
+  \label{fig:plot5}
+\end{figure}
