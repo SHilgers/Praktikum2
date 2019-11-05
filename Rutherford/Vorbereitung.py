@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 from uncertainties import ufloat
 from scipy.stats import sem
 
-
 Z=7.06
 A=14.02
 I=14.05 #16.04

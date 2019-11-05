@@ -85,9 +85,9 @@ die Teilchenzahldichte zu
 bestimmen.
 
 Mit der Masse
-\begin{align}
+\begin{align*}
   \symup{m}_{\alpha}=\SI{6.64e-27}{\kilo\gram}
-\end{align}
+\end{align*}
 der Alphateilchen \cite{online2}
 lässt sich die Geschwindigkeit $v$ über die Formel
 \begin{equation}
@@ -101,14 +101,14 @@ berechnen mit der Vakuumlichtgeschwindigkeit \cite{online4}
 \begin{align*}
   \symup{c}=\SI{299792458}{\metre\per\second} \:.
 \end{align*}
-Mit der Gleichung \ref{eqn:???}
+Durch Umstellen der Gleichung \eqref{eqn:BetheBloch}
 ergibt sich somit insgesamt eine Foliendicke von
 \begin{align*}
   \symup{dx}=\SI{0.75(6)}{\micro\metre} \: ,
 \end{align*}
-wobei sich der Fehler gemäß Gleichung \ref{eqn:gauß} durch
+wobei sich der Fehler gemäß Gleichung \eqref{eqn:gaus} durch
 \begin{equation}
-  \increment \symup{dx}=????
+  \increment dx=\increment dE \frac{m_e v^2 (4\pi \epsilon_0)^2}{\ln\Bigg(\frac{2m_e v²}{I}\Bigg)4\pi e^4 z²NZ}
 \end{equation}
 berechnen lässt.
 %mit der Elektronenmasse \cite{online4}
@@ -130,7 +130,7 @@ Die gemessenen Werte zur Bestimmung des differentiellen Wirkungsquerschnitts sin
 Tabelle \ref{tab:tabe2} angegeben, wobei die Messzeit jeweils 6 Minuten beträgt. Der
 Fehler auf die Anzahl der gemessenen Counts $N$ ergibt sich gemäß der Poisson-Verteilung durch
 \begin{align*}
-  N \pm \sqrt{N} \: .
+  \increment N = \sqrt{N} \:.
 \end{align*}
 \input{Tabelle2.tex}
 Die Counts pro Sekunde sind in Abhängigkeit des Winkel in Abbildung \ref{fig:plot2}
@@ -151,7 +151,7 @@ Die Fläche ist hier durch die aktive Detektorfläche mit ${A=\SI{1}{\centi\metr
 gegeben und der Abstand zur Quelle beträgt ${r=\SI{10.1}{\centi\metre}}$.
 Somit ergibt sich
 \begin{align*}
-  \symup{\Omega}= 7.8\cdot10^{-4} \: .
+  \symup{\Omega}= 7,8\cdot10^{-4} \: .
 \end{align*}
 Die Zerfallskonstante von $\ce{^{241}Am}$ \cite{online3} beträgt
 \begin{align*}
@@ -188,12 +188,12 @@ Somit lässt sich der differentielle Wirkungsquerschnitt gemäß der Formel
 berechnen. Dabei ist $A_{\text{exp}}$ die gemessene Aktivität, also die gemessenen Counts
 pro Sekunde. Für die Foliendicke $dx$ wird der Theoriewert $\SI{2}{\micro\metre}$ verwendet,
 $\symup{A}=\SI{317}{\kilo\becquerel}$ ist die Aktivität der Quelle und N die Teilchenzahldichte.
-Der Fehler ergibt sich über die Gauß´sche Fehlerfortpflanzung \ref{eqn:gauß} durch
+Der Fehler ergibt sich über die Gauß´sche Fehlerfortpflanzung \eqref{eqn:gaus} durch
 \begin{equation}
    \increment \frac{d\sigma}{d\Omega}= \frac{1}{dx\cdot \symup{A} N \cdot \symup{\Omega}^2}\increment A_{\text{exp}} \: .
    \label{eqn:dWq}
 \end{equation}
-Die entsprechenden Theoriewerte lassen sich durch die Formel \ref{eqn:???} berechnen und sind in Tabelle
+Die entsprechenden Theoriewerte lassen sich durch die Formel \eqref{eqn:Rutherford} berechnen und sind in Tabelle
 \ref{tab:tabe4} angegeben, zusammen mit den experimentell ermittelten Werten und den jeweiligen Abweichungen,
 welche sich über die Gleichung
 \begin{equation}
@@ -220,15 +220,15 @@ bei einem Winkel von 7° gemessen und sind in Tabelle
 \input{Tabelle3.tex}
 Die Fehler ergeben sich auch hier über das $\sqrt{\text{N}}$-Gesetz der Poisson-Verteilung.
 Analog zum Vorgehen im vorherigen Auswertungsteil, lassen sich für die unterschiedlichen
-Materialien jeweils der experimentell bestimmte Wirkungsquerschnitt über Gleichungen \ref{eqn:WQ}
-und \ref{eqn:dWQ} bestimmen, sowie der theoretische Wert durch Gleichung \ref{eqn:??}.
+Materialien jeweils der experimentell bestimmte Wirkungsquerschnitt über Gleichungen \eqref{eqn:Wq}
+und \eqref{eqn:dWq} bestimmen, sowie der theoretische Wert durch Gleichung \eqref{eqn:Rutherford}.
 Die somit berechneten Werte sind zusammen mit der jeweiligen Abweichung gemäß
-Gleichung \ref{eqn:abe} in Tabelle \ref{tab:tabe5}
+Gleichung \eqref{eqn:abw} in Tabelle \ref{tab:tabe5}
 angegeben.\\
 \input{Tabelle5.tex}
 Die Werte sind doppellogarithmisch in Abhängigkeit der Kernladungszahl Z in Abbildung \ref{fig:plot5}
 dargestellt.
-Nach Gleichung \ref{eqn:???} ist ein quadratisches Anwachsen des Wirkungsquerschnittes
+Nach Gleichung \eqref{eqn:Rutherford} ist ein quadratisches Anwachsen des Wirkungsquerschnittes
 mit der Kernladungszahl zu erwarten, also ${\frac{d\sigma}{d\Omega} \sim \symup{Z}^2}$.
 Doppellogarithmisch ergibt sich daraus eine Gerade mit Steigung 2, wie es auch
 an den theoretischen Werten zu erkennen ist. Die experimentellen Werte steigen zwar auch mit
