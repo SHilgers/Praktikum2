@@ -1,11 +1,102 @@
 \section{Auswertung}
-\label{sec:Auswertung}
+\subsection{Kontrastmessung}
 
-Test
+Nach Formel \ref{eqn:??} kann der Kontrast des Interferometers in Abhängigkeit des Polarisationswinkels $\Phi$
+berechnet werden. Die dazu verwendeten Messwerte $I_{\text{max}}$, $I_{\text{min}}$, der Polarisationswinkel sowie
+der berechnete Kontrast sind in Tabelle \ref{tab:tab1} dargestellt.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+\input{Tabelle1.tex}
+
+Die berechneten Kontrastwerte sind in Abbildung \ref{fig:Kontrast} zusammen mit der Ausgleichsrechnung
+gegen den Polarisationswinkel aufgetragen. Dabei wird für die Regression der nach der Theorie geltende Zusammenhang
+\begin{equation}
+  K\sim a\cdot|sin(\Phi)cos(\Phi)|
+\end{equation}
+verwendet.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{Kontrast.png}
+  \caption{Der Kontrast in Abhängigkeit der Polarisatin $\Phi$ sowie die Regression.}
+  \label{fig:Kontrast}
+\end{figure}
+
+Der maximale Kontrast von $K=\SI{0,84}{}$ ergibt sich bei eiem Polarisationswinkel von $\Phi=\SI{50}{\degree}$,
+weshalb diese Einstellung für die Weiteren Messungen verwendet wird.
+
+\subsection{Brechungsindex von Glas}
+
+Um aus der Anzahl der gemessenen Interfernzmaxima/-minima den Brechungsindex nach Formel \ref{eqn:??}
+bestimmen zu können muss beachtet werden, dass in dem verwendeten Doppelglashalter zwei Glasplättchen verbaut sind,
+welche um $\Theta_0=\pm\SI{10}{\degree}$ verkippt sind. Somit ergibt sich die resultierende
+Phasenverschiebung nach
+\begin{equation}
+  \Delta\Phi(\Theta)=\Delta\Phi(\Theta+\Theta_0)+\Delta\Phi(\Theta-\Theta_0).
+\end{equation}
+Eingesetzt in $M=\sfrac{\Delta\Phi}{2\pi}$ ergibt sich daraus eine Formel zur Berechnung des Brechingsindex:
+\begin{equation}
+  \Delta\Phi(\Theta)=\frac{2T\Theta\Theta_0}{2T\Theta\Theta_0-M\lambda}.
+\end{equation}
+
+Dabei bezeichnet $M$ die Anzahl der gemessenen Maxima und $\lambda$ die Wellenlänge des
+verwendeten HeNe-Lasers von $\SI{632,990}{\nm}$. Die Dicke der Platten $T$ ist mit
+$T=\SI{1}{\mm}$ gegeben. Die so berechneten Werte für die Brechungsindizes sind zusammen mit
+der Anzahl der Maxima in Tabelle \ref{tab:tab2} aufgeführt.
+
+\input{Tabelle2.tex}
+
+Um den Mittelwert des Brechungsindizes berechnet sich über
+\begin{equation}
+  \bar{n}=\frac{1}{a}\sum_{i=1}^{a}n_i
+  \label{eqn:Mittel}
+\end{equation}
+und sein Fehler mit
+\begin{equation}
+  \sigma_{\bar{n}}=\sqrt{\frac{1}{a(a-1)}\sum_{i=1}^{a}(\bar{n}-n_i)^2}.
+  \label{eqn:Fehler}
+\end{equation}
+Daraus ergibt sich ein Wert von
+\begin{equation}
+  n_\text{Glas}=\SI{1.641(7)}{}.
+\end{equation}
+Verglichen mit dem Theoriewert von $n_\text{Theorie}=\SI{1,613}{}$ ergibt sich ein Fehler von 1,74\%.
+
+\subsection{Brechungsindex von Luft}
+
+Der Brechungsindex von Luft kann auf zwei Arten bestimmt werden. Zum einen durch die Anzahl der
+gemessenen Maxima und zum anderen über den Druck.
+Um den Brechungsindex über die Anzahl der Maxima zu bestimmen wird Formel \ref{??}
+verwendet. Dabei kann $\Delta n$ durch  $\Delta n= n-1$ ersetzt werden, da das Vakuum den
+Brechungsindex 1 besitzt. Eingesetzt in $M=\sfrac{\Delta\Phi}{2\pi}$ ergibt sich somit
+\begin{equation}
+  n=\frac{M\lambda}{L}.
+\end{equation}
+Aus den Messwerten, welche in Tabelle \ref{tab:tab3} dargestellt sind, ergeben sich daraus folgende Werte für
+den Brechungsindex von Luft:
+
+\begin{align*}
+  n_\text{Luft1}&=\SI{1,000259526(26)}{}\\
+  n_\text{Luft2}&=\SI{1,000253196(25)}{}\\
+  n_\text{Luft3}&=\SI{1,000253196(25)}{}
+\end{align*}
+
+Nach Formel \ref{eqn:Mittel} ergibt sich daraus der Mittelwert zu:
+$n_\text{Luft}=\SI{1,000255306(26)}{}$.
+
+\input{Tabelle3.tex}
+
+Der Brechungsindex kann außerdem über das Lorentz-Lorenz Gesetz aus Formel \ref{eqn:??} bestimmt
+werden. Für Gase ergibt sich daraus die folgende Relation für den Brechungsindex:
+
+\begin{equation}
+n\sim\sqrt{1+\frac{3pA}{RT}}.
+\end{equation}
+Mit der molaren Reflexivität $A=\frac{4\pi}{3}N_\alpha \cdot \alpha$ folgt daraus
+\begin{equation}
+  n\sim\sqrt{1+\frac{4\pi p}{RT}N_\alpha \alpha}.
+\end{equation}
+
+Dabei bezeichnet $R$ die Gaskonstante, $T$ die Temperatur, $N_\alpha$ die Avogadro-Konstante
+und $\alpha=\SI{2.118(91)e-29}{\m\cubic}$ \cite{alpha} die molare Polarisierbarkeit von Luft.
+Die auf diesem Wege berechneten Werte für den Brechungsindex von Luft sind in Tabelle \ref{tab:tab3}
+dargestellt. Für den Mittelwert ergibt sich daraus $n_\text{Luft}=\SI{1.0000164(7)}{}$.
