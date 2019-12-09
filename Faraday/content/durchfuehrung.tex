@@ -1,2 +1,43 @@
+\section{Versuchsaufbau}
+
+Die hier verwendeten GaAs Proben sind nur im Infratoten halbwegs durchlässig, weshalb ein
+Infrarot-Messplatz eingerichtet wird, welcher in Abbildung \ref{fig:aufbau} dargestellt ist.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=11cm]{Aufbau.png}
+  \caption{Aufbau der verwendetem Messapparatur.}
+  \label{fig:aufbau}
+\end{figure}
+
+Als Lichtquelle wird eine Halogen-Lampe verwendet, da ihr Emissionsspektum im Infraroten liegt.
+Das emittierte Licht wird zunächst mithilfe einer Sammellinse fokussiert und anschließend durch
+den "Lichtzerhacker" geleitet. Das noch unpolarisierte Licht wird nun durch ein Glan-Thomson-Prisma
+linear polarisiert und fällt anschließend auf die Probe, welche sich im Magnetfeld eines
+Elektromagneten befindet.
+Bevor die austretende Strahlung detektiert wird, wird sie mithilfe eines Interferenzfilters monochromatisiert,
+um den Faraday-Effekt wellenlängenabhängig zu untersuchen. Durch ein weiteres Glan-Thomson-Prisma wird der
+Strahl in zwei Strahlen geteilt, welche senkrecht zueinander polarisiert sind. Die Intensität der beiden
+Strahlen wir unabhängig voneinander durch zwei Photowiderstände aus PbS gemessen. Ihr Innenwiderstand ist
+proportional zur Lichtintensität, jedoch kommt es aufgrund der hohen Innenwiderstandes zu Rausspannungen.
+Um diese zu minimieren wird die Wechsellichtmethode verwendet, welche durch den "Lichtzerhacker" am Anfang des
+Starhlengangs ermöglicht wird. Diese rotierende Sektorscheibe zerhackt das Licht in gleichmäßige Impulse, woduch
+an den Photodioden ein Wechselstrom messbar wird. Die Spannungen werden auf einen Differenzverstärker und anschließend auf
+einen Selektivverstärker gegeben um das Signal auf einem Oszilloskop sichtbar zu machen.
+Die Differenz der beiden Signale verschwindet genau dann, wenn beide Eingangssignale nach Betrag und Phase
+übereinstimmen.
+
+
 \section{Durchführung}
-\label{sec:Durchführung}
+Zunächst wird das Magnetfeld mithilfe einer Hallsonde, welche auf der optischen Achse montiert werden kann, vermessen.
+Um das Maximum zu bestimmen, wird die Hallsonde langsam durch den Elektromagneten bewegt.
+Um die Faraday-Rotation zu vermessen, muss die Apperatur zunächst justiert werden. Dabei muss beachtet werden, dass
+die beiden geteilten Strahlen exakt auf die Detektorflächen der Photodioden treffen.
+Ist dies geschehen, wird die Faraday-Rotation für zwei n-dotierte GaAs Proben und eine reine GaAs Probe vermessen dessen
+Eigenschaften in der folgenden Tabelle aufgefürt sind.
+
+\input{Tab.tex}
+
+Die Faraday-Rotation wird mithilfe des Polarisators vor dem Elektromagneten bestimmt. Dazu wird der Winkel am Polarisator notiert,
+für den die Signalamplitude auf nahezu Null abfällt. Anschließend wird das Magnetfeld umgepolt und der Winkel erneut vermessen.
+Dieses Vorgehen wird für jede Probe mit 9 Interferenzfiltern von $\SI{1,06}{\micro\metre}$ bis $\SI{2,65}{\um}$ wiederholt. 
