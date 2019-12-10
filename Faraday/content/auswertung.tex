@@ -1,11 +1,128 @@
+
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung des Magnetfeldes}
 
-Test
-
-%\begin{figure}
-%  \centering
-%  \includegraphics{plot.pdf}
-%  \caption{Plot.}
-%  \label{fig:plot}
-%\end{figure}
+Die Messwerte zur Bestimmung des Magnetfeldes sind in Tabelle \ref{tab:tabe1} angegeben.
+\input{Tabelle1.tex}
+Die Messwerte weisen dabei ein Maximum bei einer Magnetfeldstärke von $\SI{0.436}{\tesla}$ auf, welches
+im Folgenden für die weitere Auswertung genutzt wird als Magnetfeldstärke am Ort der Probe.
+Die Werte folgen einer Kurve der Form \cite{skript2}
+\begin{equation*}
+  B(z)=a\cdot(b+(z-z_0)^2)^{-3/2} \: ,
+\end{equation*}
+wobei sich durch einen Fit die Werte
+\begin{align*}
+  a &= \SI{3.85(10)}{\milli\tesla\per\milli\metre\cubic}\\
+  b &= \SI{426(7)}{\milli\metre\squared}\\
+  z_0 &= \SI{6.267(28)}{\milli\metre}
+\end{align*}
+ergeben. Die Ausgleichskurve ist zusammen mit den Messwerten in Abbildung \ref{fig:plot1}
+dargestellt.\\
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{plot1.pdf}
+  \caption{Messwerte zur Bestimmung des Magnetfeldes zusammen mit der entsprechenden Ausgleichskurve}
+  \label{fig:plot1}
+\end{figure}
+\subsection{Bestimmung der Faraday Rotation und der effektiven Masse}
+Aus den jeweils gemessenen Winkeln $\Theta_1$ und $\Theta_2$ wird über die Formel
+\begin{equation}
+  \Delta \Theta =(\Theta_2-\Theta_1)/2
+\end{equation}
+die Differenz der Drehwinkel berechnet, wobei der Faktor $\frac{1}{2}$ verwendet wird, da
+sich das Magnetfeld effektiv aufgrund der Umpolung um 2$\lvert B \rvert$ ändert.
+Dieser Wert wird anschließend in Radiant umgerechnet und auf die Länge $L$ der
+jeweiligen Probe normiert,
+über die Formel
+\begin{equation}
+  \frac{\Delta \Theta \cdot 2\pi}{L\cdot360°} \: .
+\end{equation}
+Diese Werte sind zusammen mit den ursprünglichen Messwerten in Tabelle \ref{tab:tabe2} für hochreines
+GaAs angegeben, in Tabelle \ref{tab:tabe3} für eine Dotierung von N=$1,2\cdot10^{18}$ und
+in Tabelle \ref{tab:tabe4} für eine Dotierung von N=$2,8\cdot10^{18}$.
+\input{Tabelle2.tex}
+\input{Tabelle3.tex}
+\input{Tabelle4.tex}
+Die normierten Winkel $\Delta \Theta$ sind zudem in Abbildung \ref{fig:plot2}
+dargestellt in Abhängigkeit der quadrierten Wellenlänge. \\
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{plot2.pdf}
+  \caption{Normierte Winkel $\Delta \Theta$ in Abhängigkeit der quadrierten Wellenlänge $\lambda^2$}
+  \label{fig:plot2}
+\end{figure}
+Um den Einfluss des reinen GaAs aus den Messwerten der dotierten Proben herauszurechnen, wird
+für jede Wellenlänge die Differenz der jeweiligen
+Werte des normierten Winkels $\Delta \Theta$ von reinem und dotiertem GaAs gebildet.
+Mit diesen Werten wird eine lineare Regression der Form
+\begin{equation}
+  \Delta \Theta(\lambda^2)=a\cdot\lambda^2
+\end{equation}
+durchgeführt, wobei der y-Achsenabschnitt auf 0 gesetzt wird, da eine Wellenlänge von 0
+auch einer Faradayrotation von 0 entsprechen sollte.
+Hieraus ergeben sich die Parameter
+\begin{align}
+  a_1=& (7,2\,\pm\,0,9)\,\cdot\,10^{12}\,\text{m}^{-3} \\
+  a_2=& (13,8\,\pm\,1,4)\,\cdot\,10^{12}\,\text{m}^{-3} \: ,
+\end{align}
+wobei der Index 1 die Probe mit einer Dotierung von N=$1,2\cdot10^{18}$ bezeichnet
+und der Index 2 die Probe mit einer Dotierung von N=$2,8\cdot10^{18}$.
+Die linearen Ausgleichsgerade sind zusammen mit den Werten in Abbildung \ref{fig:plot3}
+dargestellt. \\
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{plot3.pdf}
+  \caption{Differenz der normierte Winkel $\Delta \Theta$
+  zwischen reiner und dotierter Probe, sowie lineare Ausgleichsgeraden}
+  \label{fig:plot3}
+\end{figure}
+Aus der Gleichung \eqref{eqn:rot} ergibt sich, dass diese Steigung genau
+\begin{equation}
+  a=\frac{\text{e}_0^3\,N\,B}{8\pi^2\,\epsilon_0^3\,\text{c}^3\,(m^*)^2\,n}
+\end{equation}
+entspricht, woraus sich durch Umformungen die Gleichung
+\begin{equation}
+  m^*=\sqrt{\frac{\text{e}_0^3\,N\,B}{8\pi^2\,\epsilon_0^3\,\text{c}^3\,a\,n}}
+\end{equation}
+für die effektive Masse ergibt.
+Der Fehler $\increment m^*$ ergibt sich dabei gemäß der Gauß´schen Fehlerfortpflanzung
+\begin{equation}
+  \increment f = \sqrt{ \sum_{i=1}^N \left( \frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\increment x_i)^2  } \: ,
+  \label{eqn:gaus}
+\end{equation}
+über die Gleichung
+\begin{equation}
+  \increment m^*=\frac{1}{2}\sqrt{\frac{\text{e}_0\,N\,B}{8\pi^2\,\epsilon_0^3\,\text{c}^3\,a^3\,n}}\increment a \: .
+\end{equation}
+Die Werte des Brechungsindex $n$ bei der jeweiligen Wellenlänge für GaAs
+stammen aus der Quelle \cite{online1} und sind zusammen mit den errechneten Werten in Tabelle
+\ref{tab:tabe5}  angegeben. Die verwendeten Werte für die restlichen Naturkonstanten stammen
+aus der Quelle \cite{pdg}.
+\input{Tabelle5.tex}
+Hieraus lässt sich der Mittelwert über die Gleichung
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i \: \:
+  \label{eqn:mit}
+\end{equation}
+\noindent bilden, wobei der dazugehörige signifikante Fehler sich gemäß Gleichung \eqref{eqn:gaus} durch
+\begin{equation}
+  \increment \bar{x} = \sqrt{\sum_{i=1}^N \increment x_i^2}
+  \label{eqn:mitf}
+\end{equation}
+ergibt, da der Gaußfehler größer ist als der Fehler durch die Mittelung
+\begin{equation}
+  \increment \bar{x} = \frac{1}{\sqrt{N}} \sqrt{ \frac{1}{N-1} \sum_{i=1}^N
+  (x_i - \bar{x})^2} \: .
+  \label{eqn:mitf}
+\end{equation}
+Somit ergibt sich ein Wert von
+\begin{align*}
+  m^*=\SI{7.2(4)e-32}{\kilo\gram} \: \,
+\end{align*}
+bzw. das Verhältnis
+\begin{align*}
+  \frac{m*}{m_e}=0,079\pm0,004
+\end{align*}
+zwischen der effektiven Masse und der Ruhemasse $m_e=\SI{9.109e-31}{\kilo\gram}$ der Elektronen.
