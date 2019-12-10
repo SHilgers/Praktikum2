@@ -35,13 +35,16 @@ Elektronen tritt pro Atom nur eine effektive Anzahl von Elektronen mit der einfa
 Strahlung in Wechselwirkung. Da nur diese effektiven Elektronen die optischen
 Eigenschaften des Festkörpers bestimmen, werden sie auch als Dispersionselektronen
 bezeichnet. Analog zur Anzahl der effektiven Elektronen lässt sich auch eine
-effektive Masse $m*$ bestimmen. Aus der Bandstruktur kann diese über die Krümmung des
+effektive Masse $m^*$ bestimmen. Aus der Bandstruktur kann diese über die Krümmung des
 Leitungsbandes am Punkt $\vec{k}=\vec{0}$ nach
 
 \begin{equation}
   m^*_i=\hbar^2\Big(\frac{\partial^2 E}{\partial k^2_i} \Big)^{-1}
 \end{equation}
-bestimmt werden.
+bestimmt werden. Diese Größe $m^*_i$ ist dabei richtungsabhägig. Bei ausreichender
+Kristallsymmetrie kann sie jedoch als isotrop angenommen werden und zur richtungsunabhängigen
+Größe $m^*$ vereinfacht werden. Für GaAs liegt diese außreichende Kristallsymmetrie vor und es kann
+die Größe $m^*$ verwendet werden.
 
 Unter Verwendung der effektiven Masse $m^*$ kann wieder die Quantenmechanik eines
 freien Teilchens angenommen werden, da das Potential schon in der effektiven Masse
@@ -61,7 +64,7 @@ einfallenden Lichtstrahls in Abbildung \ref{fig:Doppelbrechend} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{Doppelbrechend.png}
-  \caption{Schematische Darstellung eines doppelbrechenden Kristalls mit ordentlichem und außerordentlichem Strahl.}
+  \caption{Schematische Darstellung eines doppelbrechenden Kristalls mit ordentlichem und außerordentlichem Strahl \cite{Heintze}.}
   \label{fig:Doppelbrechend}
 \end{figure}
 
@@ -93,7 +96,7 @@ Dabei bezeichnet $L$ die Länge des Kristalls und $k_i$ den jeweiligen Wellenvek
 
 
 \subsection{Induzierte Doppelbrechung-Faraday Effekt}
-In optisch inaktiven Medien, welche nicht doppelbrechend sind, kann durch anlegen eines Magnetfeldes in Ausbreitungsrichtung des Lichts
+In optisch inaktiven Medien, welche nicht doppelbrechend sind, kann durch Anlegen eines Magnetfeldes in Ausbreitungsrichtung des Lichts
 Doppelbrechung hervorgerufen werden. Das Magnetfeld induziert in den Atomen zusätzliche Kreisströme, wodurch es zu einer Asymmetrie im
 Kristall kommt, welche zu unterschiedlichen Brechungsindizes für links- und rechtspolarisiertes Licht führt. Dies hat zur Folge, dass es
 bei dem Einfall von linear polarisiertem Licht, welches parallel zum Magnetfeld in den Kristall einfällt zu einer Drehung der
@@ -105,16 +108,16 @@ Der Drehwinkel $\theta$ ist dabei von der Stärke und Richtung des Magnetfeldes 
 Die Verdet-Konstante $V$ ist dabei eine für den Stoff charakteristische Größe und ist stark von der Wellenlänge abhängig.
 
 Aus der Bewegungsgleichung für ein gebundenes Elektron sowie den Polarisationseffekten im Kristall lässt sich folgende Gleichung
-für für den Drehwinkel $\theta$ aufstellen:
+für den Drehwinkel $\theta$ aufstellen:
 
 \begin{equation}
-  \theta(\lambda)=\frac{2\pi^2e_0^3c}{\epsilon_0 m^2 \lambda^2 \omega_0^2}\cdot\frac{NBL}{n}
+  \theta(\lambda)=\frac{2\pi^2e_0^3c}{\epsilon_0 m^2 \lambda^2 \omega_0^4}\cdot\frac{NBL}{n}
 \end{equation}
 Diese Relation bezieht sich auf alle Ladungsträger im Kristall, sowohl die gebundenen Kristallelektronen, als auch die
 freien Elektronen durch die Dotierung.
 
 Die Rotation der freien Elektronen kann anhand der Gleichung
 \begin{equation}
-  \theta_\text{frei}(\lambda)=\frac{\epsilon_0^3}{8\pi^2\epsilon_0c^3(m*)^2}\cdot\lambda^2\cdot\frac{NB}{n}
+  \theta_\text{frei}(\lambda)=\frac{e_0^3}{8\pi^2\epsilon_0c^3(m*)^2}\cdot\lambda^2\cdot\frac{NBL}{n}
 \end{equation}
 bestimmt werden.
