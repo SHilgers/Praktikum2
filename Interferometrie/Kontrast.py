@@ -19,15 +19,17 @@ x = np.linspace(0, 3.5 ,1000)
 plt.plot (phi , K,'r+', label='Messdaten')
 #plt.plot(phi, np.abs(np.sin(phi)*np.cos(phi)), 'g', label='Theoriekurve')
 
-
-def f(phi, a, b, c):
-    return a*(np.abs(np.sin(phi)*np.cos(phi)))
+phi=phi[0:11]
+K=K[0:11]
+print('phi', phi)
+def f(phi, a):
+    return 2*a*(np.abs(np.sin(phi)*np.cos(phi)))
 params, cov= curve_fit(f, phi, K)
 errors = np.sqrt(np.diag(cov))
 print('a =', params[0], '±', errors[0])
 #print('b =', params[1], '±', errors[1])
 
-plt.plot(x, f(x,*params),'b-', label='Regression')
+plt.plot(x[0:450], f(x,*params)[0:450],'b-', label='Regression')
 
 plt.grid()
 plt.xlabel(r'$\Phi$ in rad')
