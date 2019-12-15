@@ -10,13 +10,19 @@ der berechnete Kontrast sind in Tabelle \ref{tab:tab1} dargestellt.
 Die berechneten Kontrastwerte sind in Abbildung \ref{fig:Kontrast} zusammen mit der Ausgleichsrechnung
 gegen den Polarisationswinkel aufgetragen. Dabei wird für die Regression der nach der Theorie geltende Zusammenhang
 \begin{equation}
-  K\sim 2\cdot|sin(\Phi)cos(\Phi)|
+  K\sim 2a\cdot|sin(\Phi)cos(\Phi)|
 \end{equation}
-verwendet.
+verwendet, wobei hier nur die Werte von $\phi=0$ bis $\frac{\pi}{2}$ verwendet werden. Denn die Werte von
+$\phi=\frac{\pi}{2}$ bis $2\pi$ passen offensichtlich nicht zum erwarteten Verlauf und werden daher bei der
+Regression nicht berücksichtigt.
+Für den Fitparameter $a$ ergibt sich aus der Regression folgender Wert:
+\begin{equation}
+  a=\SI{0,84(2)}{}.
+\end{equation}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{Kontrast.png}
+  \includegraphics[width=12cm]{Kontrast.pdf}
   \caption{Der Kontrast in Abhängigkeit der Polarisation $\Phi$, sowie die Regression.}
   \label{fig:Kontrast}
 \end{figure}
@@ -40,7 +46,8 @@ Eingesetzt in $M=\sfrac{\Delta\Phi}{2\pi}$ ergibt sich daraus eine Formel zur Be
 
 Dabei bezeichnet $M$ die Anzahl der gemessenen Maxima und $\lambda$ die Wellenlänge des
 verwendeten HeNe-Lasers von $\SI{632,990}{\nm}$. Die Dicke der Platten $T$ ist mit
-$T=\SI{1}{\mm}$ gegeben. Die so berechneten Werte für die Brechungsindizes sind zusammen mit
+$T=\SI{1}{\mm}$ gegeben. Da die Messung von -4 bis 7\:$\si{\degree}$ durchgeführt wurde beträgt
+$\theta=\SI{11}{\degree}$. Die so berechneten Werte für die Brechungsindizes sind zusammen mit
 der Anzahl der Maxima in Tabelle \ref{tab:tab2} aufgeführt.
 
 \input{Tabelle2.tex}
@@ -57,22 +64,21 @@ und sein Fehler mit
 \end{equation}
 Daraus ergibt sich ein Wert von
 \begin{equation}
-  n_\text{Glas}=\SI{1.641(7)}{}.
+  n_\text{Glas}=\SI{1.743(9)}{}.
 \end{equation}
-Verglichen mit dem Theoriewert von $n_\text{Theorie}=\SI{1,613}{}$ ergibt sich ein Fehler von 1,74\%.
+%Verglichen mit dem Theoriewert von $n_\text{Theorie}=\SI{1,613}{}$ ergibt sich ein Fehler von 21,2\%.
 
 \subsection{Brechungsindex von Luft}
 
-Der Brechungsindex von Luft kann auf zwei Arten bestimmt werden. Zum einen durch die Anzahl der
-gemessenen Maxima und zum anderen über den Druck.
-Um den Brechungsindex über die Anzahl der Maxima zu bestimmen wird Formel \ref{eqn:pM2}
+Um den Brechungsindex bei Atmosphärendruck über die Anzahl der Maxima zu bestimmen wird Formel \ref{eqn:pM2}
 verwendet. Dabei kann $\Delta n$ durch  $\Delta n= n-1$ ersetzt werden, da das Vakuum den
 Brechungsindex 1 besitzt. Eingesetzt in $M=\sfrac{\Delta\Phi}{2\pi}$ ergibt sich somit
 \begin{equation}
-  n=\frac{M\lambda}{L}.
+  n=\frac{M\lambda}{L}+1.
+  \label{eqn:nmax}
 \end{equation}
 Aus den Messwerten, welche in Tabelle \ref{tab:tab3} dargestellt sind, ergeben sich daraus folgende Werte für
-den Brechungsindex von Luft:
+den Brechungsindex von Luft bei Atmosphärendruck:
 
 \begin{align*}
   n_\text{Luft1}&=\SI{1,000259526(26)}{}\\
@@ -87,15 +93,38 @@ Nach Formel \ref{eqn:Mittel} ergibt sich daraus der Mittelwert zu:
 
 \input{Tabelle3.tex}
 
-Der Brechungsindex kann außerdem über das Lorentz-Lorenz Gesetz aus Formel \ref{eqn:lorentz} bestimmt
-werden. Mit der molaren Reflexivität $A=\frac{4\pi}{3}N_\alpha \cdot \alpha$ folgt daraus
+Um das Lorentz-Lorentz-Gesetz zu verifizieren, wird zunächst über die Anzahl der gemessenen Maxima für jeden
+Druck gemittelt. Nach Formel \ref{eqn:nmax} kann nun der Brechungsindex in Abhängigkeit des Drucks bestimmt
+und in Diagramm \ref{fig:Lorentz} gegeneinander aufgetragen werden.
+Die Regression erfolgt nach dem Lorentz-Lorentz-Gesetz aus Gleichung \ref{eqn:lorentz} mit
 \begin{equation}
-  n\sim\sqrt{1+\frac{4\pi p}{RT}N_\alpha \alpha}.
+  n\sim\sqrt{1+\frac{Bp}{RT}}
 \end{equation}
+und liefert für den Fitparameter $B$ den Wert $B=\SI{0,001318(2)}{}$. Die allgemeine Gaskonstante wird dabei mit $R$
+bezeichnet und $T$ bezeichnet die Temperatur, welche zum Messzeitpunkt $T=\SI{21,2}{\celsius}$ beträgt.
+Somit ergibt sich eine druckabhängige Formel für den Brechungsindex von
+\begin{equation}
+  n\sim\sqrt{\frac{\SI{0,001318(2)}\cdot p}{RT}}
+\end{equation}
+mit $p$ in Millibar.
 
-Dabei bezeichnet $R$ die Gaskonstante, $N_\alpha$ die Avogadro-Konstante
-und\\
-$\alpha=\SI{2.118(91)e-29}{\m\cubic}$ \cite{alpha} die molare Polarisierbarkeit von Luft. Die Temperatur $T$
-im Raum beträgt zum Messzeitpunkt $T=\SI{21,2}{\celsius}$.
-Die auf diesem Wege berechneten Werte für den Brechungsindex von Luft sind in Tabelle \ref{tab:tab3}
-dargestellt. Für den Mittelwert ergibt sich daraus $n_\text{Luft}=\SI{1.0000164(7)}{}$.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{Glasplot.pdf}
+  \caption{Brechungsindizes in abhängigkeit des Drucks mit einer Regression nach dem Lorentz-Lorentz-Gesetz.}
+  \label{fig:Lorentz}
+\end{figure}
+%Der Brechungsindex kann außerdem über das Lorentz-Lorenz Gesetz aus Formel \ref{eqn:lorentz} bestimmt
+%werden.
+
+% Mit der molaren Reflexivität $A=\frac{4\pi}{3}N_\alpha \cdot \alpha$ folgt daraus
+%\begin{equation}
+%  n\sim\sqrt{1+\frac{4\pi p}{RT}N_\alpha \alpha}.
+%\end{equation}
+
+%Dabei bezeichnet $R$ die Gaskonstante, $N_\alpha$ die Avogadro-Konstante
+%und\\
+%$\alpha=\SI{2.118(91)e-29}{\m\cubic}$ \cite{alpha} die molare Polarisierbarkeit von Luft.
+
+%Die auf diesem Wege berechneten Werte für den Brechungsindex von Luft sind in Tabelle \ref{tab:tab3}
+%dargestellt. Für den Mittelwert ergibt sich daraus $n_\text{Luft}=\SI{1.0000164(7)}{}$.

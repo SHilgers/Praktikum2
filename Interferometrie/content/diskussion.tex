@@ -3,16 +3,25 @@
 Die Kontrastmessung ergab einen maximalen Kontrast von $K=0,84$ für einen Polarisationswinkel von $\Phi=\SI{50}{\degree}$.
 Im Vergleich zu dem theoretischen Wert von $K=1$, welcher in der Praxis jedoch nicht erreichbar ist, ergibt sich eine
 Abweichung von 16\%.
+\\
+\\
+Der Brechungsindex von Glas konnte mithilfe des Doppelglashalters auf\\
+$n_\text{Glas}=\SI{1.743(9)}{}$ bestimmt werden.
+Der Vergleich mit dem Theoriewert von \\
+$n_\text{Theorie}=\SI{1,613}{}$ \cite{ns}
+liefert eine Abweichung von 21,2\%, wobei für die Berechnung nur die signifikanten Stellen verwendet wurden.
 
-Der Brechungsindex von Glas konnte mithilfe des Doppelglashalters auf $n_\text{Glas}=\SI{1.641(7)}{}$ bestimmt werden.
-Der Vergleich mit dem Theoriewert von $n_\text{Theorie}=\SI{1,613}{}$ \cite{ns} liefert eine Abweichung von 1,74\%.
-
-Des Weiteren wurde der Brechungsindex von Luft auf zwei Wegen bestimmt. Unter Verwendung der Anzahl der Maxima ergibt
-sich ein Brechungsindex von\\
-$n_\text{Luft}=\SI{1,000255306(26)}{}$, während sich unter Verwendung des Drucks nach dem
-Lorentz-Lorenz Gesetz ein Brechungsindex von $n_\text{Luft}=\SI{1.0000164(7)}{}$ ergibt.
-Der Vergleich mit dem Theoriewert für Luft von $n_\text{Luft,Theorie}=\SI{1,000272}{}$ \cite{ns} liefert einen Fehler von
-$\SI{1,67e-3}{}$\% für die Bestimmung über die Maxima und 0,025\% für die Bestimmung über den Druck.
+Des Weiteren wurde der Brechungsindex von Luft bestimmt. Unter Verwendung der Anzahl der Maxima ergibt
+sich bei Atmosphärendruck ein Brechungsindex von\\
+$n_\text{Luft}=\SI{1,000255306(26)}{}$.
+Hier zeigt der Vergleich mit dem Theoriewert für Luft von $n_\text{Luft,Theorie}=\SI{1,000272}{}$ \cite{ns}
+eine Abweichung von 6,14\%, wobei hier ebenfalls nur die signifikanten Nachkommastellen
+berücksichtigt wurden.
+Mithilfe des Lorentz-Lorentz-Gesetzes und einer Regression konnte die druckabhängige Formel
+\begin{equation}
+    n\sim\sqrt{\frac{\SI{0,001318(2)}\cdot p}{RT}}
+\end{equation}
+für den Brechungsindex aufgestellt werden.
 
 Zusammenfassend konnten die gesuchten Brechungsindizes mithilfe des Interferometers sehr genau bestimmt werden, obwohl
 einige Fehlerquellen wie Helligkeitsschwankungen oder Luftbewegungen und damit auch Dichteschwankungen der Luft auftraten.
