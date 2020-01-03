@@ -46,7 +46,7 @@ print(np.mean(nn))
 
 p=100*mbar #Druck in Pa
 Na=6.022*10**(23)
-a=ufloat_fromstr("2.118(91)e-29")
+a=ufloat_fromstr("2.118(91)e-29") #Konstante nicht mehr verwendet
 #a=2.118*10**(-29)
 R=8.3145
 K=21.2+273.15 #Temperatur in K
@@ -69,7 +69,8 @@ def f(x, b):
 params, cov= curve_fit(f, mbar, nr)
 errors = np.sqrt(np.diag(cov))
 print('a =', params[0], '±', errors[0])
-#print('b =', params[1], '±', errors[1])
+
+B=ufloat(params[0], errors[0])
 
 plt.plot(x, f(x,*params),'b-', label='Regression')
 
@@ -81,6 +82,9 @@ plt.tight_layout()
 plt.savefig('Glasplot.pdf')
 plt.show()
 
-u=[21, 21, 22]
-print(np.mean(u))
-print(sem(u))
+#Berechnung bei Normatmosphäre
+pnor= 1013.25 #Normaldruck
+Tnor=15+273.15
+n=(1+(B*pnor)/(R*Tnor))**(1/2)
+#n=(1+(B*950)/(R*294.35))**(1/2)
+print('n bei Normdruck=', n)

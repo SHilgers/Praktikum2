@@ -104,9 +104,16 @@ und liefert für den Fitparameter $B$ den Wert $B=\SI{0,001318(2)}{}$. Die allge
 bezeichnet und $T$ bezeichnet die Temperatur, welche zum Messzeitpunkt $T=\SI{21,2}{\celsius}$ beträgt.
 Somit ergibt sich eine druckabhängige Formel für den Brechungsindex von
 \begin{equation}
-  n\sim\sqrt{\frac{\SI{0,001318(2)}\cdot p}{RT}}
+  n\sim\sqrt{1+\frac{\SI{0,001318(2)}\cdot p}{RT}}
 \end{equation}
 mit $p$ in Millibar.
+
+Mithilfe dieser Formal kann nun der Brechungsindex bei Normatmophäre bestimmt werden, indem
+die definierte Temperatur von $T=\SI{15}{\celsius}$ und der definierte Druck von $p=\SI{1013,25}{\milli\bar}$
+eingesetzt werden. Es ergibt sich so ein Brechungsindex von
+\begin{equation}
+  n_\text{Normatmophäre}=\SI{1,0002788(5)}{}.
+\end{equation}
 
 \begin{figure}[H]
   \centering
