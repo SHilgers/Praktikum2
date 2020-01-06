@@ -12,8 +12,8 @@ sich zu
 \begin{equation}
   b_1=\SI{1,99(5)}{\K\per\min}
 \end{equation}
-ergibtk
-Um die Aktivierungsenergie durch lineare Ausgleichsrechnung zu bestimmen wird zunächst
+ergibt.
+Um die Aktivierungsenergie durch eine lineare Ausgleichsrechnung zu bestimmen, wird zunächst
 der Relaxationsstrom gegen die Temperatur aufgetragen. Dies ist in Abbildung \ref{fig:Fig1}
 dargestellt. Da das erste Maximum des Relaxationsstroms,
 welches im Folgenden genauer untersucht wird, auf der steigenden Flanke des zweiten Maximums
@@ -46,11 +46,17 @@ Für die Berechnung mittels des Integrals werden die schwarz und blau markierten
 \textbf{Aktivierungsenergie aus der Anlaufkurve}\\
 Zur Bestimmung der Aktivierungsenergie $W$ werden die in Abbildung \ref{fig:Fig2} schwarz
 markierten Messwerte verwendet. Diese können durch die Formel \ref{eqn:stromnäherung} genähert werden,
-welche logarithmisch gegen $\sfrac{1}{T}$ aufgetragen einer linearen Ausgleichsgeraden der Form
+welche logarithmisch gegen $\sfrac{1}{T}$ aufgetragen einer Geraden entsprechen. Mit einer
+Ausgleichsgeraden der Form
 \begin{equation}
   f(T)=m\cdot x+b
 \end{equation}
-entspricht. Die logarithmierten Messwerte als auch die Ausgleichsgerade sind in Diagramm \ref{fig:Fig3}
+ergeben sich die Parameter
+\begin{align*}
+  m&=\SI{11100(900)}{}\;\; \text{und}\\
+  b&=\SI{46(4)}{}.
+\end{align*}
+Das zugehörige Diagramm mit den logarithmierten Messwerte und der Ausgleichsgerade ist in Diagramm \ref{fig:Fig3}
 dargestellt.
 
 \begin{figure}[H]
@@ -60,20 +66,16 @@ dargestellt.
   \label{fig:Fig3}
 \end{figure}
 
-Aus den so erhaltenen Parametern
-\begin{align*}
-  m&=\SI{11100(900)}{}\;\; \text{und}\\
-  b&=\SI{46(4)}{}
-\end{align*}
-lässt sich über
+Aus den so erhaltenen Parametern lässt sich über
 \begin{equation}
   W=k_{B}\cdot m
   \label{eqn:Aktivierung}
 \end{equation}
 die Aktivierungsenergie $W$ aus der Steigung der Ausgleichsgeraden zu $W_\text{A,1}=\SI{0,96}{\eV}$ bestimmen.
-
+\\
+\\
 \textbf{Aktivierungsenergie durch integrieren}\\
-Um die Aktivierungsenergie durch Integrieren zu bestimmen werden sowohl die schwarz als auch blau markierten
+Um die Aktivierungsenergie durch Integrieren zu bestimmen, werden sowohl die schwarz als auch blau markierten
 Werte aus Diagramm \ref{fig:Fig2} verwendet. Unter Verwendung von Gleichung \ref{eqn:integral} ergibt sich aufgetragen
 gegen $\sfrac{1}{T}$ ein nahezu linearer Verlauf, welcher erneut mit einer linearen Ausgleichsgerade der
 Form $f(T)=m\cdot x+b$ angenähert werden kann. Die Ausgleichsrechnung liefert die Parameter
@@ -135,7 +137,8 @@ bestimmen lässt.
 \end{figure}
 
 \textbf{Aktivierungsenergie durch integrieren}\\
-Aus der linearen Ausgleichsrechnung der integrierten Werte ergeben sich die Parameter
+Aus der linearen Ausgleichsrechnung der integrierten Werte, welche in Diagramm \ref{fig:Abb4}
+zu sehen ist, ergeben sich die Parameter
 \begin{align}
   m&=\SI{9800(700)}{}\;\; \text{und}\\
   b&=\SI{41(3)}{}.
@@ -153,8 +156,8 @@ Daraus ergibt sich eine Aktivierungsenergie von $W_\text{I,2}=\SI{0,85}{\eV}$
 Mittels Gleichung \ref{eqn:taumax} lässt sich zunächst $\tau_\text{max}$ bestimmen. Dazu
 werden aus den Diagrammen \ref{fig:Fig2} und \ref{fig:Abb2} die Temperaturen bestimmt, an den $I$ maximal ist:
 \begin{align*}
-  T_\text{max1}&=\SI{259,25}{\celsius}\;\;\text{und}\\
-  T_\text{max2}&=\SI{255,05}{\celsius}.
+  T_\text{max1}&=\SI{259,25}{\K}\;\;\text{und}\\
+  T_\text{max2}&=\SI{255,05}{\K}.
 \end{align*}
 
 Unter Verwendung der berechneten Aktivierungsenergien ergeben sich mittels Gleichung \ref{eqn:taumax}
