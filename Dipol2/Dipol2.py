@@ -80,7 +80,7 @@ print('d =', params2[1], '±', errors2[1])
 plt.plot(u, g(u,*params2),'b-', label='Regression')
 plt.grid()
 plt.xlabel(r'$1/T$ in 1/K')
-plt.ylabel(r'$ln(I)$ in ln(pA)')
+plt.ylabel(r'$ln(I)$ ')
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig('Dipol2Anlauf.png')
@@ -95,6 +95,19 @@ Tint=T[10:42] #Für Integral verwendete Werte
 Iint=Iohne[10:42] #Für Integral verwendete Werte
 I_int = integrate.cumtrapz(Iint, Tint, initial=Iint[0]) #Integral berechnen
 IInt=np.log(I_int/Iint)
+
+def Integral(Tint,Iint,H):
+    array = np.array([])
+    for b in Tint:
+        array = np.append(array, np.trapz(Iint[Tint >= b], Tint[Tint >= b]))
+    return array
+
+Integ = Integral(Tint, Iint, H)
+print('Iteg=', Integ)
+Integ=Integ/Iint
+Integ = Integ[Integ > 0] #negative Werte rausschmeißen
+Integ = np.log(Integ)
+print('Iteg=', Integ)
 #print('Iint', Iint)
 #print('Tint', Tint)
 #print('I_int', I_int)
@@ -112,12 +125,13 @@ plt.savefig('Dipol2Int.png')
 plt.show()
 ###############
 
-plt.plot(1/Tint, IInt ,'r+', label='Integral')
+#plt.plot(1/Tint, Iint ,'r+', label='Integral')
+plt.plot(1/Tint[1:], Integ ,'r+', label='Integral')
 t = np.linspace(0.0037, 0.00423)
 def h(x ,e, f):
     return -e*x+f
 
-params3, cov3= curve_fit(h, 1/Tint,  IInt)
+params3, cov3= curve_fit(h, 1/Tint[1:],  Integ)
 errors3 = np.sqrt(np.diag(cov3))
 print('e =', params3[0], '±', errors3[0])
 print('f =', params3[1], '±', errors3[1])
@@ -125,7 +139,7 @@ print('f =', params3[1], '±', errors3[1])
 plt.plot(t, h(t,*params3),'b-', label='Regression')
 plt.grid()
 plt.xlabel(r'$1/T$ in K')
-plt.ylabel(r'$lnf(T)$ in pA')
+plt.ylabel(r'$lnf(T)$')
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig('Dipol2Integral.png')
@@ -137,8 +151,14 @@ print('Aktivierungsarbeit über Integral (eV)=', W2)
 
 ####Relaxationszeit
 Tmax=255.05 #K
-taumax1=(const.k*Tmax**2)/(H*W1)
-taumax2=(const.k*Tmax**2)/(H*W2)
+taumax1=(const.k*Tmax**2)/(H*W1*const.e)
+taumax2=(const.k*Tmax**2)/(H*W2*const.e)
 
 print('Relaxationszeit Anlauf=', taumax1)
 print('Relaxationszeit Integral=', taumax2)
+#Berechnung tau0
+tau01=taumax1/np.exp((W1*const.e)/(const.k*Tmax))
+tau02=taumax2/np.exp((W2*const.e)/(const.k*Tmax))
+
+print('Relaxationszeit tau0 Anlauf=', tau01)
+print('Relaxationszeit tau0 Integral=', tau02)
