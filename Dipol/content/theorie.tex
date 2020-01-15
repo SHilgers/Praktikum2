@@ -13,7 +13,14 @@ eine Ionenbindung eingehen und somit einen Kristall bilden. Bringt man anstelle
 der einfach geladenen Kationen auch doppelt geladene Kationen, wie beispielsweise
 $\ce{Sr^{++}}$ ein, so kommt es aufgrund der notwendigen Ladungsneutralität des Kristalls
 zu Leerstellen an den Stellen wo üblicherweise ein einfach positiv geladenes Kation
-sitzt. Die Leerstellen bilden dabei mit den zweifach geladenen Kationen permanente
+sitzt. Dies ist in Abbildung \ref{fig:ion} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{ion.png}
+  \caption{Aufbau eines CsI-Kristalls mit permanenten Dipolen durch Dotierung mit Strontium \cite{skript}.}
+  \label{fig:ion}
+\end{figure}
+Die Leerstellen bilden dabei mit den zweifach geladenen Kationen permanente
 Dipole im Kristall aus, welche an die Symmetrie des Gitters gebunden sind und
 somit nur diskrete Werte und Richtungen erlauben. Diese sind jedoch statistisch verteilt,
 sodass es keine Vorzugsrichtung und somit auch kein makroskopisches Dipolmoment gibt. \\
@@ -68,12 +75,12 @@ und der entsprechenden Temperatur $T_0$ vor dem Abkühlen. Unter Verwendung
 der Gleichungen \eqref{eqn:tau} und \eqref{eqn:anteil} folgt damit insgesamt für die
 Relaxationsstromdichte $j(T)$ die Formel
 \begin{equation}
-  j(T)=\frac{p^2E}{3k_bT_p}\frac{N_p}{\tau_0}  \exp{\Big(-\frac{1}{b}\int_{T_0}^{T}
-  \symup{d}T\exp{\Big(-\frac{W}{k_bT´}\Big)}{\symup{d}t}\Big)}
-  \exp{-\frac{W}{k_BT}} \:.
+  j(T)=\frac{p^2E}{3k_BT_p}\frac{N_p}{\tau_0}  \exp{\Big(-\frac{1}{b}\int_{T_0}^{T}
+  \symup{d}T´\exp{\Big(-\frac{W}{k_BT´}\Big)}{\symup{d}t}\Big)}
+  \exp{-\Big(\frac{W}{k_BT}\Big)} \:.
   \label{eqn:stromd}
 \end{equation}
-Da sich im Anfangsbereich der Stromkurve für das Integral $\int_{T_0}^{T} \symup{d}T\,\exp{(-\frac{W}{k_bT´})} \approx 0$
+Da sich im Anfangsbereich der Stromkurve für das Integral $\int_{T_0}^{T} \symup{d}T´\,\exp{(-\frac{W}{k_bT´})} \approx 0$
 ergibt, lässt sich dort die Gleichung über
 \begin{equation}
   j(T)\approx \frac{p^2E}{3k_bT_p}\frac{N_p}{\tau_0} \exp{\Big(-\frac{W}{k_BT}\Big)} \:

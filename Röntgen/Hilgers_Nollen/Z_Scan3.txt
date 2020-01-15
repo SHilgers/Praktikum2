@@ -1,0 +1,272 @@
+;RAW4.00
+[RawHeader]
+Date=01/13/2020
+EstimatedTotalTime=0
+FurtherDQLReading=0
+HardwareIndicator=65519
+MeasuredTotalTime=0
+MeasurementFlag=1
+NumberOfMeasuredRanges=1
+NumberOfRanges=1
+Time=09:45:00
+
+[HardwareConfiguration]
+AbsorptionFactor=7.9
+ActivateAbsorber=200000
+Alpha1=1.5406
+Alpha2=1.54439
+AlphaAverage=1.54184
+AlphaRatio=0.5
+Analyzer=0
+Anode=Cu
+AntiScatteringSlit=8.34
+BeamOpticsFlags=1213
+Beta=1.39222
+BetaRelativeIntensity=0
+DeactivateAbsorber=150000
+DetectorSlit=11.66
+DivergenceSlit=0.6
+GoniometerControl=9999
+GoniometerDiameter=700
+GoniometerModel=516
+GoniometerStage=16
+Monochromator=0
+NearSampleSlit=0
+PrimarySollerSlit=2.5
+SampleChanger=0
+SecondSollerSlit=2.5
+SynchronousAxis=0
+ThinFilmAttachment=0
+WaveUnit=A
+
+[VarInfo]
+Type=OSUSER
+Flags=0
+Value=TU Dortmund
+
+[VarInfo]
+Type=USER
+Flags=0
+Value=Administrator
+
+[VarInfo]
+Type=SITE
+Flags=0
+Value=Deutschland
+
+[VarInfo]
+Type=CREATOR
+Flags=0
+Value=XRD Commander
+
+[RangeHeader]
+ActuallyUsedLambda=1.5406
+AdditionalDetectorMask=4100
+DataRecordLength=4
+DelayTime=0
+DisplayPlaneNumber=0
+EstimatedScanTime=0
+ExtraParametersMask=0
+GeneratorCurrent=35
+GeneratorVoltage=40
+Increment=0.02
+Increment3=0
+NumberOfCompletedData=91
+NumberOfCounts=1
+NumberOfDetectors=0
+NumberOfDrives=8
+NumberOfEncoderDrives=0
+NumberOfMeasuredData=91
+NumberOfVaryingParameters=0
+RangeStartTime=1077936128
+RotationSpeed=0
+ScanMode=1
+ScanType=Z-Drive
+SimulatedMeasConditions=0
+SlitChangerIn=9999
+SmootingWidth=0
+Start=-0.9
+Steps=91
+SynchronousRotation=0
+Time=1
+
+[Drive]
+DriveFlags=1
+DriveName=Theta
+DriveNumber=1
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=0
+
+[Drive]
+DriveFlags=1
+DriveName=2Theta
+DriveNumber=2
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=0
+
+[Drive]
+DriveFlags=1
+DriveName=Spinner
+DriveNumber=3
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=90
+
+[Drive]
+DriveFlags=0
+DriveName=X-Drive
+DriveNumber=5
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=25
+
+[Drive]
+DriveFlags=0
+DriveName=Y-Drive
+DriveNumber=6
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=-30
+
+[Drive]
+DriveFlags=0
+DriveName=Z-Drive
+DriveNumber=7
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=-0.9
+
+[Drive]
+DriveFlags=1025
+DriveName=Rotary Absorber
+DriveNumber=20
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=270
+
+[Drive]
+DriveFlags=0
+DriveName=Lynx-Iris
+DriveNumber=21
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=0.5
+
+[PSD]
+ActualTwoTheta=0
+FirstUsedChannel=0
+FixedPSD=0
+PSDOpening=12.225
+PSDType=5
+
+[Data]
+     Angle,       PSD,
+      -0.9,1.00655e+006,
+     -0.88,1.00059e+006,
+     -0.86,1.00037e+006,
+     -0.84,1.0087e+006,
+     -0.82,1.00222e+006,
+      -0.8,1.00852e+006,
+     -0.78,1.00418e+006,
+     -0.76,1.00693e+006,
+     -0.74,1.00217e+006,
+     -0.72,1.00471e+006,
+      -0.7,1.00847e+006,
+     -0.68,1.01053e+006,
+     -0.66,1.00896e+006,
+     -0.64,1.01144e+006,
+     -0.62,1.01154e+006,
+      -0.6,1.01729e+006,
+     -0.58,1.01848e+006,
+     -0.56,1.02883e+006,
+     -0.54,1.02649e+006,
+     -0.52,    988093,
+      -0.5,    886183,
+     -0.48,    757128,
+     -0.46,    603979,
+     -0.44,    449170,
+     -0.42,    286817,
+      -0.4,    148744,
+     -0.38,     57939,
+     -0.36,     10355,
+     -0.34,       264,
+     -0.32,        21,
+      -0.3,         6,
+     -0.28,         2,
+     -0.26,         4,
+     -0.24,         1,
+     -0.22,         4,
+      -0.2,         3,
+     -0.18,         3,
+     -0.16,         1,
+     -0.14,         3,
+     -0.12,         0,
+      -0.1,         1,
+     -0.08,         2,
+     -0.06,         2,
+     -0.04,         2,
+     -0.02,         3,
+-3.46945e-018,         4,
+      0.02,         4,
+      0.04,         1,
+      0.06,         3,
+      0.08,         2,
+       0.1,         4,
+      0.12,         1,
+      0.14,         3,
+      0.16,         3,
+      0.18,         2,
+       0.2,         3,
+      0.22,         3,
+      0.24,         3,
+      0.26,         5,
+      0.28,         1,
+       0.3,         0,
+      0.32,         2,
+      0.34,         2,
+      0.36,         2,
+      0.38,         4,
+       0.4,         1,
+      0.42,         0,
+      0.44,         2,
+      0.46,         1,
+      0.48,         4,
+       0.5,        27,
+      0.52,       232,
+      0.54,       594,
+      0.56,      1205,
+      0.58,      1931,
+       0.6,      2627,
+      0.62,      3191,
+      0.64,      3732,
+      0.66,      3776,
+      0.68,      3464,
+       0.7,      3373,
+      0.72,      3143,
+      0.74,      2945,
+      0.76,      2726,
+      0.78,      2460,
+       0.8,      2316,
+      0.82,      2244,
+      0.84,      2262,
+      0.86,      2264,
+      0.88,      2160,
+       0.9,      2100,
