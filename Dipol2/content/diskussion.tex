@@ -9,16 +9,19 @@ Die auf verschiedene Weisen und für verschiedene Heizraten bestimmten Aktivieru
 %gering voneinander abweichen.
 Verglichen mit dem Literaturwert für Strontium dotiertes
 Kalium-Bromid von ${W_\text{lit}=\SI{0,66}{\eV} }$~\cite{literaturwert}
-fällt auf, dass die Berechnung über den Anlaufstrom mit einer Heizrate von $b_2=\SI{1,06(2)}{\K\per\min}$
-exakt den Literaturwert liefert. Die größte Abweichung mit 45,5\% ergibt sich für für die Berechnung über den
-Anlaufstrom bei einer Heizrate von $b_1=\SI{1,99(5)}{\K\per\min}$.
+fällt auf, dass die Berechnung über den Anlaufstrom mit einer Heizrate von \\
+${b_2=\SI{1,06(2)}{\K\per\min}}$
+exakt den Literaturwert liefert. Die größte Abweichung mit 56,1\% ergibt sich für für die Berechnung über die
+Integration bei einer Heizrate von ${b_1=\SI{1,99(5)}{\K\per\min}}$. Die Abweichungen für die Werte $W_\text{A,1}$
+und $W_\text{I,2}$ liegen mit 45,5\% und 31,8\% darunter. Da die exakte Messung der Aktivierungsenergie
+über den Anlaufstrom wahrscheinlich nicht reproduzierbar ist, lässt sich aus den Ergebnissen nicht bestimmen,
+welche der verwendeten Verfahren besser zur Bestimmung der Aktivierungsenergie geeignet ist.
 
-Diese Abweichung zeigt, dass
-die Berechnung über den Anlaufstrom nicht die bevorzugte Variante ist und das exakte Ergebnis von $W_\text{A,2}$
-wahrscheinlich nicht reproduzierbar ist.
-Die Berehnung über das Integral weicht ebenfalls vom Literaturwert ab, ist mit 21,2 bzw. 28,8\% Abweichung aber
-genauer.
-\\
+%Diese Abweichung zeigt, dass die Berechnung über den Anlaufstrom nicht die bevorzugte
+%Variante ist und das exakte Ergebnis von $W_\text{A,2}$ wahrscheinlich nicht reproduzierbar ist.
+%Die Berehnung über das Integral weicht ebenfalls vom Literaturwert ab, ist mit 21,2 bzw. 28,8\% Abweichung aber
+%genauer.
+
 Für die Relaxationszeiten wurden folgende Werte berechnet:
 \begin{align*}
   \tau_\text{01,A}&=\SI{0.7(24)e-18}{\s}\;\;\;&\tau_\text{02,A}&=\SI{7(8)e-13}{\s}\\
@@ -27,9 +30,17 @@ Für die Relaxationszeiten wurden folgende Werte berechnet:
 während der Literaturwert durch $W_\text{lit}=\SI{4e-14}{\s}$ \cite{literaturwert}
 gegeben ist.
 
-Da die Relaxationszeit von der Aktivierungsenergie abhängt, pflanzen sich diese Fehler fort.
-Daher ergibt sich für $\tau_\text{02,A}$ mit 1597,5\% der geringste Fehler.
-\\
-Mögliche Fehlerquellen der Messung sind zum einen Schwankungen in der Heizrate, da diese immer nachreguliert werden
-musste und zu Beginn der Messung ein großes Temperaturgefälle vorliegt. Zum anderen ist das verwendete
-Picoampermeter sehr empfindlich gegenüber Erschütterungen, welche sich jedoch nicht vollständig vermeiden lassen.
+Da die Relaxationszeit exponentiell von der Aktivierungsenergie abhängt, pflanzen sich schon kleine Fehler
+der Aktivierungsenergie stark auf die Relaxationszeit fort.
+Daher ergibt sich für $\tau_\text{02,A}$ mit 1650\% der geringste Fehler.
+
+Nach Formel \ref{eqn:taumax} wird erwartet, dass sich mit steigender Heizrate die Relaxationszeit verringert.
+Dies kann durch die Messung bestätigt werden, denn sowohl für die Berechnung über den Anlaufstrom, als auch über
+Integration, sind die Relaxationszeiten für die Heizrate $b_1$ kleiner als für $b_2$.
+
+Da es sich bei der Dipolrealaxation um einen statistischen Prozess handelt, sind die berechneten Werte mit einem
+statistischen Fehler behaftet. Der Fehler der Heizrate, als auch Fehler im gemessenen Relaxationsstrom, welche auf
+Erschütterungen des Picoampermeters zurückzuführen wären, sind vernachlässigbar klein.
+%Mögliche Fehlerquellen der Messung sind zum einen Schwankungen in der Heizrate, da diese immer nachreguliert werden
+%musste und zu Beginn der Messung ein großes Temperaturgefälle vorliegt. Zum anderen ist das verwendete
+%Picoampermeter sehr empfindlich gegenüber Erschütterungen, welche sich jedoch nicht vollständig vermeiden lassen.
