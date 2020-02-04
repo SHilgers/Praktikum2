@@ -149,3 +149,24 @@ Der Einfluss der Oberflächenrauigkeit auf die Reflektivität ist in Abbildung \
   \caption{Reflektivität einer Si-Oberfläche mit unterschiedlicher Oberflächenrauigkeit \cite{XSR}.}
   \label{fig:rau}
 \end{figure}
+
+\subsection{Geometriewinkel}
+Da bei der Röntgenreflektivität mit sehr kleinen Einfallswinkeln $\alpha_i$ gearbeitet wird, ist zu berücksichtigen, dass der Strahl eine
+größere Fläche überstreicht, als die Probenoberfläche. Diese Geometrie ist in Abbildung \ref{fig:geometrie} dargestellt.
+Somit wird nur ein Teil der Intensität reflektiert und später detektiert. Um dies
+zu berücksichtigen wird der Geometriefaktor $G$ eingeführt, welcher als Verhältins der Strahlbreite $D\sin{\alpha_i}$ die die Oberfläche trifft zur
+Gesamtstrahlbreite $d_0$ definiert ist. Somit ergibt sich:
+
+\begin{align}
+    G&=\frac{D\sin\alpha_i}{d_0}\;\;\; &\text{mit}\;\;\; &\alpha_i<\alpha_g\;\;\; \text{und}\\
+    G&=1\;\;\; &\text{mit}\;\;\; &\alpha_i>\alpha_g.
+\end{align}
+Ab einem genügend großen Einafllswinkel, dem sogenennten Geometriewinkel $\alpha_g$, fällt der gesamte Strahl auf die Probenoberfläche
+und wird reflektiert.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{Geometriewinkel.png}
+  \caption{Veranschaulichung des Geometriewinkels \cite{skript}.}
+  \label{fig:geometrie}
+\end{figure}
